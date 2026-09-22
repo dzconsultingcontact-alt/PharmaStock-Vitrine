@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmaStock — #1 Logiciel de gestion pour pharmacies au Maroc</title>
+<meta name="description" content="PharmaStock est le logiciel de gestion n°1 pour les pharmacies au Maroc : gestion de stock, ordonnances, ventes et assistant IA. Essai gratuit 14 jours, sans carte bancaire.">
+<meta name="keywords" content="logiciel pharmacie maroc, gestion pharmacie au maroc, logiciel gestion pharmacie, pharmacie au maroc, gestion de stock pharmacie, logiciel officine maroc">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mapharmastock.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:title" content="PharmaStock — #1 Logiciel de gestion pour pharmacies au Maroc">
+<meta property="og:description" content="PharmaStock est le logiciel de gestion n°1 pour les pharmacies au Maroc : gestion de stock, ordonnances, ventes et assistant IA. Essai gratuit 14 jours, sans carte bancaire.">
+<meta property="og:url" content="https://mapharmastock.com/">
+<meta property="og:site_name" content="PharmaStock">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PharmaStock — #1 Logiciel de gestion pour pharmacies au Maroc">
+<meta name="twitter:description" content="PharmaStock est le logiciel de gestion n°1 pour les pharmacies au Maroc : gestion de stock, ordonnances, ventes et assistant IA. Essai gratuit 14 jours, sans carte bancaire.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Unbounded:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#0891b2;--teal2:#06b6d4;--teal3:#0e7490;
+  --green:#10b981;--orange:#f59e0b;--red:#ef4444;
+  --dark:#0c1a2e;--text:#1e293b;--gray:#64748b;--gray2:#94a3b8;
+  --border:#e2e8f0;--light:#f0f9ff;--light2:#e0f2fe;
+  --bg:#f8fafc;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);overflow-x:hidden;}
+
+/* TOPBAR */
+.topbar{background:var(--teal);padding:.5rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.4rem;}
+.topbar p{color:white;font-size:.8rem;font-weight:500;}
+.topbar p strong{background:rgba(255,255,255,.2);padding:.15rem .55rem;border-radius:100px;margin-right:.3rem;}
+.topbar-links{display:flex;gap:1.5rem;}
+.topbar-links a{color:rgba(255,255,255,.9);font-size:.78rem;text-decoration:none;font-weight:500;display:flex;align-items:center;gap:4px;}
+.topbar-links a:hover{color:white;}
+
+/* NAV — ChannelEngine dark style */
+nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 5%;max-width:1400px;margin:0 auto;height:68px;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--teal),var(--green));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;}
+.logo-text{font-family:'Unbounded',sans-serif;font-weight:900;font-size:1rem;color:white;}
+.logo-text span{color:var(--teal2);}
+
+/* MEGA MENU */
+.nav-menu{display:flex;align-items:center;list-style:none;height:100%;margin:0 auto;padding:0 2rem;}
+.nav-menu>li{height:100%;display:flex;align-items:center;position:relative;}
+.nav-menu>li>a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.83rem;font-weight:500;padding:0 1rem;height:100%;display:flex;align-items:center;gap:5px;transition:color .2s;white-space:nowrap;border-bottom:2px solid transparent;letter-spacing:.01em;}
+.nav-menu>li>a:hover,.nav-menu>li.open>a{color:white;border-bottom-color:var(--teal2);}
+.nav-menu>li>a .arrow{font-size:.55rem;transition:transform .25s;display:inline-block;opacity:.6;}
+.nav-menu>li.open>a .arrow{transform:rotate(180deg);opacity:1;}
+
+/* DROPDOWN */
+.dropdown{display:none;position:absolute;top:calc(100% + 1px);left:50%;transform:translateX(-50%);background:white;border:1px solid var(--border);border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.18);padding:1.5rem;z-index:300;min-width:580px;animation:dropIn .22s ease;}
+.nav-menu>li.open .dropdown{display:flex;}
+@keyframes dropIn{from{opacity:0;transform:translateX(-50%) translateY(-6px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.dd-col{flex:1;}
+.dd-col+.dd-col{padding-left:1.4rem;border-left:1px solid var(--border);margin-left:1.4rem;}
+.dd-label{font-size:.63rem;font-weight:700;color:var(--gray2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.9rem;padding-bottom:.5rem;border-bottom:1px solid var(--border);}
+.dd-items{display:flex;flex-direction:column;gap:.1rem;}
+.dd-item{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem .7rem;border-radius:9px;text-decoration:none;transition:background .15s;}
+.dd-item:hover{background:var(--light);}
+.dd-item-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;background:var(--bg);}
+.dd-item-text .title{font-size:.83rem;font-weight:600;color:var(--dark);display:block;margin-bottom:.12rem;}
+.dd-item-text .sub{font-size:.72rem;color:var(--gray2);line-height:1.4;}
+.dd-promo{background:linear-gradient(135deg,#0c1a2e,#0c3a5c);border-radius:12px;padding:1.2rem;margin-top:.7rem;}
+.dd-promo .dp-tag{font-size:.62rem;font-weight:700;color:var(--teal2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem;}
+.dd-promo .dp-title{font-size:.83rem;font-weight:700;color:white;margin-bottom:.3rem;line-height:1.35;}
+.dd-promo .dp-sub{font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:.75rem;line-height:1.4;}
+.dd-promo a{font-size:.76rem;font-weight:700;color:var(--teal2);text-decoration:none;}
+.dd-promo a:hover{color:white;}
+
+/* NAV ACTIONS */
+.nav-actions{display:flex;gap:.6rem;align-items:center;flex-shrink:0;}
+.nav-login{color:rgba(255,255,255,.7);text-decoration:none;font-size:.8rem;font-weight:500;padding:.5rem .95rem;border-radius:7px;border:1px solid rgba(255,255,255,.2);transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:5px;}
+.nav-login:hover{border-color:rgba(255,255,255,.5);color:white;}
+.nav-cta{background:var(--teal);color:white;padding:.5rem 1.2rem;border-radius:7px;font-size:.8rem;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:0 4px 14px rgba(8,145,178,.4);white-space:nowrap;}
+.nav-cta:hover{background:var(--teal2);transform:translateY(-1px);}
+
+/* HAMBURGER MOBILE */
+.nav-hamburger{display:none;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);border:none;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
+.nav-hamburger span{display:block;width:18px;height:2px;background:white;border-radius:2px;transition:all .3s;}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:#0c1a2e;z-index:199;overflow-y:auto;padding:1.5rem 5%;}
+.mm-item{border-bottom:1px solid rgba(255,255,255,.07);padding:.9rem 0;}
+.mm-item>a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:600;display:flex;align-items:center;justify-content:space-between;}
+.mm-sub{display:none;padding:.5rem 0 .5rem 1rem;}
+.mm-sub a{display:block;color:rgba(255,255,255,.5);text-decoration:none;font-size:.85rem;padding:.4rem 0;font-weight:400;}
+.mm-sub a:hover{color:white;}
+.mm-ctas{display:flex;flex-direction:column;gap:.8rem;margin-top:1.5rem;}
+.mm-ctas a{text-align:center;padding:.85rem;border-radius:9px;font-size:.9rem;font-weight:700;text-decoration:none;}
+.mm-cta1{background:var(--teal);color:white;}
+.mm-cta2{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);}
+@media(max-width:960px){
+  .nav-menu,.nav-actions{display:none!important;}
+  .nav-hamburger{display:flex!important;}
+  .mobile-menu.open{display:block;}
+}
+
+/* HERO - LIGHT */
+.hero{background:linear-gradient(160deg,#f0f9ff 0%,#ffffff 55%,#f0fdf4 100%);padding:3rem 5% 4rem;display:flex;flex-direction:column;align-items:center;gap:2.5rem;position:relative;overflow:hidden;max-width:100%;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.1) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(16,185,129,.07) 0%,transparent 70%);pointer-events:none;}
+.hero-visual{width:100%;max-width:860px;position:relative;z-index:1;animation:fadeUp .7s ease both;}
+.hero-visual img{width:100%;height:auto;display:block;}
+.hero-content{width:100%;max-width:860px;position:relative;z-index:1;animation:fadeUp .7s .2s ease both;text-align:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(8,145,178,.08);border:1px solid rgba(8,145,178,.2);color:var(--teal3);padding:.38rem .9rem;border-radius:100px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero h1{font-family:'Unbounded',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;line-height:1.1;color:var(--dark);margin-bottom:1.2rem;}
+.hero h1 .accent{color:var(--teal);}
+.hero-sub{font-size:.98rem;color:var(--gray);line-height:1.8;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto;}
+.hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.8rem;justify-content:center;}
+.btn-primary{background:var(--teal);color:white;padding:.85rem 1.8rem;border-radius:8px;font-size:.9rem;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:0 6px 20px rgba(8,145,178,.3);display:inline-block;}
+.btn-primary:hover{background:var(--teal3);transform:translateY(-2px);box-shadow:0 10px 28px rgba(8,145,178,.4);}
+.btn-secondary{background:white;color:var(--teal);padding:.85rem 1.8rem;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;border:1.5px solid rgba(8,145,178,.3);display:inline-block;transition:all .2s;}
+.btn-secondary:hover{border-color:var(--teal);box-shadow:0 4px 14px rgba(8,145,178,.12);}
+.hero-checks{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center;}
+.hero-checks span{color:var(--gray);font-size:.82rem;display:flex;align-items:center;gap:8px;font-weight:500;}
+.hero-checks span::before{content:'✓';color:var(--green);font-weight:700;}
+
+/* HERO VISUAL */
+.hero-visual{flex:1;display:flex;justify-content:flex-end;position:relative;z-index:1;animation:fadeUp .7s .2s ease both;}
+@keyframes float-app{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes slide-badge{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
+.hero-wrap{position:relative;max-width:560px;width:100%;}
+.hero-app-card{background:white;border-radius:16px;box-shadow:0 24px 70px rgba(0,0,0,.12),0 0 0 1px rgba(0,0,0,.04);overflow:hidden;animation:float-app 5s ease-in-out infinite;}
+.float-badge{position:absolute;background:white;border-radius:12px;padding:10px 14px;box-shadow:0 8px 24px rgba(0,0,0,.1);animation:slide-badge 1s ease both;z-index:10;border:1px solid var(--border);}
+.fb-top{top:-16px;left:16px;animation-delay:.6s;}
+.fb-bot{bottom:20px;right:-16px;animation-delay:.9s;}
+.fb-icon{font-size:18px;margin-bottom:3px;}
+.fb-val{font-family:'Unbounded',sans-serif;font-size:.95rem;font-weight:900;color:var(--dark);}
+.fb-lbl{font-size:.65rem;color:var(--gray);font-weight:500;}
+
+/* MOCKUP */
+.m-topbar{background:#1e293b;padding:6px 12px;display:flex;align-items:center;justify-content:space-between;}
+.m-logo{display:flex;align-items:center;gap:5px;font-family:'Unbounded',sans-serif;font-weight:700;font-size:8px;color:#06b6d4;}
+.m-logo-i{width:14px;height:14px;background:linear-gradient(135deg,#0891b2,#10b981);border-radius:3px;font-size:7px;display:flex;align-items:center;justify-content:center;}
+.m-user{display:flex;align-items:center;gap:4px;font-size:7px;color:#94a3b8;}
+.m-av{width:16px;height:16px;background:linear-gradient(135deg,#0891b2,#10b981);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:5.5px;font-weight:700;}
+.m-body{display:flex;}
+.m-sb{width:100px;background:#0f172a;padding:7px 5px;}
+.m-nav{display:flex;align-items:center;gap:4px;padding:3.5px 5px;border-radius:5px;font-size:6.5px;color:#64748b;margin-bottom:2px;}
+.m-nav.on{background:rgba(6,182,212,.15);color:#06b6d4;}
+.m-main{flex:1;padding:9px;background:#f8fafc;}
+.m-title{font-family:'Unbounded',sans-serif;font-size:6.5px;font-weight:700;color:var(--dark);margin-bottom:6px;}
+.m-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:5px;}
+.m-kpi{background:white;border-radius:4px;padding:3.5px 4px;border:1px solid var(--border);text-align:center;}
+.m-kpi .kl{font-size:4px;color:var(--gray2);font-weight:700;letter-spacing:.04em;}
+.m-kpi .kv{font-family:'Unbounded',sans-serif;font-size:8.5px;font-weight:900;}
+.m-chart{background:white;border-radius:4px;padding:6px;border:1px solid var(--border);margin-bottom:4px;}
+.m-bars{display:flex;align-items:flex-end;gap:3px;height:36px;}
+.m-bar{flex:1;border-radius:2px 2px 0 0;background:linear-gradient(to top,var(--teal),var(--teal2));}
+.m-top{background:white;border-radius:4px;padding:5px;border:1px solid var(--border);}
+.m-row{display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px solid #f1f5f9;}
+.m-rn{font-size:5.5px;color:var(--dark);font-weight:600;}
+.m-rv{font-size:5.5px;color:var(--green);font-weight:700;}
+
+/* BANDS */
+.brands-band{padding:1.8rem 5%;border-bottom:1px solid var(--border);border-top:1px solid var(--border);background:white;}
+.brands-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:center;}
+.brands-inner p{font-size:.72rem;color:var(--gray2);font-weight:700;text-transform:uppercase;letter-spacing:.08em;}
+.brand-pill{display:flex;align-items:center;gap:.4rem;padding:.4rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.75rem;font-weight:600;color:var(--gray);}
+
+.kpi-band{background:var(--dark);padding:3rem 5%;}
+.kpi-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+.kpi-item{padding:1.2rem 1rem;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.kpi-item:last-child{border-right:none;}
+.kpi-num{font-family:'Unbounded',sans-serif;font-size:1.8rem;font-weight:900;color:#06b6d4;line-height:1;margin-bottom:.35rem;}
+.kpi-num sup{font-size:.9rem;}
+.kpi-lbl{font-size:.75rem;color:rgba(255,255,255,.7);font-weight:600;margin-bottom:.15rem;}
+.kpi-sub{font-size:.65rem;color:#475569;}
+
+/* GENERAL */
+.section-tag{display:inline-block;color:var(--teal);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.7rem;}
+.section-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.45rem,2.6vw,2.1rem);font-weight:900;color:var(--dark);margin-bottom:.9rem;line-height:1.18;}
+.section-sub{color:var(--gray);font-size:.9rem;line-height:1.78;max-width:520px;}
+.divider{height:1px;background:var(--border);max-width:1200px;margin:0 auto;}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* PROMO */
+.promo{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);padding:4rem 5%;border-top:1px solid var(--light2);border-bottom:1px solid var(--light2);}
+.promo-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.promo-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(8,145,178,.1);border:1px solid rgba(8,145,178,.2);color:var(--teal3);padding:.3rem .8rem;border-radius:100px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:1rem;}
+.promo h2{font-family:'Unbounded',sans-serif;font-size:clamp(1.3rem,2.3vw,1.8rem);font-weight:900;color:var(--dark);margin-bottom:.9rem;line-height:1.2;}
+.promo p{color:var(--gray);font-size:.9rem;line-height:1.75;margin-bottom:1.3rem;}
+.promo-list{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.5rem;}
+.promo-list li{color:var(--text);font-size:.86rem;display:flex;align-items:center;gap:8px;font-weight:500;}
+.promo-list li::before{content:'✓';color:var(--teal);font-weight:700;}
+.promo-card{background:white;border:1.5px solid var(--light2);border-radius:20px;padding:2.2rem;text-align:center;box-shadow:0 12px 40px rgba(8,145,178,.1);}
+.promo-price{font-family:'Unbounded',sans-serif;font-size:4rem;font-weight:900;color:var(--teal);line-height:1;}
+.promo-price small{font-size:1.4rem;color:var(--gray);font-weight:500;}
+.promo-price-lbl{font-size:.8rem;color:var(--gray);margin-bottom:1.2rem;font-weight:500;}
+.promo-feats{list-style:none;text-align:left;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem;}
+.promo-feats li{font-size:.8rem;color:var(--gray);display:flex;align-items:center;gap:7px;font-weight:500;}
+.promo-feats li::before{content:'✓';color:var(--green);font-weight:700;}
+
+/* ABOUT */
+.about{padding:5rem 5%;}
+.about-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.about-visual{background:linear-gradient(160deg,var(--light),var(--light2));border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;align-items:center;gap:1.2rem;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;width:100%;}
+.about-stat{background:white;border-radius:12px;padding:1rem;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.05);}
+.as-val{font-family:'Unbounded',sans-serif;font-size:1.5rem;font-weight:900;color:var(--teal);}
+.as-lbl{font-size:.7rem;color:var(--gray);font-weight:500;margin-top:.2rem;}
+
+/* SERVICES */
+.services{padding:5rem 5%;background:var(--bg);}
+.services-inner{max-width:1200px;margin:0 auto;}
+.services-header{text-align:center;margin-bottom:3rem;}
+.services-header .section-sub{margin:0 auto;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.srv-card{background:white;border:1px solid var(--border);border-radius:16px;padding:1.8rem;transition:all .25s;position:relative;overflow:hidden;}
+.srv-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--green));transform:scaleX(0);transition:transform .3s;transform-origin:left;}
+.srv-card:hover{border-color:rgba(8,145,178,.3);box-shadow:0 12px 35px rgba(8,145,178,.09);transform:translateY(-4px);}
+.srv-card:hover::after{transform:scaleX(1);}
+.srv-icon{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1rem;}
+.srv-card h3{font-family:'Unbounded',sans-serif;font-size:.82rem;font-weight:700;margin-bottom:.45rem;color:var(--dark);}
+.srv-card p{font-size:.82rem;color:var(--gray);line-height:1.65;margin-bottom:.9rem;}
+.srv-link{color:var(--teal);font-size:.78rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:5px;}
+.srv-link:hover{color:var(--teal3);}
+
+/* HOW */
+.how{padding:5rem 5%;}
+.how-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.how-steps{display:flex;flex-direction:column;gap:1.4rem;margin-top:1.4rem;}
+.how-step{display:flex;align-items:flex-start;gap:1rem;}
+.step-num{width:42px;height:42px;background:linear-gradient(135deg,var(--teal),var(--teal3));border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-family:'Unbounded',sans-serif;font-size:.75rem;font-weight:900;flex-shrink:0;}
+.step-text h4{font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:.3rem;}
+.step-text p{font-size:.82rem;color:var(--gray);line-height:1.65;}
+.how-visual{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;}
+.how-row{display:flex;align-items:center;gap:.8rem;background:white;border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem;transition:all .2s;}
+.how-row:hover{border-color:var(--teal);box-shadow:0 4px 14px rgba(8,145,178,.08);}
+.hr-icon{font-size:20px;flex-shrink:0;}
+.hr-title{font-size:.85rem;font-weight:700;color:var(--dark);}
+.hr-sub{font-size:.72rem;color:var(--gray);}
+.hr-check{margin-left:auto;width:22px;height:22px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:11px;color:white;flex-shrink:0;}
+.hr-last{border-color:rgba(16,185,129,.3);background:#f0fdf4;}
+
+/* TESTIMONIALS */
+.testi{padding:5rem 5%;background:var(--bg);}
+.testi-inner{max-width:1200px;margin:0 auto;}
+.testi-header{text-align:center;margin-bottom:3rem;}
+.testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;}
+.testi-card{background:white;border:1px solid var(--border);border-radius:16px;padding:1.8rem;transition:all .2s;}
+.testi-card:hover{border-color:rgba(8,145,178,.25);box-shadow:0 8px 24px rgba(8,145,178,.07);}
+.t-stars{color:var(--orange);font-size:.85rem;margin-bottom:.8rem;letter-spacing:2px;}
+.t-text{font-size:.87rem;color:var(--gray);line-height:1.78;font-style:italic;margin-bottom:1.2rem;}
+.t-author{display:flex;align-items:center;gap:.8rem;}
+.t-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--green));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:.82rem;flex-shrink:0;}
+.t-name{font-size:.86rem;font-weight:700;color:var(--dark);}
+.t-role{font-size:.72rem;color:var(--gray2);}
+
+/* PRICING */
+.pricing{padding:5rem 5%;}
+.pricing-inner{max-width:1100px;margin:0 auto;text-align:center;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.price-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:2rem 1.8rem;text-align:left;position:relative;transition:all .22s;}
+.price-card:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.09);}
+.price-card.featured{border-color:var(--teal);background:linear-gradient(160deg,#f0f9ff,#fff);box-shadow:0 8px 30px rgba(8,145,178,.12);}
+.pop-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--teal),var(--green));color:white;font-size:.68rem;font-weight:700;padding:.28rem .9rem;border-radius:100px;white-space:nowrap;letter-spacing:.04em;}
+.plan-name{font-family:'Unbounded',sans-serif;font-size:.92rem;font-weight:900;color:var(--dark);margin-bottom:.2rem;}
+.plan-desc{font-size:.76rem;color:var(--gray);margin-bottom:1.2rem;font-weight:500;}
+.plan-price{font-family:'Unbounded',sans-serif;font-size:2.6rem;font-weight:900;color:var(--teal);line-height:1;}
+.plan-price small{font-size:.85rem;color:var(--gray);font-weight:400;font-family:'Inter',sans-serif;}
+.plan-period{font-size:.7rem;color:var(--gray2);margin-bottom:1.5rem;font-weight:500;}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:.46rem;margin-bottom:1.8rem;}
+.plan-feats li{font-size:.8rem;color:var(--gray);display:flex;align-items:center;gap:7px;font-weight:500;}
+.plan-feats li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;}
+.plan-feats li.no{opacity:.3;}
+.plan-feats li.no::before{content:'✗';color:var(--gray2);}
+.p-btn{width:100%;padding:.8rem;border-radius:9px;font-size:.83rem;font-weight:700;cursor:pointer;border:none;transition:all .2s;text-align:center;text-decoration:none;display:block;font-family:'Inter',sans-serif;}
+.p-btn-out{background:transparent;border:1.5px solid var(--border);color:var(--text);}
+.p-btn-out:hover{border-color:var(--teal);color:var(--teal);}
+.p-btn-fill{background:linear-gradient(135deg,var(--teal),var(--teal3));color:white;box-shadow:0 4px 16px rgba(8,145,178,.28);}
+.p-btn-fill:hover{box-shadow:0 8px 24px rgba(8,145,178,.38);transform:translateY(-1px);}
+
+/* FAQ */
+.faq{padding:5rem 5%;background:var(--bg);}
+.faq-inner{max-width:800px;margin:0 auto;}
+.faq-header{text-align:center;margin-bottom:2.5rem;}
+.faq-list{display:flex;flex-direction:column;gap:.7rem;}
+.faq-item{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s;}
+.faq-item.open{border-color:rgba(8,145,178,.35);}
+.faq-q{padding:1rem 1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:.88rem;font-weight:600;color:var(--dark);user-select:none;}
+.faq-icon{width:24px;height:24px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--teal);transition:transform .3s;flex-shrink:0;}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:var(--teal);color:white;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s;}
+.faq-item.open .faq-a{max-height:200px;padding:0 1.3rem 1rem;}
+.faq-a p{font-size:.84rem;color:var(--gray);line-height:1.75;}
+
+/* CTA FINAL */
+.cta-final{background:linear-gradient(135deg,var(--teal3),var(--dark));padding:5rem 5%;text-align:center;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(6,182,212,.08) 0%,transparent 70%);pointer-events:none;}
+.cta-final h2{font-family:'Unbounded',sans-serif;font-size:clamp(1.5rem,3vw,2.4rem);font-weight:900;color:white;margin-bottom:.9rem;position:relative;}
+.cta-final p{color:rgba(255,255,255,.65);font-size:.92rem;margin:0 auto 2rem;max-width:480px;position:relative;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;}
+.btn-white{background:white;color:var(--teal);padding:.85rem 2rem;border-radius:9px;font-size:.88rem;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:all .2s;display:inline-block;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.28);}
+.btn-out-white{background:transparent;color:white;padding:.85rem 2rem;border-radius:9px;font-size:.88rem;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);display:inline-block;transition:border-color .2s;}
+.btn-out-white:hover{border-color:white;}
+
+/* FOOTER */
+.footer{background:#060e1c;padding:4rem 5% 2rem;}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.07);}
+.footer-logo-text{font-family:'Unbounded',sans-serif;font-weight:900;font-size:1rem;color:white;}
+.footer-logo-text span{color:#06b6d4;}
+.footer-desc{font-size:.8rem;color:#475569;line-height:1.7;margin:.7rem 0 1.2rem;}
+.footer-contacts{display:flex;flex-direction:column;gap:.4rem;}
+.footer-contacts a{color:#06b6d4;font-size:.8rem;text-decoration:none;font-weight:500;}
+.f-col h4{font-size:.72rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.9rem;}
+.f-col ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+.f-col ul a{color:#64748b;font-size:.8rem;text-decoration:none;font-weight:500;transition:color .2s;}
+.f-col ul a:hover{color:#06b6d4;}
+.footer-bot{max-width:1200px;margin:0 auto;padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
+.footer-bot p{font-size:.73rem;color:#334155;}
+.footer-bot-links{display:flex;gap:1.5rem;}
+.footer-bot-links a{font-size:.73rem;color:#334155;text-decoration:none;}
+.footer-bot-links a:hover{color:#06b6d4;}
+
+@media(max-width:1024px){
+  .hero,.promo-inner,.about-inner,.how-inner{flex-direction:column;}
+  .hero,.about-inner,.how-inner,.promo-inner{display:flex;flex-direction:column;}
+  .about-inner,.how-inner,.promo-inner{display:grid;grid-template-columns:1fr;}
+  .hero-visual{justify-content:center;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .kpi-inner{grid-template-columns:repeat(2,1fr);}
+  .kpi-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.07);}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .services-grid,.pricing-grid,.testi-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .topbar-links{display:none;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PharmaStock",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Logiciel de gestion de pharmacie au Maroc : stock en temps réel, ordonnances OCR, assistant IA pharmaceutique et anti-péremption proactive.",
+  "url": "https://mapharmastock.com/",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Maroc"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "MAD",
+    "description": "Essai gratuit de 14 jours, sans carte bancaire"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le meilleur logiciel de gestion de pharmacie au Maroc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PharmaStock est un logiciel de gestion de pharmacie conçu spécifiquement pour le marché marocain : gestion de stock en temps réel, ordonnances par OCR, assistant IA en français et arabe, et alertes anti-péremption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien coûte un logiciel de gestion de pharmacie au Maroc ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PharmaStock propose des forfaits mensuels ou annuels à des tarifs transparents, sans frais cachés. Un essai gratuit de 14 jours permet de tester toutes les fonctionnalités avant de s'engager."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'essai est-il vraiment sans engagement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, l'essai de 14 jours est entièrement gratuit, sans carte bancaire requise et sans engagement. Vous pouvez annuler à tout moment sans frais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je importer mes données depuis mon ancien logiciel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, PharmaStock supporte l'import CSV pour votre stock existant ainsi que l'import de catalogues fournisseurs au format PDF. Notre équipe vous accompagne lors de la migration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne l'OCR des ordonnances ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vous photographiez ou uploadez l'ordonnance (JPG, PNG ou PDF). Notre IA analyse l'image et extrait automatiquement les médicaments, dosages et posologies en quelques secondes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'assistant IA parle-t-il arabe et français ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, l'assistant IA répond en français et comprend les questions en arabe. Il est spécialisé sur les médicaments disponibles au Maroc avec les noms commerciaux locaux."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mes données sont-elles sécurisées ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toutes vos données sont chiffrées et stockées sur des serveurs sécurisés. Chaque pharmacie a ses données strictement isolées. Nous respectons les normes de protection des données en vigueur au Maroc."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <p><strong>🚧 En développement</strong> Le site est en cours de développement — <a href="demande-essai.html" style="color:#fff;text-decoration:underline;font-weight:700;">Réservez votre essai</a></p>
+  <div class="topbar-links">
+    <a href="tel:+212600000000">📞 +212 6 00 00 00 00</a>
+    <a href="mailto:contact@pharmastock.ma">✉ contact@pharmastock.ma</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">💊</div>
+      <span class="logo-text">Pharma<span>Stock</span></span>
+    </a>
+
+    <ul class="nav-menu">
+      <li>
+        <a href="qui-sommes-nous.html">Qui sommes-nous <span class="arrow">▾</span></a>
+        <div class="dropdown" style="min-width:520px">
+          <div class="dd-col">
+            <div class="dd-label">Notre histoire</div>
+            <div class="dd-items">
+              <a href="qui-sommes-nous.html" class="dd-item"><div class="dd-item-icon">🏥</div><div class="dd-item-text"><span class="title">À propos de PharmaStock</span><span class="sub">Notre mission, nos valeurs et notre équipe</span></div></a>
+              <a href="qui-sommes-nous.html#comment" class="dd-item"><div class="dd-item-icon">🎯</div><div class="dd-item-text"><span class="title">Comment ça marche</span><span class="sub">Découvrez notre processus en 4 étapes</span></div></a>
+              <a href="qui-sommes-nous.html#valeurs" class="dd-item"><div class="dd-item-icon">⚙️</div><div class="dd-item-text"><span class="title">Nos valeurs</span><span class="sub">Ce qui nous distingue</span></div></a>
+            </div>
+          </div>
+          <div class="dd-col" style="min-width:200px">
+            <div class="dd-promo">
+              <div class="dp-tag">🇲🇦 N°1 au Maroc</div>
+              <div class="dp-title">Conçu pour les pharmaciens marocains</div>
+              <div class="dp-sub">Un logiciel pensé localement avec IA Claude Anthropic.</div>
+              <a href="qui-sommes-nous.html">Découvrir notre histoire →</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- OFFRES -->
+      <li>
+        <a href="offres.html">Offres <span class="arrow">▾</span></a>
+        <div class="dropdown" style="min-width:580px">
+          <div class="dd-col">
+            <div class="dd-label">Nos forfaits</div>
+            <div class="dd-items">
+              <a href="offres.html#starter" class="dd-item"><div class="dd-item-icon" style="background:#f0f9ff">🟢</div><div class="dd-item-text"><span class="title">Starter — 150 DH/mois</span><span class="sub">Jusqu'à 500 références, 1 utilisateur</span></div></a>
+              <a href="offres.html#pro" class="dd-item"><div class="dd-item-icon" style="background:#e0f2fe">⭐</div><div class="dd-item-text"><span class="title">Pro — 300 DH/mois</span><span class="sub">Stock illimité, OCR + IA inclus, 3 utilisateurs</span></div></a>
+              <a href="offres.html#enterprise" class="dd-item"><div class="dd-item-icon" style="background:#fef3c7">🏆</div><div class="dd-item-text"><span class="title">Enterprise — 600 DH/mois</span><span class="sub">Multi-pharmacies, utilisateurs illimités, 24/7</span></div></a>
+            </div>
+          </div>
+          <div class="dd-col" style="min-width:200px">
+            <div class="dd-label">Essai gratuit</div>
+            <div class="dd-promo">
+              <div class="dp-tag">🔥 Offre limitée</div>
+              <div class="dp-title">14 jours gratuits sans engagement</div>
+              <div class="dp-sub">Aucune carte bancaire. Accès complet dès le départ.</div>
+              <a href="demande-essai.html">Démarrer l'essai →</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- DEMANDER UN ESSAI -->
+      <li>
+        <a href="demande-essai.html">Demander un essai <span class="arrow">▾</span></a>
+        <div class="dropdown" style="min-width:500px">
+          <div class="dd-col">
+            <div class="dd-label">Commencer</div>
+            <div class="dd-items">
+              <a href="demande-essai.html" class="dd-item"><div class="dd-item-icon">📝</div><div class="dd-item-text"><span class="title">Formulaire de demande</span><span class="sub">Remplissez votre demande en 3 étapes simples</span></div></a>
+              <a href="demande-essai.html" class="dd-item"><div class="dd-item-icon">🎬</div><div class="dd-item-text"><span class="title">Demander une démo live</span><span class="sub">Notre équipe vous présente l'application</span></div></a>
+              <a href="https://app.mapharmastock.com/login" class="dd-item"><div class="dd-item-icon">🔐</div><div class="dd-item-text"><span class="title">Se connecter</span><span class="sub">Accéder à votre espace PharmaStock</span></div></a>
+            </div>
+          </div>
+          <div class="dd-col" style="min-width:190px">
+            <div class="dd-label">Garanties</div>
+            <div class="dd-items">
+              <div class="dd-item" style="background:var(--bg);border-radius:9px"><div class="dd-item-icon">⏱️</div><div class="dd-item-text"><span class="title" style="color:var(--green)">Réponse sous 24h</span><span class="sub">Notre équipe vous recontacte rapidement</span></div></div>
+              <div class="dd-item" style="background:var(--bg);border-radius:9px"><div class="dd-item-icon">🆓</div><div class="dd-item-text"><span class="title" style="color:var(--teal)">Sans carte bancaire</span><span class="sub">14 jours d'essai entièrement gratuits</span></div></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- CONTACT -->
+      <li>
+        <a href="contact.html">Contact <span class="arrow">▾</span></a>
+        <div class="dropdown" style="min-width:480px">
+          <div class="dd-col">
+            <div class="dd-label">Nous joindre</div>
+            <div class="dd-items">
+              <a href="contact.html" class="dd-item"><div class="dd-item-icon">📧</div><div class="dd-item-text"><span class="title">Envoyer un message</span><span class="sub">contact@pharmastock.ma</span></div></a>
+              <a href="tel:+212600000000" class="dd-item"><div class="dd-item-icon">📞</div><div class="dd-item-text"><span class="title">Appeler notre équipe</span><span class="sub">+212 6 00 00 00 00 · Lun–Ven 9h–18h</span></div></a>
+              <a href="contact.html" class="dd-item"><div class="dd-item-icon">💬</div><div class="dd-item-text"><span class="title">WhatsApp</span><span class="sub">Réponse rapide garantie</span></div></a>
+              <a href="contact.html" class="dd-item"><div class="dd-item-icon">🗓️</div><div class="dd-item-text"><span class="title">Planifier une démo</span><span class="sub">Choisissez un créneau avec notre équipe</span></div></a>
+            </div>
+          </div>
+          <div class="dd-col" style="min-width:185px">
+            <div class="dd-label">Localisation</div>
+            <div class="dd-promo">
+              <div class="dp-tag">📍 Casablanca, Maroc</div>
+              <div class="dp-title">DZ Consulting</div>
+              <div class="dp-sub">Lun–Ven · 9h00–18h00 GMT+1</div>
+              <a href="contact.html">Voir toutes les options →</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="https://app.mapharmastock.com/login" class="nav-login">🔐 Se connecter</a>
+      <a href="demande-essai.html" class="nav-cta">Essai gratuit</a>
+    </div>
+
+    <!-- HAMBURGER MOBILE -->
+    <button class="nav-hamburger" onclick="toggleMobile()" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-item"><a href="#apropos">Qui sommes-nous <span>›</span></a><div class="mm-sub"><a href="#apropos">À propos</a><a href="#comment">Comment ça marche</a><a href="#services">Nos services</a></div></div>
+  <div class="mm-item"><a href="#tarifs">Offres <span>›</span></a><div class="mm-sub"><a href="demande-essai.html">Starter — 150 DH/mois</a><a href="demande-essai.html">Pro — 300 DH/mois</a><a href="demande-essai.html">Enterprise — 600 DH/mois</a></div></div>
+  <div class="mm-item"><a href="demande-essai.html">Demander un essai</a></div>
+  <div class="mm-item"><a href="contact.html">Contact</a></div>
+  <div class="mm-item"><a href="#faq">FAQ</a></div>
+  <div class="mm-ctas">
+    <a href="demande-essai.html" class="mm-cta1">Demander un essai gratuit →</a>
+    <a href="https://app.mapharmastock.com/login" class="mm-cta2">Se connecter</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- ILLUSTRATION EN HAUT -->
+  <div class="hero-visual">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" style="width:100%;height:auto;display:block;max-width:860px;margin:0 auto;">
+      <defs>
+        <style>
+          @keyframes ps-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+          @keyframes ps-float2{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+          @keyframes ps-pulse{0%,100%{opacity:1}50%{opacity:.4}}
+          @keyframes ps-fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+          @keyframes ps-slide{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
+          @keyframes ps-blink{0%,88%,100%{transform:scaleY(1)}94%{transform:scaleY(0.05)}}
+          .ps-float{animation:ps-float 4s ease-in-out infinite;}
+          .ps-float2{animation:ps-float2 4s .8s ease-in-out infinite;}
+          .ps-pulse{animation:ps-pulse 2s ease-in-out infinite;}
+          .ps-f1{animation:ps-fadein .6s .2s ease both;}
+          .ps-f2{animation:ps-fadein .6s .5s ease both;}
+          .ps-f3{animation:ps-fadein .6s .8s ease both;}
+          .ps-s1{animation:ps-slide .6s .4s ease both;}
+          .ps-s2{animation:ps-slide .6s .7s ease both;}
+          .ps-s3{animation:ps-slide .6s 1s ease both;}
+        </style>
+        <linearGradient id="ps-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0f9ff"/><stop offset="60%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f0fdf4"/></linearGradient>
+        <linearGradient id="ps-screen" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+        <linearGradient id="ps-teal" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0891b2"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+        <linearGradient id="ps-green" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+        <linearGradient id="ps-bar" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" stop-color="#0891b2"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient>
+        <linearGradient id="ps-coat" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+        <linearGradient id="ps-skin" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#fcd9b5"/><stop offset="100%" stop-color="#f5c29a"/></linearGradient>
+        <filter id="ps-shadow"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0891b2" flood-opacity=".12"/></filter>
+        <filter id="ps-soft"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity=".1"/></filter>
+        <clipPath id="ps-clip"><rect x="340" y="58" width="328" height="240" rx="12"/></clipPath>
+      </defs>
+
+      <!-- BG -->
+      <rect width="800" height="520" fill="url(#ps-bg)" rx="20"/>
+      <circle cx="650" cy="80" r="120" fill="rgba(8,145,178,.05)"/>
+      <circle cx="80" cy="420" r="90" fill="rgba(16,185,129,.05)"/>
+
+      <!-- LAPTOP -->
+      <g class="ps-float" style="transform-origin:500px 250px">
+        <ellipse cx="500" cy="315" rx="195" ry="16" fill="#cbd5e1" opacity=".4"/>
+        <rect x="315" y="300" width="380" height="14" rx="4" fill="#94a3b8"/>
+        <rect x="295" y="308" width="420" height="9" rx="3" fill="#64748b"/>
+        <rect x="330" y="48" width="348" height="260" rx="14" fill="#1e293b" filter="url(#ps-shadow)"/>
+        <rect x="340" y="58" width="328" height="240" rx="10" fill="url(#ps-screen)"/>
+        <g clip-path="url(#ps-clip)">
+          <rect x="340" y="58" width="328" height="30" fill="#0f172a"/>
+          <rect x="350" y="66" width="14" height="14" rx="3" fill="url(#ps-teal)"/>
+          <text x="352" y="77" font-size="8" fill="white" font-family="sans-serif" font-weight="700">💊</text>
+          <text x="370" y="77" font-size="8" fill="#06b6d4" font-family="sans-serif" font-weight="700">PharmaStock</text>
+          <circle cx="646" cy="73" r="8" fill="url(#ps-teal)"/>
+          <text x="643" y="77" font-size="6" fill="white" font-family="sans-serif" font-weight="700">MD</text>
+          <rect x="340" y="88" width="68" height="210" fill="#0a1628"/>
+          <rect x="344" y="96" width="60" height="17" rx="4" fill="rgba(6,182,212,.2)"/>
+          <text x="348" y="108" font-size="6.5" fill="#06b6d4" font-family="sans-serif">📊 Tableau</text>
+          <text x="348" y="124" font-size="6.5" fill="#475569" font-family="sans-serif">⚠️ Péremption</text>
+          <text x="348" y="140" font-size="6.5" fill="#475569" font-family="sans-serif">📦 Stock</text>
+          <text x="348" y="156" font-size="6.5" fill="#475569" font-family="sans-serif">📋 Ordonnances</text>
+          <text x="348" y="172" font-size="6.5" fill="#475569" font-family="sans-serif">📈 Ventes</text>
+          <text x="348" y="188" font-size="6.5" fill="#f59e0b" font-family="sans-serif">🤖 IA</text>
+          <rect x="408" y="88" width="260" height="210" fill="#f8fafc"/>
+          <text x="414" y="103" font-size="7.5" fill="#0c1a2e" font-family="sans-serif" font-weight="700">🏪 Ma Pharmacie — Tableau de Bord</text>
+          <rect x="412" y="108" width="56" height="28" rx="4" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="416" y="118" font-size="4.5" fill="#94a3b8" font-family="sans-serif" font-weight="700">MÉDICAMENTS</text>
+          <text x="416" y="129" font-size="10" fill="#0891b2" font-family="sans-serif" font-weight="900">2748</text>
+          <rect x="472" y="108" width="56" height="28" rx="4" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="476" y="118" font-size="4.5" fill="#94a3b8" font-family="sans-serif" font-weight="700">ALERTES</text>
+          <text x="476" y="129" font-size="10" fill="#f59e0b" font-family="sans-serif" font-weight="900">79</text>
+          <rect x="532" y="108" width="56" height="28" rx="4" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="536" y="118" font-size="4.5" fill="#94a3b8" font-family="sans-serif" font-weight="700">CA JOUR</text>
+          <text x="536" y="129" font-size="10" fill="#10b981" font-family="sans-serif" font-weight="900">80€</text>
+          <rect x="592" y="108" width="56" height="28" rx="4" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="596" y="118" font-size="4.5" fill="#94a3b8" font-family="sans-serif" font-weight="700">À RISQUE</text>
+          <text x="596" y="129" font-size="10" fill="#ef4444" font-family="sans-serif" font-weight="900">66</text>
+          <rect x="412" y="142" width="148" height="68" rx="5" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="418" y="153" font-size="5.5" fill="#0c1a2e" font-family="sans-serif" font-weight="700">📈 Évolution CA 2026</text>
+          <rect x="420" y="186" width="10" height="18" rx="2" fill="url(#ps-bar)" opacity=".6"/>
+          <rect x="434" y="176" width="10" height="28" rx="2" fill="url(#ps-bar)" opacity=".7"/>
+          <rect x="448" y="161" width="10" height="43" rx="2" fill="url(#ps-bar)"/>
+          <rect x="462" y="168" width="10" height="36" rx="2" fill="url(#ps-bar)" opacity=".9"/>
+          <rect x="476" y="181" width="10" height="23" rx="2" fill="url(#ps-bar)" opacity=".65"/>
+          <rect x="490" y="190" width="10" height="14" rx="2" fill="url(#ps-bar)" opacity=".45"/>
+          <rect x="504" y="194" width="10" height="10" rx="2" fill="url(#ps-bar)" opacity=".35"/>
+          <rect x="566" y="142" width="82" height="68" rx="5" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="572" y="153" font-size="5" fill="#0c1a2e" font-family="sans-serif" font-weight="700">État des stocks</text>
+          <circle cx="598" cy="177" r="19" fill="#10b981"/>
+          <path d="M598,177 L598,158 A19,19 0 0,1 615,187 Z" fill="#f59e0b"/>
+          <path d="M598,177 L615,187 A19,19 0 0,1 590,196 Z" fill="#ef4444"/>
+          <rect x="624" y="163" width="5" height="5" rx="1" fill="#10b981"/>
+          <text x="632" y="168" font-size="4.5" fill="#64748b" font-family="sans-serif">OK 95%</text>
+          <rect x="624" y="172" width="5" height="5" rx="1" fill="#f59e0b"/>
+          <text x="632" y="177" font-size="4.5" fill="#64748b" font-family="sans-serif">&lt;30j 3%</text>
+          <rect x="624" y="181" width="5" height="5" rx="1" fill="#ef4444"/>
+          <text x="632" y="186" font-size="4.5" fill="#64748b" font-family="sans-serif">Pér. 2%</text>
+          <rect x="412" y="216" width="236" height="56" rx="5" fill="white" stroke="#e2e8f0" stroke-width=".8"/>
+          <text x="418" y="226" font-size="5.5" fill="#0c1a2e" font-family="sans-serif" font-weight="700">🏆 Top médicaments</text>
+          <text x="418" y="238" font-size="5" fill="#1e293b" font-family="sans-serif">🥇 ZITHROMAX 500mg</text>
+          <text x="578" y="238" font-size="5" fill="#10b981" font-family="sans-serif" font-weight="700">2 316€</text>
+          <text x="418" y="249" font-size="5" fill="#1e293b" font-family="sans-serif">🥈 ABBOTICINE 250mg</text>
+          <text x="578" y="249" font-size="5" fill="#10b981" font-family="sans-serif" font-weight="700">616€</text>
+          <text x="418" y="260" font-size="5" fill="#1e293b" font-family="sans-serif">🥉 AUGMENTIN 1g</text>
+          <text x="578" y="260" font-size="5" fill="#10b981" font-family="sans-serif" font-weight="700">564€</text>
+          <rect x="340" y="278" width="328" height="20" fill="#fef3c7"/>
+          <text x="355" y="292" font-size="6.5" fill="#92400e" font-family="sans-serif" font-weight="600">⚠️ 55 lots expirés à retirer — Voir Anti-Péremption</text>
+          <g class="ps-pulse"><circle cx="478" cy="173" r="3" fill="rgba(6,182,212,.7)"/><circle cx="478" cy="173" r="6" fill="none" stroke="rgba(6,182,212,.3)" stroke-width="1.5"/></g>
+        </g>
+        <circle cx="504" cy="62" r="3" fill="#0f172a"/>
+      </g>
+
+      <!-- PHARMACIENNE -->
+      <g class="ps-float2" style="transform-origin:175px 300px">
+        <ellipse cx="175" cy="490" rx="75" ry="11" fill="rgba(0,0,0,.07)"/>
+        <rect x="144" y="400" width="26" height="88" rx="11" fill="#1e293b"/>
+        <rect x="180" y="400" width="26" height="88" rx="11" fill="#1e293b"/>
+        <ellipse cx="157" cy="488" rx="20" ry="8" fill="#0f172a"/>
+        <ellipse cx="193" cy="488" rx="20" ry="8" fill="#0f172a"/>
+        <rect x="122" y="222" width="106" height="186" rx="16" fill="url(#ps-coat)" stroke="#e2e8f0" stroke-width="1.5"/>
+        <path d="M156 222 L175 248 L194 222" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="130" y="278" width="28" height="20" rx="4" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+        <rect x="136" y="274" width="4" height="12" rx="2" fill="#0891b2"/>
+        <rect x="142" y="274" width="4" height="12" rx="2" fill="#10b981"/>
+        <rect x="166" y="274" width="38" height="24" rx="4" fill="#0891b2"/>
+        <text x="169" y="284" font-size="6.5" fill="white" font-family="sans-serif" font-weight="700">Dr. Said</text>
+        <text x="169" y="293" font-size="5.5" fill="rgba(255,255,255,.7)" font-family="sans-serif">Pharmacien</text>
+        <path d="M150 238 Q132 258 134 278 Q136 298 150 303" stroke="#0891b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle cx="150" cy="305" r="6" fill="#0891b2" stroke="white" stroke-width="1.5"/>
+        <path d="M150 238 Q162 231 172 238" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+        <circle cx="148" cy="237" r="3.5" fill="#0f172a"/>
+        <circle cx="172" cy="236" r="3.5" fill="#0f172a"/>
+        <path d="M122 257 Q86 267 80 310" stroke="url(#ps-coat)" stroke-width="24" fill="none" stroke-linecap="round"/>
+        <path d="M228 257 Q262 262 274 296" stroke="url(#ps-coat)" stroke-width="24" fill="none" stroke-linecap="round"/>
+        <ellipse cx="77" cy="314" rx="11" ry="9" fill="#fcd9b5"/>
+        <rect x="52" y="300" width="50" height="70" rx="7" fill="#1e293b" filter="url(#ps-soft)"/>
+        <rect x="56" y="304" width="42" height="62" rx="4" fill="#0891b2" opacity=".9"/>
+        <rect x="58" y="308" width="38" height="4" rx="2" fill="white" opacity=".8"/>
+        <rect x="58" y="315" width="26" height="2.5" rx="1" fill="white" opacity=".5"/>
+        <rect x="58" y="320" width="32" height="2.5" rx="1" fill="white" opacity=".4"/>
+        <rect x="58" y="328" width="38" height="14" rx="2.5" fill="white" opacity=".12"/>
+        <rect x="60" y="331" width="14" height="2" rx="1" fill="white" opacity=".7"/>
+        <rect x="60" y="335" width="20" height="2" rx="1" fill="white" opacity=".5"/>
+        <circle cx="77" cy="368" r="3.5" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+        <ellipse cx="278" cy="298" rx="11" ry="9" fill="#fcd9b5"/>
+        <path d="M278 292 L281 277 Q282 269 279 267 Q276 265 275 271 L274 285" stroke="#fcd9b5" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <ellipse cx="272" cy="293" rx="5" ry="6.5" fill="#fcd9b5"/>
+        <rect x="165" y="187" width="21" height="38" rx="9" fill="#fcd9b5"/>
+        <ellipse cx="175" cy="158" rx="42" ry="48" fill="url(#ps-skin)"/>
+        <path d="M133 145 Q135 100 175 92 Q215 100 217 145 Q207 108 175 104 Q143 108 133 145Z" fill="#1a0a00"/>
+        <path d="M133 145 Q127 162 131 176" stroke="#1a0a00" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <path d="M217 145 Q223 162 219 176" stroke="#1a0a00" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <ellipse cx="161" cy="162" rx="6.5" ry="7" fill="white"/>
+        <ellipse cx="189" cy="162" rx="6.5" ry="7" fill="white"/>
+        <circle cx="162" cy="163" r="4" fill="#2c1810" style="animation:ps-blink 4s infinite;transform-origin:162px 163px"/>
+        <circle cx="190" cy="163" r="4" fill="#2c1810" style="animation:ps-blink 4s .15s infinite;transform-origin:190px 163px"/>
+        <circle cx="164" cy="161" r="1.4" fill="white"/>
+        <circle cx="192" cy="161" r="1.4" fill="white"/>
+        <path d="M154 153 Q161 149 168 152" stroke="#2c1810" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M182 152 Q189 149 196 153" stroke="#2c1810" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M163 176 Q175 185 187 176" stroke="#c0736a" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <path d="M173 168 Q170 174 173 177 Q175 179 177 177 Q180 174 177 168" stroke="#d4917a" stroke-width="1.3" fill="none"/>
+        <rect x="153" y="157" width="22" height="14" rx="5" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+        <rect x="177" y="157" width="22" height="14" rx="5" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+        <line x1="175" y1="164" x2="177" y2="164" stroke="#1e293b" stroke-width="1.8"/>
+        <line x1="151" y1="164" x2="146" y2="161" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="199" y1="164" x2="204" y2="161" stroke="#1e293b" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="150" cy="172" rx="7" ry="4" fill="#f0a090" opacity=".22"/>
+        <ellipse cx="200" cy="172" rx="7" ry="4" fill="#f0a090" opacity=".22"/>
+      </g>
+
+      <!-- CONNECTION LINE -->
+      <path d="M280 288 Q315 278 338 252" stroke="#06b6d4" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity=".35"/>
+
+      <!-- BADGES -->
+      <g class="ps-s1"><rect x="558" y="18" width="185" height="50" rx="12" fill="white" stroke="#e2e8f0" stroke-width="1" filter="url(#ps-soft)"/><rect x="566" y="26" width="7" height="7" rx="2" fill="#10b981" class="ps-pulse"/><text x="579" y="35" font-size="9" fill="#0c1a2e" font-family="sans-serif" font-weight="700">✅ Stock mis à jour</text><text x="566" y="48" font-size="7.5" fill="#64748b" font-family="sans-serif">DOLIPRANE +50 unités</text><text x="566" y="60" font-size="6.5" fill="#94a3b8" font-family="sans-serif">Il y a 2 minutes</text></g>
+      <g class="ps-s2"><rect x="16" y="118" width="172" height="50" rx="12" fill="white" stroke="#fcd34d" stroke-width="1.5" filter="url(#ps-soft)"/><rect x="24" y="126" width="7" height="7" rx="2" fill="#f59e0b" class="ps-pulse"/><text x="37" y="135" font-size="8.5" fill="#92400e" font-family="sans-serif" font-weight="700">⚠️ Alerte péremption</text><text x="24" y="148" font-size="7.5" fill="#64748b" font-family="sans-serif">ICAZ LP — 29 unités</text><text x="24" y="160" font-size="6.5" fill="#94a3b8" font-family="sans-serif">Expire dans 3 jours</text></g>
+      <g class="ps-s3"><rect x="553" y="398" width="205" height="50" rx="12" fill="white" stroke="#e0f2fe" stroke-width="1.5" filter="url(#ps-soft)"/><rect x="561" y="406" width="7" height="7" rx="2" fill="#0891b2" class="ps-pulse"/><text x="574" y="415" font-size="8.5" fill="#0c1a2e" font-family="sans-serif" font-weight="700">🤖 Assistant IA actif</text><text x="561" y="428" font-size="7" fill="#64748b" font-family="sans-serif">Ordonnance — 3 médicaments</text><text x="561" y="440" font-size="6.5" fill="#94a3b8" font-family="sans-serif">Claude Haiku · 0.8s</text></g>
+      <g class="ps-f3"><rect x="16" y="378" width="162" height="50" rx="12" fill="white" stroke="#dcfce7" stroke-width="1.5" filter="url(#ps-soft)"/><rect x="24" y="386" width="7" height="7" rx="2" fill="#10b981" class="ps-pulse"/><text x="37" y="395" font-size="8.5" fill="#0c1a2e" font-family="sans-serif" font-weight="700">💰 Vente enregistrée</text><text x="24" y="408" font-size="7.5" fill="#64748b" font-family="sans-serif">Montant : 26,80 MAD</text><text x="24" y="420" font-size="6.5" fill="#94a3b8" font-family="sans-serif">Via ordonnance OCR</text></g>
+
+      <!-- BRAND LABEL -->
+      <g class="ps-f1"><rect x="298" y="454" width="208" height="38" rx="19" fill="url(#ps-teal)" opacity=".95" filter="url(#ps-soft)"/><text x="358" y="469" font-size="10.5" fill="white" font-family="sans-serif" font-weight="700">💊 PharmaStock</text><text x="336" y="484" font-size="8.5" fill="rgba(255,255,255,.8)" font-family="sans-serif">Gérez intelligemment</text></g>
+    </svg>
+  </div>
+
+  <!-- TEXTE EN BAS -->
+  <div class="hero-content">
+    <div class="hero-tag">🇲🇦 N°1 au Maroc</div>
+    <h1>Gestion de Pharmacie<br><span class="accent">Simplifiée</span><br>Stock Maîtrisé</h1>
+    <p class="hero-sub">Rejoignez PharmaStock et gérez votre officine avec intelligence. Stock en temps réel, ordonnances OCR, assistant IA pharmaceutique et anti-péremption proactive.</p>
+    <div class="hero-btns">
+      <a href="demande-essai.html" class="btn-primary">Demander un essai gratuit</a>
+      <a href="#services" class="btn-secondary">Découvrir les services</a>
+    </div>
+    <div class="hero-checks">
+      <span>100% adapté aux pharmacies marocaines</span>
+      <span>Accompagnement humain et personnalisé</span>
+      <span>Assistant IA propulsé par Claude (Anthropic)</span>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<div class="brands-band">
+  <div class="brands-inner">
+    <p>Compatible avec</p>
+    <div class="brand-pill">🏥 CNOPS</div>
+    <div class="brand-pill">🏛️ CNSS</div>
+    <div class="brand-pill">📋 PDF Ordonnances</div>
+    <div class="brand-pill">🤖 Claude AI</div>
+    <div class="brand-pill">📱 WhatsApp</div>
+    <div class="brand-pill">📊 Export Excel</div>
+  </div>
+</div>
+
+<!-- KPI BAND -->
+<div class="kpi-band">
+  <div class="kpi-inner" style="grid-template-columns:repeat(5,1fr)">
+    <div class="kpi-item"><div class="kpi-num">2 748</div><div class="kpi-lbl">Médicaments gérés</div><div class="kpi-sub">Références en temps réel</div></div>
+    <div class="kpi-item"><div class="kpi-num" style="color:#ef4444">55</div><div class="kpi-lbl">Lots expirés détectés</div><div class="kpi-sub">Gestion péremption proactive</div></div>
+    <div class="kpi-item"><div class="kpi-num">97<sup>%</sup></div><div class="kpi-lbl">Économie IA</div><div class="kpi-sub">Cache prompt Anthropic</div></div>
+    <div class="kpi-item"><div class="kpi-num">1.4M</div><div class="kpi-lbl">MAD pertes évitées</div><div class="kpi-sub">Anti-péremption proactif</div></div>
+    <div class="kpi-item"><div class="kpi-num">99.9<sup>%</sup></div><div class="kpi-lbl">Disponibilité</div><div class="kpi-sub">Infrastructure sécurisée</div></div>
+  </div>
+</div>
+
+<!-- PROMO -->
+<div class="promo">
+  <div class="promo-inner">
+    <div class="reveal">
+      <div class="promo-badge">🔥 Offre du moment</div>
+      <h2>Profitez dès aujourd'hui des tarifs parmi les plus bas du marché marocain.</h2>
+      <p>Chez PharmaStock, nous croyons que la performance commence par des conditions avantageuses.</p>
+      <ul class="promo-list">
+        <li>Forfait Pro à seulement <strong>150 DH/mois</strong></li>
+        <li>Aucun engagement, aucun frais caché</li>
+        <li>Accompagnement personnalisé inclus</li>
+        <li>Assistant IA et OCR ordonnances inclus</li>
+      </ul>
+      <a href="demande-essai.html" class="btn-primary">Profiter de l'offre →</a>
+    </div>
+    <div class="reveal">
+      <div class="promo-card">
+        <div class="promo-price">150<small> DH</small></div>
+        <div class="promo-price-lbl">par mois — Forfait Pro</div>
+        <ul class="promo-feats">
+          <li>Stock illimité</li>
+          <li>OCR ordonnances automatique</li>
+          <li>Assistant IA inclus</li>
+          <li>3 utilisateurs</li>
+          <li>Support prioritaire</li>
+          <li>Essai 14j gratuit</li>
+        </ul>
+        <a href="demande-essai.html" class="btn-primary" style="text-align:center">Démarrer l'essai →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="apropos">
+  <div class="about-inner">
+    <div class="about-visual reveal">
+      <div style="text-align:center">
+        <svg width="130" height="210" viewBox="0 0 180 320" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="90" cy="200" r="100" fill="#e0f2fe" opacity="0.5"/>
+          <rect x="45" y="155" width="90" height="130" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+          <path d="M75 155 L90 175 L105 155" fill="none" stroke="#0891b2" stroke-width="1.5"/>
+          <rect x="55" y="190" width="22" height="16" rx="3" fill="#f0f9ff" stroke="#bae6fd" stroke-width="0.8"/>
+          <rect x="61" y="188" width="3" height="12" rx="1" fill="#0891b2"/><rect x="66" y="188" width="3" height="12" rx="1" fill="#10b981"/>
+          <rect x="98" y="188" width="28" height="18" rx="3" fill="#0891b2"/>
+          <rect x="55" y="155" width="70" height="20" rx="4" fill="#e0f2fe"/>
+          <path d="M45 165 Q20 180 25 220" stroke="white" stroke-width="18" fill="none" stroke-linecap="round"/>
+          <path d="M135 165 Q155 175 150 210" stroke="white" stroke-width="18" fill="none" stroke-linecap="round"/>
+          <ellipse cx="18" cy="210" rx="8" ry="6" fill="#f5d0a9"/>
+          <ellipse cx="152" cy="213" rx="8" ry="6" fill="#f5d0a9"/>
+          <path d="M152 207 L152 198" stroke="#f5d0a9" stroke-width="5" stroke-linecap="round"/>
+          <rect x="82" y="125" width="16" height="32" rx="6" fill="#f5d0a9"/>
+          <ellipse cx="90" cy="105" rx="32" ry="36" fill="#f5d0a9"/>
+          <path d="M58 95 Q60 65 90 60 Q120 65 122 95 Q115 75 90 72 Q65 75 58 95Z" fill="#2c1810"/>
+          <path d="M58 95 Q55 105 60 115" stroke="#2c1810" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path d="M122 95 Q125 105 120 115" stroke="#2c1810" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <ellipse cx="78" cy="108" rx="5" ry="5.5" fill="white"/><ellipse cx="102" cy="108" rx="5" ry="5.5" fill="white"/>
+          <circle cx="79" cy="109" r="3" fill="#2c1810"/><circle cx="103" cy="109" r="3" fill="#2c1810"/>
+          <circle cx="80" cy="108" r="1" fill="white"/><circle cx="104" cy="108" r="1" fill="white"/>
+          <path d="M73 102 Q78 99 83 101" stroke="#2c1810" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M97 101 Q102 99 107 102" stroke="#2c1810" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M80 120 Q90 128 100 120" stroke="#c0736a" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="71" y="104" width="18" height="12" rx="4" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+          <rect x="91" y="104" width="18" height="12" rx="4" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+          <path d="M89 110 L91 110" stroke="#1e293b" stroke-width="1.5"/>
+          <rect x="62" y="280" width="22" height="35" rx="6" fill="#1e293b"/>
+          <rect x="96" y="280" width="22" height="35" rx="6" fill="#1e293b"/>
+          <ellipse cx="73" cy="315" rx="14" ry="7" fill="#0f172a"/><ellipse cx="107" cy="315" rx="14" ry="7" fill="#0f172a"/>
+          <path d="M72 165 Q65 175 68 185 Q71 195 80 195" stroke="#0891b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="80" cy="196" r="5" fill="#0891b2" stroke="white" stroke-width="1"/>
+          <path d="M72 165 Q80 160 88 165" stroke="#0891b2" stroke-width="2.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat"><div class="as-val">14j</div><div class="as-lbl">Essai gratuit</div></div>
+        <div class="about-stat"><div class="as-val">OCR</div><div class="as-lbl">Ordonnances auto</div></div>
+        <div class="about-stat"><div class="as-val">IA</div><div class="as-lbl">Claude Anthropic</div></div>
+        <div class="about-stat"><div class="as-val">24/7</div><div class="as-lbl">Disponibilité</div></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="section-tag">À propos de nous</span>
+      <h2 class="section-title">Un accompagnement Humain, Transparent et Engagé.</h2>
+      <p class="section-sub">Chez PharmaStock, nous croyons en une nouvelle façon de gérer une pharmacie : intelligente, sécurisée et valorisante.<br><br>Notre équipe accompagne les pharmaciens marocains avec un logiciel tout-en-un conçu pour simplifier le quotidien. Nous offrons un accompagnement de proximité, une gestion rigoureuse, et une technologie IA de pointe.</p>
+      <a href="#services" class="btn-primary" style="display:inline-block;margin-top:1.5rem">Découvrir nos services →</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <span class="section-tag">Nos Solutions</span>
+      <h2 class="section-title">Nos Solutions pour les Pharmaciens</h2>
+      <p class="section-sub">PharmaStock met à votre disposition une gamme complète de services pour vous accompagner à chaque étape.</p>
+    </div>
+    <div class="services-grid">
+      <div class="srv-card reveal"><div class="srv-icon" style="background:#e0f2fe">📦</div><h3>Gestion du Stock</h3><p>Suivez vos 2 700+ références en temps réel. Alertes automatiques de rupture et réapprovisionnement intelligent.</p><a href="#" class="srv-link">En savoir plus →</a></div>
+      <div class="srv-card reveal"><div class="srv-icon" style="background:#fee2e2">⚠️</div><h3>Anti-Péremption</h3><p>Détectez les lots à risque avant expiration. Évitez jusqu'à 1,4M MAD de pertes annuelles sur vos lots périmés.</p><a href="#" class="srv-link">En savoir plus →</a></div>
+      <div class="srv-card reveal"><div class="srv-icon" style="background:#dcfce7">📋</div><h3>Ordonnances OCR</h3><p>Scannez une ordonnance, les médicaments sont extraits automatiquement par IA. Zéro ressaisie manuelle.</p><a href="#" class="srv-link">En savoir plus →</a></div>
+      <div class="srv-card reveal"><div class="srv-icon" style="background:#fef3c7">🤖</div><h3>Assistant IA</h3><p>Conseils médicaments, identification par photo, analyse d'ordonnances — propulsé par Claude (Anthropic).</p><a href="#" class="srv-link">En savoir plus →</a></div>
+      <div class="srv-card reveal"><div class="srv-icon" style="background:#ede9fe">📊</div><h3>Ventes & Statistiques</h3><p>Chiffre d'affaires, top médicaments, évolution mensuelle — tableaux de bord complets et exportables.</p><a href="#" class="srv-link">En savoir plus →</a></div>
+      <div class="srv-card reveal"><div class="srv-icon" style="background:#e0f2fe">🏪</div><h3>Multi-Pharmacies</h3><p>Gérez plusieurs officines depuis un seul compte. Données séparées, sécurisées et consolidées.</p><a href="#" class="srv-link">En savoir plus →</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW -->
+<section class="how" id="comment">
+  <div class="how-inner">
+    <div class="reveal">
+      <span class="section-tag">Comment ça marche ?</span>
+      <h2 class="section-title">Un Parcours Simple, Rapide et 100% Digitalisé</h2>
+      <p class="section-sub">Avec PharmaStock, vous bénéficiez d'un processus fluide, structuré et accompagné de bout en bout.</p>
+      <div class="how-steps">
+        <div class="how-step"><div class="step-num">01</div><div class="step-text"><h4>Demande d'essai</h4><p>Remplissez le formulaire en ligne, sans engagement. Notre équipe vous recontacte sous 24h.</p></div></div>
+        <div class="how-step"><div class="step-num">02</div><div class="step-text"><h4>Import de votre stock</h4><p>Importez vos médicaments via CSV ou PDF catalogue fournisseur automatiquement.</p></div></div>
+        <div class="how-step"><div class="step-num">03</div><div class="step-text"><h4>Gestion au quotidien</h4><p>Suivez votre stock, gérez vos ordonnances et utilisez l'IA pendant qu'on gère la technique.</p></div></div>
+        <div class="how-step"><div class="step-num">04</div><div class="step-text"><h4>Rapports & analyse</h4><p>Vos statistiques, ventes et alertes sont générées automatiquement chaque jour.</p></div></div>
+      </div>
+      <a href="demande-essai.html" class="btn-primary" style="display:inline-block;margin-top:1.5rem">Rejoindre PharmaStock →</a>
+    </div>
+    <div class="how-visual reveal">
+      <div class="how-row"><div class="hr-icon">📝</div><div><div class="hr-title">Demande d'essai en ligne</div><div class="hr-sub">Formulaire simple, 2 minutes</div></div><div class="hr-check">✓</div></div>
+      <div class="how-row"><div class="hr-icon">📦</div><div><div class="hr-title">Import du stock</div><div class="hr-sub">CSV ou PDF automatique</div></div><div class="hr-check">✓</div></div>
+      <div class="how-row"><div class="hr-icon">🤖</div><div><div class="hr-title">Configuration IA</div><div class="hr-sub">Assistant pharmaceutique actif</div></div><div class="hr-check">✓</div></div>
+      <div class="how-row"><div class="hr-icon">📊</div><div><div class="hr-title">Tableau de bord live</div><div class="hr-sub">Toutes vos stats en temps réel</div></div><div class="hr-check">✓</div></div>
+      <div class="how-row"><div class="hr-icon">⚠️</div><div><div class="hr-title">Alertes péremption</div><div class="hr-sub">55 lots détectés automatiquement</div></div><div class="hr-check">✓</div></div>
+      <div class="how-row hr-last"><div class="hr-icon">🎉</div><div><div class="hr-title" style="color:#10b981">Pharmacie optimisée !</div><div class="hr-sub">Prêt à gérer en toute sérénité</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="testi-inner">
+    <div class="testi-header">
+      <span class="section-tag">Témoignages</span>
+      <h2 class="section-title">Des Pharmaciens Épanouis et Sereins</h2>
+      <p class="section-sub" style="margin:0 auto">Découvrez ce que nos clients disent de PharmaStock.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"Grâce à PharmaStock, j'ai évité plus de 50 lots expirés en un seul mois. L'anti-péremption proactive m'a fait économiser des milliers de dirhams. Un outil indispensable."</p><div class="t-author"><div class="t-av">FA</div><div><div class="t-name">Fatima A.</div><div class="t-role">Pharmacienne — Casablanca</div></div></div></div>
+      <div class="testi-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"L'assistant IA est bluffant. Je scanne une ordonnance et tous les médicaments sont détectés automatiquement. Je gagne au moins 2 heures par jour sur la gestion administrative."</p><div class="t-author"><div class="t-av">KM</div><div><div class="t-name">Karim M.</div><div class="t-role">Pharmacien — Rabat</div></div></div></div>
+      <div class="testi-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"Interface claire et moderne. En moins d'une semaine j'avais tout mon stock importé et géré. Le support est réactif et vraiment humain. Je recommande à tous mes confrères."</p><div class="t-author"><div class="t-av">SB</div><div><div class="t-name">Sara B.</div><div class="t-role">Pharmacienne — Marrakech</div></div></div></div>
+      <div class="testi-card reveal"><div class="t-stars">★★★★★</div><p class="t-text">"Avec PharmaStock je gère mes 3 pharmacies depuis un seul tableau de bord. La fonctionnalité multi-pharmacies est un vrai game changer pour notre groupe."</p><div class="t-author"><div class="t-av">YE</div><div><div class="t-name">Youssef E.</div><div class="t-role">Directeur — Groupe Atlas Pharma, Fès</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="tarifs">
+  <div class="pricing-inner">
+    <span class="section-tag">Tarifs</span>
+    <h2 class="section-title">Des forfaits adaptés à chaque pharmacie</h2>
+    <p class="section-sub" style="margin:0 auto">Sans engagement. Demandez votre essai gratuit 14 jours, sans carte bancaire.</p>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="plan-name">Starter</div><div class="plan-desc">Pour les petites officines</div>
+        <div class="plan-price">150 <small>DH</small></div><div class="plan-period">par mois · HT</div>
+        <ul class="plan-feats">
+          <li>Stock jusqu'à 500 références</li><li>Anti-péremption basique</li><li>Ordonnances & patients</li><li>Ventes & facturation</li><li>1 utilisateur</li>
+          <li class="no">Assistant IA</li><li class="no">OCR ordonnances</li><li class="no">Multi-pharmacies</li>
+        </ul>
+        <a href="demande-essai.html" class="p-btn p-btn-out">Demander un essai</a>
+      </div>
+      <div class="price-card featured reveal">
+        <div class="pop-badge">⭐ Le plus populaire</div>
+        <div class="plan-name">Pro</div><div class="plan-desc">Pour les pharmacies actives</div>
+        <div class="plan-price">300 <small>DH</small></div><div class="plan-period">par mois · HT</div>
+        <ul class="plan-feats">
+          <li>Stock illimité</li><li>Anti-péremption avancé</li><li>Ordonnances + OCR automatique</li><li>Ventes & facturation complète</li><li>3 utilisateurs</li><li>Assistant IA inclus</li><li>Support prioritaire</li>
+          <li class="no">Multi-pharmacies</li>
+        </ul>
+        <a href="demande-essai.html" class="p-btn p-btn-fill">Demander un essai</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="plan-name">Enterprise</div><div class="plan-desc">Pour les groupes de pharmacies</div>
+        <div class="plan-price">600 <small>DH</small></div><div class="plan-period">par mois · HT</div>
+        <ul class="plan-feats">
+          <li>Stock illimité</li><li>Anti-péremption avancé</li><li>Ordonnances + OCR</li><li>Ventes & facturation complète</li><li>Utilisateurs illimités</li><li>Assistant IA illimité</li><li>Multi-pharmacies illimité</li><li>Support dédié 24/7</li>
+        </ul>
+        <a href="demande-essai.html" class="p-btn p-btn-out">Demander un essai</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Questions Fréquentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Quel est le meilleur logiciel de gestion de pharmacie au Maroc ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>PharmaStock est conçu spécifiquement pour les pharmaciens marocains : gestion de stock en temps réel, ordonnances par OCR, assistant IA en français et arabe, et alertes anti-péremption proactives — le tout à des tarifs adaptés au marché local.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Combien coûte un logiciel de gestion de pharmacie au Maroc ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>Nos forfaits sont transparents et sans frais cachés. Consultez notre page <a href="offres.html">Offres & Tarifs</a> pour le détail, ou démarrez directement un essai gratuit de 14 jours pour tester avant de vous engager.</p></div>
+      </div>
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">L'essai est-il vraiment sans engagement ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>Oui, l'essai de 14 jours est entièrement gratuit, sans carte bancaire requise et sans engagement. Vous pouvez annuler à tout moment sans frais.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Puis-je importer mes données depuis mon ancien logiciel ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>Oui, PharmaStock supporte l'import CSV pour votre stock existant ainsi que l'import de catalogues fournisseurs au format PDF. Notre équipe vous accompagne lors de la migration.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Comment fonctionne l'OCR des ordonnances ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>Vous photographiez ou uploadez l'ordonnance (JPG, PNG ou PDF). Notre IA analyse l'image et extrait automatiquement les médicaments, dosages et posologies en quelques secondes.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">L'assistant IA parle-t-il arabe et français ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>Oui, l'assistant IA répond en français et comprend les questions en arabe. Il est spécialisé sur les médicaments disponibles au Maroc avec les noms commerciaux locaux.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Mes données sont-elles sécurisées ?<div class="faq-icon">+</div></div>
+        <div class="faq-a"><p>Toutes vos données sont chiffrées et stockées sur des serveurs sécurisés. Chaque pharmacie a ses données strictement isolées. Nous respectons les normes de protection des données en vigueur au Maroc.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <h2>Passez à l'étape suivante avec PharmaStock</h2>
+  <p>Votre tremplin vers une pharmacie simplifiée, intelligente et sécurisée.</p>
+  <div class="cta-btns">
+    <a href="demande-essai.html" class="btn-white">Demander un essai gratuit →</a>
+    <a href="contact.html" class="btn-out-white">Nous contacter</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:.6rem">
+        <div class="logo-icon">💊</div>
+        <span class="footer-logo-text">Pharma<span>Stock</span></span>
+      </div>
+      <p class="footer-desc">Logiciel de gestion de pharmacie tout-en-un, conçu pour les pharmaciens marocains. Stock, ordonnances, IA et anti-péremption.</p>
+      <div class="footer-contacts">
+        <a href="tel:+212600000000">📞 +212 6 00 00 00 00</a>
+        <a href="mailto:contact@pharmastock.ma">✉ contact@pharmastock.ma</a>
+        <a href="#">📍 Casablanca, Maroc — DZ Consulting</a>
+      </div>
+    </div>
+    <div class="f-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#services">Nos services</a></li>
+        <li><a href="#comment">Comment ça marche</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Nos Services</h4>
+      <ul>
+        <li><a href="#">Gestion du Stock</a></li>
+        <li><a href="#">Anti-Péremption</a></li>
+        <li><a href="#">Ordonnances OCR</a></li>
+        <li><a href="#">Assistant IA</a></li>
+        <li><a href="#">Ventes & Stats</a></li>
+        <li><a href="#">Multi-Pharmacies</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Liens Utiles</h4>
+      <ul>
+        <li><a href="demande-essai.html">Demander un essai</a></li>
+        <li><a href="conseils-gestion-stock-pharmacie-maroc.html">Conseils &amp; Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://app.mapharmastock.com/login">Se connecter</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Confidentialité</a></li>
+        <li><a href="#">CGU</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p>2026 © PharmaStock — DZ Consulting. Tous droits réservés.</p>
+    <div class="footer-bot-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">CGU</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// MEGA MENU — hover ouvre le dropdown, clic navigue vers la page
+document.querySelectorAll('.nav-menu>li').forEach(li=>{
+  const dd=li.querySelector('.dropdown');
+  if(!dd)return;
+  let t;
+  li.addEventListener('mouseenter',()=>{
+    clearTimeout(t);
+    document.querySelectorAll('.nav-menu>li').forEach(x=>x.classList.remove('open'));
+    li.classList.add('open');
+  });
+  li.addEventListener('mouseleave',()=>{t=setTimeout(()=>li.classList.remove('open'),150);});
+  dd.addEventListener('mouseenter',()=>clearTimeout(t));
+  dd.addEventListener('mouseleave',()=>{t=setTimeout(()=>li.classList.remove('open'),150);});
+  // La flèche seule toggle sans naviguer
+  const arrow=li.querySelector(':scope>a .arrow');
+  if(arrow){
+    arrow.addEventListener('click',e=>{
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen=li.classList.contains('open');
+      document.querySelectorAll('.nav-menu>li').forEach(x=>x.classList.remove('open'));
+      if(!isOpen)li.classList.add('open');
+    });
+  }
+});
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.nav-menu'))
+    document.querySelectorAll('.nav-menu>li').forEach(x=>x.classList.remove('open'));
+});
+
+// HAMBURGER mobile
+function toggleMobile(){
+  const m=document.getElementById('mobileMenu');
+  const h=document.getElementById('hamburger');
+  m.classList.toggle('open');
+  h.classList.toggle('active');
+  const spans=h.querySelectorAll('span');
+  if(h.classList.contains('active')){
+    spans[0].style.transform='rotate(45deg) translate(5px,5px)';
+    spans[1].style.opacity='0';
+    spans[2].style.transform='rotate(-45deg) translate(5px,-5px)';
+  } else {
+    spans.forEach(s=>{s.style.transform='';s.style.opacity='';});
+  }
+}
+
+// FAQ accordion
+function toggleFaq(el){
+  const item=el.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+
+// Scroll reveal
+const obs=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible');});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
