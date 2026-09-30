@@ -155,3 +155,13 @@ nav .nav-menu > li > a:hover{color:var(--ps-ink)!important}
 .reveal{transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)!important}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .plan-name,h3,.t-name,.dd-item-text .title,.form-header h2{font-family:'Plus Jakarta Sans',system-ui,sans-serif!important;font-weight:800!important;letter-spacing:-.01em!important}
+
+/* Menu mobile (pages internes) : fond clair, textes lisibles */
+.mobile-menu{background:#fff!important;border-top:1px solid var(--border);box-shadow:0 30px 60px -30px rgba(11,27,43,.35)}
+.mobile-menu .mm-item{border-bottom:1px solid #E1E7E4!important}
+.mobile-menu .mm-item a{color:var(--ps-ink)!important;font-weight:700}
+.mobile-menu .mm-item a.active-link{color:var(--ps-primary)!important}
+.mobile-menu .mm-item a span{color:var(--ps-primary)!important}
+.mobile-menu .mm-cta1{background:var(--ps-primary)!important;color:#fff!important}
+.mobile-menu .mm-cta2{border:1.5px solid #D5DDDA!important;color:var(--ps-ink)!important;background:#fff!important}
+.mobile-menu .ps-lang-m{color:var(--ps-ink)!important;border-color:#D5DDDA!important;background:#fff!important}

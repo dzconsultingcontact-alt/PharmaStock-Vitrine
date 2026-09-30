@@ -38,6 +38,20 @@
     document.body.insertBefore(s, document.body.firstChild);
   }
 
+
+  /* Menu mobile : toujours ouvert juste sous la barre de navigation (le bandeau décale la barre) */
+  function menuMobile() {
+    var m = document.getElementById('mobileMenu'); if (!m || m.__ps) return; m.__ps = true;
+    function place() {
+      var n = document.querySelector('header.nav, nav'); if (!n) return;
+      var b = Math.max(0, Math.round(n.getBoundingClientRect().bottom));
+      m.style.setProperty('--mm-top', b + 'px'); m.style.top = b + 'px';
+    }
+    new MutationObserver(function () { if (m.classList.contains('open')) place(); }).observe(m, { attributes: true, attributeFilter: ['class'] });
+    window.addEventListener('scroll', function () { if (m.classList.contains('open')) place(); }, { passive: true });
+    window.addEventListener('resize', function () { if (m.classList.contains('open')) place(); });
+  }
+
   function boutonWhatsApp() {
     if (document.querySelector('.ps-wa')) return;
     var a = document.createElement('a');
@@ -114,6 +128,6 @@
   }
 
   arabe();
-  function init() { bandeau(); boutonWhatsApp(); formulaires(); if (!LANG_OFF) boutonsLangue(); }
+  function init() { bandeau(); menuMobile(); boutonWhatsApp(); formulaires(); if (!LANG_OFF) boutonsLangue(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
