@@ -198,40 +198,40 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .sr{opacity:1;transform:none}}
 </style>
 <style>
-#carte{width:100%;max-width:560px;justify-self:end;position:relative;border-radius:34px;padding-bottom:92px;background:radial-gradient(120% 90% at 70% 10%,#12324A 0%,#0B1B2B 60%);padding-top:28px;padding-left:28px;padding-right:28px;overflow:hidden;box-shadow:0 50px 90px -50px rgba(11,27,43,.6)}
-#carte:before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M40 0H0v40' fill='none' stroke='%23ffffff' stroke-opacity='.04'/%3E%3C/svg%3E");pointer-events:none}
-#carte .mx-svg{display:block;width:100%;height:auto;max-height:620px;position:relative}
-#carte .mx-land{fill:rgba(127,209,199,.07);stroke:rgba(127,209,199,.55);stroke-width:1.2;stroke-linejoin:round}
-#carte .mx-dots{stroke:rgba(127,209,199,.28);stroke-width:2.6;stroke-linecap:round}
-#carte .mx-links line{stroke:rgba(127,209,199,.45);stroke-width:1.2;stroke-dasharray:4 6;animation:mxDash 6s linear infinite}
-#carte .mx-arcs path{fill:none;stroke:url(#mxl);stroke-width:2;filter:drop-shadow(0 0 3px rgba(127,209,199,.8));stroke-linecap:round}
-#carte .mx-arcs path.amb{stroke:#E9A23B;stroke-width:2}
-#carte .mx-ph circle{fill:#7FD1C7;opacity:.55;animation:mxTw 4s ease-in-out infinite}
-#carte .mx-core{fill:#fff;stroke:#7FD1C7;stroke-width:2}
-#carte .mx-halo{fill:rgba(127,209,199,.25);transform-origin:center;transform-box:fill-box;animation:mxPulse 2.8s ease-out infinite}
-#carte .mx-c:nth-child(3n) .mx-halo{animation-delay:.9s}#carte .mx-c:nth-child(3n+1) .mx-halo{animation-delay:1.8s}
-#carte .mx-c text{fill:#E6EEF0;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif;paint-order:stroke;stroke:#0B1B2B;stroke-width:3px}
-#carte .mx-fly circle{fill:#E9A23B;filter:drop-shadow(0 0 6px rgba(233,162,59,.9))}
-#carte .mx-toast{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px 16px;color:#fff;font-size:14px;transition:opacity .4s,transform .4s}
-#carte .mx-toast.off{opacity:0;transform:translateY(8px)}
-#carte .mx-toast b{display:block;font-size:14px}#carte .mx-toast small{color:#A9BBC0;font-size:12.5px}
-#carte .mx-toast i{flex:0 0 10px;height:10px;border-radius:50%;background:#E9A23B;box-shadow:0 0 0 5px rgba(233,162,59,.2)}
-#carte .mx-tag{position:absolute;top:22px;left:24px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A9BBC0;background:rgba(255,255,255,.06);border-radius:999px;padding:6px 12px}
+.mapx{padding:110px 32px}
+.mapx .mx-wrap{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:center}
+.mapx .mx-card{position:relative;border-radius:34px;padding-bottom:92px!important;background:radial-gradient(120% 90% at 70% 10%,#12324A 0%,#0B1B2B 60%);padding:28px;overflow:hidden;box-shadow:0 50px 90px -50px rgba(11,27,43,.6)}
+.mapx .mx-card:before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M40 0H0v40' fill='none' stroke='%23ffffff' stroke-opacity='.04'/%3E%3C/svg%3E");pointer-events:none}
+.mapx .mx-svg{display:block;width:100%;height:auto;max-height:620px;position:relative}
+.mapx .mx-land{fill:rgba(127,209,199,.07);stroke:rgba(127,209,199,.55);stroke-width:1.2;stroke-linejoin:round}
+.mapx .mx-dots{stroke:rgba(127,209,199,.28);stroke-width:2.6;stroke-linecap:round}
+.mapx .mx-links line{stroke:rgba(127,209,199,.45);stroke-width:1.2;stroke-dasharray:4 6;animation:mxDash 6s linear infinite}
+.mapx .mx-arcs path{fill:none;stroke:url(#mxl);stroke-width:2;filter:drop-shadow(0 0 3px rgba(127,209,199,.8));stroke-linecap:round}
+.mapx .mx-arcs path.amb{stroke:#E9A23B;stroke-width:2}
+.mapx .mx-ph circle{fill:#7FD1C7;opacity:.55;animation:mxTw 4s ease-in-out infinite}
+.mapx .mx-core{fill:#fff;stroke:#7FD1C7;stroke-width:2}
+.mapx .mx-halo{fill:rgba(127,209,199,.25);transform-origin:center;transform-box:fill-box;animation:mxPulse 2.8s ease-out infinite}
+.mapx .mx-c:nth-child(3n) .mx-halo{animation-delay:.9s}.mapx .mx-c:nth-child(3n+1) .mx-halo{animation-delay:1.8s}
+.mapx .mx-c text{fill:#E6EEF0;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif;paint-order:stroke;stroke:#0B1B2B;stroke-width:3px}
+.mapx .mx-fly circle{fill:#E9A23B;filter:drop-shadow(0 0 6px rgba(233,162,59,.9))}
+.mapx .mx-toast{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px 16px;color:#fff;font-size:14px;transition:opacity .4s,transform .4s}
+.mapx .mx-toast.off{opacity:0;transform:translateY(8px)}
+.mapx .mx-toast b{display:block;font-size:14px}.mapx .mx-toast small{color:#A9BBC0;font-size:12.5px}
+.mapx .mx-toast i{flex:0 0 10px;height:10px;border-radius:50%;background:#E9A23B;box-shadow:0 0 0 5px rgba(233,162,59,.2)}
+.mapx .mx-tag{position:absolute;top:22px;left:24px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A9BBC0;background:rgba(255,255,255,.06);border-radius:999px;padding:6px 12px}
+.mapx .mx-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:16px}
+.mapx .mx-list li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;line-height:1.55;color:var(--mute)}
+.mapx .mx-list b{display:block;color:var(--ink);font-size:17px}
+.mapx .mx-ic{flex:0 0 38px;height:38px;border-radius:12px;background:rgba(14,107,106,.1);color:var(--acc);display:flex;align-items:center;justify-content:center;font-weight:900}
+.mapx .mx-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;font-size:13.5px;color:var(--mute)}
+.mapx .mx-legend span{display:inline-flex;align-items:center;gap:8px}
+.mapx .mx-legend em{width:10px;height:10px;border-radius:50%;display:inline-block}
 @keyframes mxPulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
 @keyframes mxTw{0%,100%{opacity:.25}50%{opacity:.85}}
 @keyframes mxDash{to{stroke-dashoffset:-160}}
-@media (max-width:1024px){#carte{margin:0 auto}}
-@media (max-width:640px){#carte{padding-bottom:80px;padding:14px;border-radius:24px}#carte .mx-toast{left:12px;right:12px;bottom:12px;padding:10px 12px}}
-[dir=rtl] #carte .mx-list li,[dir=rtl] #carte .mx-legend{direction:rtl}
-</style>
-<style>
-.hero-vis{position:relative;height:680px}
-.hero-vis #carte{position:absolute;bottom:0;right:0;width:78%;max-width:none;padding-bottom:92px}
-.hero-vis .mock{position:absolute;left:-30px;top:0;width:540px;height:430px;scale:.6;transform-origin:left top;z-index:2}
-@media (min-width:1025px){.hero-vis #carte .mx-tag{left:auto;right:24px}}
-.hero-vis .mock .toast{scale:1.3;transform-origin:left bottom}
-@media (max-width:1240px){.hero-vis .mock{scale:.52}}
-@media (max-width:1024px){.hero-vis{height:auto;display:flex;flex-direction:column;gap:28px}.hero-vis #carte{position:relative;width:100%;max-width:560px;margin:0 auto;padding-bottom:84px}.hero-vis .mock{position:relative;left:0;width:100%;scale:1;height:400px}.hero-vis .mock .toast{scale:1}}
+@media (max-width:1024px){.mapx .mx-wrap{grid-template-columns:1fr;gap:40px}}
+@media (max-width:640px){.mapx{padding:70px 16px}.mapx .mx-card{padding:14px;border-radius:24px}.mapx .mx-toast{left:12px;right:12px;bottom:12px;padding:10px 12px}}
+[dir=rtl] .mapx .mx-list li,[dir=rtl] .mapx .mx-legend{direction:rtl}
 </style>
 </head>
 <body>
@@ -278,9 +278,44 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E6B6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-ar="لا شيء للتثبيت">Rien à installer</span></span>
 </div>
 </div>
-<div class="hero-vis">
-<div id="carte" class="mx-card rv d2" aria-label="Carte du réseau PharmaStock">
-<span class="mx-tag" data-ar="محاكاة">Simulation</span>
+<div class="mock rv d2" aria-hidden="true">
+<div class="screen">
+<div class="side"><i style="height:10px;width:70%;background:#0E6B6A"></i><i style="width:80%;margin-top:16px"></i><i style="height:30px;border-radius:9px;background:rgba(14,107,106,.14)"></i><i style="width:60%"></i><i style="width:75%"></i><i style="width:55%"></i><i style="width:70%"></i></div>
+<div class="main">
+<div class="serif" style="font-size:30px">Ma pharmacie</div>
+<div class="kpis">
+<div class="kpi" style="background:rgba(14,107,106,.08);border:1.5px solid rgba(14,107,106,.2)"><small>MÉDICAMENTS</small><b style="color:#0E6B6A">2 749</b></div>
+<div class="kpi" style="background:rgba(233,162,59,.1);border:1.5px solid rgba(233,162,59,.3)"><small>ALERTES</small><b style="color:#B06E0E">5</b></div>
+<div class="kpi" style="background:rgba(37,99,235,.08);border:1.5px solid rgba(37,99,235,.2)"><small>VENTES DU JOUR</small><b style="color:#1D4ED8">38</b></div>
+</div>
+<div class="chart"><div class="bar" style="height:38%;animation-delay:.3s"></div><div class="bar" style="height:55%;animation-delay:.4s"></div><div class="bar" style="height:47%;animation-delay:.5s"></div><div class="bar" style="height:72%;background:#9FCFCB;animation-delay:.6s"></div><div class="bar" style="height:64%;background:#9FCFCB;animation-delay:.7s"></div><div class="bar" style="height:90%;background:#0E6B6A;animation-delay:.8s"></div></div>
+</div>
+</div>
+<div class="toast"><span class="b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><span><strong data-ar="صيدلية أطلس تتوفر على منتجك">Pharmacie Atlas a votre produit</strong><small data-ar="رد على « أبحث عن » · منذ دقيقتين">Réponse à « Je cherche » · il y a 2 min</small></span></div>
+<div class="langchip"><span>FR</span><span style="color:#C9D2CF">|</span><span>عربي</span></div>
+</div>
+</div>
+</section>
+
+
+
+<section id="carte" class="mapx" style="padding-top:30px">
+<div class="mx-wrap">
+<div class="sr">
+<div class="eyebrow" data-ar="شبكة PharmaStock">LE RÉSEAU PHARMASTOCK</div>
+<h2 class="h2 serif" style="margin-top:14px" data-ar="نربط صيدليات المملكة كلها.">Relier les pharmacies<br>de tout le Royaume.</h2>
+<p class="lead" data-ar="هدفنا: أن تتمكن كل صيدلية، من طنجة إلى الداخلة، من الاعتماد على زملائها. شبكة PharmaStock تربط الصيدليات لتبادل فائض المخزون، ومساعدة مريض ينتظر، وتقليل الخسائر بسبب انتهاء الصلاحية.">Notre but : que chaque officine, de Tanger à Dakhla, puisse compter sur ses confrères. Le réseau PharmaStock relie les pharmacies pour échanger un surstock, dépanner un patient qui attend et réduire les pertes liées à la péremption.</p>
+<ul class="mx-list">
+<li><span class="mx-ic">⇄</span><span data-ar="&lt;b&gt;تبادل بين الزملاء&lt;/b&gt;صرّف فائض المخزون لدى صيدلية قريبة بدل أن ينتهي صلاحيته على رفوفك.">
+<b>Échanges entre confrères</b>Écoulez un surstock auprès d'une pharmacie proche plutôt que de le voir périmer en rayon.</span></li>
+<li><span class="mx-ic">⌕</span><span data-ar="&lt;b&gt;منتج مفقود؟&lt;/b&gt;اعرف في ثوان أي صيدلية من الشبكة تتوفر عليه.">
+<b>Un produit introuvable ?</b>Sachez en quelques secondes quelle pharmacie du réseau l'a en stock.</span></li>
+<li><span class="mx-ic">☾</span><span data-ar="&lt;b&gt;صيدليات الحراسة&lt;/b&gt;دليل محدث لصيدليات الحراسة في المدن الكبرى.">
+<b>Pharmacies de garde</b>Un annuaire à jour des pharmacies de garde dans les grandes villes.</span></li>
+</ul>
+<div class="mx-legend"><span><em style="background:#0B1B2B;box-shadow:0 0 0 3px #7FD1C7"></em><span data-ar="مدينة">Ville</span></span><span><em style="background:#7FD1C7"></em><span data-ar="صيدلية">Pharmacie</span></span><span><em style="background:#E9A23B"></em><span data-ar="تبادل جار">Échange en cours</span></span></div>
+</div>
+<div class="mx-card sr" aria-live="off">
 <svg class="mx-svg" viewBox="0 0 460 520" role="img" aria-label="Carte du Maroc : illustration du réseau de pharmacies PharmaStock">
 <defs><linearGradient id="mxl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7FD1C7" stop-opacity=".1"/><stop offset="1" stop-color="#E6FFFB"/></linearGradient><radialGradient id="mxg" cx="50%" cy="35%" r="65%"><stop offset="0" stop-color="#7FD1C7" stop-opacity=".16"/><stop offset="1" stop-color="#7FD1C7" stop-opacity="0"/></radialGradient></defs>
 <path class="mx-land" d="M12.5,478.8L14.6,464.6L18.3,457.0L21.3,453.6L26.0,451.8L30.2,444.1L31.8,436.9L34.5,433.6L35.4,431.0L34.4,429.1L37.0,425.2L40.2,419.3L41.7,415.5L45.4,409.6L45.9,408.3L45.5,406.8L44.0,408.1L42.5,410.2L40.6,411.9L41.4,409.9L42.8,406.7L46.2,403.5L51.4,399.9L62.3,387.7L66.5,385.5L70.1,380.4L71.5,375.8L71.9,365.3L73.2,359.7L75.5,355.3L78.4,347.4L80.6,343.8L82.1,336.6L83.6,333.7L86.4,332.5L90.4,328.8L96.3,326.6L103.3,321.8L106.6,319.0L108.8,314.8L111.2,306.3L115.4,297.4L117.5,290.7L117.6,290.6L121.3,287.1L123.9,282.6L128.1,280.6L137.0,279.6L150.2,275.9L162.1,270.3L165.4,268.0L169.1,263.5L175.0,257.6L186.3,250.6L191.4,246.7L199.2,236.7L204.5,228.5L208.8,223.2L211.8,218.5L213.8,213.7L215.0,206.0L214.2,202.9L211.0,198.0L208.7,196.7L208.1,194.3L209.3,190.2L209.3,183.1L210.0,171.7L213.7,162.5L222.6,150.3L224.3,145.4L225.3,137.3L225.4,134.5L236.7,123.2L243.3,114.4L245.6,112.3L251.4,108.3L271.6,99.5L283.1,93.3L289.8,88.7L293.8,83.3L304.8,61.9L315.7,31.5L316.6,27.9L321.4,26.9L324.9,26.5L327.7,25.4L331.0,23.0L334.3,24.0L332.7,25.6L332.7,29.3L335.0,33.7L339.0,38.7L346.4,44.9L352.2,47.5L360.4,49.0L369.8,46.2L375.2,46.2L377.8,45.0L380.6,46.8L386.0,47.3L391.2,46.3L395.1,43.7L397.6,40.7L398.0,42.2L398.1,43.8L398.9,44.8L400.4,48.6L401.2,50.1L404.2,49.8L406.8,50.6L412.6,50.2L418.2,50.9L419.0,53.4L420.6,55.4L426.4,59.9L429.9,62.7L430.0,63.7L428.8,65.9L428.4,67.5L429.3,69.2L431.4,71.2L431.6,72.2L431.1,73.3L430.0,75.5L432.3,81.9L432.7,88.0L432.1,92.4L432.1,94.9L432.4,97.0L434.3,102.0L433.1,110.2L434.5,114.6L436.6,118.2L437.7,124.6L439.4,127.6L442.0,130.3L443.5,131.2L446.5,133.4L448.7,135.2L450,137.9L447.3,140.2L445.1,142.2L444.5,144.3L445.5,147.8L445.5,149.6L444.1,150.2L438.6,150.1L434.2,149.9L429.3,149.7L422.3,149.4L417.9,149.2L411.9,148.9L409.9,149.1L404.4,150.0L400.6,150.7L400.0,150.9L398.7,151.8L397.9,154.3L397.1,157.2L396.3,158.5L384.8,162.7L380.2,163.3L377.6,162.8L375.8,163.2L374.2,164.0L373.6,165.4L373.5,167.1L373.9,168.9L375.0,171.3L375.2,173.7L374.5,175.4L374.3,177.1L374.0,179.0L374.6,180.0L375.7,180.1L376.7,181.0L378.3,181.7L379.7,183.2L379.6,185.3L378.5,186.5L377.5,187.1L373.2,187.6L369.7,188.1L365.3,191.4L360.5,195.0L354.8,197.3L352.3,197.9L348.0,199.6L342.8,202.4L340.2,206.8L337.0,211.9L333.9,215.3L329.6,218.5L325.7,219.8L320.6,221.3L314.4,222.5L310.0,222.9L308.6,223.1L304.7,223.2L302.8,223.0L301.4,222.9L300.8,223.2L300.6,224.0L300.5,225.8L300.2,227.9L299.0,229.7L298.1,230.5L297.0,230.8L293.8,230.3L291.0,229.8L284.5,229.0L283.2,229.2L282.7,229.4L280.6,230.6L277.5,233.1L275.3,235.4L273.7,236.3L270.0,236.9L268.3,237.7L261.2,243.2L259.7,244.5L252.4,249.3L250.3,250.9L248.6,252.4L244.3,256.0L241.5,257.5L241.0,258.4L240.8,260.6L240.8,265.3L240.8,269.8L240.8,276.4L240.8,283.0L240.8,290.6L240.8,295.7L240.8,302.1L240.9,307.2L240.9,313.3L240.9,319.4L240.9,326.3L240.9,333.2L240.9,338.2L240.9,341.7L235.3,341.7L230.2,341.7L225.1,341.7L220.0,341.7L214.8,341.7L209.8,341.7L204.7,341.7L199.5,341.7L194.4,341.7L189.3,341.7L184.2,341.7L179.1,341.7L173.9,341.7L168.8,341.7L163.8,341.7L158.6,341.7L153.5,341.7L149.4,341.7L149.4,345.3L149.4,349.4L149.4,353.6L149.4,357.7L149.4,361.8L149.4,366.0L149.4,370.1L149.4,374.3L149.4,378.4L149.4,382.5L149.4,386.6L149.4,390.7L149.4,394.8L149.4,398.9L149.4,403.0L149.4,407.1L149.4,411.2L149.4,414.8L149.2,418.0L147.6,419.0L143.6,420.7L139.7,422.5L134.5,423.3L132.8,423.9L129.6,426.3L125.2,429.3L121.6,432.0L119.1,435.4L118.2,437.3L117.8,439.4L118.1,441.3L119.5,445.1L119.8,447.0L120.0,450.4L120.3,454.0L120.5,457.9L120.8,461.8L121.0,466.0L121.3,470.1L121.5,474.3L121.7,477.5L122.0,481.4L117.8,481.4L111.5,481.4L105.3,481.4L99.0,481.4L92.6,481.4L86.3,481.4L80.1,481.4L73.8,481.4L67.4,481.5L61.2,481.5L54.9,481.5L48.6,481.5L42.4,481.5L36.0,481.5L29.7,481.5L23.4,481.5L17.2,481.5L13.6,481.5L12.5,487.0L11.5,491.0L10.9,494.2L11.3,496.9L10,495.4L12.4,480.1Z"/>
@@ -292,6 +327,8 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 <g class="mx-fly"></g>
 </svg>
 <div class="mx-toast off" aria-hidden="true"><i></i><span><b class="mx-t1"></b><small class="mx-t2"></small></span></div>
+</div>
+</div>
 <script>
 (function(){
 var P=[["Tanger","طنجة",320,28.9],["Tétouan","تطوان",331.8,35.3],["Nador","الناظور",398.8,48.7],["Oujda","وجدة",426.8,65.1],["Fès","فاس",342,86.7],["Meknès","مكناس",326.9,91],["Kénitra","القنيطرة",298.6,79.1],["Rabat","الرباط",291.5,87.1],["Casablanca","الدار البيضاء",270.9,101.9],["El Jadida","الجديدة",245.9,112.4],["Béni Mellal","بني ملال",304.9,142.2],["Safi","آسفي",225.6,143.5],["Marrakech","مراكش",259.9,165.1],["Errachidia","الرشيدية",357.9,155.4],["Essaouira","الصويرة",211.1,169],["Ouarzazate","ورزازات",290.1,187.9],["Agadir","أكادير",215.8,203.6],["Guelmim","كلميم",203.1,249.1],["Laâyoune","العيون",117,306.3],["Dakhla","الداخلة",42.1,411.7]],E=[[0,1],[0,6],[1,4],[2,3],[2,1],[3,4],[4,5],[4,6],[5,6],[6,7],[7,8],[8,9],[9,11],[10,15],[10,12],[11,14],[12,15],[12,11],[13,10],[13,4],[14,16],[16,17],[17,14],[18,17],[18,19],[19,17]];
@@ -327,28 +364,7 @@ setInterval(spark,200);
 setInterval(step,2600);
 })();
 </script>
-</div>
-<div class="mock rv d2" aria-hidden="true">
-<div class="screen">
-<div class="side"><i style="height:10px;width:70%;background:#0E6B6A"></i><i style="width:80%;margin-top:16px"></i><i style="height:30px;border-radius:9px;background:rgba(14,107,106,.14)"></i><i style="width:60%"></i><i style="width:75%"></i><i style="width:55%"></i><i style="width:70%"></i></div>
-<div class="main">
-<div class="serif" style="font-size:30px">Ma pharmacie</div>
-<div class="kpis">
-<div class="kpi" style="background:rgba(14,107,106,.08);border:1.5px solid rgba(14,107,106,.2)"><small>MÉDICAMENTS</small><b style="color:#0E6B6A">2 749</b></div>
-<div class="kpi" style="background:rgba(233,162,59,.1);border:1.5px solid rgba(233,162,59,.3)"><small>ALERTES</small><b style="color:#B06E0E">5</b></div>
-<div class="kpi" style="background:rgba(37,99,235,.08);border:1.5px solid rgba(37,99,235,.2)"><small>VENTES DU JOUR</small><b style="color:#1D4ED8">38</b></div>
-</div>
-<div class="chart"><div class="bar" style="height:38%;animation-delay:.3s"></div><div class="bar" style="height:55%;animation-delay:.4s"></div><div class="bar" style="height:47%;animation-delay:.5s"></div><div class="bar" style="height:72%;background:#9FCFCB;animation-delay:.6s"></div><div class="bar" style="height:64%;background:#9FCFCB;animation-delay:.7s"></div><div class="bar" style="height:90%;background:#0E6B6A;animation-delay:.8s"></div></div>
-</div>
-</div>
-<div class="toast"><span class="b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><span><strong data-ar="صيدلية أطلس تتوفر على منتجك">Pharmacie Atlas a votre produit</strong><small data-ar="رد على « أبحث عن » · منذ دقيقتين">Réponse à « Je cherche » · il y a 2 min</small></span></div>
-<div class="langchip"><span>FR</span><span style="color:#C9D2CF">|</span><span>عربي</span></div>
-</div>
-</div>
-</div>
 </section>
-
-
 
 <section class="stats">
 <div class="wrap">
