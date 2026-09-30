@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PharmaStock — Logiciel de gestion de pharmacie au Maroc</title>
-<meta name="description" content="PharmaStock est le logiciel de gestion conçu pour les pharmacies au Maroc : base de plus de 6 000 médicaments marocains, stock et lots, réception par scan, crédit client, réseau entre pharmacies, en français et en arabe. Essai gratuit 14 jours, sans carte bancaire.">
+<meta name="description" content="PharmaStock est le logiciel de gestion conçu pour les pharmacies au Maroc : base de plus de 6 000 médicaments marocains, stock et lots, réception par scan, crédit client, réseau entre pharmacies, en français et en arabe. Essai gratuit de 3 mois, sans carte bancaire.">
 <meta name="keywords" content="logiciel pharmacie maroc, gestion pharmacie au maroc, logiciel gestion pharmacie, pharmacie au maroc, gestion de stock pharmacie, logiciel officine maroc, pharmacie de garde maroc, pharmacie de garde casablanca">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mapharmastock.com/">
@@ -19,16 +19,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/ps-site.css?v=5">
+<link rel="stylesheet" href="/assets/ps-site.css?v=7">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PharmaStock","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://mapharmastock.com/","inLanguage":["fr","ar"],"description":"Logiciel de gestion de pharmacie au Maroc : base de plus de 6 000 médicaments marocains avec code-barres, stock et lots en temps réel, réception par scan DataMatrix, crédit client, réseau entre pharmacies, interface en français et en arabe.","featureList":["Base des médicaments du Maroc (code-barres, PPV)","Gestion de stock et des lots (FEFO)","Réception des livraisons par scan DataMatrix","Ventes au comptoir, même hors ligne","Crédit client (carnet) et relances WhatsApp","Marketplace et « Je cherche » entre pharmacies","Préparations magistrales","Rappels patients chroniques","Commandes suggérées","Retours et avoirs","Équipe et droits d'accès","Multi-pharmacies","Assistant IA","Interface en français et en arabe"],"areaServed":{"@type":"Country","name":"Maroc"},"offers":{"@type":"Offer","priceCurrency":"MAD","description":"Essai gratuit de 14 jours, sans carte bancaire"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PharmaStock","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://mapharmastock.com/","inLanguage":["fr","ar"],"description":"Logiciel de gestion de pharmacie au Maroc : base de plus de 6 000 médicaments marocains avec code-barres, stock et lots en temps réel, réception par scan DataMatrix, crédit client, réseau entre pharmacies, interface en français et en arabe.","featureList":["Base des médicaments du Maroc (code-barres, PPV)","Gestion de stock et des lots (FEFO)","Réception des livraisons par scan DataMatrix","Ventes au comptoir, même hors ligne","Crédit client (carnet) et relances WhatsApp","Marketplace et « Je cherche » entre pharmacies","Préparations magistrales","Rappels patients chroniques","Commandes suggérées","Retours et avoirs","Équipe et droits d'accès","Multi-pharmacies","Assistant IA","Interface en français et en arabe"],"areaServed":{"@type":"Country","name":"Maroc"},"offers":{"@type":"Offer","priceCurrency":"MAD","description":"Essai gratuit de 3 mois, sans carte bancaire"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"PharmaStock contient-il la base des médicaments du Maroc ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Plus de 6 000 médicaments marocains sont déjà référencés avec leur code-barres, leur PPV et leur prix de remboursement. Vous n'avez pas à saisir votre catalogue."}},
 {"@type":"Question","name":"Puis-je utiliser PharmaStock en arabe ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Chaque utilisateur passe du français à l'arabe à tout moment, avec un affichage de droite à gauche."}},
 {"@type":"Question","name":"Que se passe-t-il en cas de coupure internet ?","acceptedAnswer":{"@type":"Answer","text":"Vous continuez à vendre. Les ventes sont gardées sur le poste et envoyées automatiquement au retour de la connexion."}},
-{"@type":"Question","name":"L'essai est-il vraiment sans engagement ?","acceptedAnswer":{"@type":"Answer","text":"Oui : 14 jours gratuits, sans carte bancaire et sans engagement."}},
+{"@type":"Question","name":"L'essai est-il vraiment sans engagement ?","acceptedAnswer":{"@type":"Answer","text":"Oui : 3 mois gratuits, sans carte bancaire et sans engagement."}},
 {"@type":"Question","name":"Puis-je importer les données de mon ancien logiciel ?","acceptedAnswer":{"@type":"Answer","text":"Oui, votre stock peut être importé et notre équipe vous accompagne pendant la migration."}}]}
 </script>
 <style>
@@ -251,14 +251,43 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 @media (min-width:1025px){.mobile-menu{display:none!important}}
 [dir=rtl] .mm-item a:after{content:"‹"}
 </style>
+<style>
+.pion{padding:40px 32px 110px}
+.pion-in{max-width:1240px;margin:0 auto;border-radius:34px;background:linear-gradient(135deg,#0E6B6A 0%,#0B4A55 55%,#0B1B2B 100%);color:#fff;padding:64px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center;position:relative;overflow:hidden}
+.pion-in:before{content:"";position:absolute;right:-160px;top:-160px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(127,209,199,.35),rgba(127,209,199,0) 65%);pointer-events:none}
+.pion-l{position:relative}
+.pion-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 16px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#FDE7C2}
+.pion-dot{width:9px;height:9px;border-radius:50%;background:#E9A23B;box-shadow:0 0 0 0 rgba(233,162,59,.6);animation:pionP 1.8s infinite}
+@keyframes pionP{70%{box-shadow:0 0 0 10px rgba(233,162,59,0)}100%{box-shadow:0 0 0 0 rgba(233,162,59,0)}}
+.pion h2{font-size:52px;line-height:1.05;margin:22px 0 0;letter-spacing:-.01em}
+.pion-lead{font-size:18px;line-height:1.6;color:#CFE3E1;margin:20px 0 0;max-width:560px}
+.pion-list{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
+.pion-list li{display:flex;gap:14px;align-items:flex-start;color:#CFE3E1;line-height:1.5;font-size:15.5px}
+.pion-list b{display:block;color:#fff;font-size:16.5px}
+.pion-ok{flex:0 0 28px;height:28px;border-radius:50%;background:rgba(127,209,199,.2);color:#7FD1C7;display:flex;align-items:center;justify-content:center;font-weight:900}
+.pion-form{position:relative;background:#fff;color:var(--ink);border-radius:26px;padding:30px;box-shadow:0 40px 80px -40px rgba(0,0,0,.5)}
+.pion-form h3{margin:0;font-size:22px;font-weight:800}
+.pion-small{margin:4px 0 18px;color:var(--mute);font-size:14px}
+.pion-row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.pion-f{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--ink)}
+.pion-f input{border:1.5px solid #D5DDDA;border-radius:12px;padding:12px 14px;font:inherit;font-weight:500;font-size:15px;color:var(--ink);background:#fff;width:100%;box-sizing:border-box}
+.pion-f input:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 4px rgba(14,107,106,.15)}
+.pion-btn{width:100%;justify-content:center;margin-top:4px;border:0;cursor:pointer}
+.pion-legal{margin:12px 0 0;font-size:12.5px;color:var(--mute)}
+.pion .ps-msg{margin-top:10px;font-size:14px}
+@media (max-width:1024px){.pion-in{grid-template-columns:1fr;padding:48px 32px}.pion h2{font-size:42px}}
+@media (max-width:640px){.pion{padding:20px 16px 70px}.pion-in{padding:36px 20px;border-radius:24px;gap:32px}.pion h2{font-size:34px}.pion-row{grid-template-columns:1fr}.pion-form{padding:22px}}
+.band{direction:ltr}.band .mq span{unicode-bidi:isolate}
+@media (max-width:640px){.band{padding:6px 0}.band .mq{font-size:14px!important;gap:24px;animation-duration:32s}}
+</style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
 
 <div class="band" aria-label="Points forts">
 <div class="mq serif">
-<span data-ar="قاعدة الأدوية المغربية">Base des médicaments du Maroc</span><i>✦</i><span data-ar="الاستلام بمسح DataMatrix">Réception par scan DataMatrix</span><i>✦</i><span data-ar="ديون الزبناء">Crédit client</span><i>✦</i><span data-ar="سوق بين الصيدليات">Marketplace entre pharmacies</span><i>✦</i><span data-ar="العمل بدون إنترنت">Mode hors ligne</span><i>✦</i><span data-ar="الواجهة بالعربية">Interface en arabe</span><i>✦</i>
-<span data-ar="قاعدة الأدوية المغربية">Base des médicaments du Maroc</span><i>✦</i><span data-ar="الاستلام بمسح DataMatrix">Réception par scan DataMatrix</span><i>✦</i><span data-ar="ديون الزبناء">Crédit client</span><i>✦</i><span data-ar="سوق بين الصيدليات">Marketplace entre pharmacies</span><i>✦</i><span data-ar="العمل بدون إنترنت">Mode hors ligne</span><i>✦</i><span data-ar="الواجهة بالعربية">Interface en arabe</span><i>✦</i>
+<span data-ar="3 أشهر من التجربة المجانية">3 mois d'essai gratuit</span><i>✦</i><span data-ar="عرض خاص: أول 30 صيدلية">Offre spéciale : 30 premières pharmacies</span><i>✦</i><span data-ar="قاعدة الأدوية المغربية">Base des médicaments du Maroc</span><i>✦</i><span data-ar="الاستلام بمسح DataMatrix">Réception par scan DataMatrix</span><i>✦</i><span data-ar="ديون الزبناء">Crédit client</span><i>✦</i><span data-ar="سوق بين الصيدليات">Marketplace entre pharmacies</span><i>✦</i><span data-ar="العمل بدون إنترنت">Mode hors ligne</span><i>✦</i><span data-ar="الواجهة بالعربية">Interface en arabe</span><i>✦</i>
+<span data-ar="3 أشهر من التجربة المجانية">3 mois d'essai gratuit</span><i>✦</i><span data-ar="عرض خاص: أول 30 صيدلية">Offre spéciale : 30 premières pharmacies</span><i>✦</i><span data-ar="قاعدة الأدوية المغربية">Base des médicaments du Maroc</span><i>✦</i><span data-ar="الاستلام بمسح DataMatrix">Réception par scan DataMatrix</span><i>✦</i><span data-ar="ديون الزبناء">Crédit client</span><i>✦</i><span data-ar="سوق بين الصيدليات">Marketplace entre pharmacies</span><i>✦</i><span data-ar="العمل بدون إنترنت">Mode hors ligne</span><i>✦</i><span data-ar="الواجهة بالعربية">Interface en arabe</span><i>✦</i>
 </div>
 </div>
 
@@ -281,6 +310,7 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 <div class="mm-item"><a href="#fonctions" data-ar="الوظائف">Fonctionnalités</a></div>
 <div class="mm-item"><a href="#journee" data-ar="يوم في الصيدلية">Une journée</a></div>
 <div class="mm-item"><a href="#carte" data-ar="الشبكة">Réseau</a></div>
+<div class="mm-item"><a href="#pionnieres" data-ar="عرض أول 30 صيدلية">Offre 30 premières pharmacies</a></div>
 <div class="mm-item"><a href="/offres.html" data-ar="العروض">Offres</a></div>
 <div class="mm-item"><a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a></div>
 <div class="mm-item"><a href="/guides/" data-ar="الأدلة">Guides</a></div>
@@ -307,7 +337,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <a class="btn btn-g" href="/demande-essai.html" data-ar="اطلب عرضا توضيحيا">Demander une démonstration</a>
 </div>
 <div class="ticks rv d4">
-<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E6B6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-ar="14 يوما مجانا">14 jours gratuits</span></span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E6B6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-ar="3 أشهر مجانا">3 mois gratuits</span></span>
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E6B6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-ar="بدون بطاقة بنكية">Sans carte bancaire</span></span>
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E6B6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-ar="لا شيء للتثبيت">Rien à installer</span></span>
 </div>
@@ -400,11 +430,47 @@ setInterval(step,2600);
 </script>
 </section>
 
+<section id="pionnieres" class="pion">
+<div class="pion-in">
+<div class="pion-l sr">
+<div class="pion-badge"><span class="pion-dot"></span><span data-ar="عرض خاص · 30 مقعدا فقط">Offre spéciale · 30 places seulement</span></div>
+<h2 class="serif" data-ar="للصيدليات الثلاثين الأولى: عرض الرواد.">Pour les 30 premières pharmacies&nbsp;: l'offre Pionnières.</h2>
+<p class="pion-lead" data-ar="كل صيدلية تستفيد من 3 أشهر من التجربة المجانية. والصيدليات الثلاثون الأولى التي تنضم إلى PharmaStock تحصل على امتيازات خاصة، لأنها تبني التطبيق معنا.">Toutes les pharmacies profitent de 3 mois d'essai gratuit. Les 30 premières qui rejoignent PharmaStock obtiennent en plus des avantages réservés, parce qu'elles construisent l'application avec nous.</p>
+<ul class="pion-list">
+<li><span class="pion-ok">✓</span><span data-ar="&lt;b&gt;3 أشهر مجانا&lt;/b&gt;جميع الوظائف، بدون بطاقة بنكية وبدون التزام."><b>3 mois offerts</b>Toutes les fonctionnalités, sans carte bancaire et sans engagement.</span></li>
+<li><span class="pion-ok">✓</span><span data-ar="&lt;b&gt;التثبيت واستيراد المخزون مجانا&lt;/b&gt;نتكفل باستيراد أدويتك ومخزونك الحالي."><b>Installation et import du stock offerts</b>Nous importons vos médicaments et votre stock existant pour vous.</span></li>
+<li><span class="pion-ok">✓</span><span data-ar="&lt;b&gt;مخاطب مخصص عبر واتساب&lt;/b&gt;رد سريع وتكوين فريقك."><b>Un interlocuteur dédié sur WhatsApp</b>Réponse rapide et formation de votre équipe.</span></li>
+<li><span class="pion-ok">✓</span><span data-ar="&lt;b&gt;سعر تفضيلي للرواد&lt;/b&gt;شروط خاصة محفوظة لأول 30 صيدلية شريكة."><b>Tarif préférentiel Pionnier</b>Des conditions réservées aux 30 premières pharmacies partenaires.</span></li>
+<li><span class="pion-ok">✓</span><span data-ar="&lt;b&gt;أفكارك أولا&lt;/b&gt;الوظائف التي تطلبها تمر في مقدمة برنامجنا."><b>Vos idées en priorité</b>Les fonctions que vous demandez passent en tête de notre feuille de route.</span></li>
+</ul>
+</div>
+<form class="pion-form sr" data-ps-lead="PIONNIERE" novalidate>
+<h3 data-ar="أحجز مكاني">Je réserve ma place</h3>
+<p class="pion-small" data-ar="دقيقتان. نتصل بك خلال 24 ساعة.">2 minutes. Nous vous recontactons sous 24 h.</p>
+<div class="pion-row">
+<label class="pion-f"><span data-ar="الاسم">Prénom</span><input name="prenom" autocomplete="given-name" maxlength="80"></label>
+<label class="pion-f"><span data-ar="النسب">Nom</span><input name="nom" autocomplete="family-name" maxlength="80"></label>
+</div>
+<label class="pion-f"><span data-ar="اسم الصيدلية">Nom de la pharmacie</span><input name="pharmacie" required maxlength="150" placeholder="Pharmacie ..."></label>
+<div class="pion-row">
+<label class="pion-f"><span data-ar="المدينة">Ville</span><input name="ville" maxlength="80" autocomplete="address-level2"></label>
+<label class="pion-f"><span data-ar="الهاتف / واتساب">Téléphone / WhatsApp</span><input name="tel" type="tel" maxlength="30" autocomplete="tel" placeholder="06 12 34 56 78"></label>
+</div>
+<label class="pion-f"><span data-ar="البريد الإلكتروني (اختياري)">Email (facultatif)</span><input name="email" type="email" maxlength="150" autocomplete="email"></label>
+<div class="ps-hp" aria-hidden="true" style="position:absolute;left:-9999px"><label>Site web<input name="site_web" tabindex="-1" autocomplete="off"></label></div>
+<button type="submit" class="btn btn-p pion-btn" data-ar="← أحجز مكاني">Réserver ma place →</button>
+<div class="ps-msg" role="status" aria-live="polite"></div>
+<p class="pion-legal" data-ar="تُستعمل معلوماتك فقط للتواصل معك بخصوص PharmaStock.">Vos informations servent uniquement à vous recontacter au sujet de PharmaStock.</p>
+</form>
+</div>
+</section>
+
+
 <section class="stats">
 <div class="wrap">
 <div class="stat sr"><b class="serif">6 000+</b><p data-ar="دواء مغربي مرجعي، بالرمز الشريطي وثمن البيع للعموم">médicaments marocains déjà référencés, avec code-barres et PPV</p></div>
 <div class="stat sr"><b class="serif">FR · ع</b><p data-ar="واجهة بالفرنسية والعربية، حسب اختيار كل مستعمل">interface en français et en arabe, au choix de chaque utilisateur</p></div>
-<div class="stat sr"><b class="serif" data-ar="14 يوما">14 jours</b><p data-ar="تجربة مجانية، بدون بطاقة بنكية ولا التزام">d'essai gratuit, sans carte bancaire ni engagement</p></div>
+<div class="stat sr"><b class="serif" data-ar="3 أشهر">3 mois</b><p data-ar="تجربة مجانية، بدون بطاقة بنكية ولا التزام">d'essai gratuit, sans carte bancaire ni engagement</p></div>
 <div class="stat sr"><b class="serif">0</b><p data-ar="برنامج للتثبيت: المتصفح يكفي، حتى على اللوحة">logiciel à installer : un navigateur suffit, même sur tablette</p></div>
 </div>
 </section>
@@ -478,7 +544,7 @@ setInterval(step,2600);
 <details open><summary><span data-ar="هل يتضمن PharmaStock قاعدة الأدوية المغربية؟" style="color:inherit;font-size:inherit;transform:none">PharmaStock contient-il la base des médicaments du Maroc ?</span><span>+</span></summary><p data-ar="نعم. أكثر من 6000 دواء مغربي مرجعي بالرمز الشريطي وثمن البيع للعموم وثمن التعويض. لا حاجة لإدخال لائحتك.">Oui. Plus de 6 000 médicaments marocains sont déjà référencés avec leur code-barres, leur PPV et leur prix de remboursement. Vous n'avez pas à saisir votre catalogue.</p></details>
 <details><summary><span data-ar="هل يمكن استعمال PharmaStock بالعربية؟" style="color:inherit;font-size:inherit;transform:none">Puis-je utiliser PharmaStock en arabe ?</span><span>+</span></summary><p data-ar="نعم. كل مستعمل ينتقل بين الفرنسية والعربية في أي لحظة، مع عرض من اليمين إلى اليسار.">Oui. Chaque utilisateur passe du français à l'arabe à tout moment, avec un affichage de droite à gauche.</p></details>
 <details><summary><span data-ar="ماذا يحدث عند انقطاع الإنترنت؟" style="color:inherit;font-size:inherit;transform:none">Que se passe-t-il en cas de coupure internet ?</span><span>+</span></summary><p data-ar="تواصل البيع. تُحفظ المبيعات على الجهاز وتُرسل تلقائيا عند عودة الاتصال.">Vous continuez à vendre. Les ventes sont gardées sur le poste et envoyées automatiquement au retour de la connexion.</p></details>
-<details><summary><span data-ar="هل التجربة فعلا بدون التزام؟" style="color:inherit;font-size:inherit;transform:none">L'essai est-il vraiment sans engagement ?</span><span>+</span></summary><p data-ar="نعم: 14 يوما مجانا، بدون بطاقة بنكية وبدون التزام.">Oui : 14 jours gratuits, sans carte bancaire et sans engagement.</p></details>
+<details><summary><span data-ar="هل التجربة فعلا بدون التزام؟" style="color:inherit;font-size:inherit;transform:none">L'essai est-il vraiment sans engagement ?</span><span>+</span></summary><p data-ar="نعم: 3 أشهر مجانا، بدون بطاقة بنكية وبدون التزام.">Oui : 3 mois gratuits, sans carte bancaire et sans engagement.</p></details>
 <details><summary><span data-ar="هل يمكن استيراد معطيات برنامجي القديم؟" style="color:inherit;font-size:inherit;transform:none">Puis-je importer les données de mon ancien logiciel ?</span><span>+</span></summary><p data-ar="نعم، يمكن استيراد مخزونك ويرافقك فريقنا أثناء الانتقال.">Oui, votre stock peut être importé et notre équipe vous accompagne pendant la migration.</p></details>
 </div>
 </section>
@@ -486,7 +552,7 @@ setInterval(step,2600);
 <section class="cta" style="padding:0 32px 110px">
 <div class="final sr">
 <h2 class="serif" data-ar="مستعد لتبسيط تدبير صيدليتك؟">Prêt à simplifier votre officine ?</h2>
-<p data-ar="أنشئ حسابك في دقيقتين وجرّب PharmaStock مجانا لمدة 14 يوما.">Créez votre compte en deux minutes et testez PharmaStock gratuitement pendant 14 jours.</p>
+<p data-ar="أنشئ حسابك في دقيقتين وجرّب PharmaStock مجانا لمدة 3 أشهر.">Créez votre compte en deux minutes et testez PharmaStock gratuitement pendant 3 mois.</p>
 <div class="ctas" style="justify-content:center">
 <a class="btn" href="/inscription/" style="background:#fff;color:#0B1B2B" data-ar="ابدأ التجربة المجانية">Démarrer l'essai gratuit</a>
 <a class="btn btn-o" href="/contact.html" data-ar="اتصل بنا">Nous contacter</a>
@@ -512,6 +578,6 @@ setInterval(step,2600);
 var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 els.forEach(function(e){io.observe(e)});})();
 </script>
-<script src="/assets/ps-site.js?v=6" defer></script>
+<script src="/assets/ps-site.js?v=7" defer></script>
 </body>
 </html>
