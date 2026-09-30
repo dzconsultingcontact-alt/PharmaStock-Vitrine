@@ -224,6 +224,15 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 @media (max-width:640px){#carte{padding-bottom:80px;padding:14px;border-radius:24px}#carte .mx-toast{left:12px;right:12px;bottom:12px;padding:10px 12px}}
 [dir=rtl] #carte .mx-list li,[dir=rtl] #carte .mx-legend{direction:rtl}
 </style>
+<style>
+.hero-vis{position:relative;height:680px}
+.hero-vis #carte{position:absolute;bottom:0;right:0;width:78%;max-width:none;padding-bottom:92px}
+.hero-vis .mock{position:absolute;left:-30px;top:0;width:540px;height:430px;scale:.6;transform-origin:left top;z-index:2}
+@media (min-width:1025px){.hero-vis #carte .mx-tag{left:auto;right:24px}}
+.hero-vis .mock .toast{scale:1.3;transform-origin:left bottom}
+@media (max-width:1240px){.hero-vis .mock{scale:.52}}
+@media (max-width:1024px){.hero-vis{height:auto;display:flex;flex-direction:column;gap:28px}.hero-vis #carte{position:relative;width:100%;max-width:560px;margin:0 auto;padding-bottom:84px}.hero-vis .mock{position:relative;left:0;width:100%;scale:1;height:400px}.hero-vis .mock .toast{scale:1}}
+</style>
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
@@ -269,6 +278,7 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E6B6A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-ar="لا شيء للتثبيت">Rien à installer</span></span>
 </div>
 </div>
+<div class="hero-vis">
 <div id="carte" class="mx-card rv d2" aria-label="Carte du réseau PharmaStock">
 <span class="mx-tag" data-ar="محاكاة">Simulation</span>
 <svg class="mx-svg" viewBox="0 0 460 520" role="img" aria-label="Carte du Maroc : illustration du réseau de pharmacies PharmaStock">
@@ -317,6 +327,23 @@ setInterval(spark,200);
 setInterval(step,2600);
 })();
 </script>
+</div>
+<div class="mock rv d2" aria-hidden="true">
+<div class="screen">
+<div class="side"><i style="height:10px;width:70%;background:#0E6B6A"></i><i style="width:80%;margin-top:16px"></i><i style="height:30px;border-radius:9px;background:rgba(14,107,106,.14)"></i><i style="width:60%"></i><i style="width:75%"></i><i style="width:55%"></i><i style="width:70%"></i></div>
+<div class="main">
+<div class="serif" style="font-size:30px">Ma pharmacie</div>
+<div class="kpis">
+<div class="kpi" style="background:rgba(14,107,106,.08);border:1.5px solid rgba(14,107,106,.2)"><small>MÉDICAMENTS</small><b style="color:#0E6B6A">2 749</b></div>
+<div class="kpi" style="background:rgba(233,162,59,.1);border:1.5px solid rgba(233,162,59,.3)"><small>ALERTES</small><b style="color:#B06E0E">5</b></div>
+<div class="kpi" style="background:rgba(37,99,235,.08);border:1.5px solid rgba(37,99,235,.2)"><small>VENTES DU JOUR</small><b style="color:#1D4ED8">38</b></div>
+</div>
+<div class="chart"><div class="bar" style="height:38%;animation-delay:.3s"></div><div class="bar" style="height:55%;animation-delay:.4s"></div><div class="bar" style="height:47%;animation-delay:.5s"></div><div class="bar" style="height:72%;background:#9FCFCB;animation-delay:.6s"></div><div class="bar" style="height:64%;background:#9FCFCB;animation-delay:.7s"></div><div class="bar" style="height:90%;background:#0E6B6A;animation-delay:.8s"></div></div>
+</div>
+</div>
+<div class="toast"><span class="b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><span><strong data-ar="صيدلية أطلس تتوفر على منتجك">Pharmacie Atlas a votre produit</strong><small data-ar="رد على « أبحث عن » · منذ دقيقتين">Réponse à « Je cherche » · il y a 2 min</small></span></div>
+<div class="langchip"><span>FR</span><span style="color:#C9D2CF">|</span><span>عربي</span></div>
+</div>
 </div>
 </div>
 </section>
