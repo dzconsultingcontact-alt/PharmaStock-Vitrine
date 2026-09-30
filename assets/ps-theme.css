@@ -1,5 +1,5 @@
 /* PharmaStock — thème « Officine » (bleu nuit, vert pétrole, Instrument Serif) — surcharge commune de toutes les pages */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 :root{
   --teal:#0E6B6A;--teal2:#0E6B6A;--teal3:#0B5857;--green:#0F9D76;--orange:#E9A23B;--red:#DC2626;
   --dark:#0B1B2B;--text:#0B1B2B;--gray:#4A5D6E;--gray2:#8A9BA8;--border:#E1E7E4;--light:#E3F1EF;--light2:#CFE6E3;--bg:#F4F6F3;
@@ -11,8 +11,8 @@
 @keyframes ps-shine{from{left:-60%}to{left:130%}}
 html{overflow-x:hidden}
 html body{background:var(--bg)!important;color:var(--text);-webkit-font-smoothing:antialiased}
-html body,html body button,html body input,html body select,html body textarea{font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif}
-h1,h2,.section-title,.ps-h2,.page-hero h1,.cta-final h2,.cta-band h2,.plan-price,.ms-val,.num,.logo-text,.f-logo-text,.footer-logo-text,.promo-price,.kpi-num,.step-num{font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;letter-spacing:-.015em!important}
+html body,html body button,html body input,html body select,html body textarea{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+h1,h2,.section-title,.ps-h2,.page-hero h1,.cta-final h2,.cta-band h2,.plan-price,.ms-val,.num,.logo-text,.f-logo-text,.footer-logo-text,.promo-price,.kpi-num,.step-num{font-family:'Plus Jakarta Sans',system-ui,sans-serif!important;font-weight:800!important;letter-spacing:-.025em!important;font-style:normal!important}
 h1,.page-hero h1{line-height:1.05!important}
 h3{letter-spacing:-.01em}
 [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] .section-title,[dir="rtl"] .ps-h2,[dir="rtl"] .logo-text,[dir="rtl"] .page-hero h1{font-family:'Cairo',sans-serif!important;font-weight:800!important}
@@ -22,7 +22,7 @@ a{color:var(--ps-primary)}
 /* Bandeau défilant (remplace l'ancienne barre du haut) */
 .topbar{display:none!important}
 .ps-band{background:var(--ps-ink);color:#DCEAF1;padding:11px 0;overflow:hidden;position:relative;z-index:60}
-.ps-band .ps-mq{display:flex;gap:44px;width:max-content;animation:ps-marquee 40s linear infinite;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:19px;white-space:nowrap}
+.ps-band .ps-mq{display:flex;gap:44px;width:max-content;animation:ps-marquee 40s linear infinite;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-style:normal;font-weight:600;font-size:15px;letter-spacing:.01em;white-space:nowrap}
 .ps-band .ps-mq i{color:var(--ps-mint);font-style:normal}
 .ps-band:hover .ps-mq{animation-play-state:paused}
 
@@ -37,7 +37,7 @@ nav .nav-menu > li > a:hover{color:var(--ps-ink)!important}
 .dd-item-icon{background:var(--light)!important;color:var(--ps-primary)!important;border-radius:12px!important;display:flex;align-items:center;justify-content:center}
 .dd-item:hover .dd-item-icon{background:var(--ps-primary)!important;color:#fff!important}
 .dd-promo{background:var(--ps-ink)!important;border:0!important;border-radius:16px!important}
-.dd-promo *{color:#DCEAF1!important}.dd-promo .dp-title{color:#fff!important;font-family:'Instrument Serif',serif!important;font-size:1.3rem!important;font-weight:400!important}
+.dd-promo *{color:#DCEAF1!important}.dd-promo .dp-title{color:#fff!important;font-family:'Plus Jakarta Sans',system-ui,sans-serif!important;font-weight:800!important;font-size:1.3rem!important;font-weight:400!important}
 .dd-promo a{color:var(--ps-mint)!important}
 .nav-login{color:var(--ps-ink)!important;border:1.5px solid #CFD8D6!important;background:#fff!important;border-radius:12px!important}
 .nav-login:hover{border-color:var(--ps-primary)!important;color:var(--ps-primary)!important}
@@ -169,3 +169,6 @@ nav .nav-menu > li > a:hover{color:var(--ps-ink)!important}
 /* Bandeau défilant : plus fin sur téléphone, sens constant en arabe */
 .ps-band{direction:ltr}.ps-band .ps-mq span{unicode-bidi:isolate}
 @media (max-width:640px){.ps-band{padding:6px 0}.ps-band .ps-mq{font-size:14px;gap:24px;animation-duration:32s}}
+
+/* Typographie professionnelle : Plus Jakarta Sans (titres) + Inter (texte) */
+em,h1 em,h2 em{font-style:normal}
