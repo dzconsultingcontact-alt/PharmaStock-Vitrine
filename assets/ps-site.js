@@ -23,6 +23,8 @@
   function bandeau() {
     if (document.querySelector('.band, .ps-band')) return;
     var items = [
+      ['3 mois d\'essai gratuit', '3 أشهر من التجربة المجانية'],
+      ['Offre spéciale : 30 premières pharmacies', 'عرض خاص: أول 30 صيدلية'],
       ['Base des médicaments du Maroc', 'قاعدة الأدوية المغربية'],
       ['Réception par scan DataMatrix', 'الاستلام بمسح DataMatrix'],
       ['Crédit client', 'ديون الزبناء'],
@@ -123,7 +125,7 @@
     var l = document.createElement('link'); l.rel = 'stylesheet';
     l.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap';
     document.head.appendChild(l);
-    var s = document.createElement('script'); s.src = '/assets/ps-ar.js?v=5'; s.defer = true;
+    var s = document.createElement('script'); s.src = '/assets/ps-ar.js?v=7'; s.defer = true;
     document.head.appendChild(s);
   }
 

@@ -165,3 +165,7 @@ nav .nav-menu > li > a:hover{color:var(--ps-ink)!important}
 .mobile-menu .mm-cta1{background:var(--ps-primary)!important;color:#fff!important}
 .mobile-menu .mm-cta2{border:1.5px solid #D5DDDA!important;color:var(--ps-ink)!important;background:#fff!important}
 .mobile-menu .ps-lang-m{color:var(--ps-ink)!important;border-color:#D5DDDA!important;background:#fff!important}
+
+/* Bandeau défilant : plus fin sur téléphone, sens constant en arabe */
+.ps-band{direction:ltr}.ps-band .ps-mq span{unicode-bidi:isolate}
+@media (max-width:640px){.ps-band{padding:6px 0}.ps-band .ps-mq{font-size:14px;gap:24px;animation-duration:32s}}
