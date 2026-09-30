@@ -18,8 +18,8 @@
 <meta name="theme-color" content="#0B1B2B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/ps-site.css?v=7">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/ps-site.css?v=8">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"PharmaStock","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://mapharmastock.com/","inLanguage":["fr","ar"],"description":"Logiciel de gestion de pharmacie au Maroc : base de plus de 6 000 médicaments marocains avec code-barres, stock et lots en temps réel, réception par scan DataMatrix, crédit client, réseau entre pharmacies, interface en français et en arabe.","featureList":["Base des médicaments du Maroc (code-barres, PPV)","Gestion de stock et des lots (FEFO)","Réception des livraisons par scan DataMatrix","Ventes au comptoir, même hors ligne","Crédit client (carnet) et relances WhatsApp","Marketplace et « Je cherche » entre pharmacies","Préparations magistrales","Rappels patients chroniques","Commandes suggérées","Retours et avoirs","Équipe et droits d'accès","Multi-pharmacies","Assistant IA","Interface en français et en arabe"],"areaServed":{"@type":"Country","name":"Maroc"},"offers":{"@type":"Offer","priceCurrency":"MAD","description":"Essai gratuit de 3 mois, sans carte bancaire"}}
 </script>
@@ -35,9 +35,9 @@
 :root{--ink:#0B1B2B;--ink2:#34495C;--mute:#4A5D6E;--ground:#F4F6F3;--line:#E1E7E4;--acc:#0E6B6A;--acc2:#0B5857;--mint:#7FD1C7;--amber:#E9A23B}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--ground);font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--ground);font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--acc)}
-.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+.serif{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400}
 .wrap{max-width:1240px;margin:0 auto}
 @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-12px) rotate(-1.2deg)}}
@@ -94,7 +94,7 @@ html{overflow-x:hidden}
 .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .kpi{border-radius:14px;padding:14px}
 .kpi small{display:block;font-size:10px;font-weight:700;color:var(--mute)}
-.kpi b{font-family:'Instrument Serif',serif;font-weight:400;font-size:30px}
+.kpi b{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400;font-size:30px}
 .chart{flex-grow:1;border-radius:16px;border:1px solid var(--line);padding:18px;display:flex;align-items:flex-end;gap:12px}
 .bar{flex-grow:1;border-radius:8px 8px 3px 3px;background:#CFE6E3;transform-origin:bottom;animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both}
 .toast{position:absolute;left:-30px;bottom:60px;animation:floaty2 6s ease-in-out infinite;background:var(--ink);color:#fff;border-radius:18px;padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 24px 50px -20px rgba(11,27,43,.6)}
@@ -283,14 +283,26 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 <style>
 .trial-big{display:inline-flex;align-items:center;gap:16px;margin-top:30px;padding:14px 22px 14px 18px;border-radius:20px;background:linear-gradient(135deg,rgba(14,107,106,.1),rgba(127,209,199,.18));border:1.5px solid rgba(14,107,106,.25);max-width:100%;box-sizing:border-box}
 .hero .wrap>div{min-width:0}
-.trial-big b{white-space:nowrap;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:58px;line-height:1;color:var(--acc);letter-spacing:-.02em}
+.trial-big b{white-space:nowrap;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400;font-size:58px;line-height:1;color:var(--acc);letter-spacing:-.02em}
 .trial-big strong{display:block;font-size:21px;font-weight:800;color:var(--ink)}
 .trial-big small{display:block;font-size:13.5px;color:var(--mute);font-weight:600;margin-top:2px}
 .pion-stats{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap}
 .pion-stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:14px 20px;min-width:150px}
-.pion-stats b{display:block;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:48px;line-height:1;color:#FDE7C2}
+.pion-stats b{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400;font-size:48px;line-height:1;color:#FDE7C2}
 .pion-stats span{display:block;margin-top:6px;font-size:14px;font-weight:700;color:#CFE3E1}
 @media (max-width:640px){.trial-big{gap:12px;padding:12px 16px}.trial-big b{font-size:44px}.trial-big strong{font-size:17px}.pion-stats b{font-size:38px}.pion-stats div{min-width:0;flex:1}}
+</style>
+<style>
+/* Typographie professionnelle : Plus Jakarta Sans (titres) + Inter (texte) */
+.serif,.trial-big b,.pion-stats b{font-weight:800!important;letter-spacing:-.03em;font-style:normal}
+.hero h1{font-size:64px;line-height:1.06;letter-spacing:-.035em}.hero h1 em{font-style:normal}
+.h2,.net h2,.cta h2{font-size:46px!important;line-height:1.1!important;letter-spacing:-.03em!important}
+.pion h2{font-size:42px;line-height:1.12;letter-spacing:-.03em}
+.band .mq{font-style:normal;font-weight:600;font-size:15px!important;letter-spacing:.01em}
+.trial-big b{font-size:48px}.pion-stats b{font-size:40px}
+.kpi b{font-weight:800;letter-spacing:-.02em}
+@media (max-width:1024px){.hero h1{font-size:52px}}
+@media (max-width:640px){.hero h1{font-size:40px!important;line-height:1.1}.h2,.net h2,.cta h2{font-size:32px!important}.pion h2{font-size:30px}.band .mq{font-size:13px!important}.trial-big b{font-size:38px}.pion-stats b{font-size:32px}}
 </style>
 </head>
 <body>
@@ -591,6 +603,6 @@ setInterval(step,2600);
 var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 els.forEach(function(e){io.observe(e)});})();
 </script>
-<script src="/assets/ps-site.js?v=7" defer></script>
+<script src="/assets/ps-site.js?v=8" defer></script>
 </body>
 </html>
