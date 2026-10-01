@@ -1,0 +1,85 @@
+/* PharmaStock — composants ajoutés au site vitrine (nouveautés, pionnières, formulaires, pages ville, guides, WhatsApp, arabe) */
+.ps-sec{padding:72px 20px;scroll-margin-top:90px}
+.ps-in{max-width:1140px;margin:0 auto}
+.ps-tag{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--teal,#0891b2);background:var(--light2,#e0f2fe);padding:6px 12px;border-radius:999px;margin-bottom:12px}
+.ps-h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:800;color:var(--dark,#0c1a2e);margin:0 0 10px;line-height:1.2}
+.ps-sub{color:var(--gray,#64748b);font-size:1.05rem;max-width:720px;margin:0 0 36px;line-height:1.6}
+.ps-center{text-align:center}.ps-center .ps-sub{margin-left:auto;margin-right:auto}
+.ps-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.ps-card{background:#fff;border:1px solid var(--border,#e2e8f0);border-radius:18px;padding:22px;box-shadow:0 1px 3px rgba(15,23,42,.05);transition:transform .2s,box-shadow .2s;position:relative}
+.ps-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(8,145,178,.12)}
+.ps-card .ps-ico{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:var(--light,#f0f9ff);margin-bottom:12px}
+.ps-card h3{font-size:1.05rem;margin:0 0 6px;color:var(--dark,#0c1a2e)}
+.ps-card p{margin:0;color:var(--gray,#64748b);font-size:.93rem;line-height:1.55}
+.ps-new{position:absolute;top:14px;right:14px;font-size:.68rem;font-weight:800;color:#047857;background:#d1fae5;padding:3px 8px;border-radius:999px}
+.ps-bg{background:var(--bg,#f8fafc)}
+.ps-dark{background:linear-gradient(135deg,#0c1a2e 0%,#0e7490 100%);color:#fff}
+.ps-dark .ps-h2{color:#fff}.ps-dark .ps-sub{color:#cbd5e1}.ps-dark .ps-tag{background:rgba(255,255,255,.12);color:#67e8f9}
+.ps-pion{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.ps-avantages{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:12px}
+.ps-avantages li{display:flex;gap:12px;align-items:flex-start;line-height:1.5}
+.ps-avantages li b{display:block}
+.ps-avantages .ps-ok{flex:0 0 28px;height:28px;border-radius:50%;background:rgba(16,185,129,.18);color:#34d399;display:flex;align-items:center;justify-content:center;font-weight:900}
+.ps-compteur{display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:10px 16px;border-radius:12px;font-weight:700}
+.ps-form{background:#fff;color:var(--text,#1e293b);border-radius:20px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.ps-form h3{margin:0 0 4px;font-size:1.25rem;color:var(--dark,#0c1a2e)}
+.ps-form .ps-small{color:var(--gray,#64748b);font-size:.85rem;margin:0 0 16px}
+.ps-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ps-field{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.ps-field label{font-size:.8rem;font-weight:700;color:#334155}
+.ps-field input,.ps-field select,.ps-field textarea{font:inherit;font-size:.95rem;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;color:#0f172a;min-height:44px}
+.ps-field input:focus,.ps-field select:focus,.ps-field textarea:focus{outline:2px solid var(--teal2,#06b6d4);border-color:transparent}
+.ps-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.ps-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:800;border:0;border-radius:12px;padding:13px 20px;cursor:pointer;text-decoration:none;min-height:46px;transition:transform .15s,filter .15s}
+.ps-btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.ps-btn-p{background:linear-gradient(135deg,var(--teal,#0891b2),var(--teal3,#0e7490));color:#fff}
+.ps-btn-w{background:#16a34a;color:#fff}
+.ps-btn-o{background:#fff;color:var(--teal3,#0e7490);border:1.5px solid var(--teal,#0891b2)}
+.ps-btn-block{width:100%}
+.ps-msg{margin-top:12px;padding:12px 14px;border-radius:10px;font-size:.92rem;display:none}
+.ps-msg.ok{display:block;background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0}
+.ps-msg.err{display:block;background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
+.ps-legal{font-size:.75rem;color:#94a3b8;margin:10px 0 0}
+/* bouton WhatsApp flottant */
+.ps-wa{position:fixed;right:18px;bottom:18px;z-index:9990;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:800;padding:12px 16px 12px 12px;border-radius:999px;box-shadow:0 10px 25px rgba(0,0,0,.2);font-size:.95rem}
+.ps-wa svg{width:28px;height:28px}
+.ps-wa:hover{filter:brightness(1.05)}
+@media (max-width:640px){.ps-wa span{display:none}.ps-wa{padding:12px}}
+/* sélecteur de langue */
+.ps-lang{font:inherit;font-family:'Cairo','Inter',sans-serif;font-weight:800;font-size:.85rem;white-space:nowrap;border:1.5px solid var(--border,#e2e8f0);background:#fff;color:var(--dark,#0c1a2e);border-radius:10px;padding:7px 11px;cursor:pointer;min-height:38px;margin-inline-end:8px}
+.ps-lang:hover{border-color:var(--teal,#0891b2)}
+.ps-lang-m{display:block;margin:10px 16px}
+/* pages intérieures */
+.ps-hero{background:linear-gradient(135deg,#f0f9ff 0%,#ecfeff 60%,#f8fafc 100%);padding:56px 20px 36px;border-bottom:1px solid var(--border,#e2e8f0)}
+.ps-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--dark,#0c1a2e);margin:0 0 12px;line-height:1.15}
+.ps-hero p{font-size:1.1rem;color:#475569;max-width:760px;line-height:1.6;margin:0}
+.ps-ar-line{direction:rtl;color:#64748b;margin-top:8px!important;font-size:1.05rem!important}
+.ps-crumb{font-size:.85rem;color:#64748b;margin-bottom:14px}.ps-crumb a{color:var(--teal3,#0e7490);text-decoration:none}
+.ps-crumb a:hover{text-decoration:underline}
+.ps-villes{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0;padding:0;list-style:none}
+.ps-villes a{display:inline-block;padding:9px 14px;border-radius:999px;border:1px solid var(--border,#e2e8f0);background:#fff;color:var(--dark,#0c1a2e);text-decoration:none;font-weight:600;font-size:.92rem}
+.ps-villes a:hover,.ps-villes a[aria-current]{border-color:var(--teal,#0891b2);color:var(--teal3,#0e7490);background:var(--light,#f0f9ff)}
+.ps-prose{max-width:780px;margin:0 auto;font-size:1.05rem;line-height:1.75;color:#334155}
+.ps-prose h2{font-size:1.5rem;color:var(--dark,#0c1a2e);margin:40px 0 12px;line-height:1.3}
+.ps-prose h3{font-size:1.15rem;color:var(--dark,#0c1a2e);margin:28px 0 8px}
+.ps-prose p{margin:0 0 16px}.ps-prose ul,.ps-prose ol{margin:0 0 18px;padding-inline-start:22px}.ps-prose li{margin-bottom:8px}
+.ps-prose a{color:var(--teal3,#0e7490);font-weight:600}
+.ps-prose table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:.95rem}
+.ps-prose th,.ps-prose td{border:1px solid var(--border,#e2e8f0);padding:10px;text-align:start;vertical-align:top}
+.ps-prose th{background:var(--light,#f0f9ff)}
+.ps-note{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:14px 16px;margin:0 0 18px;font-size:.97rem}
+.ps-cta-box{margin:36px 0;background:linear-gradient(135deg,#0c1a2e,#0e7490);color:#fff;border-radius:20px;padding:26px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.ps-cta-box p{margin:0;color:#e2e8f0;max-width:520px}.ps-cta-box strong{display:block;color:#fff;font-size:1.2rem;margin-bottom:4px}
+.ps-meta{color:#64748b;font-size:.9rem;margin-top:10px!important}
+.ps-faq details{border:1px solid var(--border,#e2e8f0);border-radius:12px;padding:14px 16px;margin-bottom:10px;background:#fff}
+.ps-faq summary{font-weight:700;cursor:pointer;color:var(--dark,#0c1a2e)}
+.ps-faq details p{margin:10px 0 0}
+.ps-guides .ps-card a.ps-lire{display:inline-block;margin-top:12px;font-weight:800;color:var(--teal3,#0e7490);text-decoration:none}
+.ps-guides .ps-card h3 a{color:inherit;text-decoration:none}
+.ps-guides .ps-card h3 a::after{content:"";position:absolute;inset:0}
+@media (max-width:860px){.ps-pion{grid-template-columns:1fr}.ps-row{grid-template-columns:1fr}.ps-sec{padding:56px 16px}}
+/* arabe */
+html[dir=rtl] body{font-family:'Cairo','Inter',sans-serif}
+html[dir=rtl] .ps-new{right:auto;left:14px}
+html[dir=rtl] .ps-wa{right:auto;left:18px}
+html[dir=rtl] a[href^="tel:"],html[dir=rtl] .ps-ltr{direction:ltr;unicode-bidi:embed;display:inline-block}

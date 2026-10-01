@@ -1,0 +1,7 @@
+# Fichiers serveur non versionnés (contiennent des secrets)
+api/
+# Sauvegardes et aperçus
+backup-*/
+apercu-*/
+tmp-*/
+index.backup-*.html
