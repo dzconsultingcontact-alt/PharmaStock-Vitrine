@@ -125,7 +125,7 @@
     var l = document.createElement('link'); l.rel = 'stylesheet';
     l.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap';
     document.head.appendChild(l);
-    var s = document.createElement('script'); s.src = '/assets/ps-ar.js?v=7'; s.defer = true;
+    var s = document.createElement('script'); s.src = '/assets/ps-ar.js?v=8'; s.defer = true;
     document.head.appendChild(s);
   }
 
