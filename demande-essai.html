@@ -125,6 +125,28 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 .success-wrap h2{font-family:'Unbounded',sans-serif;font-size:1.5rem;font-weight:900;color:var(--dark);margin-bottom:.5rem;}
 .success-wrap p{color:var(--gray);font-size:.88rem;line-height:1.7;margin-bottom:1.5rem;}
 @media(max-width:900px){.page{grid-template-columns:1fr;}.page-left{padding:2.5rem;}.page-right{padding:2rem;}.form-grid,.plan-sel{grid-template-columns:1fr;}}
+/* Mise en page : cartes compactes, rien ne déborde, formulaire en premier sur téléphone */
+.page>*{min-width:0}
+.page-left h2 em{color:#7FD1C7!important}
+.page-left .benefits{gap:.75rem}
+.page-left .benefit{align-items:center!important;gap:14px!important;padding:14px 16px!important}
+.page-left .benefit .b-text{min-width:0}
+.page-left .benefit .b-text h4{margin:0 0 2px!important;font-size:.92rem!important}
+.page-left .benefit .b-text p{margin:0!important;font-size:.8rem!important;line-height:1.45!important}
+.page-left .kpi-row{flex-wrap:wrap;gap:12px}
+.page-left .kpi-m{flex:1 1 0;min-width:96px;text-align:center;padding:12px 10px!important}
+.page-left .kpi-m .num{font-size:1.45rem!important;line-height:1.2!important;white-space:nowrap}
+.page-left .kpi-m .lbl{font-size:.72rem!important;margin-top:2px}
+#formSection,.success-wrap{width:100%;max-width:640px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){
+  .page{min-height:0}
+  .page-right{order:1;padding:1.75rem 1.1rem!important}
+  .page-left{order:2;padding:2rem 1.1rem!important}
+  .page-left h2{font-size:1.45rem!important}
+  .page-left>p{margin-bottom:1.4rem!important}
+  .form-header h1{font-size:1.3rem!important}
+  .page-left .kpi-row{margin-top:1.4rem;padding-top:1.2rem}
+}
 </style>
 <meta property="og:image" content="https://mapharmastock.com/assets/og-pharmastock.jpg"><meta name="twitter:image" content="https://mapharmastock.com/assets/og-pharmastock.jpg"><link rel="stylesheet" href="/assets/ps-site.css?v=8"><link rel="stylesheet" href="/assets/ps-theme.css?v=8"></head>
 <body>
