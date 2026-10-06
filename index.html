@@ -72,7 +72,9 @@ a{color:var(--acc)}
 .nav a.lk:hover{color:var(--ink)}.nav a.lk:hover::after{width:100%}
 .nav-actions{display:flex;align-items:center;gap:18px}
 .nav .btn{padding:11px 20px;font-size:15px;white-space:nowrap}
-@media (max-width:1240px){.nav .links a[href='/blog/']{display:none}}
+@media (max-width:1320px){.nav .links a[href='/blog/']{display:none}}
+@media (max-width:1200px){.nav .links a[href='#journee']{display:none}}
+@media (max-width:1100px){.nav .links{gap:20px}}
 /* hero */
 .hero{position:relative;padding:90px 32px 110px;overflow:hidden}
 html{overflow-x:hidden}
@@ -323,6 +325,7 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 <a class="lk" href="#journee" data-ar="يوم في الصيدلية">Une journée</a>
 <a class="lk" href="#reseau" data-ar="الشبكة">Réseau</a>
 <a class="lk" href="/offres.html" data-ar="العروض">Offres</a>
+<a class="lk" href="/fournisseurs/" data-ar="الموردون">Fournisseurs</a>
 <a class="lk" href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a>
 <a class="lk" href="/blog/" data-ar="المدونة">Blog</a>
 </nav>
@@ -742,6 +745,26 @@ setInterval(step,2600);
 <div class="row"><span class="tag" style="background:#E9A23B">−20 %</span><span style="flex-grow:1"><strong data-ar="عرض من الشبكة: منتج قريب من انتهاء الصلاحية">Offre du réseau : produit proche de la péremption</strong><small data-ar="صيدلية من الشبكة · بثمن مخفض">Pharmacie du réseau · prix réduit</small></span></div>
 <div class="row"><span class="tag" style="background:#7FD1C7" data-ar="أبحث عن">JE CHERCHE</span><span style="flex-grow:1"><strong data-ar="منتج مفقود · علبتان">Produit introuvable · 2 boîtes</strong><small data-ar="مستعجل · مريض في الانتظار">Urgent · patient en attente</small></span></div>
 <div class="row"><span class="dot" style="margin:0 8px"></span><span style="flex-grow:1"><strong data-ar="زميل يتوفر على منتجك">Un confrère a votre produit</strong><small data-ar="إشعار فوري">Notification instantanée</small></span></div>
+</div>
+</div>
+</section>
+
+<section id="fournisseurs" class="netw" style="padding:0 32px 110px">
+<div class="net sr" style="background:linear-gradient(135deg,#1B1740 0%,#2A2470 55%,#3B2F8F 100%)">
+<div class="glow" style="right:-140px;top:-140px;width:460px;height:460px;background:radial-gradient(circle,rgba(167,139,250,.45),rgba(167,139,250,0) 65%)"></div>
+<div style="position:relative">
+<div class="eyebrow" style="color:#C4B5FD" data-ar="تجار الجملة · المختبرات">GROSSISTES · LABORATOIRES</div>
+<h2 class="serif" data-ar="أيها الموردون: عروضكم&lt;br&gt;أمام الصيادلة.">Fournisseurs : vos offres<br>devant les pharmaciens.</h2>
+<p class="l" data-ar="أنشئوا مجانا فضاء المورد: انشروا عروضكم وجديدكم بالصور، فتكتشفها الصيدليات داخل PharmaStock وتترك لكم تقييمها.">Créez gratuitement votre espace fournisseur : publiez vos promotions et vos nouveautés en photos. Les pharmacies les découvrent dans PharmaStock et vous laissent leur avis.</p>
+<div class="ctas">
+<a class="btn" href="/fournisseurs/" style="background:#C4B5FD;color:#1B1740" data-ar="أنشئ فضاء المورد">Créer mon espace fournisseur</a>
+<a class="btn btn-o" href="https://app.mapharmastock.com/login?espace=fournisseur" data-ar="دخول الموردين">Connexion fournisseur</a>
+</div>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:14px" aria-hidden="true">
+<div class="row"><span class="tag" style="background:#FF6B35;color:#fff">−25 %</span><span style="flex-grow:1"><strong data-ar="إعلانك بالصور داخل PharmaStock">Votre annonce, en photos, dans PharmaStock</strong><small data-ar="يؤكدها فريقنا · تبقى 7 أو 15 أو 30 يوما">Validée par notre équipe · en ligne 7, 15 ou 30 jours</small></span></div>
+<div class="row"><span class="tag" style="background:#C4B5FD;color:#1B1740">★ 4,8</span><span style="flex-grow:1"><strong data-ar="تقييمات الصيدليات">Les avis des pharmacies</strong><small data-ar="نجوم وتعليقات، مع إمكانية الرد">Étoiles et commentaires, auxquels vous répondez</small></span></div>
+<div class="row"><span class="dot" style="margin:0 8px"></span><span style="flex-grow:1"><strong data-ar="مشاهدات ونقرات كل إعلان">Vues et clics de chaque annonce</strong><small data-ar="نتائج قابلة للقياس">Des résultats mesurés</small></span></div>
 </div>
 </div>
 </section>
