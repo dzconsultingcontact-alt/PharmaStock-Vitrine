@@ -491,6 +491,34 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 </div></section>
 <section class="ps-sec" style="padding-top:36px"><div class="ps-in ps-pion" style="align-items:start">
   <form class="ps-form" id="ps-inscription" novalidate="" style="box-shadow:var(--ps-shadow,0 4px 16px rgba(15,23,42,.06));border:1px solid var(--border,#e2e8f0)">
+    <h3 data-ar="اختر عرضك">Votre offre</h3>
+    <style>
+      .ps-offres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 12px}
+      .ps-offre{position:relative;display:block;border:1.5px solid #e2e8f0;border-radius:14px;padding:12px 12px 10px;cursor:pointer;transition:border-color .2s,box-shadow .2s;background:#fff}
+      .ps-offre input{position:absolute;opacity:0;pointer-events:none}
+      .ps-offre b{display:block;font-size:1rem;color:#0f172a}
+      .ps-offre .px{display:block;font-weight:800;color:#0B5F7A;font-size:.95rem;margin:2px 0 4px}
+      .ps-offre small{display:block;color:#64748b;font-size:.76rem;line-height:1.35}
+      .ps-offre:has(input:checked){border-color:#0E6B6A;box-shadow:0 0 0 3px rgba(14,107,106,.15)}
+      .ps-offre:has(input:checked)::after{content:"✓";position:absolute;top:8px;right:10px;width:20px;height:20px;border-radius:50%;background:#0E6B6A;color:#fff;font-size:12px;display:grid;place-items:center;font-weight:800}
+      .ps-offre.off{opacity:.45;pointer-events:none}
+      .ps-nouvelle{border:1.5px dashed #C62828;background:#FFF7F7;border-radius:14px;padding:12px 14px;margin:0 0 16px}
+      .ps-nouvelle label.l1{display:flex;gap:10px;align-items:flex-start;font-size:.92rem;color:#7f1d1d;cursor:pointer}
+      .ps-nouvelle input[type=checkbox]{margin-top:3px;width:18px;height:18px;accent-color:#C62828}
+      .ps-nouvelle .ps-field{margin:10px 0 0}
+      @media (max-width:560px){.ps-offres{grid-template-columns:1fr}}
+    </style>
+    <div class="ps-offres" role="radiogroup" aria-label="Offre">
+      <label class="ps-offre"><input type="radio" name="offre" value="STARTER"><b>Starter</b><span class="px" data-ar="150 درهم / شهر">150 DH / mois</span><small data-ar="مستخدم واحد · جميع الوظائف">1 utilisateur · toutes les fonctions</small></label>
+      <label class="ps-offre"><input type="radio" name="offre" value="PRO" checked><b>Pro</b><span class="px" data-ar="300 درهم / شهر">300 DH / mois</span><small data-ar="3 مستخدمين · جميع الوظائف">3 utilisateurs · toutes les fonctions</small></label>
+      <label class="ps-offre"><input type="radio" name="offre" value="ENTERPRISE"><b>Enterprise</b><span class="px" data-ar="600 درهم / شهر">600 DH / mois</span><small data-ar="مستخدمون بلا حدود · جميع الوظائف">Utilisateurs illimités · toutes les fonctions</small></label>
+    </div>
+    <p class="ps-small" style="margin:-4px 0 12px" data-ar="3 أشهر من التجربة المجانية مع العرض المختار. لا شيء يُدفع قبل نهاية التجربة.">3 mois d'essai gratuit avec l'offre choisie. Rien à payer avant la fin de l'essai.</p>
+    <div class="ps-nouvelle">
+      <label class="l1"><input type="checkbox" id="i-nouvelle" name="nouvellePharmacie"> <span data-ar="&lt;b&gt;صيدلية جديدة؟&lt;/b&gt; فُتحت منذ أقل من 12 شهرا: سنة مجانية بعرض Enterprise (بعد التحقق).">
+        <b>Nouvelle pharmacie ?</b> Ouverte depuis moins de 12 mois : <b>1 an gratuit en offre Enterprise</b> (après vérification par notre équipe).</span></label>
+      <div class="ps-field" id="i-ouverture-bloc" style="display:none"><label for="i-ouverture" data-ar="تاريخ افتتاح الصيدلية">Date d'ouverture de la pharmacie</label><input id="i-ouverture" name="dateOuverture" type="date"></div>
+    </div>
     <h3 data-ar="معلومات الصيدلية">Votre pharmacie</h3>
     <p class="ps-small" data-ar="كل الحقول ضرورية ما عدا المشار إليها.">Tous les champs sont obligatoires sauf mention contraire.</p>
     <div class="ps-field"><label for="i-pharma" data-ar="اسم الصيدلية">Nom de la pharmacie</label><input id="i-pharma" name="pharmacie" required="" maxlength="150" placeholder="Pharmacie ..."></div>
@@ -532,6 +560,18 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 <script>
 (function(){
   var f=document.getElementById('ps-inscription'); if(!f) return;
+  var nv=document.getElementById('i-nouvelle'), bloc=document.getElementById('i-ouverture-bloc'), dOuv=document.getElementById('i-ouverture');
+  dOuv.max=new Date().toISOString().slice(0,10);
+  function majNouvelle(){
+    bloc.style.display=nv.checked?'':'none';
+    f.querySelectorAll('.ps-offre').forEach(function(l){var r=l.querySelector('input');l.classList.toggle('off',nv.checked&&r.value!=='ENTERPRISE');if(nv.checked&&r.value==='ENTERPRISE')r.checked=true;});
+  }
+  nv.addEventListener('change',majNouvelle);
+  // Offre pré-choisie depuis le lien (?offre=starter|pro|enterprise|nouvelle-pharmacie)
+  var q=(new URLSearchParams(location.search).get('offre')||'').toLowerCase();
+  if(q==='nouvelle-pharmacie'){nv.checked=true;}
+  else{var r=f.querySelector('input[name=offre][value="'+q.toUpperCase()+'"]');if(r)r.checked=true;}
+  majNouvelle();
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var ar=(window.PS_LANG==='ar');
@@ -543,6 +583,16 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
     if((d.motDePasse||'').length<8) return err(ar?'كلمة المرور يجب أن تتكون من 8 أحرف على الأقل.':'Le mot de passe doit contenir au moins 8 caractères.');
     if(d.motDePasse!==document.getElementById('i-mdp2').value) return err(ar?'كلمتا المرور غير متطابقتين.':'Les deux mots de passe ne correspondent pas.');
     if(!document.getElementById('i-cgu').checked) return err(ar?'المرجو قبول الشرط.':'Merci de cocher la case d’acceptation.');
+    var nv=document.getElementById('i-nouvelle').checked;
+    d.nouvellePharmacie=nv;
+    if(nv){
+      if(!d.dateOuverture) return err(ar?'المرجو إدخال تاريخ افتتاح الصيدلية.':'Indiquez la date d’ouverture de votre pharmacie.');
+      var o=new Date(d.dateOuverture+'T00:00:00'), lim=new Date(); lim.setFullYear(lim.getFullYear()-1); lim.setHours(0,0,0,0);
+      if(o>new Date()) return err(ar?'تاريخ الافتتاح لا يمكن أن يكون في المستقبل.':'La date d’ouverture ne peut pas être dans le futur.');
+      if(o<lim) return err(ar?'عرض الصيدلية الجديدة مخصص للصيدليات المفتوحة منذ أقل من 12 شهرا. ألغِ التحديد لمتابعة التجربة المجانية.':'L’offre nouvelle pharmacie est réservée aux pharmacies ouvertes depuis moins de 12 mois. Décochez la case pour continuer avec l’essai gratuit.');
+      d.offre='ENTERPRISE';
+    } else { delete d.dateOuverture; }
+    if(!d.offre) d.offre='PRO';
     d.langue=ar?'ar':'fr';
     var t=b.textContent; b.disabled=true; b.textContent=ar?'جارٍ الإنشاء…':'Création du compte…';
     fetch('https://api.mapharmastock.com/api/inscription',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})

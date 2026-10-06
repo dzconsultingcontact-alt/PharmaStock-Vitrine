@@ -84,6 +84,13 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 .kpi-row{display:flex;gap:1.5rem;margin-top:2.2rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08);}
 .kpi-m .num{font-family:'Unbounded',sans-serif;font-size:1.5rem;font-weight:900;color:var(--teal2);}
 .kpi-m .lbl{font-size:.68rem;color:#64748b;}
+.page-left .benefit{background:rgba(255,255,255,.07)!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:none!important;padding:14px 16px!important;align-items:center}
+.page-left .benefit:hover{transform:none!important;box-shadow:none!important;border-color:rgba(255,255,255,.3)!important}
+.page-left .benefit .b-text h4{color:#fff!important}
+.page-left .benefit .b-text p{color:rgba(255,255,255,.72)!important}
+.page-left .kpi-m{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.14)!important;box-shadow:none!important;padding:10px 14px!important}
+.page-left .kpi-m .num{color:#7FD1C7!important}
+.page-left .kpi-m .lbl{color:rgba(255,255,255,.75)!important}
 .page-right{padding:3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;background:white;}
 .form-header{margin-bottom:2rem;}
 .form-header h1{font-family:'Unbounded',sans-serif;font-size:1.6rem;font-weight:900;color:var(--dark);margin-bottom:.35rem;}
@@ -105,6 +112,8 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 .plan-opt{border:1.5px solid var(--border);border-radius:10px;padding:.75rem;cursor:pointer;transition:all .2s;text-align:center;background:white;}
 .plan-opt:hover{border-color:var(--teal);}
 .plan-opt.sel{border-color:var(--teal);background:var(--light);}
+.plan-sel .plan-opt{border:1.5px solid #E1E7E4!important;background:#fff!important;box-shadow:none!important;transform:none!important}
+.plan-sel .plan-opt.sel{border:2px solid #0E6B6A!important;background:#E9F5F3!important;box-shadow:0 0 0 3px rgba(14,107,106,.15)!important}
 .po-name{font-family:'Unbounded',sans-serif;font-size:.82rem;font-weight:900;color:var(--dark);}
 .po-price{font-size:.75rem;color:var(--teal);font-weight:700;}
 .po-desc{font-size:.65rem;color:var(--gray2);margin-top:2px;}
@@ -116,6 +125,28 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 .success-wrap h2{font-family:'Unbounded',sans-serif;font-size:1.5rem;font-weight:900;color:var(--dark);margin-bottom:.5rem;}
 .success-wrap p{color:var(--gray);font-size:.88rem;line-height:1.7;margin-bottom:1.5rem;}
 @media(max-width:900px){.page{grid-template-columns:1fr;}.page-left{padding:2.5rem;}.page-right{padding:2rem;}.form-grid,.plan-sel{grid-template-columns:1fr;}}
+/* Mise en page : cartes compactes, rien ne déborde, formulaire en premier sur téléphone */
+.page>*{min-width:0}
+.page-left h2 em{color:#7FD1C7!important}
+.page-left .benefits{gap:.75rem}
+.page-left .benefit{align-items:center!important;gap:14px!important;padding:14px 16px!important}
+.page-left .benefit .b-text{min-width:0}
+.page-left .benefit .b-text h4{margin:0 0 2px!important;font-size:.92rem!important}
+.page-left .benefit .b-text p{margin:0!important;font-size:.8rem!important;line-height:1.45!important}
+.page-left .kpi-row{flex-wrap:wrap;gap:12px}
+.page-left .kpi-m{flex:1 1 0;min-width:96px;text-align:center;padding:12px 10px!important}
+.page-left .kpi-m .num{font-size:1.45rem!important;line-height:1.2!important;white-space:nowrap}
+.page-left .kpi-m .lbl{font-size:.72rem!important;margin-top:2px}
+#formSection,.success-wrap{width:100%;max-width:640px;margin-left:auto;margin-right:auto}
+@media(max-width:900px){
+  .page{min-height:0}
+  .page-right{order:1;padding:1.75rem 1.1rem!important}
+  .page-left{order:2;padding:2rem 1.1rem!important}
+  .page-left h2{font-size:1.45rem!important}
+  .page-left>p{margin-bottom:1.4rem!important}
+  .form-header h1{font-size:1.3rem!important}
+  .page-left .kpi-row{margin-top:1.4rem;padding-top:1.2rem}
+}
 </style>
 <meta property="og:image" content="https://mapharmastock.com/assets/og-pharmastock.jpg"><meta name="twitter:image" content="https://mapharmastock.com/assets/og-pharmastock.jpg"><link rel="stylesheet" href="/assets/ps-site.css?v=8"><link rel="stylesheet" href="/assets/ps-theme.css?v=8"></head>
 <body>
@@ -257,7 +288,7 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
       <div class="benefit"><div class="b-icon"><svg class="ps-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div><div class="b-text"><h4>OCR Ordonnances</h4><p>Détection automatique des médicaments en quelques secondes.</p></div></div>
     </div>
     <div class="kpi-row">
-      <div class="kpi-m"><div class="num">14j</div><div class="lbl">Essai gratuit</div></div>
+      <div class="kpi-m"><div class="num">3 mois</div><div class="lbl">Essai gratuit</div></div>
       <div class="kpi-m"><div class="num">0 DH</div><div class="lbl">Carte bancaire</div></div>
       <div class="kpi-m"><div class="num">24h</div><div class="lbl">Réponse équipe</div></div>
     </div>
@@ -273,20 +304,20 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 
       <div id="step1">
         <div class="form-grid">
-          <div class="fg"><label>Prénom *</label><input type="text" placeholder="Mohammed" required=""></div>
-          <div class="fg"><label>Nom *</label><input type="text" placeholder="Alaoui" required=""></div>
-          <div class="fg full"><label>Email professionnel *</label><input type="email" placeholder="pharmacie@exemple.ma" required=""></div>
-          <div class="fg full"><label>Téléphone *</label><input type="tel" placeholder="+212 6XX XX XX XX" required=""></div>
+          <div class="fg"><label>Prénom *</label><input id="prenom" type="text" placeholder="Mohammed" required="" autocomplete="given-name"></div>
+          <div class="fg"><label>Nom *</label><input id="nom" type="text" placeholder="Alaoui" required="" autocomplete="family-name"></div>
+          <div class="fg full"><label>Email professionnel *</label><input id="email" type="email" placeholder="pharmacie@exemple.ma" required="" autocomplete="email"></div>
+          <div class="fg full"><label>Téléphone *</label><input id="tel" type="tel" placeholder="+212 6XX XX XX XX" required="" autocomplete="tel"></div>
         </div>
         <button class="form-btn" onclick="goStep(2)">Continuer →</button>
       </div>
 
       <div id="step2" style="display:none">
         <div class="form-grid">
-          <div class="fg full"><label>Nom de la pharmacie *</label><input type="text" placeholder="Pharmacie Atlas" required=""></div>
-          <div class="fg full"><label>Ville *</label><select required=""><option value="">Sélectionnez</option><option>Casablanca</option><option>Rabat</option><option>Marrakech</option><option>Fès</option><option>Tanger</option><option>Agadir</option><option>Meknès</option><option>Oujda</option><option>Autre</option></select></div>
-          <div class="fg"><label>Nombre de références en stock</label><select><option>Moins de 500</option><option>500 — 1000</option><option>1000 — 2000</option><option>Plus de 2000</option></select></div>
-          <div class="fg"><label>Nombre de pharmacies</label><select><option>1 pharmacie</option><option>2-3 pharmacies</option><option>4+ pharmacies</option></select></div>
+          <div class="fg full"><label>Nom de la pharmacie *</label><input id="pharmaName" type="text" placeholder="Pharmacie Atlas" required=""></div>
+          <div class="fg full"><label>Ville *</label><select id="ville" required=""><option value="">Sélectionnez</option><option>Casablanca</option><option>Rabat</option><option>Marrakech</option><option>Fès</option><option>Tanger</option><option>Agadir</option><option>Meknès</option><option>Oujda</option><option>Autre</option></select></div>
+          <div class="fg"><label>Nombre de références en stock</label><select id="nbRefs"><option>Moins de 500</option><option>500 — 1000</option><option>1000 — 2000</option><option>Plus de 2000</option></select></div>
+          <div class="fg"><label>Nombre de pharmacies</label><select id="nbPharma"><option>1 pharmacie</option><option>2-3 pharmacies</option><option>4+ pharmacies</option></select></div>
         </div>
         <button class="form-btn" onclick="goStep(3)">Continuer →</button>
         <p style="text-align:center;margin-top:.5rem;font-size:.75rem;color:var(--gray2);cursor:pointer" onclick="goStep(1)">← Retour</p>
@@ -295,15 +326,16 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
       <div id="step3" style="display:none">
         <div style="font-size:.76rem;font-weight:600;color:var(--gray);margin-bottom:.7rem">Choisissez votre forfait d'essai</div>
         <div class="plan-sel" id="planSel">
-          <div class="plan-opt" onclick="selPlan(this)"><div class="po-name">Starter</div><div class="po-price">150 DH/mois</div><div class="po-desc">500 références</div></div>
-          <div class="plan-opt sel" onclick="selPlan(this)"><div class="po-name">Pro <svg class="ps-i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><div class="po-price">300 DH/mois</div><div class="po-desc">Stock illimité + IA</div></div>
-          <div class="plan-opt" onclick="selPlan(this)"><div class="po-name">Enterprise</div><div class="po-price">600 DH/mois</div><div class="po-desc">Multi-pharmacies</div></div>
+          <div class="plan-opt" data-plan="STARTER" onclick="selPlan(this)"><div class="po-name">Starter</div><div class="po-price">150 DH/mois</div><div class="po-desc">1 utilisateur</div></div>
+          <div class="plan-opt sel" data-plan="PRO" onclick="selPlan(this)"><div class="po-name">Pro <svg class="ps-i" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><div class="po-price">300 DH/mois</div><div class="po-desc">3 utilisateurs</div></div>
+          <div class="plan-opt" data-plan="ENTERPRISE" onclick="selPlan(this)"><div class="po-name">Enterprise</div><div class="po-price">600 DH/mois</div><div class="po-desc">Utilisateurs illimités</div></div>
         </div>
         <div class="form-grid">
-          <div class="fg full"><label>Comment avez-vous entendu parler de nous ?</label><select><option value="">Sélectionner</option><option>Bouche à oreille</option><option>Réseaux sociaux</option><option>Google</option><option>Conférence</option><option>Autre</option></select></div>
-          <div class="fg full"><label>Message (optionnel)</label><input type="text" placeholder="Vos attentes ou questions..."></div>
+          <div class="fg full"><label>Comment avez-vous entendu parler de nous ?</label><select id="source"><option value="">Sélectionner</option><option>Bouche à oreille</option><option>Réseaux sociaux</option><option>Google</option><option>Conférence</option><option>Autre</option></select></div>
+          <div class="fg full"><label>Message (optionnel)</label><input id="messageLibre" type="text" placeholder="Vos attentes ou questions..." maxlength="500"></div>
         </div>
         <div style="background:var(--light);border:1px solid rgba(8,145,178,.2);border-radius:9px;padding:.85rem;margin-bottom:.85rem;font-size:.78rem;color:var(--teal3);"><svg class="ps-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Notre équipe vous contactera sous 24h pour activer votre essai gratuit de 3 mois.</div>
+        <div id="formErr" role="alert" style="display:none;background:#FEF2F2;border:1px solid #FECACA;color:#991B1B;border-radius:9px;padding:.7rem .85rem;margin-bottom:.85rem;font-size:.8rem"></div>
         <button class="form-btn" onclick="handleSubmit()">Envoyer ma demande →</button>
         <p style="text-align:center;margin-top:.5rem;font-size:.75rem;color:var(--gray2);cursor:pointer" onclick="goStep(2)">← Retour</p>
         <p class="form-note">En soumettant ce formulaire vous acceptez nos <a href="#" style="color:var(--teal)">CGU</a>.</p>
@@ -330,47 +362,65 @@ function goStep(n){
   const l=['','Étape 1 / 3 — Vos informations','Étape 2 / 3 — Votre pharmacie','Étape 3 / 3 — Choisir votre forfait'];
   document.getElementById('stepLbl').textContent=l[n];
 }
-function selPlan(el){document.querySelectorAll('.plan-opt').forEach(p=>p.classList.remove('sel'));el.classList.add('sel');}
+let selectedPlan='PRO';
+function selPlan(el){document.querySelectorAll('.plan-opt').forEach(p=>p.classList.remove('sel'));el.classList.add('sel');selectedPlan=el.getAttribute('data-plan')||'PRO';}
+function val(id){const e=document.getElementById(id);return e?String(e.value||'').trim():'';}
+function showErr(m){const b=document.getElementById('formErr');if(!b)return;b.textContent=m||'';b.style.display=m?'block':'none';}
+// Vérifie les champs obligatoires de l'étape avant de passer à la suivante
+const _goStep=goStep;
+goStep=function(n){
+  if(n>cur){
+    const bloc=document.getElementById('step'+cur);
+    const manquant=[...bloc.querySelectorAll('[required]')].find(x=>!String(x.value||'').trim());
+    if(manquant){manquant.focus();manquant.style.borderColor='#DC2626';return;}
+    const em=bloc.querySelector('input[type=email]');
+    if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())){em.focus();em.style.borderColor='#DC2626';return;}
+    bloc.querySelectorAll('[required]').forEach(x=>x.style.borderColor='');
+  }
+  _goStep(n);
+};
 
-// ✅ URL de ton API — change en production
 const API_URL = 'https://api.mapharmastock.com';
 
 async function handleSubmit() {
   const btn = document.querySelector('#step3 .form-btn');
+  const texte = 'Envoyer ma demande →';
+  if (btn.disabled) return;
+  showErr('');
   btn.textContent = 'Envoi en cours...';
   btn.disabled = true;
-
-  const data = {
-    prenom:    document.getElementById('prenom').value,
-    nom:       document.getElementById('nom').value,
-    email:     document.getElementById('email').value,
-    tel:       document.getElementById('tel').value,
-    pharmacie: document.getElementById('pharmaName').value,
-    ville:     document.getElementById('ville').value,
-    forfait:   selectedPlan
-  };
-
+  const retablir = () => { btn.textContent = texte; btn.disabled = false; };
   try {
-    const res = await fetch(`${API_URL}/api/demandeessai`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+    const details = [
+      val('nbRefs') && ('Références en stock : ' + val('nbRefs')),
+      val('nbPharma') && ('Pharmacies : ' + val('nbPharma')),
+      val('source') && ('Connu par : ' + val('source')),
+      val('messageLibre')
+    ].filter(Boolean).join(' · ');
+    const data = {
+      prenom: val('prenom'), nom: val('nom'), email: val('email'), tel: val('tel'),
+      pharmacie: val('pharmaName'), ville: val('ville'), forfait: selectedPlan,
+      message: details, page: location.pathname, langue: 'fr'
+    };
+    if (!data.tel && !data.email) { showErr('Indiquez au moins un téléphone ou un email.'); retablir(); return; }
+    const ctrl = new AbortController();
+    const minuteur = setTimeout(() => ctrl.abort(), 20000);
+    const res = await fetch(API_URL + '/api/demandeessai', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data), signal: ctrl.signal
     });
-
+    clearTimeout(minuteur);
     if (res.ok) {
       document.getElementById('formSection').style.display = 'none';
       document.getElementById('successWrap').style.display = 'block';
-    } else {
-      const err = await res.json();
-      alert('Erreur : ' + (err.message || 'Réessayez plus tard'));
-      btn.textContent = 'Envoyer ma demande →';
-      btn.disabled = false;
+      if (window.gtag) window.gtag('event', 'generate_lead', { lead_type: 'ESSAI' });
+      return;
     }
+    const err = await res.json().catch(() => ({}));
+    showErr((err.message || "L'envoi n'a pas abouti.") + ' Vous pouvez aussi nous écrire sur WhatsApp au +33 6 38 55 75 13.');
+    retablir();
   } catch (e) {
-    // Si l'API n'est pas disponible → afficher quand même le succès
-    console.warn('API non disponible, mode local', e);
-    document.getElementById('formSection').style.display = 'none';
-    document.getElementById('successWrap').style.display = 'block';
+    showErr("Connexion impossible pour le moment. Réessayez, ou écrivez-nous sur WhatsApp au +33 6 38 55 75 13.");
+    retablir();
   }
 }
 </script>

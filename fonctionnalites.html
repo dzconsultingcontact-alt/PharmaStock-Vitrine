@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonctionnalités de PharmaStock — logiciel de gestion de pharmacie au Maroc</title>
+<meta name="description" content="Toutes les fonctionnalités de PharmaStock expliquées avec une démonstration : ventes, stock et lots, inventaire, péremptions, commandes, réception par scan, crédit client, rappels patients, préparations, équipe et Marketplace.">
+<meta name="keywords" content="logiciel pharmacie maroc, gestion pharmacie au maroc, logiciel gestion pharmacie, pharmacie au maroc, gestion de stock pharmacie, logiciel officine maroc, pharmacie de garde maroc, pharmacie de garde casablanca">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mapharmastock.com/fonctionnalites.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:title" content="Fonctionnalités de PharmaStock — logiciel de gestion de pharmacie au Maroc">
+<meta property="og:description" content="Toutes les fonctionnalités de PharmaStock expliquées avec une démonstration : ventes, stock et lots, inventaire, péremptions, commandes, réception par scan, crédit client, rappels patients, préparations, équipe et Marketplace.">
+<meta property="og:url" content="https://mapharmastock.com/fonctionnalites.html">
+<meta property="og:site_name" content="PharmaStock">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/ps-site.css?v=8">
+<style>
+:root{--ink:#0B1B2B;--ink2:#34495C;--mute:#4A5D6E;--ground:#F4F6F3;--line:#E1E7E4;--acc:#0E6B6A;--acc2:#0B5857;--mint:#7FD1C7;--amber:#E9A23B}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--acc)}
+.serif{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400}
+.wrap{max-width:1240px;margin:0 auto}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-12px) rotate(-1.2deg)}}
+@keyframes floaty2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 10px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes shine{from{left:-60%}to{left:130%}}
+@keyframes grow{from{transform:scaleY(.2)}to{transform:scaleY(1)}}
+.rv{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}.d4{animation-delay:.38s}
+.sr{opacity:1}
+.js .sr{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .sr.in{opacity:1;transform:none}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;border-radius:14px;padding:16px 26px;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s,color .2s;min-height:48px}
+.btn:hover{transform:translateY(-2px)}
+.btn-p{background:var(--acc);color:#fff;box-shadow:0 10px 30px rgba(14,107,106,.35)}
+.btn-p:hover{background:var(--acc2);color:#fff;box-shadow:0 16px 40px rgba(14,107,106,.45)}
+.btn-p::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);animation:shine 3.2s ease-in-out infinite}
+.btn-g{background:#fff;color:var(--ink);border:1.5px solid #CFD8D6}
+.btn-g:hover{border-color:var(--acc);color:var(--acc)}
+.btn-o{color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.btn-o:hover{border-color:#fff;color:#fff}
+/* navigation */
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,246,243,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{padding:16px 32px;display:flex;align-items:center;gap:36px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.logo i{width:40px;height:40px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.logo span{font-size:28px}
+.nav .links{display:flex;gap:28px;flex-grow:1}
+.nav a.lk{white-space:nowrap;color:var(--ink2);text-decoration:none;font-weight:600;font-size:15px;position:relative}
+.nav a.lk::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--acc);transition:width .25s}
+.nav a.lk:hover{color:var(--ink)}.nav a.lk:hover::after{width:100%}
+.nav-actions{display:flex;align-items:center;gap:18px}
+.nav .btn{padding:11px 20px;font-size:15px;white-space:nowrap}
+@media (max-width:1240px){.nav .links a[href='/blog/']{display:none}}
+/* hero */
+.hero{position:relative;padding:90px 32px 110px;overflow:hidden}
+html{overflow-x:hidden}
+.glow{position:absolute;border-radius:50%;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #DCE3E0;border-radius:999px;padding:8px 16px 8px 10px;font-size:14px;font-weight:600;color:var(--ink2)}
+.dot{width:10px;height:10px;border-radius:50%;background:#25D366;animation:pulse 2s infinite;flex-shrink:0}
+.hero h1{margin:26px 0 0;font-size:78px;line-height:1.02;letter-spacing:-.02em}
+.hero h1 em{color:var(--acc)}
+.lead{margin:26px 0 0;font-size:20px;line-height:1.6;color:var(--mute);max-width:540px}
+.ctas{display:flex;gap:14px;margin-top:38px;flex-wrap:wrap}
+.ticks{display:flex;gap:26px;margin-top:34px;color:var(--mute);font-size:14px;font-weight:600;flex-wrap:wrap}
+.ticks span{display:flex;align-items:center;gap:8px}
+.mock{position:relative;height:560px}
+.screen{position:absolute;inset:20px 0 0 20px;animation:floaty 7s ease-in-out infinite;background:#fff;border-radius:24px;border:1px solid #DCE3E0;box-shadow:0 50px 90px -30px rgba(11,27,43,.35);overflow:hidden;display:flex}
+.screen .side{width:150px;background:#EEF5F3;border-right:1px solid #DCE3E0;padding:20px 14px;display:flex;flex-direction:column;gap:10px}
+.screen .side i{display:block;height:8px;border-radius:6px;background:#C9DAD6}
+.screen .main{flex-grow:1;padding:24px;display:flex;flex-direction:column;gap:16px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kpi{border-radius:14px;padding:14px}
+.kpi small{display:block;font-size:10px;font-weight:700;color:var(--mute)}
+.kpi b{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400;font-size:30px}
+.chart{flex-grow:1;border-radius:16px;border:1px solid var(--line);padding:18px;display:flex;align-items:flex-end;gap:12px}
+.bar{flex-grow:1;border-radius:8px 8px 3px 3px;background:#CFE6E3;transform-origin:bottom;animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both}
+.toast{position:absolute;left:-30px;bottom:60px;animation:floaty2 6s ease-in-out infinite;background:var(--ink);color:#fff;border-radius:18px;padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 24px 50px -20px rgba(11,27,43,.6)}
+.toast .b{width:38px;height:38px;border-radius:11px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.toast strong{display:block;font-size:15px}.toast small{display:block;font-size:13px;color:#A9BCC9}
+.langchip{position:absolute;right:-10px;top:0;animation:floaty2 7s ease-in-out infinite;animation-delay:1s;background:#fff;border:1px solid #DCE3E0;border-radius:16px;padding:12px 16px;display:flex;gap:10px;box-shadow:0 20px 40px -20px rgba(11,27,43,.35);font-weight:700;font-size:14px;color:var(--acc)}
+/* bandeau */
+.band{background:var(--ink);color:#DCEAF1;padding:11px 0;overflow:hidden}
+.band:hover .mq{animation-play-state:paused}
+.mq{display:flex;gap:56px;width:max-content;animation:marquee 40s linear infinite;font-size:19px;font-style:italic;white-space:nowrap}
+.mq i{color:var(--mint);font-style:normal}
+/* chiffres */
+.stats{padding:90px 32px 30px}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.stat{border-top:2px solid var(--ink);padding-top:20px}
+.stat b{display:block;font-size:64px;line-height:1}
+.stat p{margin:10px 0 0;color:var(--mute);font-size:15px;line-height:1.5}
+/* fonctions */
+.sec{padding:90px 32px}
+.sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:44px}
+.h2{margin:0;font-size:58px;line-height:1.05;letter-spacing:-.015em}
+.sec-h p{margin:0;color:var(--mute);font-size:17px;line-height:1.6;max-width:400px}
+.bento{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px -18px rgba(11,27,43,.25);border-color:#9FCFCB}
+.card h3{margin:22px 0 10px;font-size:21px;font-weight:700}
+.card p{margin:0;color:var(--mute);font-size:15px;line-height:1.65}
+.ico{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#E3F1EF;color:var(--acc);transition:transform .35s,background .35s,color .35s}
+.card:hover .ico{transform:rotate(-6deg) scale(1.08);background:var(--acc);color:#fff}
+.span2{grid-column:span 2}
+.card.dark{background:var(--ink);border-color:var(--ink);color:#fff;display:flex;gap:36px;align-items:center;padding:36px}
+.card.dark h3{font-size:26px}.card.dark p{color:#B8C9D4;font-size:16px}
+.card.dark .ico{background:rgba(127,209,199,.16);color:var(--mint)}
+.mini{width:250px;flex-shrink:0;display:flex;flex-direction:column;gap:10px}
+.mini div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:14px}
+.mini b{display:block;font-size:14px}.mini small{display:block;font-size:12px;color:#A9BCC9;margin-top:4px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+/* journée */
+.day{padding:100px 32px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--acc)}
+.tl{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:64px}
+.tl::before{content:"";position:absolute;left:6%;right:6%;top:27px;height:2px;background:linear-gradient(90deg,#9FCFCB,var(--acc),#9FCFCB)}
+.step{position:relative;text-align:center;padding:0 8px}
+.step .t{width:56px;height:56px;margin:0 auto;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;border:6px solid #fff;transition:transform .3s,background .3s}
+.step:hover .t{transform:scale(1.12);background:var(--acc)}
+.step h3{margin:22px 0 8px;font-size:20px}
+.step p{margin:0;color:var(--mute);font-size:15px;line-height:1.65}
+/* réseau */
+.net{max-width:1240px;margin:0 auto;border-radius:34px;background:var(--ink);color:#fff;padding:72px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:60px;align-items:center;position:relative;overflow:hidden}
+.net h2{margin:16px 0 0;font-size:54px;line-height:1.06}
+.net p.l{margin:22px 0 0;color:#B8C9D4;font-size:17px;line-height:1.7}
+.row{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:20px 22px;display:flex;gap:16px;align-items:center;transition:transform .3s,background .3s}
+.row:hover{transform:translateX(6px);background:rgba(255,255,255,.1)}
+.row strong{display:block}.row small{display:block;font-size:13px;color:#A9BCC9}
+.tag{font-size:12px;font-weight:800;color:var(--ink);border-radius:999px;padding:5px 10px;flex-shrink:0}
+/* faq */
+.faq{padding:40px 32px 110px}
+.faq .in{max-width:900px;margin:0 auto}
+.faq details{border-bottom:1px solid #DCE3E0;padding:22px 0}
+.faq summary{cursor:pointer;list-style:none;font-weight:700;font-size:18px;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary span{transition:transform .25s;color:var(--acc);font-size:24px;line-height:1}
+.faq details[open] summary span{transform:rotate(45deg)}
+.faq p{margin:12px 0 0;color:var(--mute);line-height:1.7;font-size:16px}
+/* cta + footer */
+.final{max-width:1240px;margin:0 auto;border-radius:34px;padding:80px 60px;text-align:center;background:linear-gradient(135deg,var(--acc),#0B4A55);color:#fff}
+.final h2{margin:0;font-size:60px;line-height:1.05}
+.final p{margin:20px auto 0;max-width:560px;color:#D3ECEA;font-size:18px;line-height:1.6}
+footer{background:var(--ink);color:#A9BCC9;padding:56px 32px}
+footer .wrap{display:flex;justify-content:space-between;gap:40px;align-items:flex-start;flex-wrap:wrap}
+footer nav{display:flex;gap:60px;font-size:14px;flex-wrap:wrap}
+footer nav div{display:flex;flex-direction:column;gap:10px}
+footer nav b{color:#fff}
+footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
+/* arabe */
+[dir="rtl"] body,[dir="rtl"] .serif{font-family:'Cairo','Plus Jakarta Sans',sans-serif}
+[dir="rtl"] .hero h1{font-size:64px;line-height:1.2}
+[dir="rtl"] .toast{left:auto;right:-30px}
+/* responsive */
+@media (max-width:1024px){
+ .hero .wrap,.net{grid-template-columns:1fr}
+ .mock{height:480px;max-width:620px}
+ .stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tl{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}.tl::before{display:none}
+ .nav .links{display:none}
+ .sec-h{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:640px){
+ .nav .wrap{padding:12px 16px;gap:12px}.nav .lk.login{display:none}.logo span{font-size:24px}
+ .hero{padding:48px 16px 70px}.hero h1{font-size:48px}.lead{font-size:17px}
+ .mock{height:400px}.kpi b{font-size:22px}.kpi small{font-size:8px}.screen .side{display:none}.toast{left:0;right:0;bottom:10px}.langchip{display:none}
+ .stats,.sec,.day,.faq{padding-left:16px;padding-right:16px}
+ .stats .wrap,.bento,.two,.tl{grid-template-columns:1fr}
+ .span2{grid-column:auto}.card.dark{flex-direction:column;align-items:flex-start;padding:28px}.mini{width:100%}
+ .h2,.net h2{font-size:40px}.final h2{font-size:40px}
+ .net{padding:40px 24px;border-radius:24px}.final{padding:56px 24px;border-radius:24px}
+ .stat b{font-size:52px}.mq{font-size:16px}
+ section.netw,section.cta{padding-left:16px!important;padding-right:16px!important}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .sr{opacity:1;transform:none}}
+</style>
+<style>
+.mapx{padding:110px 32px}
+.mapx .mx-wrap{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:center}
+.mapx .mx-card{position:relative;border-radius:34px;padding-bottom:92px!important;background:radial-gradient(120% 90% at 70% 10%,#12324A 0%,#0B1B2B 60%);padding:28px;overflow:hidden;box-shadow:0 50px 90px -50px rgba(11,27,43,.6)}
+.mapx .mx-card:before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M40 0H0v40' fill='none' stroke='%23ffffff' stroke-opacity='.04'/%3E%3C/svg%3E");pointer-events:none}
+.mapx .mx-svg{display:block;width:100%;height:auto;max-height:620px;position:relative}
+.mapx .mx-land{fill:rgba(127,209,199,.07);stroke:rgba(127,209,199,.55);stroke-width:1.2;stroke-linejoin:round}
+.mapx .mx-dots{stroke:rgba(127,209,199,.28);stroke-width:2.6;stroke-linecap:round}
+.mapx .mx-links line{stroke:rgba(127,209,199,.45);stroke-width:1.2;stroke-dasharray:4 6;animation:mxDash 6s linear infinite}
+.mapx .mx-arcs path{fill:none;stroke:url(#mxl);stroke-width:2;filter:drop-shadow(0 0 3px rgba(127,209,199,.8));stroke-linecap:round}
+.mapx .mx-arcs path.amb{stroke:#E9A23B;stroke-width:2}
+.mapx .mx-ph circle{fill:#7FD1C7;opacity:.55;animation:mxTw 4s ease-in-out infinite}
+.mapx .mx-core{fill:#fff;stroke:#7FD1C7;stroke-width:2}
+.mapx .mx-halo{fill:rgba(127,209,199,.25);transform-origin:center;transform-box:fill-box;animation:mxPulse 2.8s ease-out infinite}
+.mapx .mx-c:nth-child(3n) .mx-halo{animation-delay:.9s}.mapx .mx-c:nth-child(3n+1) .mx-halo{animation-delay:1.8s}
+.mapx .mx-c text{fill:#E6EEF0;font:700 12px 'Plus Jakarta Sans',system-ui,sans-serif;paint-order:stroke;stroke:#0B1B2B;stroke-width:3px}
+.mapx .mx-fly circle{fill:#E9A23B;filter:drop-shadow(0 0 6px rgba(233,162,59,.9))}
+.mapx .mx-toast{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:12px 16px;color:#fff;font-size:14px;transition:opacity .4s,transform .4s}
+.mapx .mx-toast.off{opacity:0;transform:translateY(8px)}
+.mapx .mx-toast b{display:block;font-size:14px}.mapx .mx-toast small{color:#A9BBC0;font-size:12.5px}
+.mapx .mx-toast i{flex:0 0 10px;height:10px;border-radius:50%;background:#E9A23B;box-shadow:0 0 0 5px rgba(233,162,59,.2)}
+.mapx .mx-tag{position:absolute;top:22px;left:24px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A9BBC0;background:rgba(255,255,255,.06);border-radius:999px;padding:6px 12px}
+.mapx .mx-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:16px}
+.mapx .mx-list li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;line-height:1.55;color:var(--mute)}
+.mapx .mx-list b{display:block;color:var(--ink);font-size:17px}
+.mapx .mx-ic{flex:0 0 38px;height:38px;border-radius:12px;background:rgba(14,107,106,.1);color:var(--acc);display:flex;align-items:center;justify-content:center;font-weight:900}
+.mapx .mx-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;font-size:13.5px;color:var(--mute)}
+.mapx .mx-legend span{display:inline-flex;align-items:center;gap:8px}
+.mapx .mx-legend em{width:10px;height:10px;border-radius:50%;display:inline-block}
+@keyframes mxPulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+@keyframes mxTw{0%,100%{opacity:.25}50%{opacity:.85}}
+@keyframes mxDash{to{stroke-dashoffset:-160}}
+@media (max-width:1024px){.mapx .mx-wrap{grid-template-columns:1fr;gap:40px}}
+@media (max-width:640px){.mapx{padding:70px 16px}.mapx .mx-card{padding:14px;border-radius:24px}.mapx .mx-toast{left:12px;right:12px;bottom:12px;padding:10px 12px}}
+[dir=rtl] .mapx .mx-list li,[dir=rtl] .mapx .mx-legend{direction:rtl}
+</style>
+<style>
+.hb{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:#fff;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;flex-shrink:0;padding:0}
+.hb span{display:block;width:20px;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s,opacity .2s}
+.hb.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hb.active span:nth-child(2){opacity:0}.hb.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;left:0;right:0;bottom:0;top:var(--mm-top,70px);background:#fff;z-index:199;overflow-y:auto;padding:8px 20px 32px;border-top:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(11,27,43,.35)}
+.mobile-menu.open{display:block;animation:mmIn .25s ease}
+.mm-item{border-bottom:1px solid var(--line)}
+.mm-item a{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;color:var(--ink);font-weight:700;font-size:17px;text-decoration:none}
+.mm-item a:after{content:"›";color:var(--acc);font-size:22px;line-height:1}
+.mm-ctas{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.mm-ctas a,.mm-ctas button{text-align:center;padding:14px;border-radius:14px;font-weight:800;font-size:16px;text-decoration:none}
+.mm-cta1{background:var(--acc);color:#fff}.mm-cta2{border:1.5px solid var(--line);color:var(--ink)}
+@keyframes mmIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media (max-width:1024px){.hb{display:flex}.nav .wrap{justify-content:space-between}}
+@media (max-width:640px){.nav .nav-actions{display:none}}
+@media (min-width:1025px){.mobile-menu{display:none!important}}
+[dir=rtl] .mm-item a:after{content:"‹"}
+</style>
+<style>
+.pion{padding:40px 32px 110px}
+.pion-in{max-width:1240px;margin:0 auto;border-radius:34px;background:linear-gradient(135deg,#0E6B6A 0%,#0B4A55 55%,#0B1B2B 100%);color:#fff;padding:64px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center;position:relative;overflow:hidden}
+.pion-in:before{content:"";position:absolute;right:-160px;top:-160px;width:460px;height:460px;border-radius:50%;background:radial-gradient(circle,rgba(127,209,199,.35),rgba(127,209,199,0) 65%);pointer-events:none}
+.pion-l{position:relative}
+.pion-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 16px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#FDE7C2}
+.pion-dot{width:9px;height:9px;border-radius:50%;background:#E9A23B;box-shadow:0 0 0 0 rgba(233,162,59,.6);animation:pionP 1.8s infinite}
+@keyframes pionP{70%{box-shadow:0 0 0 10px rgba(233,162,59,0)}100%{box-shadow:0 0 0 0 rgba(233,162,59,0)}}
+.pion h2{font-size:52px;line-height:1.05;margin:22px 0 0;letter-spacing:-.01em}
+.pion-lead{font-size:18px;line-height:1.6;color:#CFE3E1;margin:20px 0 0;max-width:560px}
+.pion-list{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:16px}
+.pion-list li{display:flex;gap:14px;align-items:flex-start;color:#CFE3E1;line-height:1.5;font-size:15.5px}
+.pion-list b{display:block;color:#fff;font-size:16.5px}
+.pion-ok{flex:0 0 28px;height:28px;border-radius:50%;background:rgba(127,209,199,.2);color:#7FD1C7;display:flex;align-items:center;justify-content:center;font-weight:900}
+.pion-form{position:relative;background:#fff;color:var(--ink);border-radius:26px;padding:30px;box-shadow:0 40px 80px -40px rgba(0,0,0,.5)}
+.pion-form h3{margin:0;font-size:22px;font-weight:800}
+.pion-small{margin:4px 0 18px;color:var(--mute);font-size:14px}
+.pion-row{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.pion-f{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--ink)}
+.pion-f input{border:1.5px solid #D5DDDA;border-radius:12px;padding:12px 14px;font:inherit;font-weight:500;font-size:15px;color:var(--ink);background:#fff;width:100%;box-sizing:border-box}
+.pion-f input:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 4px rgba(14,107,106,.15)}
+.pion-btn{width:100%;justify-content:center;margin-top:4px;border:0;cursor:pointer}
+.pion-legal{margin:12px 0 0;font-size:12.5px;color:var(--mute)}
+.pion .ps-msg{margin-top:10px;font-size:14px}
+@media (max-width:1024px){.pion-in{grid-template-columns:1fr;padding:48px 32px}.pion h2{font-size:42px}}
+@media (max-width:640px){.pion{padding:20px 16px 70px}.pion-in{padding:36px 20px;border-radius:24px;gap:32px}.pion h2{font-size:34px}.pion-row{grid-template-columns:1fr}.pion-form{padding:22px}}
+.band{direction:ltr}.band .mq span{unicode-bidi:isolate}
+@media (max-width:640px){.band{padding:6px 0}.band .mq{font-size:14px!important;gap:24px;animation-duration:32s}}
+</style>
+<style>
+.trial-big{display:inline-flex;align-items:center;gap:16px;margin-top:30px;padding:14px 22px 14px 18px;border-radius:20px;background:linear-gradient(135deg,rgba(14,107,106,.1),rgba(127,209,199,.18));border:1.5px solid rgba(14,107,106,.25);max-width:100%;box-sizing:border-box}
+.hero .wrap>div{min-width:0}
+.trial-big b{white-space:nowrap;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400;font-size:58px;line-height:1;color:var(--acc);letter-spacing:-.02em}
+.trial-big strong{display:block;font-size:21px;font-weight:800;color:var(--ink)}
+.trial-big small{display:block;font-size:13.5px;color:var(--mute);font-weight:600;margin-top:2px}
+.pion-stats{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap}
+.pion-stats div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:14px 20px;min-width:150px}
+.pion-stats b{display:block;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:400;font-size:48px;line-height:1;color:#FDE7C2}
+.pion-stats span{display:block;margin-top:6px;font-size:14px;font-weight:700;color:#CFE3E1}
+@media (max-width:640px){.trial-big{gap:12px;padding:12px 16px}.trial-big b{font-size:44px}.trial-big strong{font-size:17px}.pion-stats b{font-size:38px}.pion-stats div{min-width:0;flex:1}}
+</style>
+<style>
+/* Typographie professionnelle : Plus Jakarta Sans (titres) + Inter (texte) */
+.serif,.trial-big b,.pion-stats b{font-weight:800!important;letter-spacing:-.03em;font-style:normal}
+.hero h1{font-size:64px;line-height:1.06;letter-spacing:-.035em}.hero h1 em{font-style:normal}
+.h2,.net h2,.cta h2{font-size:46px!important;line-height:1.1!important;letter-spacing:-.03em!important}
+.pion h2{font-size:42px;line-height:1.12;letter-spacing:-.03em}
+.band .mq{font-style:normal;font-weight:600;font-size:15px!important;letter-spacing:.01em}
+.trial-big b{font-size:48px}.pion-stats b{font-size:40px}
+.kpi b{font-weight:800;letter-spacing:-.02em}
+@media (max-width:1024px){.hero h1{font-size:52px}}
+@media (max-width:640px){.hero h1{font-size:40px!important;line-height:1.1}.h2,.net h2,.cta h2{font-size:32px!important}.pion h2{font-size:30px}.band .mq{font-size:13px!important}.trial-big b{font-size:38px}.pion-stats b{font-size:32px}}
+</style>
+
+<style>
+.fx-hero{padding:76px 32px 36px}
+.fx-hero .wrap{max-width:980px}
+.fx-sur{font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--acc);margin:0 0 14px}
+[dir="rtl"] .fx-sur{letter-spacing:0;font-size:16px}
+.fx-hero h1{margin:0;font-size:60px;line-height:1.05;letter-spacing:-.015em;color:var(--ink)}
+.fx-hero .fx-lead{margin:22px 0 0;font-size:19px;line-height:1.65;color:var(--mute);max-width:720px}
+.fx-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
+.fx-nav a{display:inline-block;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:600;font-size:15px;text-decoration:none;transition:border-color .2s,color .2s}
+.fx-nav a:hover{border-color:var(--acc);color:var(--acc)}
+.fx-note{margin:22px 0 0;font-size:14px;color:var(--mute)}
+.fx-g{padding:64px 32px 8px;scroll-margin-top:90px}
+.fx-g .wrap{max-width:1180px}
+.fx-g>.wrap>h2{margin:0;font-size:44px;line-height:1.1;letter-spacing:-.015em;color:var(--ink)}
+.fx-g>.wrap>p{margin:10px 0 0;color:var(--mute);font-size:17px}
+.fx-f{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:44px;align-items:center;margin-top:44px;padding:34px;background:#fff;border:1px solid var(--line);border-radius:22px;scroll-margin-top:90px}
+.fx-f:nth-of-type(even) .fx-txt{order:2}
+.fx-f h3{margin:0 0 12px;font-size:28px;line-height:1.2;color:var(--ink)}
+.fx-f .fx-txt>p{margin:0;color:var(--ink2);font-size:16px;line-height:1.7}
+.fx-f ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.fx-f li{position:relative;padding-inline-start:30px;color:var(--ink);font-size:15.5px;line-height:1.55}
+.fx-f li::before{content:"";position:absolute;inset-inline-start:0;top:3px;width:19px;height:19px;border-radius:50%;background:var(--acc) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.fx-media{margin:0;min-width:0}
+.fx-media video{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line);background:#102a43;box-shadow:0 18px 44px rgba(11,27,43,.12)}
+.fx-media figcaption{margin-top:10px;font-size:14px;color:var(--mute);line-height:1.5}
+.fx-fin{padding:70px 32px 110px}
+.fx-fin .wrap{max-width:980px;background:var(--ink);color:#fff;border-radius:28px;padding:54px 44px;text-align:center}
+.fx-fin h2{margin:0;font-size:40px;line-height:1.15;color:#fff}
+.fx-fin p{margin:14px auto 0;max-width:560px;color:#C9D6DF;font-size:17px;line-height:1.6}
+.fx-fin .ctas{justify-content:center}
+@media (max-width:900px){
+ .fx-hero{padding:44px 16px 20px}.fx-hero h1{font-size:40px}.fx-hero .fx-lead{font-size:17px}
+ .fx-g{padding:44px 16px 4px}.fx-g>.wrap>h2{font-size:32px}
+ .fx-f{grid-template-columns:minmax(0,1fr);gap:22px;padding:20px;margin-top:26px}
+ .fx-f:nth-of-type(even) .fx-txt{order:0}
+ .fx-f h3{font-size:23px}
+ .fx-fin{padding:44px 16px 70px}.fx-fin .wrap{padding:36px 20px}.fx-fin h2{font-size:30px}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="band" aria-label="Points forts">
+<div class="mq serif">
+<span data-ar="3 أشهر من التجربة المجانية">3 mois d'essai gratuit</span><i>✦</i><span data-ar="أول 30 صيدلية: −50% و4 أشهر مجانا">30 premières pharmacies : −50 % + 4 mois offerts</span><i>✦</i><span data-ar="قاعدة الأدوية المغربية">Base des médicaments du Maroc</span><i>✦</i><span data-ar="الاستلام بمسح DataMatrix">Réception par scan DataMatrix</span><i>✦</i><span data-ar="ديون الزبناء">Crédit client</span><i>✦</i><span data-ar="سوق بين الصيدليات">Marketplace entre pharmacies</span><i>✦</i><span data-ar="العمل بدون إنترنت">Mode hors ligne</span><i>✦</i><span data-ar="الواجهة بالعربية">Interface en arabe</span><i>✦</i>
+<span data-ar="3 أشهر من التجربة المجانية">3 mois d'essai gratuit</span><i>✦</i><span data-ar="أول 30 صيدلية: −50% و4 أشهر مجانا">30 premières pharmacies : −50 % + 4 mois offerts</span><i>✦</i><span data-ar="قاعدة الأدوية المغربية">Base des médicaments du Maroc</span><i>✦</i><span data-ar="الاستلام بمسح DataMatrix">Réception par scan DataMatrix</span><i>✦</i><span data-ar="ديون الزبناء">Crédit client</span><i>✦</i><span data-ar="سوق بين الصيدليات">Marketplace entre pharmacies</span><i>✦</i><span data-ar="العمل بدون إنترنت">Mode hors ligne</span><i>✦</i><span data-ar="الواجهة بالعربية">Interface en arabe</span><i>✦</i>
+</div>
+</div>
+
+<header class="nav">
+<div class="wrap">
+<a class="logo" href="https://mapharmastock.com/" aria-label="PharmaStock, accueil"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD1C7" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i><span class="serif">PharmaStock</span></a>
+<nav class="links" aria-label="Navigation principale">
+<a class="lk" href="/fonctionnalites.html" data-ar="الوظائف">Fonctionnalités</a>
+<a class="lk" href="/#journee" data-ar="يوم في الصيدلية">Une journée</a>
+<a class="lk" href="/#reseau" data-ar="الشبكة">Réseau</a>
+<a class="lk" href="/offres.html" data-ar="العروض">Offres</a>
+<a class="lk" href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a>
+<a class="lk" href="/blog/" data-ar="المدونة">Blog</a>
+</nav>
+<div class="nav-actions"><a class="lk login" href="https://app.mapharmastock.com/login" data-ar="تسجيل الدخول">Se connecter</a><a class="btn btn-p" href="/inscription/" data-ar="تجربة مجانية">Essai gratuit</a></div>
+<button class="hb" id="hamburger" type="button" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobile()"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+<div class="mm-item"><a href="/fonctionnalites.html" data-ar="الوظائف">Fonctionnalités</a></div>
+<div class="mm-item"><a href="/#journee" data-ar="يوم في الصيدلية">Une journée</a></div>
+<div class="mm-item"><a href="/#carte" data-ar="الشبكة">Réseau</a></div>
+<div class="mm-item"><a href="/#pionnieres" data-ar="عرض أول 30 صيدلية">Offre 30 premières pharmacies</a></div>
+<div class="mm-item"><a href="/offres.html" data-ar="العروض">Offres</a></div>
+<div class="mm-item"><a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a></div>
+<div class="mm-item"><a href="/guides/" data-ar="الأدلة">Guides</a></div>
+<div class="mm-item"><a href="/blog/" data-ar="المدونة">Blog</a></div>
+<div class="mm-item"><a href="/contact.html" data-ar="اتصل بنا">Contact</a></div>
+<div class="mm-ctas"><a href="/inscription/" class="mm-cta1" data-ar="ابدأ التجربة المجانية">Démarrer l'essai gratuit</a><a href="https://app.mapharmastock.com/login" class="mm-cta2" data-ar="تسجيل الدخول">Se connecter</a></div>
+</div>
+<script>
+function toggleMobile(force){var m=document.getElementById('mobileMenu'),h=document.getElementById('hamburger');if(!m||!h)return;var o=typeof force==='boolean'?force:!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('active',o);h.setAttribute('aria-expanded',o);document.documentElement.style.overflow=o?'hidden':'';}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#mobileMenu a');if(a)toggleMobile(false);});
+</script>
+
+<main>
+<section class="fx-hero"><div class="wrap">
+<p class="fx-sur" data-ar="الوظائف">Fonctionnalités</p>
+<h1 class="serif" data-ar="كل ما يقوم به PharmaStock، شاشة بشاشة.">Tout ce que fait PharmaStock, écran par écran.</h1>
+<p class="fx-lead" data-ar="من البيع في الصيدلية إلى طلبية الموزّع: كل وظيفة مشروحة، مع عرض مصوَّر من داخل البرنامج.">De la vente au comptoir à la commande du grossiste : chaque fonction est expliquée, avec une démonstration filmée dans le logiciel.</p>
+<div class="ctas"><a class="btn btn-p" href="/inscription/" data-ar="ابدأ التجربة المجانية">Démarrer l'essai gratuit</a><a class="btn btn-g" href="/demande-essai.html" data-ar="اطلب عرضا توضيحيا">Demander une démonstration</a></div>
+<nav class="fx-nav" aria-label="Rubriques"><a href="#g-pilotage" data-ar="القيادة">Pilotage</a><a href="#g-stock" data-ar="المخزون">Stock</a><a href="#g-achats" data-ar="المشتريات">Achats</a><a href="#g-patients" data-ar="المبيعات والمرضى">Ventes &amp; patients</a><a href="#g-reseau" data-ar="الشبكة والفريق">Réseau &amp; équipe</a><a href="#g-outils" data-ar="الأدوات">Outils</a></nav>
+<p class="fx-note" data-ar="العروض مسجَّلة على صيدلية وهمية: الأسماء والأرقام مختلَقة.">Les démonstrations sont enregistrées sur une pharmacie fictive : les noms et les chiffres sont inventés.</p>
+</div></section>
+<section class="fx-g" id="g-pilotage"><div class="wrap">
+<h2 class="serif" data-ar="القيادة">Pilotage</h2>
+<p data-ar="متابعة النشاط وتسجيل المبيعات">Suivre l&#x27;activité et encaisser</p>
+<article class="fx-f sr" id="tableau-de-bord">
+<div class="fx-txt">
+<h3 class="serif" data-ar="لوحة القيادة">Tableau de bord</h3>
+<p data-ar="لوحة القيادة هي الصفحة الرئيسية للصيدلية: بنظرة واحدة يرى الصيدلي عدد المراجع في المخزون، وتنبيهات انتهاء الصلاحية، ورقم المعاملات وعدد مبيعات اليوم. رسمان بيانيان يبيّنان تطور المبيعات شهرا بشهر وحالة المخزون، وترتيب يعطي الأدوية الخمسة الأكثر مبيعا. كل رقم اختصار: نقرة تقود إلى الشاشة التي تتيح التصرف.">Le tableau de bord est la page d&#x27;accueil de la pharmacie : en un coup d&#x27;œil, le pharmacien voit le nombre de références en stock, les alertes de péremption, le chiffre d&#x27;affaires et le nombre de ventes du jour. Deux graphiques montrent l&#x27;évolution des ventes mois par mois et l&#x27;état du stock, et un classement donne les cinq médicaments les plus vendus. Chaque chiffre est un raccourci : un clic mène à l&#x27;écran qui permet d&#x27;agir.</p>
+<ul><li data-ar="منذ تسجيل الدخول، يعرف الصيدلي أين وصل يومه: رقم المعاملات وعدد المبيعات، من دون أي بحث.">Dès la connexion, le pharmacien sait où en est sa journée : chiffre d&#x27;affaires, nombre de ventes, sans rien chercher.</li><li data-ar="انتهاء الصلاحية لم يعد يمر من دون انتباه: عدّادان (30 يوما و7 أيام) أمام العين كل صباح.">Les péremptions ne passent plus inaperçues : deux compteurs (30 jours et 7 jours) sous les yeux chaque matin.</li><li data-ar="كل رقم باب: نقرة على التنبيه فيكون المستخدم في الشاشة التي تعالجه.">Chaque chiffre est une porte : un clic sur l&#x27;alerte et l&#x27;on est sur l&#x27;écran pour la traiter.</li><li data-ar="الرسم البياني الشهري يبيّن اتجاه السنة من دون إخراج أي كشف محاسبي.">Le graphique mensuel montre la tendance de l&#x27;année sans sortir un seul état comptable.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="tableau-de-bord-vue" aria-label="Lire le tableau de bord"></video><figcaption data-ar="قراءة لوحة القيادة">Lire le tableau de bord</figcaption></figure>
+</article>
+<article class="fx-f sr" id="ventes">
+<div class="fx-txt">
+<h3 class="serif" data-ar="المبيعات والإحصائيات">Ventes &amp; Stats</h3>
+<p data-ar="هذه الصفحة هي صندوق الصيدلية. يسجّل فيها الصيدلي البيع ببضع نقرات (المريض، طريقة الأداء، المنتجات، التخفيضات)، فينقص المخزون تلقائيا بإخراج العلب الأقرب إلى انتهاء الصلاحية أولا، وتُنشأ الفاتورة تلقائيا. وتعرض الصفحة نفسها أرقام الفترة (عدد المبيعات، رقم المعاملات، متوسط السلة)، ولائحة المبيعات، وتفاصيل كل بيع، وإرجاع منتج، وحذف بيع سُجّل خطأً.">C&#x27;est la caisse de la pharmacie. Le pharmacien y enregistre une vente en quelques clics (patient, mode de paiement, produits, remises), le stock est diminué tout seul en sortant d&#x27;abord les boîtes qui périment le plus tôt, et la facture est créée automatiquement. La même page donne les chiffres de la période (nombre de ventes, chiffre d&#x27;affaires, panier moyen), la liste des ventes, leur détail, le retour d&#x27;un produit et la suppression d&#x27;une vente saisie par erreur.</p>
+<ul><li data-ar="بيع في أقل من دقيقة: تكتب ثلاثة حروف أو الرمز الشريطي، تختار، ثم تؤكد.">Une vente en moins d&#x27;une minute : on tape trois lettres ou le code-barres, on choisit, on valide.</li><li data-ar="لا نسيان لانتهاء الصلاحية: البرنامج يُخرج دائما أولًا العلب الأقرب إلى انتهاء الصلاحية، ويشير بالأحمر إلى الدفعة التي بقي لها أقل من 7 أيام.">Zéro oubli de péremption : le logiciel sort toujours en premier les boîtes qui périment le plus tôt et signale en rouge un lot à moins de 7 jours.</li><li data-ar="يستحيل بيع ما ليس متوفرا: يُراقَب المخزون على الشاشة ثم مرة ثانية عند التسجيل، والدفعة المنتهية الصلاحية لا تُباع أبدا.">Impossible de vendre ce qu&#x27;on n&#x27;a pas : le stock est contrôlé à l&#x27;écran puis une seconde fois à l&#x27;enregistrement, et un lot périmé n&#x27;est jamais vendu.</li><li data-ar="تخفيضات مرنة، كما عند طاولة البيع: بالنسبة المئوية أو بالدرهم، على منتج واحد أو على البيع كله، مع إعادة حساب المجموع أمام أعين الزبون.">Des remises souples, comme au comptoir : en pourcentage ou en dirhams, sur un article ou sur toute la vente, avec le total recalculé sous les yeux du client.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="ventes-vente-libre" aria-label="Une vente sans ordonnance, avec remises"></video><figcaption data-ar="بيع بدون وصفة، مع تخفيضات">Une vente sans ordonnance, avec remises</figcaption></figure>
+</article>
+<article class="fx-f sr" id="vente-ordonnance">
+<div class="fx-txt">
+<h3 class="serif" data-ar="البيع بوصفة طبية">Vente avec ordonnance</h3>
+<p data-ar="يصوّر الصيدلي الوصفة الطبية للمريض أو يختار ملفها: يقرؤها الذكاء الاصطناعي، فيُتعرَّف على الأدوية الموصوفة، وتُطابَق مع مخزون الصيدلية، وتُقترح مع دفعاتها. يتحقق الصيدلي من اللائحة، ويكمّلها عند الحاجة، ثم ينتقل إلى البيع الذي يُفتح مملوءا مسبقا. فيربح وقت الإدخال ويحتفظ بأثر للوصفة، التي تُسجَّل تلقائيا مع ملفها.">Le pharmacien photographie ou sélectionne l&#x27;ordonnance du patient : elle est lue par une intelligence artificielle, les médicaments prescrits sont reconnus, rapprochés du stock de la pharmacie et proposés avec leurs lots. Il vérifie la liste, la complète si besoin, puis passe à la vente, qui s&#x27;ouvre déjà remplie. Il gagne le temps de la saisie et garde une trace de l&#x27;ordonnance, enregistrée automatiquement avec son fichier.</p>
+<ul><li data-ar="لا إعادة إدخال بعد اليوم: صورة الوصفة تملأ البيع، ولا يبقى على الصيدلي إلا المراقبة.">Plus de ressaisie : la photo de l&#x27;ordonnance remplit la vente, le pharmacien n&#x27;a plus qu&#x27;à contrôler.</li><li data-ar="يقرأ أيضا الوصفات المكتوبة بخط اليد، بفضل القراءة بالذكاء الاصطناعي.">Lit aussi les ordonnances manuscrites, grâce à une lecture par intelligence artificielle.</li><li data-ar="يُتحقق من المخزون في الحال: ترى فورا ما يمكن صرفه، وما نفد مخزونه، وأي الدفعات ستخرج.">Le stock est vérifié tout de suite : on voit immédiatement ce qui peut être délivré, ce qui est en rupture, et quels lots vont sortir.</li><li data-ar="لا خطأ في المنتج: عندما يطابق اسمٌ عدة جرعات أو أشكال، يطلب البرنامج الاختيار ويُظهر مخزون كل واحد منها.">Pas d&#x27;erreur de produit : quand un nom correspond à plusieurs dosages ou formes, le logiciel demande de choisir et montre le stock de chacun.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="vente-ordonnance-analyse" aria-label="De la photo de l&#x27;ordonnance à la vente pré-remplie"></video><figcaption data-ar="من صورة الوصفة إلى البيع المملوء مسبقا">De la photo de l&#x27;ordonnance à la vente pré-remplie</figcaption></figure>
+</article>
+</div></section>
+<section class="fx-g" id="g-stock"><div class="wrap">
+<h2 class="serif" data-ar="المخزون">Stock</h2>
+<p data-ar="المنتجات، الدفعات، انتهاء الصلاحية والأسعار">Produits, lots, péremptions et prix</p>
+<article class="fx-f sr" id="gestion-stock">
+<div class="fx-txt">
+<h3 class="serif" data-ar="تدبير المخزون">Gestion du stock</h3>
+<p data-ar="الشاشة المركزية للمخزون: كل أدوية الصيدلية ومنتجاتها مع كميتها وحد التنبيه الخاص بها وثمنها وحالة ملوّنة (جيد، ضعيف، نفاد). يرى الصيدلي بنظرة واحدة ما ينقصه، ويطلب بنقرتين المنتج الذي نزل تحت حده، ويضيف منتجاً جديداً بمجرد مسح العلبة: تُملأ البطاقة تلقائياً من قاعدة الأدوية المشتركة، مع الدفعة وتاريخ انتهاء الصلاحية إذا كانت العلبة تحمل رمز DataMatrix.">L&#x27;écran central du stock : tous les médicaments et produits de la pharmacie avec leur quantité, leur seuil d&#x27;alerte, leur prix et un statut en couleur (OK, Faible, Rupture). Le pharmacien voit d&#x27;un coup d&#x27;œil ce qui manque, commande en deux clics le produit qui passe sous son seuil, et ajoute un nouveau produit simplement en scannant la boîte : la fiche se remplit toute seule à partir de la base commune des médicaments, avec le lot et la date de péremption quand la boîte porte un DataMatrix.</p>
+<ul><li data-ar="نظرة واحدة تكفي: أربعة أرقام ملوّنة تبيّن عدد المنتجات في حالة نفاد أو مخزون ضعيف أو وضع سليم.">Un coup d&#x27;œil suffit : quatre chiffres en couleur disent combien de produits sont en rupture, en stock faible ou en ordre.</li><li data-ar="انتهت إعادة الإدخال: تُمسح العلبة، فيُعثر على الدواء في القاعدة المشتركة مع سعره الرسمي، وتُملأ البطاقة تلقائياً.">Fini la ressaisie : on bipe la boîte, le médicament est retrouvé dans la base commune avec son prix officiel, et la fiche se remplit toute seule.</li><li data-ar="مع DataMatrix، تدخل الدفعة وتاريخ انتهاء الصلاحية في الوقت نفسه مع المنتج: يبدأ التتبع منذ الاستلام.">Avec le DataMatrix, le lot et la date de péremption entrent en même temps que le produit : la traçabilité commence dès la réception.</li><li data-ar="لا يوجد قارئ رموز؟ الهاتف يكفي: تقرأ الكاميرا الرموز، وصورة بسيطة يقرؤها الذكاء الاصطناعي عندما يكون الرمز تالفاً.">Pas de douchette ? Le téléphone suffit : la caméra lit les codes, et une simple photo est lue par l&#x27;intelligence artificielle quand le code est abîmé.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="gestion-stock" aria-label="La page Gestion Stock"></video><figcaption data-ar="صفحة تدبير المخزون">La page Gestion Stock</figcaption></figure>
+</article>
+<article class="fx-f sr" id="gestion-lots">
+<div class="fx-txt">
+<h3 class="serif" data-ar="تدبير الدفعات">Gestion des lots</h3>
+<p data-ar="شاشة التتبع: كل دفعة مستلَمة تُسجَّل برقمها وتاريخ انتهاء صلاحيتها وكميتها، ثم تُصنَّف تلقائياً (جيد، تنبيه، مستعجل، منتهية الصلاحية). يعرف الصيدلي في كل لحظة أي الدفعات انتهت صلاحيتها أو توشك أن تنتهي، ويعثر على دفعة في بضع ثوانٍ عند سحب دفعة من السوق. يتم الإدخال بمسح العلبة: مع رمز DataMatrix، يُملأ الدواء والدفعة والتاريخ في آن واحد، وتُضاف كمية الدفعة تلقائياً إلى مخزون المنتج.">L&#x27;écran de traçabilité : chaque lot reçu est enregistré avec son numéro, sa date de péremption et sa quantité, puis classé automatiquement (OK, alerte, urgent, expiré). Le pharmacien sait à tout moment quels lots sont périmés ou vont l&#x27;être, et retrouve un lot en quelques secondes en cas de rappel. La saisie se fait en scannant la boîte : avec un DataMatrix, le médicament, le lot et la date se remplissent d&#x27;un coup, et la quantité du lot s&#x27;ajoute toute seule au stock du produit.</p>
+<ul><li data-ar="التتبع بلا مجهود: مسحة واحدة لرمز DataMatrix فتُسجَّل الدفعة وتاريخ انتهاء الصلاحية والدواء، ولا يبقى إلا الكمية.">La traçabilité sans effort : un bip sur le DataMatrix et le lot, la date de péremption et le médicament sont enregistrés, il ne reste que la quantité.</li><li data-ar="لا أدوية منتهية الصلاحية منسية في قاع الدرج بعد اليوم: تُصنَّف الدفعات تلقائياً إلى منتهية الصلاحية ومستعجلة وتنبيهات، مع شارات ملوّنة.">Plus de périmés oubliés au fond du tiroir : les lots sont classés tout seuls en expirés, urgents, alertes, avec des pastilles de couleur.</li><li data-ar="عند سحب دفعة من السوق، يُكتب الرقم فيُعرف فوراً هل هي في الصيدلية وكم بقي منها.">En cas de rappel de lot, on tape le numéro et on sait tout de suite s&#x27;il est dans la pharmacie et combien il en reste.</li><li data-ar="المخزون يُحدَّث تلقائياً: إنشاء دفعة أو تصحيحها أو حذفها يعدّل كمية المنتج.">Le stock se tient à jour tout seul : créer, corriger ou supprimer un lot ajuste la quantité du produit.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="gestion-lots" aria-label="La page Gestion des Lots"></video><figcaption data-ar="صفحة تدبير الدفعات">La page Gestion des Lots</figcaption></figure>
+</article>
+<article class="fx-f sr" id="inventaire">
+<div class="fx-txt">
+<h3 class="serif" data-ar="جرد المخزون">Inventaire</h3>
+<p data-ar="تُستعمل شاشة الجرد لعدّ علب الصيدلية فعليًا ولجعل مخزون البرنامج مطابقًا للواقع. يتم العدّ بكاميرا الهاتف أو بقارئ الرموز (الدوشيت) أو بكتابة الكميات؛ والبرنامج يرتّب كل شيء حسب المنتج، ويقارنه بالمخزون، وينبّه إلى الفوارق وإلى العلب المنتهية الصلاحية، ثم يصحّح المخزون والدفعات بتأكيد واحد. تُحفظ كل عملية جرد في قائمة مع اسمها وصاحبها وتاريخها وتعليقها وتفاصيلها منتجًا بمنتج، ويمكن تصديرها إلى Excel. العدّ يُحفظ تلقائيًا: يمكن إيقافه ومتابعته لاحقًا، حتى على جهاز آخر.">L&#x27;écran Inventaire sert à compter physiquement les boîtes de la pharmacie et à remettre le stock du logiciel d&#x27;accord avec la réalité. On compte à la caméra du téléphone, à la douchette ou en tapant les quantités ; le logiciel trie tout par produit, compare au stock, signale les écarts et les périmés, puis corrige le stock et les lots en une seule validation. Chaque inventaire est conservé dans une liste avec son nom, son auteur, sa date, son commentaire et son détail produit par produit, exportable vers Excel. Le comptage se sauvegarde tout seul : on peut l&#x27;interrompre et le reprendre plus tard, même sur un autre appareil.</p>
+<ul><li data-ar="هاتف واحد يكفي: الكاميرا تقرأ الرموز الشريطية ورموز DataMatrix باستمرار، دون شراء أي معدات. وقارئ الرموز الموجود في الصيدلية يعمل أيضًا، كما هو.">Un téléphone suffit : la caméra lit les codes-barres et les DataMatrix en continu, sans matériel à acheter. La douchette de la pharmacie fonctionne aussi, telle quelle.</li><li data-ar="لا عدّ مزدوج بالكاميرا: كل علبة تحمل DataMatrix برقم تسلسلي لا تُعدّ إلا مرة واحدة، حتى لو مرّت عليها الكاميرا من جديد.">Pas de double comptage à la caméra : chaque boîte portant un DataMatrix avec numéro de série n&#x27;est comptée qu&#x27;une fois, même si l&#x27;on repasse dessus.</li><li data-ar="الدفعة وتاريخ انتهاء الصلاحية يُقرآن من DataMatrix: الجرد يصحّح الدفعات أيضًا، دون أي إدخال.">Le lot et la date de péremption sont lus dans le DataMatrix : l&#x27;inventaire remet aussi les lots d&#x27;aplomb, sans saisie.</li><li data-ar="العلب بدون رمز مقروء لا تعطّل العمل: صورة للرف، والذكاء الاصطناعي يقترح المنتجات والكميات، ثم يتحقق منها المستخدم.">Les boîtes sans code lisible ne bloquent pas : une photo du rayon et l&#x27;IA propose les produits et les quantités, que l&#x27;on vérifie.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="inventaire-liste" aria-label="La liste des inventaires, la création et la reprise"></video><figcaption data-ar="قائمة عمليات الجرد، الإنشاء والمتابعة">La liste des inventaires, la création et la reprise</figcaption></figure>
+</article>
+<article class="fx-f sr" id="anti-peremption">
+<div class="fx-txt">
+<h3 class="serif" data-ar="مكافحة انتهاء الصلاحية">Anti-péremption</h3>
+<p data-ar="الشاشة التي تجنّب رمي البضاعة. تراقب جميع الدفعات، وتُبرز التي تنتهي صلاحيتها خلال 30 يومًا أو خلال 7 أيام أو التي انتهت صلاحيتها فعلًا، وتقدّر بالدرهم قيمة ما هو في خطر، وتعرض خسائر الأشهر الستة الأخيرة. ولكل دفعة تقترح الإجراء المناسب: إطلاق تخفيض للبيع قبل التاريخ (مع إمكانية النشر في سوق الصيدليات الخاص بالشبكة)، أو سحب الدفعة من المخزون.">L&#x27;écran qui évite de jeter de la marchandise. Il surveille tous les lots, met en avant ceux qui périment sous 30 jours, sous 7 jours ou qui sont déjà expirés, chiffre en dirhams ce qui est à risque et montre les pertes des six derniers mois. Pour chaque lot, il propose la bonne action : lancer une promotion pour vendre avant la date (avec publication possible sur la Marketplace B2B du réseau), ou retirer le lot du stock.</p>
+<ul><li data-ar="كل علبة منتهية الصلاحية خسارة صافية: الشاشة تنبّه قبل 30 يومًا، حين يكون الوقت ما زال كافيًا للبيع.">Chaque boîte périmée est une perte sèche : l&#x27;écran prévient 30 jours avant, quand il est encore temps de vendre.</li><li data-ar="الخسارة المحتملة مقدّرة بالدرهم: « قيمة في خطر » يفهمها الصيدلي في الحال.">La perte potentielle est chiffrée en dirhams : « Valeur à risque » parle tout de suite au pharmacien.</li><li data-ar="يُنشأ التخفيض بثلاث نقرات، مع معاينة الثمن قبل التأكيد؛ ثم يظهر الثمن المشطوب في مكافحة انتهاء الصلاحية وفي تدبير المخزون.">Une promotion se crée en trois clics, avec l&#x27;aperçu du prix avant de valider ; le prix barré apparaît ensuite dans Anti-Péremption et dans Gestion Stock.</li><li data-ar="ما لن تبيعه الصيدلية لمرضاها قد يهمّ زميلًا: يُنشر التخفيض في سوق الصيدليات بتفعيل مفتاح بسيط.">Ce que la pharmacie ne vendra pas à ses patients peut intéresser un confrère : la promotion est publiée sur la Marketplace B2B en activant un simple interrupteur.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="anti-peremption" aria-label="La page Anti-Péremption"></video><figcaption data-ar="صفحة مكافحة انتهاء الصلاحية">La page Anti-Péremption</figcaption></figure>
+</article>
+<article class="fx-f sr" id="prix-officiels">
+<div class="fx-txt">
+<h3 class="serif" data-ar="الأسعار الرسمية">Prix officiels</h3>
+<p data-ar="في المغرب، السعر العمومي للأدوية محدَّد رسمياً ويتغيّر بانتظام. يُبقي PharmaStock قاعدة مشتركة للأسعار محيَّنة: يحدّثها فريق PharmaStock انطلاقاً من معطيات AMMPS (الوكالة المغربية للأدوية والمنتجات الصحية) ومن دليل الأدوية الصادر عن CRPOS. عندما يتغيّر السعر الرسمي لمنتج موجود في مخزون الصيدلية، يُنبَّه الصيدلي بشريط ويقرّر، منتجاً منتجاً أو في مرة واحدة: قبول السعر الجديد أو الاحتفاظ بسعره. أسعار البيع في مخزونه لا تتغيّر أبداً دون موافقته.">Au Maroc, le prix public des médicaments est fixé officiellement et il change régulièrement. PharmaStock tient à jour une base commune des prix : l&#x27;équipe PharmaStock la met à jour à partir des données de l&#x27;AMMPS (Agence Marocaine du Médicament et des Produits de Santé) et du guide des médicaments du CRPOS. Quand le prix officiel d&#x27;un produit que la pharmacie a en stock change, le pharmacien est prévenu par un bandeau et décide, produit par produit ou en une fois : accepter le nouveau prix ou garder le sien. Les prix de vente de son stock ne changent jamais sans son accord.</p>
+<ul><li data-ar="لم تعد مضطراً لمراقبة تغيّرات الأسعار: فريق PharmaStock يحدّث القاعدة انطلاقاً من AMMPS ومن دليل CRPOS، والبرنامج ينبّهك.">Vous n&#x27;avez plus à surveiller les changements de prix : l&#x27;équipe PharmaStock met à jour la base à partir de l&#x27;AMMPS et du guide du CRPOS, et le logiciel vous prévient.</li><li data-ar="لا ترى إلا ما يعنيك: تُسرد فقط منتجات مخزونك التي تغيّر سعرها، مع الفرق بالدرهم.">Vous ne voyez que ce qui vous concerne : seuls les produits de votre stock dont le prix a changé sont listés, avec l&#x27;écart en dirhams.</li><li data-ar="القرار يبقى بيدك: لا يُغيَّر أي سعر بيع في مخزونك دون موافقتك، منتجاً منتجاً أو بنقرة واحدة للكل.">Vous gardez la main : aucun prix de vente de votre stock n&#x27;est modifié sans votre accord, produit par produit ou en un clic pour tous.</li><li data-ar="كل شيء موثَّق: تاريخ التحديث ومصدره، والأسعار المقبولة في سجل الأسعار، والأسعار التي اخترت الاحتفاظ بها في تبويب خاص.">Tout est tracé : la date et la source de la mise à jour, les prix acceptés dans l&#x27;historique des prix, les prix que vous avez choisi de garder dans un onglet dédié.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="prix-officiels" aria-label="Décider après une mise à jour des prix officiels"></video><figcaption data-ar="اتخاذ القرار بعد تحديث الأسعار الرسمية">Décider après une mise à jour des prix officiels</figcaption></figure>
+</article>
+</div></section>
+<section class="fx-g" id="g-achats"><div class="wrap">
+<h2 class="serif" data-ar="المشتريات">Achats</h2>
+<p data-ar="الطلب من الموردين واستلام الطلبيات">Commander et réceptionner</p>
+<article class="fx-f sr" id="commandes-fournisseurs">
+<div class="fx-txt">
+<h3 class="serif" data-ar="طلبيات الموردين">Commandes fournisseurs</h3>
+<p data-ar="تجمع هذه الشاشة كل مسار الشراء في الصيدلية: المنتجات التي بلغت حد التنبيه، والطلبيات الموجّهة إلى الموزّعين بالجملة، وسجل الموردين. ببضع نقرات يطلب الصيدلي منتجا نفد مخزونه، وتُرسل الطلبية تلقائيا إلى المورّد عبر البريد الإلكتروني أو عبر WhatsApp. ثم يتابع كل طلبية حسب حالتها، من « في الانتظار » إلى « مسلّمة »، ويستلم التسليم من الشاشة نفسها.">Cet écran réunit tout le circuit d&#x27;achat de la pharmacie : les produits tombés au seuil d&#x27;alerte, les commandes passées aux grossistes et le carnet de fournisseurs. En quelques clics, le pharmacien commande un produit en rupture, et la commande part toute seule par e-mail ou par WhatsApp chez le fournisseur. Il suit ensuite chaque commande par son statut, de « En attente » à « Livrée », et réceptionne la livraison depuis le même écran.</p>
+<ul><li data-ar="انتهى زمن حالات النفاد المنسية: بمجرد أن يبلغ منتج حد التنبيه، يظهر في التنبيهات بأولوية ملوّنة وبكمية للطلب محسوبة سلفا.">Fini les ruptures oubliées : dès qu&#x27;un produit touche son seuil, il apparaît dans les alertes avec une priorité en couleur et une quantité à commander déjà calculée.</li><li data-ar="الطلب يستغرق أقل من دقيقة: نقرة على « طلب »، ثم المورّد، ثم الكمية، فتُرسل الطلبية.">Commander prend moins d&#x27;une minute : un clic sur « Commander », le fournisseur, la quantité, et la commande part.</li><li data-ar="تصل الطلبية مباشرة إلى الموزّع بالجملة، عبر البريد الإلكتروني أو على WhatsApp، مع تفاصيل المنتجات ومعلومات الاتصال بالصيدلية: لا حاجة بعد الآن إلى المكالمات الهاتفية ولا إلى إعادة الكتابة.">La commande arrive directement chez le grossiste, par e-mail ou sur son WhatsApp, avec le détail des produits et les coordonnées de la pharmacie : plus besoin de téléphoner ni de recopier.</li><li data-ar="السجل كله في مكان واحد: المورّد الذي طُلب منه، ومتى، وبأي مبلغ، وأين وصلت كل طلبية.">Tout l&#x27;historique est au même endroit : qui a été commandé, quand, pour quel montant, et où en est chaque commande.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="commandes-fournisseurs-commander" aria-label="Commander un produit en rupture et l&#x27;envoyer par WhatsApp"></video><figcaption data-ar="طلب منتج نفد مخزونه وإرسال الطلبية عبر WhatsApp">Commander un produit en rupture et l&#x27;envoyer par WhatsApp</figcaption></figure>
+</article>
+<article class="fx-f sr" id="reception-commande">
+<div class="fx-txt">
+<h3 class="serif" data-ar="استلام طلبية">Réception de commande</h3>
+<p data-ar="عندما يصل طرد الموزّع بالجملة، يفتح الصيدلي الطلبية ويمسح العلب: يتعرّف البرنامج على كل منتج، ويعدّ العلب، ويعبّئ رقم الدفعة وتاريخ انتهاء الصلاحية. عند التأكيد يرتفع المخزون، وتُنشأ الدفعات، وتنتقل الطلبية تلقائيا إلى « مسلّمة » أو « تسليم جزئي ». يتم الاستلام بقارئ الرموز (الدوشيت) على الحاسوب، أو بكاميرا هاتف أو لوحة إلكترونية، مع مساعدة الذكاء الاصطناعي للعلب التي ليس عليها رمز مقروء.">Quand le carton du grossiste arrive, le pharmacien ouvre la commande et scanne les boîtes : le logiciel reconnaît chaque produit, compte les boîtes et remplit le numéro de lot et la date de péremption. À la validation, le stock augmente, les lots sont créés et la commande passe toute seule en « Livrée » ou en « Livraison partielle ». La réception se fait à la douchette sur l&#x27;ordinateur, ou avec la caméra d&#x27;un téléphone ou d&#x27;une tablette, avec l&#x27;aide de l&#x27;intelligence artificielle pour les boîtes sans code lisible.</p>
+<ul><li data-ar="يصير الاستلام مجرد تمرير لقارئ الرموز: يُعبَّأ المنتج والدفعة وتاريخ انتهاء الصلاحية تلقائيا انطلاقا من DataMatrix، دون أخطاء نسخ.">La réception devient un simple passage de douchette : le produit, le lot et la date de péremption se remplissent tout seuls à partir du DataMatrix, sans erreur de recopie.</li><li data-ar="المخزون صحيح منذ لحظة التسليم: تُسجَّل الكميات والدفعات وتواريخ انتهاء الصلاحية بتأكيد واحد، وهذا يغذّي بعد ذلك تتبع الدفعات ومكافحة انتهاء الصلاحية.">Le stock est juste dès la livraison : quantités, lots et péremptions sont enregistrés en une seule validation, ce qui alimente ensuite le suivi des lots et l&#x27;anti-péremption.</li><li data-ar="مراقبة التسليم بندا بندا: المطلوب، وما تم استلامه، والمستلم الآن. ويُنبَّه فورا إلى أي منتج زائد أو غير مطلوب.">Contrôle de la livraison ligne par ligne : commandé, déjà reçu, reçu maintenant. Un produit en trop ou non commandé est signalé immédiatement.</li><li data-ar="التسليمات غير المكتملة تُدبَّر بشكل طبيعي: يُؤكَّد ما وصل، ويُستلم الباقي لاحقا في الطلبية نفسها.">Les livraisons incomplètes sont gérées naturellement : on valide ce qui est arrivé, le reste se réceptionne plus tard sur la même commande.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="reception-commande-douchette" aria-label="Réceptionner à la douchette"></video><figcaption data-ar="الاستلام بقارئ الرموز">Réceptionner à la douchette</figcaption></figure>
+</article>
+<article class="fx-f sr" id="commandes-suggerees">
+<div class="fx-txt">
+<h3 class="serif" data-ar="الطلبيات المقترحة">Commandes suggérées</h3>
+<p data-ar="يحضّر البرنامج الطلبية بدل الصيدلي: ينظر إلى ما بيع فعلا، وما بقي في المخزون، وما هو قيد الطلب، ثم يقترح لكل منتج الكمية الواجب طلبها. يعدّل الصيدلي ما يشاء، ويختار مورديه، وينشئ بنقرة واحدة طلبية لكل مورّد. وهكذا يطلب ما يلزم بالضبط: حالات نفاد أقل، وفائض مخزون أقل.">Le logiciel prépare la commande à la place du pharmacien : il regarde ce qui s&#x27;est réellement vendu, ce qui reste en stock et ce qui est déjà en commande, puis propose pour chaque produit la quantité à commander. Le pharmacien ajuste, choisit ses fournisseurs et crée en un clic une commande par fournisseur. Il commande ainsi juste ce qu&#x27;il faut : moins de ruptures, moins de surstock.</p>
+<ul><li data-ar="الطلبية جاهزة عند الوصول صباحا: لا حاجة بعد الآن إلى جولة بين الرفوف ولا إلى مراجعة البطاقات واحدة واحدة.">La commande est prête en arrivant le matin : plus besoin de faire le tour des rayons ni de consulter les fiches une par une.</li><li data-ar="ينطلق الحساب من المبيعات الفعلية للصيدلية، لا من تقدير: يُطلب كل منتج حسب وتيرته الخاصة.">Le calcul part des ventes réelles de la pharmacie, pas d&#x27;une estimation : chaque produit est commandé à son propre rythme.</li><li data-ar="لا طلب مكرر: ما سبق طلبه ولم يُسلَّم بعد يُخصم تلقائيا.">Pas de double commande : ce qui est déjà commandé et pas encore livré est déduit automatiquement.</li><li data-ar="الحالات المستعجلة تظهر للعين مباشرة: المنتجات النافدة بالأحمر، والمنتجات التي ستنفد قبل التسليم المقبل بالبرتقالي.">Les urgences sautent aux yeux : ruptures en rouge, produits qui vont manquer avant la prochaine livraison en orange.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="commandes-suggerees-calcul" aria-label="Comprendre le calcul et régler les paramètres"></video><figcaption data-ar="فهم الحساب وضبط الإعدادات">Comprendre le calcul et régler les paramètres</figcaption></figure>
+</article>
+</div></section>
+<section class="fx-g" id="g-patients"><div class="wrap">
+<h2 class="serif" data-ar="المبيعات والمرضى">Ventes &amp; patients</h2>
+<p data-ar="الوصفات، الفواتير، الدَّين ومتابعة المرضى">Ordonnances, factures, crédit et suivi des patients</p>
+<article class="fx-f sr" id="ordonnances">
+<div class="fx-txt">
+<h3 class="serif" data-ar="الوصفات الطبية">Ordonnances</h3>
+<p data-ar="تحفظ صفحة الوصفات الطبية أثر كل الوصفات التي مرّت بالصيدلية: الرقم، التاريخ، المريض، الأدوية الموصوفة وملف الوصفة. تُسجَّل فيها وصفة جديدة بتصويرها (بالهاتف) أو باختيار ملف؛ فيقرؤها ذكاء اصطناعي ويمكن الانتقال مباشرة إلى البيع. وتبويب ثانٍ يعرض سجل المرضى.">La page Ordonnances garde la trace de toutes les ordonnances passées par la pharmacie : numéro, date, patient, médicaments prescrits et fichier de l&#x27;ordonnance. On y enregistre une nouvelle ordonnance en la photographiant (au téléphone) ou en choisissant un fichier ; elle est lue par une intelligence artificielle et l&#x27;on peut passer directement à la vente. Un second onglet donne le fichier des patients.</p>
+<ul><li data-ar="كل الوصفات في مكان واحد، يُعثر عليها في بضع ثوانٍ باسم المريض أو بالرقم.">Toutes les ordonnances au même endroit, retrouvées en quelques secondes par le nom du patient ou le numéro.</li><li data-ar="الوصفة الأصلية تبقى قابلة للاطلاع: نقرة على « عرض » تعرض الوثيقة المصوَّرة.">L&#x27;ordonnance d&#x27;origine reste consultable : un clic sur « Voir » affiche le document photographié.</li><li data-ar="صورة بالهاتف تكفي: لا ماسح ضوئي ولا إعادة إدخال، فالوصفة يقرؤها الذكاء الاصطناعي ولو كانت بخط اليد.">Une photo au téléphone suffit : pas de scanner, pas de ressaisie, l&#x27;ordonnance est lue par l&#x27;intelligence artificielle, même manuscrite.</li><li data-ar="من الوصفة إلى البيع بنقرة واحدة: « الانتقال إلى البيع » يفتح الصندوق معبّأ مسبقًا.">De l&#x27;ordonnance à la vente en un clic : « Passer à la Vente » ouvre la caisse déjà remplie.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="ordonnances-liste" aria-label="Consulter les ordonnances et les patients"></video><figcaption data-ar="الاطلاع على الوصفات والمرضى">Consulter les ordonnances et les patients</figcaption></figure>
+</article>
+<article class="fx-f sr" id="factures">
+<div class="fx-txt">
+<h3 class="serif" data-ar="الفواتير">Factures</h3>
+<p data-ar="صفحة « الفواتير » تجمع كل فواتير الصيدلية. تُنشأ الفواتير تلقائيا: فاتورة عند كل بيع، وفاتورة قسيمة عند كل إرجاع منتج. يتابع فيها الصيدلي رقم معاملاته المفوتر (لليوم، لفترة معينة، شهرا بشهر)، ويعثر على فاتورة برقمها أو باسم الزبون، ويطّلع على تفاصيلها ويحمّلها بصيغة PDF.">La page Factures rassemble toutes les factures de la pharmacie. Elles sont créées automatiquement : une facture à chaque vente, une facture d&#x27;avoir à chaque retour de produit. Le pharmacien y suit son chiffre d&#x27;affaires facturé (du jour, d&#x27;une période, mois par mois), retrouve une facture par son numéro ou par le nom du client, en consulte le détail et la télécharge en PDF.</p>
+<ul><li data-ar="لا فاتورة تُحرَّر يدويا: توجد الفاتورة فور تأكيد البيع، مرقَّمة ومؤرَّخة.">Aucune facture à rédiger : elle existe dès que la vente est validée, numérotée et datée.</li><li data-ar="يُعثر على الفاتورة في بضع ثوانٍ، باسم الزبون أو بالرقم، وتُسلَّم بصيغة PDF.">Une facture retrouvée en quelques secondes, par le nom du client ou le numéro, et remise en PDF.</li><li data-ar="رقم المعاملات المفوتر أمام العين: لليوم، لفترة مختارة، وشهرا بشهر مع المقارنة بالسنة السابقة.">Le chiffre d&#x27;affaires facturé sous les yeux : du jour, d&#x27;une période choisie, et mois par mois avec comparaison à l&#x27;année précédente.</li><li data-ar="الإرجاعات مسجَّلة بدقة: كل إرجاع يُنتج فاتورة قسيمته، وهي تُخصم من رقم المعاملات.">Les retours sont tracés proprement : chaque retour produit sa facture d&#x27;avoir, qui vient en déduction du chiffre d&#x27;affaires.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="factures-liste" aria-label="Suivre et retrouver les factures"></video><figcaption data-ar="تتبّع الفواتير والعثور عليها">Suivre et retrouver les factures</figcaption></figure>
+</article>
+<article class="fx-f sr" id="retours-avoirs">
+<div class="fx-txt">
+<h3 class="serif" data-ar="المرتجعات وقسائم الشراء">Retours &amp; avoirs</h3>
+<p data-ar="تُستعمل هذه الشاشة لاسترجاع منتج سبق بيعه: يختار الصيدلي عملية البيع، ويحدد الكميات المرجعة وحالتها، ثم يعوّض الزبون نقدًا أو بالبطاقة البنكية أو في شكل قسيمة شراء (وصل مرقّم AVC-…). يُحدَّث المخزون والمحاسبة (فاتورة القسيمة) وتتبّع قسائم الشراء تلقائيًا. بعد ذلك تُستعمل القسيمة عند الصندوق، مرة واحدة أو على عدة مرات، مثل أي طريقة أداء.">Cet écran sert à reprendre un produit déjà vendu : le pharmacien choisit la vente, indique les quantités rendues et leur état, puis rembourse le client en espèces, par carte ou sous forme d&#x27;avoir (un bon d&#x27;achat numéroté AVC-…). Le stock, la comptabilité (facture d&#x27;avoir) et le suivi des bons d&#x27;achat sont mis à jour tout seuls. L&#x27;avoir se réutilise ensuite à la caisse, en une ou plusieurs fois, comme un mode de paiement.</p>
+<ul><li data-ar="يُعالَج المرتجع في أقل من دقيقة ودون أي حساب: البرنامج يعثر على البيع والثمن المؤدّى والدفعة.">Un retour se traite en moins d&#x27;une minute, sans calcul : le logiciel retrouve la vente, le prix payé et le lot.</li><li data-ar="المخزون مضبوط تلقائيًا: العلبة السليمة تعود إلى دفعتها (مع الاحتفاظ بتاريخ انتهاء الصلاحية)، والعلبة التالفة لا تعود إليها.">Le stock est juste automatiquement : une boîte en bon état revient dans son lot (péremption conservée), une boîte abîmée n&#x27;y revient pas.</li><li data-ar="الخسائر موثّقة: كل منتج تالف يترك حركة مخزون فيها السبب واسم من سجّلها.">Les pertes sont tracées : chaque produit abîmé laisse un mouvement de stock avec le motif et l&#x27;auteur.</li><li data-ar="قسيمة الشراء تُبقي رقم المعاملات داخل الصيدلية: يغادر الزبون بقسيمة مرقّمة بدل النقود.">Le bon d&#x27;achat garde le chiffre d&#x27;affaires dans la pharmacie : le client repart avec un avoir numéroté au lieu d&#x27;espèces.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="retours-avoirs-retour" aria-label="Enregistrer un retour et créer un avoir client"></video><figcaption data-ar="تسجيل مرتجع وإنشاء قسيمة شراء للزبون">Enregistrer un retour et créer un avoir client</figcaption></figure>
+</article>
+<article class="fx-f sr" id="credit-clients">
+<div class="fx-txt">
+<h3 class="serif" data-ar="ديون الزبناء">Crédit clients</h3>
+<p data-ar="هو كارني الديون في الصيدلية، يمسكه البرنامج: لكل زبون، ما عليه من دين، وما سدّده من قبل، وسقفه، وتاريخ آخر أداء له. يُسجَّل فيه دين، ويُحصَّل فيه تسديد، ويُذكَّر الزبون عبر WhatsApp بنقرة واحدة. والمبيعات المؤدّاة بطريقة « دين (الكارني) » عند الصندوق تصل إليه تلقائيًا.">C&#x27;est le carnet de crédit de la pharmacie, tenu par le logiciel : pour chaque client, ce qu&#x27;il doit, ce qu&#x27;il a déjà remboursé, son plafond et la date de son dernier paiement. On y note une dette, on y encaisse un remboursement et on relance le client par WhatsApp en un clic. Les ventes payées en « Crédit (carnet) » à la caisse y arrivent toutes seules.</p>
+<ul><li data-ar="انتهى عهد الدفتر الورقي: رصيد كل زبون صحيح دائمًا، يحسبه البرنامج، مع السجل كاملًا.">Fini le cahier papier : le solde de chaque client est toujours juste, calculé par le logiciel, avec tout l&#x27;historique.</li><li data-ar="يعرف صاحب الصيدلية في كل لحظة كم من المال في ذمة الزبناء (مجموع الديون) وكم حُصّل هذا الشهر.">Le titulaire sait à tout moment combien d&#x27;argent est dehors (encours total) et combien est rentré ce mois-ci.</li><li data-ar="المتأخرون في الأداء يظهرون فورًا: الشارة « n j sans paiement » (n يومًا بدون أداء) وعدّاد التأخيرات التي تفوق 30 يومًا.">Les mauvais payeurs se voient tout de suite : étiquette « n j sans paiement » et compteur des retards de plus de 30 jours.</li><li data-ar="السقف يحمي الصيدلية: يُنبَّه الموظف قبل منح دين زائد.">Le plafond protège la pharmacie : l&#x27;employé est averti avant d&#x27;accorder un crédit de trop.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="credit-clients-carnet" aria-label="Lire le carnet, l&#x27;historique d&#x27;un client et fixer son plafond"></video><figcaption data-ar="قراءة الكارني وسجل زبون وتحديد سقفه">Lire le carnet, l&#x27;historique d&#x27;un client et fixer son plafond</figcaption></figure>
+</article>
+<article class="fx-f sr" id="rappels-patients">
+<div class="fx-txt">
+<h3 class="serif" data-ar="تذكير المرضى">Rappels patients</h3>
+<p data-ar="تتابع هذه الشاشة العلاجات المنتظمة للمرضى (ضغط الدم، السكري، الغدة الدرقية…) وتحسب التاريخ الذي ستنتهي فيه كل علبة. تعرض كل يوم قائمة المرضى الواجب تذكيرهم وتجهّز رسالة التذكير عبر WhatsApp، بالفرنسية أو بالعربية. هكذا يكسب الصيدلي وفاء مرضاه المزمنين ويستطيع تجهيز تجديداتهم مسبقًا.">Cet écran suit les traitements réguliers des patients (tension, diabète, thyroïde…) et calcule la date à laquelle chaque boîte sera terminée. Il liste chaque jour les patients à relancer et prépare le message WhatsApp de rappel, en français ou en arabe. Le pharmacien fidélise ses patients chroniques et peut préparer leurs renouvellements à l&#x27;avance.</p>
+<ul><li data-ar="المريض المزمن يعود إليكم: يتلقى رسالة قبل نهاية علبته، باسم صيدليتكم.">Le patient chronique revient chez vous : il reçoit un message avant la fin de sa boîte, au nom de votre pharmacie.</li><li data-ar="التذكير يتم بنقرتين: الرسالة مكتوبة مسبقًا، وفيها الدواء والتاريخ وهاتفكم.">Le rappel prend deux clics : le message est déjà écrit, avec le médicament, la date et votre téléphone.</li><li data-ar="رسالة بالعربية أو بالفرنسية حسب المريض.">Message en arabe ou en français selon le patient.</li><li data-ar="تجهّزون التجديدات مسبقًا: نفاد أقل للمخزون، وانتظار أقل عند منضدة البيع.">Vous préparez les renouvellements à l&#x27;avance : moins de ruptures, moins d&#x27;attente au comptoir.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="rappels-patients-rappel" aria-label="Relancer les patients et noter un renouvellement"></video><figcaption data-ar="تذكير المرضى وتسجيل تجديد">Relancer les patients et noter un renouvellement</figcaption></figure>
+</article>
+<article class="fx-f sr" id="preparations">
+<div class="fx-txt">
+<h3 class="serif" data-ar="المستحضرات الصيدلانية">Préparations magistrales</h3>
+<p data-ar="تعوّض هذه الشاشة السجل الورقي للمستحضرات: يُسجَّل فيها كل مستحضر صيدلاني برقمه ووصفته وتركيبته وطريقة تحضيره وثمنه، ثم يُتابَع إلى أن يُسلَّم للمريض. يحسب البرنامج الثمن انطلاقًا من تكلفة المواد الأولية، ويمسك مخزون هذه المواد، ويطبع ملصق العلبة وبطاقة التحضير.">Cet écran remplace l&#x27;ordonnancier papier des préparations : chaque préparation magistrale y est enregistrée avec son numéro, son ordonnance, sa formule, son mode opératoire et son prix, puis suivie jusqu&#x27;à la remise au patient. Le logiciel calcule le prix à partir du coût des matières premières, tient le stock de ces matières et imprime l&#x27;étiquette du pot et la fiche de préparation.</p>
+<ul><li data-ar="سجل المستحضرات يُمسك تلقائيًا: الرقم، الوصفة، التركيبة، الدفعات، المحضّر والصيدلي المراقب.">L&#x27;ordonnancier des préparations est tenu tout seul : numéro, ordonnance, formule, lots, préparateur et pharmacien contrôleur.</li><li data-ar="يُحسب الثمن بلا خطأ انطلاقًا من التكلفة الحقيقية للمواد ومن معاملكم وأتعابكم.">Le prix est calculé sans erreur à partir du coût réel des matières, de votre coefficient et de vos honoraires.</li><li data-ar="يتحدّث مخزون المواد الأولية مع كل مستحضر، مع تنبيه قبل النفاد وإشارة إلى المواد المنتهية الصلاحية.">Le stock des matières premières se met à jour à chaque préparation, avec une alerte avant la rupture et un signalement des matières périmées.</li><li data-ar="يُطبع ملصق العلبة بنقرة واحدة، كاملًا ومقروءًا، مع العبارة « Usage externe » (للاستعمال الخارجي) عند اللزوم.">L&#x27;étiquette du pot s&#x27;imprime en un clic, complète et lisible, avec la mention « Usage externe » quand il le faut.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="preparations-nouvelle" aria-label="Enregistrer une nouvelle préparation"></video><figcaption data-ar="تسجيل مستحضر جديد">Enregistrer une nouvelle préparation</figcaption></figure>
+</article>
+</div></section>
+<section class="fx-g" id="g-reseau"><div class="wrap">
+<h2 class="serif" data-ar="الشبكة والفريق">Réseau &amp; équipe</h2>
+<p data-ar="الفريق، عدة صيدليات وصيدليات الحراسة">L&#x27;équipe, plusieurs officines, les gardes</p>
+<article class="fx-f sr" id="pharmacies-garde">
+<div class="fx-txt">
+<h3 class="serif" data-ar="صيدليات الحراسة">Pharmacies de garde</h3>
+<p data-ar="تعرض الشاشة صيدليات الحراسة في 7 مدن كبرى بالمغرب (نهارًا وليلًا و24/24)، مع المفتوح منها في هذه اللحظة، وهاتفها والطريق إليها. فيجيب الصيدلي فورًا المريض الذي يسأل « où aller ce soir ? » (إلى أين أذهب هذا المساء؟)، ويمكنه إرسال اللائحة عبر واتساب. ويمكنه أيضًا التصريح بحراساته هو: فتظهر صيدليته حينئذ في لائحة مستخدمي PharmaStock الآخرين في مدينته.">L&#x27;écran affiche les pharmacies de garde de 7 grandes villes du Maroc (jour, nuit, 24h/24), avec celles qui sont ouvertes en ce moment, leur téléphone et l&#x27;itinéraire. Le pharmacien répond tout de suite au patient qui demande « où aller ce soir ? », et peut envoyer la liste par WhatsApp. Il peut aussi déclarer ses propres gardes : sa pharmacie apparaît alors dans la liste des autres utilisateurs PharmaStock de sa ville.</p>
+<ul><li data-ar="المريض الذي يمرّ أو يتصل عند الإغلاق ينصرف ومعه جواب: صيدلية الحراسة المفتوحة، وهاتفها والطريق إليها.">Le patient qui passe ou qui appelle à la fermeture repart avec une réponse : la pharmacie de garde ouverte, son téléphone et l&#x27;itinéraire.</li><li data-ar="نقرة واحدة على « مشاركة » لإرسال لائحة الحراسات عبر واتساب، إلى مريض أو إلى مجموعة الحي.">Un seul clic sur « Partager » pour envoyer la liste des gardes sur WhatsApp, à un patient ou dans un groupe de quartier.</li><li data-ar="سبع مدن كبرى مغطاة، مع تحديث تلقائي: لا حاجة بعد الآن إلى البحث عن المواعيد في عدة مواقع.">Sept grandes villes couvertes, avec une mise à jour automatique : plus besoin de chercher le planning sur plusieurs sites.</li><li data-ar="الصيدلية تكسب حضورًا أوسع: حراستها المصرَّح بها تظهر عند مستخدمي PharmaStock الآخرين في مدينتها، مع عنوانها وهاتفها.">La pharmacie gagne en visibilité : sa garde déclarée apparaît chez les autres utilisateurs PharmaStock de sa ville, avec son adresse et son téléphone.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="pharmacies-garde-consulter" aria-label="Trouver une pharmacie de garde"></video><figcaption data-ar="العثور على صيدلية حراسة">Trouver une pharmacie de garde</figcaption></figure>
+</article>
+<article class="fx-f sr" id="equipe-acces">
+<div class="fx-txt">
+<h3 class="serif" data-ar="الفريق والصلاحيات">Équipe &amp; accès</h3>
+<p data-ar="ينشئ مسؤول الصيدلية هنا حساب كل معاون ويحدد ما يمكن لكل واحد القيام به: دور جاهز للاستعمال (صيدلي مساعد، بائع / محضّر) أو صلاحيات على المقاس، صلاحية بصلاحية. يستطيع إيقاف حساب بنقرة واحدة وإعادة تفعيله لاحقا، ومنح الوصول إلى عدة صيدليات من صيدلياته بالمعرّف نفسه. يتوقف عدد الحسابات على العرض: مستخدم واحد (1) في Starter، و3 في Pro، وعدد غير محدود في Enterprise، والمسؤول محسوب ضمنهم.">L&#x27;administrateur de la pharmacie crée ici le compte de chaque collaborateur et décide de ce que chacun peut faire : un rôle prêt à l&#x27;emploi (pharmacien adjoint, vendeur / préparateur) ou un accès sur mesure, droit par droit. Il peut bloquer un compte en un clic et le réactiver plus tard, et donner accès à plusieurs de ses pharmacies avec le même identifiant. Le nombre de comptes dépend de l&#x27;offre : 1 utilisateur en Starter, 3 en Pro, illimité en Enterprise, administrateur compris.</p>
+<ul><li data-ar="لكل واحد حسابه: انتهى زمن كلمة المرور المشتركة عند منضدة البيع، وصار معروفا من يصل إلى ماذا.">Chacun son compte : fini le mot de passe partagé au comptoir, on sait qui a accès à quoi.</li><li data-ar="دوران جاهزان للاستعمال لربح الوقت، وعشر صلاحيات تُحدَّد للتكيف مع كل صيدلية.">Deux rôles prêts à l&#x27;emploi pour aller vite, et dix droits à cocher pour s&#x27;adapter à chaque officine.</li><li data-ar="الأرقام تبقى سرية: من دون صلاحية « Tableau de bord &amp;amp; statistiques » (لوحة القيادة والإحصائيات)، لا يرى البائع رقم المعاملات ولا الهوامش.">Les chiffres restent confidentiels : sans le droit « Tableau de bord &amp; statistiques », un vendeur ne voit ni le chiffre d&#x27;affaires ni les marges.</li><li data-ar="صلاحية « Annuler une vente » (إلغاء عملية بيع) منفصلة عن الصندوق: يستطيع البائع تحصيل المبيعات من دون أن يستطيع حذف عملية بيع.">Le droit « Annuler une vente » est séparé de la caisse : un vendeur peut encaisser sans pouvoir supprimer une vente.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="equipe-acces-ajouter" aria-label="Ajouter un membre et choisir ses droits"></video><figcaption data-ar="إضافة عضو واختيار صلاحياته">Ajouter un membre et choisir ses droits</figcaption></figure>
+</article>
+<article class="fx-f sr" id="mes-pharmacies">
+<div class="fx-txt">
+<h3 class="serif" data-ar="صيدلياتي">Plusieurs pharmacies, un seul compte</h3>
+<p data-ar="المالك الذي له عدة صيدليات يدبّرها كلها بالمعرّف نفسه: تحتفظ كل صيدلية بمخزونها ومبيعاتها وفواتيرها، وينتقل من واحدة إلى أخرى بنقرة، من دون إعادة تسجيل الدخول. يضيف بنفسه صيدلية جديدة، تصير قابلة للاستعمال بعد تأكيدها من فريق PharmaStock. وتعرض الشاشة أيضا حالة كل صيدلية: نشطة، أو في انتظار التأكيد، أو معلقة؛ والوصول الذي بلغ أجله يُنبَّه إليه لحظة فتح الصيدلية.">Un propriétaire qui a plusieurs officines les gère toutes avec le même identifiant : chaque pharmacie garde son propre stock, ses ventes et ses factures, et il passe de l&#x27;une à l&#x27;autre en un clic, sans se reconnecter. Il ajoute lui-même une nouvelle pharmacie, qui devient utilisable après validation par l&#x27;équipe PharmaStock. L&#x27;écran montre aussi l&#x27;état de chaque pharmacie : active, en attente de validation ou suspendue ; un accès arrivé à échéance est signalé au moment d&#x27;ouvrir la pharmacie.</p>
+<ul><li data-ar="معرّف واحد لكل صيدلياته: لا حاجة إلى تسجيل الخروج للانتقال من واحدة إلى أخرى.">Un seul identifiant pour toutes ses officines : plus besoin de se déconnecter pour passer de l&#x27;une à l&#x27;autre.</li><li data-ar="كل صيدلية تحتفظ بأرقامها الخاصة: المخزون والمبيعات والفواتير لا تختلط أبدا.">Chaque pharmacie garde ses propres chiffres : stock, ventes et factures ne se mélangent jamais.</li><li data-ar="فتح صيدلية جديدة يتم في دقيقة من داخل البرنامج، من دون إعادة التسجيل.">Ouvrir une nouvelle officine se fait en une minute depuis le logiciel, sans refaire une inscription.</li><li data-ar="المعاونون يواكبون: الموظف الواحد يمكن أن يكون له وصول إلى عدة صيدليات للمالك، بمعرّف واحد.">Les collaborateurs suivent : un même employé peut avoir accès à plusieurs pharmacies du propriétaire, avec un seul identifiant.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="mes-pharmacies-basculer" aria-label="Passer d&#x27;une pharmacie à l&#x27;autre"></video><figcaption data-ar="الانتقال من صيدلية إلى أخرى">Passer d&#x27;une pharmacie à l&#x27;autre</figcaption></figure>
+</article>
+</div></section>
+<section class="fx-g" id="g-outils"><div class="wrap">
+<h2 class="serif" data-ar="الأدوات">Outils</h2>
+<p data-ar="التعاون بين الصيدليات والمساعد الذكي">L&#x27;entraide entre pharmacies et l&#x27;assistant</p>
+<article class="fx-f sr" id="marketplace">
+<div class="fx-txt">
+<h3 class="serif" data-ar="سوق الصيدليات">Marketplace B2B</h3>
+<p data-ar="يربط سوق الصيدليات بين كل الصيدليات المجهزة ببرنامج PharmaStock. يمكن لكل صيدلية أن تنشر فيه فائض مخزونها للبيع أو بتخفيض أو كتبرع أو للتبادل، وأن تجد فيه المنتجات التي تنقصها. بواسطة « أبحث عن »، تسأل الصيدلية التي نفد مخزونها الشبكة كلها؛ والزملاء الذين يتوفرون على المنتج يرونه مميَّزًا عندهم ويجيبون بالزر « Je l&amp;#x27;ai » (عندي). هكذا يصرّف الصيدلي منتجاته قبل انتهاء صلاحيتها، ويلبّي حاجة مرضاه بسرعة أكبر، ويتواصل مع زملائه بنقرة واحدة عبر واتساب أو الهاتف أو البريد الإلكتروني.">La Marketplace met en relation toutes les pharmacies équipées de PharmaStock. Chacune peut y publier ses surstocks en vente, en promotion, en don ou en échange, et y trouver les produits qui lui manquent. Avec « Je cherche », une pharmacie en rupture interroge tout le réseau ; les confrères qui ont le produit le voient signalé et répondent « Je l&#x27;ai ». Le pharmacien écoule ses produits avant péremption, dépanne ses patients plus vite et contacte ses confrères en un clic par WhatsApp, téléphone ou e-mail.</p>
+<ul><li data-ar="خسائر أقل: المنتج الذي يقترب تاريخ انتهاء صلاحيته يُعرض بتخفيض أو كتبرع على الشبكة كلها بدل أن ينتهي إلى الإتلاف.">Moins de pertes : un produit qui approche de sa date se propose en promotion ou en don à tout le réseau au lieu de finir à la destruction.</li><li data-ar="المريض لا ينتظر بعد الآن: عند نفاد المخزون، تسأل الصيدلية كل الزملاء برسالة واحدة وتتلقى الردود مع الكمية والثمن.">Un patient n&#x27;attend plus : en rupture, la pharmacie interroge tous les confrères d&#x27;un seul message et reçoit les réponses avec quantité et prix.</li><li data-ar="البرنامج يقوم بالمطابقة وحده: يُظهر « Vous en avez 48 » (لديك منه 48) على طلب الزميل، دون حاجة إلى البحث في المخزون.">Le logiciel fait le rapprochement tout seul : il signale « Vous en avez 48 » sur la demande d&#x27;un confrère, sans avoir à chercher dans son stock.</li><li data-ar="النشر يستغرق دقيقة واحدة: المنتج والثمن والدفعة وتاريخ انتهاء الصلاحية تأتي من المخزون.">Publier prend une minute : le produit, le prix, le lot et la péremption viennent du stock.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="marketplace-offres" aria-label="Parcourir les offres du réseau et contacter une pharmacie"></video><figcaption data-ar="تصفح عروض الشبكة والتواصل مع صيدلية">Parcourir les offres du réseau et contacter une pharmacie</figcaption></figure>
+</article>
+<article class="fx-f sr" id="assistant-ia">
+<div class="fx-txt">
+<h3 class="serif" data-ar="المساعد الذكي">Assistant IA</h3>
+<p data-ar="مساعد PharmaStock محادثة مع ذكاء اصطناعي متخصص في الإرشاد الصيدلي بالمغرب: يُطرح عليه سؤال عن دواء شائع أو عن عرَض خفيف، فيجيب في بضع جمل، ودائمًا مع تنبيه يدعو إلى الحذر. ويستطيع أيضًا قراءة صورة وصفة طبية والتعرف على دواء من صورة علبته. إنه وسيلة تساعد على الجواب عند استقبال الزبائن، ومقدَّمة بوضوح على أنها للمعلومة فقط: لا تعوّض الصيدلي ولا الطبيب.">L&#x27;Assistant PharmaStock est une conversation avec une intelligence artificielle spécialisée dans le conseil officinal au Maroc : on lui pose une question sur un médicament courant ou un symptôme léger, et il répond en quelques phrases, toujours avec un avertissement de prudence. Il sait aussi lire la photo d&#x27;une ordonnance et reconnaître un médicament à partir de la photo de sa boîte. C&#x27;est une aide à la réponse au comptoir, clairement présentée comme informative : elle ne remplace ni le pharmacien ni le médecin.</p>
+<ul><li data-ar="جواب في بضع ثوانٍ عن الأسئلة الشائعة عند استقبال الزبائن، دون مغادرة البرنامج.">Une réponse en quelques secondes pour les questions courantes du comptoir, sans quitter le logiciel.</li><li data-ar="مساعد مصمَّم للصيدلية المغربية: أدوية المغرب وأسماؤها التجارية، وأجوبة بالفرنسية.">Un assistant pensé pour l&#x27;officine marocaine : médicaments et noms commerciaux du Maroc, réponses en français.</li><li data-ar="أداة حذرة: تحيل على الطبيب في حالات الأطفال، والنساء الحوامل، والمسنين، والحمى المرتفعة، والأعراض التي تطول.">Un outil prudent : il renvoie vers le médecin pour les enfants, les femmes enceintes, les personnes âgées, les fièvres élevées et les symptômes qui durent.</li><li data-ar="ربح للوقت مع الوصفات الطبية الصعبة القراءة: تتحول الصورة إلى لائحة أدوية، مع ما نُسي فيها وما يجب التحقق منه.">Un gain de temps sur les ordonnances difficiles à lire : la photo est transformée en liste de médicaments, avec les oublis et les points à vérifier.</li></ul>
+</div>
+<figure class="fx-media"><video controls muted loop playsinline preload="none" width="960" height="646" style="aspect-ratio:960/646" data-video="assistant-ia-questions" aria-label="Poser une question à l&#x27;assistant"></video><figcaption data-ar="طرح سؤال على المساعد">Poser une question à l&#x27;assistant</figcaption></figure>
+</article>
+</div></section>
+<section class="fx-fin"><div class="wrap">
+<h2 class="serif" data-ar="جرّبه في صيدليتك.">Essayez-le dans votre officine.</h2>
+<p data-ar="3 أشهر من التجربة المجانية، بدون بطاقة بنكية وبدون التزام. كل الوظائف مشمولة في العروض الثلاثة.">3 mois d&#x27;essai gratuit, sans carte bancaire et sans engagement. Toutes les fonctionnalités sont incluses dans les trois offres.</p>
+<div class="ctas"><a class="btn btn-p" href="/inscription/" data-ar="ابدأ التجربة المجانية">Démarrer l'essai gratuit</a><a class="btn btn-o" href="/offres.html" data-ar="عرض العروض">Voir les offres</a></div>
+</div></section>
+</main>
+
+<footer>
+<div class="wrap">
+<div><div class="serif" style="font-size:30px;color:#fff">PharmaStock</div><p style="margin:10px 0 0;font-size:14px;max-width:320px;line-height:1.6" data-ar="برنامج تدبير الصيدليات المصمم في المغرب.">Le logiciel de gestion de pharmacie conçu au Maroc.</p></div>
+<nav aria-label="Pied de page">
+<div><b data-ar="المنتج">Produit</b><a href="/offres.html" data-ar="العروض والأثمنة">Offres &amp; tarifs</a><a href="/demande-essai.html" data-ar="عرض توضيحي">Démonstration</a><a href="https://app.mapharmastock.com/login" data-ar="تسجيل الدخول">Se connecter</a></div>
+<div><b data-ar="موارد">Ressources</b><a href="/blog/" data-ar="المدونة">Blog</a><a href="/guides/" data-ar="الأدلة">Guides</a><a href="/conseils-gestion-stock-pharmacie-maroc.html" data-ar="نصائح تدبير المخزون">Conseils gestion de stock</a><a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a></div>
+<div><b data-ar="الشركة">Société</b><a href="/qui-sommes-nous.html" data-ar="من نحن">Qui sommes-nous</a><a href="/contact.html" data-ar="اتصل بنا">Contact</a></div>
+</nav>
+</div>
+<p style="max-width:1240px;margin:36px auto 0;font-size:13px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px">© 2026 PharmaStock</p>
+</footer>
+
+<script>
+(function(){var els=document.querySelectorAll('.sr');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+els.forEach(function(e){io.observe(e)});})();
+</script>
+<script>
+/* Vidéos de démonstration : chargées à l'approche de l'écran, en français ou en arabe selon la langue du site. */
+(function(){
+  var ar = false;
+  try { var m = /[?&]lang=(fr|ar)\b/.exec(location.search); ar = m ? m[1] === 'ar' : localStorage.getItem('ps-site-lang') === 'ar'; } catch (e) {}
+  var base = 'https://app.mapharmastock.com/guide/' + (ar ? 'ar-' : 'fr-');
+  var vs = document.querySelectorAll('video[data-video]');
+  function charger(v) { if (v.src) return; v.preload = 'metadata'; v.src = base + v.getAttribute('data-video') + '.mp4#t=0.1'; }
+  if (!('IntersectionObserver' in window)) { vs.forEach(charger); return; }
+  var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { charger(x.target); io.unobserve(x.target); } }); }, { rootMargin: '500px 0px' });
+  vs.forEach(function (v) { io.observe(v); });
+})();
+</script>
+<script src="/assets/ps-site.js?v=8" defer></script>
+</body>
+</html>

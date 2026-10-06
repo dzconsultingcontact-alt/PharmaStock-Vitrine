@@ -54,6 +54,38 @@
     window.addEventListener('resize', function () { if (m.classList.contains('open')) place(); });
   }
 
+  /* Lien « Fonctionnalités » ajouté au menu, au menu mobile et au pied de page des pages qui ne l'ont pas encore */
+  function lienFonctionnalites() {
+    var texte = LANG === 'ar' ? 'الوظائف' : 'Fonctionnalités', url = '/fonctionnalites.html';
+    function absent(zone) { return zone && !zone.querySelector('a[href*="fonctionnalites"]'); }
+    var menu = document.querySelector('.nav-menu');
+    if (absent(menu)) {
+      var li = document.createElement('li'); li.innerHTML = '<a href="' + url + '" data-notranslate>' + texte + '</a>';
+      menu.insertBefore(li, menu.children[1] || null);
+      /* Sur un écran étroit, un menu déjà chargé ne doit pas pousser « Se connecter » hors de l'écran :
+         si le lien ne tient pas, il reste dans le menu mobile et le pied de page. */
+      var tient = function () {
+        var z = document.querySelector('.nav-actions'); if (!z || !li.parentNode) return;
+        if (!z.offsetParent) return; /* barre réduite (téléphone) : le menu est masqué */
+        var r = z.getBoundingClientRect(), l = document.documentElement.clientWidth;
+        if (r.right > l + 1 || r.left < -1) li.parentNode.removeChild(li);
+      };
+      tient();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(tient);
+    }
+    var mobile = document.getElementById('mobileMenu');
+    if (absent(mobile)) {
+      var d = document.createElement('div'); d.className = 'mm-item'; d.innerHTML = '<a href="' + url + '" data-notranslate>' + texte + ' <span>›</span></a>';
+      var premier = mobile.querySelector('.mm-item');
+      mobile.insertBefore(d, premier ? premier.nextSibling : mobile.firstChild);
+    }
+    var pied = document.querySelector('.footer-links');
+    if (absent(pied)) {
+      var a = document.createElement('a'); a.href = url; a.textContent = texte; a.setAttribute('data-notranslate', '');
+      pied.insertBefore(a, pied.children[1] || null);
+    }
+  }
+
   function boutonWhatsApp() {
     if (document.querySelector('.ps-wa')) return;
     var a = document.createElement('a');
@@ -125,11 +157,11 @@
     var l = document.createElement('link'); l.rel = 'stylesheet';
     l.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap';
     document.head.appendChild(l);
-    var s = document.createElement('script'); s.src = '/assets/ps-ar.js?v=7'; s.defer = true;
+    var s = document.createElement('script'); s.src = '/assets/ps-ar.js?v=8'; s.defer = true;
     document.head.appendChild(s);
   }
 
   arabe();
-  function init() { bandeau(); menuMobile(); boutonWhatsApp(); formulaires(); if (!LANG_OFF) boutonsLangue(); }
+  function init() { bandeau(); lienFonctionnalites(); menuMobile(); boutonWhatsApp(); formulaires(); if (!LANG_OFF) boutonsLangue(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
