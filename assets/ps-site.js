@@ -24,7 +24,7 @@
     if (document.querySelector('.band, .ps-band')) return;
     var items = [
       ['3 mois d\'essai gratuit', '3 أشهر من التجربة المجانية'],
-      ['Offre spéciale : 30 premières pharmacies', 'عرض خاص: أول 30 صيدلية'],
+      ['30 premières pharmacies : −50 % + 4 mois offerts', 'أول 30 صيدلية: −50% و4 أشهر مجانا'],
       ['Base des médicaments du Maroc', 'قاعدة الأدوية المغربية'],
       ['Réception par scan DataMatrix', 'الاستلام بمسح DataMatrix'],
       ['Crédit client', 'ديون الزبناء'],
@@ -45,7 +45,7 @@
   function menuMobile() {
     var m = document.getElementById('mobileMenu'); if (!m || m.__ps) return; m.__ps = true;
     function place() {
-      var n = document.querySelector('header.nav, nav'); if (!n) return;
+      var n = document.querySelector('header.psn, header.nav, nav'); if (!n) return;
       var b = Math.max(0, Math.round(n.getBoundingClientRect().bottom));
       m.style.setProperty('--mm-top', b + 'px'); m.style.top = b + 'px';
     }
@@ -144,9 +144,9 @@
       };
       return b;
     }
-    var na = document.querySelector('.nav-actions');
+    var na = document.querySelector('.psn-actions, .nav-actions');
     if (na && !na.querySelector('.ps-lang')) na.insertBefore(creer('ps-lang'), na.firstChild);
-    var mm = document.querySelector('#mobileMenu .mm-ctas') || document.getElementById('mobileMenu');
+    var mm = document.querySelector('#mobileMenu .psn-mm-ctas, #mobileMenu .mm-ctas') || document.getElementById('mobileMenu');
     if (mm && !mm.querySelector('.ps-lang')) mm.appendChild(creer('ps-lang ps-lang-m'));
   }
 
