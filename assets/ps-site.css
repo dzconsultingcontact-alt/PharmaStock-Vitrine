@@ -29,7 +29,8 @@
 .ps-field label{font-size:.8rem;font-weight:700;color:#334155}
 .ps-field input,.ps-field select,.ps-field textarea{font:inherit;font-size:.95rem;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;color:#0f172a;min-height:44px}
 .ps-field input:focus,.ps-field select:focus,.ps-field textarea:focus{outline:2px solid var(--teal2,#06b6d4);border-color:transparent}
-.ps-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+/* champ piège contre les robots : invisible, sans sortir de la page (à gauche de l'écran, il faisait défiler la version arabe sur le côté) */
+.ps-hp{position:absolute!important;left:0!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
 .ps-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:inherit;font-weight:800;border:0;border-radius:12px;padding:13px 20px;cursor:pointer;text-decoration:none;min-height:46px;transition:transform .15s,filter .15s}
 .ps-btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
 .ps-btn-p{background:linear-gradient(135deg,var(--teal,#0891b2),var(--teal3,#0e7490));color:#fff}
@@ -86,21 +87,23 @@ html[dir=rtl] a[href^="tel:"],html[dir=rtl] .ps-ltr{direction:ltr;unicode-bidi:e
 /* ===== MENU DU SITE : le même sur toutes les pages (posé par vitrine_menu.py) ===== */
 .psn,.psn *{box-sizing:border-box}
 .psn{position:sticky;top:0;z-index:50;margin:0;padding:0;background:rgba(244,246,243,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E1E7E4;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
-.psn-in{max-width:1440px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;gap:30px;min-height:72px}
+/* mesures de la page d'accueil d'origine : barre de 81 px, mêmes écarts, même taille de logo */
+.psn-in{max-width:1480px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;gap:36px;min-height:80px}
 .psn-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#0B1B2B;flex-shrink:0;padding:0;margin:0}
 .psn-logo i{width:40px;height:40px;border-radius:12px;background:#0B1B2B;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-style:normal}
 .psn-logo i svg{display:block;width:22px;height:22px}
-.psn-logo span{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;font-size:27px;line-height:1;color:#0B1B2B;display:inline;width:auto;height:auto;background:none}
-.psn-links{display:flex;align-items:center;gap:24px;flex:1 1 auto;min-width:0;margin:0;padding:0}
+.psn-logo span{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;font-size:28px;line-height:1;color:#0B1B2B;display:inline;width:auto;height:auto;background:none}
+.psn-links{display:flex;align-items:center;gap:28px;flex:1 1 auto;min-width:0;margin:0;padding:0}
 .psn-links a{position:relative;white-space:nowrap;color:#34495C;text-decoration:none;font-weight:600;font-size:15px;line-height:1.4;padding:0;margin:0;background:none;border:0;display:inline-block;text-align:start}
 .psn-links a::after{content:"";position:absolute;inset-inline-start:0;bottom:-6px;height:2px;width:0;background:#0E6B6A;transition:width .25s}
 .psn-links a:hover,.psn-links a[aria-current]{color:#0B1B2B}
 .psn-links a:hover::after,.psn-links a[aria-current]::after{width:100%}
-.psn-actions{display:flex;align-items:center;gap:14px;flex-shrink:0;margin:0;padding:0}
-.psn-actions .ps-lang{margin:0;flex-shrink:0}
+.psn-actions{display:flex;align-items:center;gap:18px;flex-shrink:0;margin:0;padding:0}
+.psn .psn-actions .ps-lang{margin:0;margin-inline-end:8px;flex-shrink:0;font-family:'Cairo','Inter',sans-serif;font-weight:800!important;font-size:13.6px;line-height:normal;letter-spacing:normal;text-transform:none;white-space:nowrap;border:1.5px solid #e2e8f0!important;background:#fff!important;color:#0c1a2e!important;border-radius:10px!important;padding:7px 11px;min-height:38px;width:auto;height:auto;box-shadow:none;cursor:pointer}
+.psn .psn-actions .ps-lang:hover{border-color:#0891b2!important}
 .psn-login{white-space:nowrap;color:#34495C;text-decoration:none;font-weight:600;font-size:15px;line-height:1.4;padding:0;border:0;background:none}
 .psn-login:hover{color:#0B1B2B}
-.psn-cta{position:relative;overflow:hidden;display:inline-flex;align-items:center;white-space:nowrap;text-decoration:none;font-weight:700;font-size:15px;line-height:1.4;border-radius:14px;padding:11px 20px;background:#0E6B6A;color:#fff;border:0;box-shadow:0 10px 30px rgba(14,107,106,.35);transition:transform .2s,box-shadow .2s,background .2s}
+.psn-cta{position:relative;overflow:hidden;display:inline-flex;align-items:center;white-space:nowrap;text-decoration:none;font-weight:700;font-size:15px;line-height:1.4;border-radius:14px;padding:11px 20px;min-height:48px;background:#0E6B6A;color:#fff;border:0;box-shadow:0 10px 30px rgba(14,107,106,.35);transition:transform .2s,box-shadow .2s,background .2s}
 .psn-cta:hover{background:#0B5857;color:#fff;transform:translateY(-2px);box-shadow:0 16px 40px rgba(14,107,106,.45)}
 .psn-cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);animation:psn-shine 3.2s ease-in-out infinite;pointer-events:none}
 @keyframes psn-shine{from{left:-60%}to{left:130%}}
@@ -110,13 +113,13 @@ html[dir=rtl] a[href^="tel:"],html[dir=rtl] .ps-ltr{direction:ltr;unicode-bidi:e
 .psn-hb.active span:nth-child(2){opacity:0}
 .psn-hb.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 /* le menu se resserre avant de passer au bouton : les liens les moins utiles s'effacent d'abord */
-@media (max-width:1470px){.psn-in{gap:24px;padding:14px 24px}.psn-links{gap:20px}.psn-logo span{font-size:25px}}
+@media (max-width:1470px){.psn-in{gap:24px;padding:16px 24px}.psn-links{gap:20px}.psn-logo span{font-size:25px}.psn-actions{gap:14px}.psn .psn-actions .ps-lang{margin-inline-end:0}}
 @media (max-width:1355px){.psn-o1{display:none!important}}
 @media (max-width:1245px){.psn-o2{display:none!important}}
 @media (max-width:1185px){.psn-o3{display:none!important}}
 @media (max-width:1115px){.psn-in{gap:18px}.psn-links{gap:16px}.psn-links a,.psn-login,.psn-cta{font-size:14.5px}.psn-cta{padding:10px 16px}}
 @media (max-width:1060px){.psn-links{display:none}.psn-hb{display:flex}.psn-in{justify-content:space-between}}
-@media (max-width:640px){.psn-in{padding:10px 16px;gap:12px;min-height:64px}.psn-actions{display:none}.psn-logo span{font-size:24px}}
+@media (max-width:640px){.psn-in{padding:10px 16px;gap:12px;min-height:64px}.psn-cta{min-height:0}.psn-actions{display:none}.psn-logo span{font-size:24px}}
 /* menu du téléphone */
 .psn-mm,.psn-mm *{box-sizing:border-box}
 .psn-mm{display:none;position:fixed;left:0;right:0;bottom:0;top:var(--mm-top,70px);background:#fff;z-index:199;overflow-y:auto;padding:8px 20px 32px;margin:0;border-top:1px solid #E1E7E4;box-shadow:0 30px 60px -30px rgba(11,27,43,.35);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
@@ -130,8 +133,13 @@ html[dir=rtl] a[href^="tel:"],html[dir=rtl] .ps-ltr{direction:ltr;unicode-bidi:e
 .psn-mm-ctas a,.psn-mm-ctas button{display:block;width:100%;margin:0;text-align:center;padding:14px;border-radius:14px;font-weight:800;font-size:16px;line-height:1.3;text-decoration:none;min-height:0}
 .psn-mm-cta1{background:#0E6B6A;color:#fff;border:0}
 .psn-mm-cta2{border:1.5px solid #E1E7E4;color:#0B1B2B;background:#fff}
-.psn-mm-ctas .ps-lang{border:1.5px solid #E1E7E4;color:#0B1B2B;background:#fff;cursor:pointer}
+.psn-mm .psn-mm-ctas .ps-lang{border:1.5px solid #E1E7E4!important;border-radius:14px!important;color:#0B1B2B!important;background:#fff!important;font-family:'Cairo','Inter',sans-serif;font-weight:800!important;font-size:16px;cursor:pointer}
 @media (min-width:1061px){.psn-mm{display:none!important}}
 [dir=rtl] .psn,[dir=rtl] .psn-mm{font-family:'Cairo','Inter',system-ui,sans-serif}
 [dir=rtl] .psn-mm-item a::after{content:"‹"}
+/* bandeau défilant : mêmes mesures que celui de la page d'accueil */
+div.ps-band .ps-mq{gap:56px;font-weight:800}
+.band .mq,div.ps-band .ps-mq{line-height:20px}
+[dir=rtl] .band .mq,[dir=rtl] div.ps-band .ps-mq{font-family:'Cairo','Plus Jakarta Sans',system-ui,sans-serif}
+@media (max-width:640px){div.ps-band .ps-mq{gap:24px;font-size:13px}.band .mq,div.ps-band .ps-mq{line-height:16px}}
 /* ===== fin du menu du site ===== */

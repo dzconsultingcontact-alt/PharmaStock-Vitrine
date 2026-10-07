@@ -139,7 +139,8 @@
       b.setAttribute('data-notranslate', '');
       b.onclick = function () {
         try { localStorage.setItem(CLE_LANG, suivant); } catch (e) { }
-        var u = new URL(location.href); u.searchParams.delete('lang'); if (suivant === 'ar') u.searchParams.set('lang', 'ar');
+        // Une page sans version arabe mène à l'accueil en arabe
+        var u = new URL(LANG_OFF ? '/' : location.href, location.href); u.searchParams.delete('lang'); if (suivant === 'ar') u.searchParams.set('lang', 'ar');
         location.href = u.toString();
       };
       return b;
@@ -162,6 +163,6 @@
   }
 
   arabe();
-  function init() { bandeau(); lienFonctionnalites(); menuMobile(); boutonWhatsApp(); formulaires(); if (!LANG_OFF) boutonsLangue(); }
+  function init() { bandeau(); lienFonctionnalites(); menuMobile(); boutonWhatsApp(); formulaires(); boutonsLangue(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
