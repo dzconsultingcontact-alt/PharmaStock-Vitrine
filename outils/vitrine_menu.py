@@ -10,7 +10,7 @@ Usage : python3 outils/vitrine_menu.py . (à la racine du site)
 import glob, os, re, sys
 
 RACINE = sys.argv[1]
-VERSION = '9'   # ?v= des fichiers communs (ps-site.css, ps-site.js)
+VERSION = '10'  # ?v= des fichiers communs (ps-site.css, ps-site.js) : à augmenter à chaque changement de l'un des deux, jamais un numéro déjà servi
 
 # (clé, adresse, libellé, arabe, classe qui retire le lien quand la place manque)
 LIENS = [
