@@ -769,6 +769,36 @@ setInterval(step,2600);
 </div>
 </section>
 
+<section id="application" class="appx">
+<style>
+.appx{padding:0 32px 110px}
+.appx .box{max-width:1240px;margin:0 auto;background:var(--ink);color:#DCEAF1;border-radius:32px;padding:48px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:40px;align-items:center;overflow:hidden;position:relative}
+.appx h2{color:#fff;font-size:38px;line-height:1.12;margin:14px 0 0}
+.appx .tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.12em;color:var(--mint);background:rgba(127,209,199,.12);border-radius:999px;padding:7px 14px}
+.appx p{font-size:17px;line-height:1.6;margin:14px 0 0;max-width:560px}
+.appx .os{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.appx .os span{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600;color:#fff}
+.appx .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.appx .btn-m{background:var(--mint);color:var(--ink)}
+.appx .tel{justify-self:center;width:170px;height:330px;border-radius:34px;border:9px solid #1F3346;background:linear-gradient(160deg,#DFF3F0,#F4F8FB);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--ink);font-weight:700;font-size:13px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.appx .tel i{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#0891b2,#10b981);display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px -8px rgba(8,145,178,.6)}
+@media (max-width:900px){.appx{padding:0 16px 80px}.appx .box{grid-template-columns:1fr;padding:30px 22px}.appx .tel{display:none}.appx h2{font-size:30px}}
+</style>
+<div class="box sr">
+<div>
+<span class="tag" data-ar="التطبيق">APPLICATION</span>
+<h2 class="serif" data-ar="PharmaStock في جيبك">PharmaStock dans votre poche</h2>
+<p data-ar="ثبّت التطبيق على هاتفك في 10 ثوانٍ، بدون App Store ولا Play Store: أيقونة على الشاشة الرئيسية، فتح بملء الشاشة وتحديثات تلقائية.">Installez l'application sur votre téléphone en 10 secondes, sans App Store ni Play Store : une icône sur l'écran d'accueil, une ouverture en plein écran et des mises à jour automatiques.</p>
+<div class="os"><span>iPhone</span><span>Android</span><span data-ar="حاسوب">Ordinateur</span></div>
+<div class="ctas">
+<a class="btn btn-m" href="/installer-application.html" data-ar="تثبيت التطبيق">Installer l'application</a>
+<a class="btn btn-o" href="https://app.mapharmastock.com/" data-ar="فتح التطبيق">Ouvrir l'application</a>
+</div>
+</div>
+<div class="tel" aria-hidden="true"><i><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i>PharmaStock</div>
+</div>
+</section>
+
 <section id="faq" class="faq">
 <div class="in">
 <h2 class="h2 serif sr" style="text-align:center;margin-bottom:30px" data-ar="أسئلة شائعة">Questions fréquentes</h2>
@@ -797,7 +827,7 @@ setInterval(step,2600);
 <div class="wrap">
 <div><div class="serif" style="font-size:30px;color:#fff">PharmaStock</div><p style="margin:10px 0 0;font-size:14px;max-width:320px;line-height:1.6" data-ar="برنامج تدبير الصيدليات المصمم في المغرب.">Le logiciel de gestion de pharmacie conçu au Maroc.</p></div>
 <nav aria-label="Pied de page">
-<div><b data-ar="المنتج">Produit</b><a href="/offres.html" data-ar="العروض والأثمنة">Offres &amp; tarifs</a><a href="/demande-essai.html" data-ar="عرض توضيحي">Démonstration</a><a href="https://app.mapharmastock.com/login" data-ar="تسجيل الدخول">Se connecter</a></div>
+<div><b data-ar="المنتج">Produit</b><a href="/offres.html" data-ar="العروض والأثمنة">Offres &amp; tarifs</a><a href="/demande-essai.html" data-ar="عرض توضيحي">Démonstration</a><a href="/installer-application.html" data-ar="تثبيت التطبيق">Installer l'application</a><a href="https://app.mapharmastock.com/login" data-ar="تسجيل الدخول">Se connecter</a></div>
 <div><b data-ar="موارد">Ressources</b><a href="/blog/" data-ar="المدونة">Blog</a><a href="/guides/" data-ar="الأدلة">Guides</a><a href="/conseils-gestion-stock-pharmacie-maroc.html" data-ar="نصائح تدبير المخزون">Conseils gestion de stock</a><a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a></div>
 <div><b data-ar="الشركة">Société</b><a href="/qui-sommes-nous.html" data-ar="من نحن">Qui sommes-nous</a><a href="/contact.html" data-ar="اتصل بنا">Contact</a><a href="/fournisseurs/" data-ar="هل أنت مورّد؟">Vous êtes fournisseur ?</a></div>
 </nav>
