@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/ps-site.css?v=8">
+<link rel="stylesheet" href="/assets/ps-site.css?v=10">
 <style>
 :root{--ink:#0B1B2B;--ink2:#34495C;--mute:#4A5D6E;--ground:#F4F6F3;--line:#E1E7E4;--acc:#0E6B6A;--acc2:#0B5857;--mint:#7FD1C7;--amber:#E9A23B}
 *{box-sizing:border-box}
@@ -344,37 +344,39 @@ footer a{color:#A9BCC9;text-decoration:none}footer a:hover{color:#fff}
 </div>
 </div>
 
-<header class="nav">
-<div class="wrap">
-<a class="logo" href="https://mapharmastock.com/" aria-label="PharmaStock, accueil"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD1C7" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i><span class="serif">PharmaStock</span></a>
-<nav class="links" aria-label="Navigation principale">
-<a class="lk" href="/fonctionnalites.html" data-ar="الوظائف">Fonctionnalités</a>
-<a class="lk" href="/#journee" data-ar="يوم في الصيدلية">Une journée</a>
-<a class="lk" href="/#reseau" data-ar="الشبكة">Réseau</a>
-<a class="lk" href="/offres.html" data-ar="العروض">Offres</a>
-<a class="lk" href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a>
-<a class="lk" href="/blog/" data-ar="المدونة">Blog</a>
-</nav>
-<div class="nav-actions"><a class="lk login" href="https://app.mapharmastock.com/login" data-ar="تسجيل الدخول">Se connecter</a><a class="btn btn-p" href="/inscription/" data-ar="تجربة مجانية">Essai gratuit</a></div>
-<button class="hb" id="hamburger" type="button" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobile()"><span></span><span></span><span></span></button>
+<!-- MENU PharmaStock (commun à toutes les pages, posé par vitrine_menu.py) -->
+<header class="psn">
+<div class="psn-in">
+<a class="psn-logo" href="/" aria-label="PharmaStock, accueil"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD1C7" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i><span data-notranslate>PharmaStock</span></a>
+<div class="psn-links" role="navigation" aria-label="Navigation principale">
+<a href="/fonctionnalites.html" aria-current="page" data-ar="الوظائف">Fonctionnalités</a>
+<a class="psn-o1" href="/#journee" data-ar="يوم في الصيدلية">Une journée</a>
+<a class="psn-o3" href="/#reseau" data-ar="الشبكة">Réseau</a>
+<a href="/offres.html" data-ar="العروض">Offres</a>
+<a href="/fournisseurs/" data-ar="الموردون">Fournisseurs</a>
+<a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a>
+<a class="psn-o2" href="/blog/" data-ar="المدونة">Blog</a>
+</div>
+<div class="psn-actions"><a class="psn-login" href="https://app.mapharmastock.com/login" data-ar="تسجيل الدخول">Se connecter</a><a class="psn-cta" href="/inscription/" data-ar="تجربة مجانية">Essai gratuit</a></div>
+<button class="psn-hb" id="hamburger" type="button" aria-label="Menu" aria-controls="mobileMenu" aria-expanded="false" onclick="psMenu()"><span></span><span></span><span></span></button>
 </div>
 </header>
-<div class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
-<div class="mm-item"><a href="/fonctionnalites.html" data-ar="الوظائف">Fonctionnalités</a></div>
-<div class="mm-item"><a href="/#journee" data-ar="يوم في الصيدلية">Une journée</a></div>
-<div class="mm-item"><a href="/#carte" data-ar="الشبكة">Réseau</a></div>
-<div class="mm-item"><a href="/#pionnieres" data-ar="عرض أول 30 صيدلية">Offre 30 premières pharmacies</a></div>
-<div class="mm-item"><a href="/offres.html" data-ar="العروض">Offres</a></div>
-<div class="mm-item"><a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a></div>
-<div class="mm-item"><a href="/guides/" data-ar="الأدلة">Guides</a></div>
-<div class="mm-item"><a href="/blog/" data-ar="المدونة">Blog</a></div>
-<div class="mm-item"><a href="/contact.html" data-ar="اتصل بنا">Contact</a></div>
-<div class="mm-ctas"><a href="/inscription/" class="mm-cta1" data-ar="ابدأ التجربة المجانية">Démarrer l'essai gratuit</a><a href="https://app.mapharmastock.com/login" class="mm-cta2" data-ar="تسجيل الدخول">Se connecter</a></div>
+<div class="psn-mm" id="mobileMenu" aria-label="Menu mobile">
+<div class="psn-mm-item"><a href="/fonctionnalites.html" aria-current="page" data-ar="الوظائف">Fonctionnalités</a></div>
+<div class="psn-mm-item"><a href="/#journee" data-ar="يوم في الصيدلية">Une journée</a></div>
+<div class="psn-mm-item"><a href="/#carte" data-ar="الشبكة">Réseau</a></div>
+<div class="psn-mm-item"><a href="/#pionnieres" data-ar="عرض أول 30 صيدلية">Offre 30 premières pharmacies</a></div>
+<div class="psn-mm-item"><a href="/offres.html" data-ar="العروض">Offres</a></div>
+<div class="psn-mm-item"><a href="/fournisseurs/" data-ar="فضاء الموردين">Espace fournisseurs</a></div>
+<div class="psn-mm-item"><a href="/pharmacie-de-garde/" data-ar="صيدليات الحراسة">Pharmacies de garde</a></div>
+<div class="psn-mm-item"><a href="/guides/" data-ar="الأدلة">Guides</a></div>
+<div class="psn-mm-item"><a href="/blog/" data-ar="المدونة">Blog</a></div>
+<div class="psn-mm-item"><a href="/qui-sommes-nous.html" data-ar="من نحن">Qui sommes-nous</a></div>
+<div class="psn-mm-item"><a href="/contact.html" data-ar="اتصل بنا">Contact</a></div>
+<div class="psn-mm-ctas"><a href="/inscription/" class="psn-mm-cta1" data-ar="ابدأ التجربة المجانية">Démarrer l'essai gratuit</a><a href="https://app.mapharmastock.com/login" class="psn-mm-cta2" data-ar="تسجيل الدخول">Se connecter</a></div>
 </div>
-<script>
-function toggleMobile(force){var m=document.getElementById('mobileMenu'),h=document.getElementById('hamburger');if(!m||!h)return;var o=typeof force==='boolean'?force:!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('active',o);h.setAttribute('aria-expanded',o);document.documentElement.style.overflow=o?'hidden':'';}
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#mobileMenu a');if(a)toggleMobile(false);});
-</script>
+<script>function psMenu(f){var m=document.getElementById('mobileMenu'),h=document.getElementById('hamburger');if(!m||!h)return;var o=typeof f==='boolean'?f:!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('active',o);h.setAttribute('aria-expanded',o);document.documentElement.style.overflow=o?'hidden':'';}document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#mobileMenu a');if(a)psMenu(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')psMenu(false);});</script>
+<!-- /MENU PharmaStock -->
 
 <main>
 <section class="fx-hero"><div class="wrap">
@@ -622,6 +624,6 @@ els.forEach(function(e){io.observe(e)});})();
   vs.forEach(function (v) { io.observe(v); });
 })();
 </script>
-<script src="/assets/ps-site.js?v=8" defer></script>
+<script src="/assets/ps-site.js?v=10" defer></script>
 </body>
 </html>
