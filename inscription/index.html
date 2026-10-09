@@ -380,7 +380,7 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
 <main id="contenu"><section class="ps-hero"><div class="ps-in">
   <div class="ps-crumb"><a href="/" data-ar="الرئيسية">Accueil</a> › <span data-ar="إنشاء حساب">Créer un compte</span></div>
   <h1 data-ar="أنشئ حساب صيدليتك مجانا">Créez le compte de votre pharmacie</h1>
-  <p data-ar="3 أشهر من التجربة المجانية، بدون بطاقة بنكية وبدون التزام. يتم تفعيل حسابك بعد تحقق سريع من فريقنا (خلال 24 ساعة عمل).">3 mois d'essai gratuit, sans carte bancaire et sans engagement. Votre compte est activé après une rapide validation par notre équipe (sous 24 h ouvrées).</p>
+  <p data-ar="3 أشهر من التجربة المجانية، بدون بطاقة بنكية وبدون التزام. أكّد بريدك الإلكتروني، ثم يتم تفعيل حسابك بعد تحقق سريع من فريقنا (خلال 24 ساعة عمل).">3 mois d'essai gratuit, sans carte bancaire et sans engagement. Confirmez votre email, puis votre compte est activé après une rapide validation par notre équipe (sous 24 h ouvrées).</p>
 </div></section>
 <section class="ps-sec" style="padding-top:36px"><div class="ps-in ps-pion" style="align-items:start">
   <form class="ps-form" id="ps-inscription" novalidate="" style="box-shadow:var(--ps-shadow,0 4px 16px rgba(15,23,42,.06));border:1px solid var(--border,#e2e8f0)">
@@ -493,7 +493,18 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
       .then(function(j){
         f.querySelectorAll('input,button').forEach(function(x){x.disabled=true;});
         m.className='ps-msg ok';
-        m.innerHTML=(ar?'<b>تم تسجيل طلبك!</b> سيقوم فريقنا بتفعيل حسابك خلال 24 ساعة عمل وسنخبرك عبر واتساب أو البريد الإلكتروني.':'<b>Demande enregistrée !</b> Notre équipe valide votre compte sous 24 h ouvrées et vous prévient par WhatsApp ou email. Vous pourrez ensuite vous connecter avec votre email et votre mot de passe.');
+        var em=d.email;
+        m.innerHTML=(ar?'<b>تم إنشاء حسابك!</b> أرسلنا رسالة تأكيد إلى <b class="ps-em" dir="ltr"></b>. اضغط على الرابط الموجود فيها لتأكيد بريدك الإلكتروني، وبعدها سيقوم فريقنا بتفعيل حسابك خلال 24 ساعة عمل. لم تصلك الرسالة؟ تحقق من البريد غير المرغوب فيه.':'<b>Compte créé !</b> Nous avons envoyé un email de confirmation à <b class="ps-em"></b>. Cliquez sur le lien qu’il contient pour confirmer votre adresse : notre équipe activera ensuite votre compte sous 24 h ouvrées. Rien reçu ? Regardez dans les spams.')
+          +'<br><button type="button" class="ps-renvoyer" style="margin-top:10px;background:none;border:1px solid currentColor;color:inherit;border-radius:999px;padding:6px 14px;cursor:pointer;font:inherit">'+(ar?'إعادة إرسال رسالة التأكيد':'Renvoyer l’email de confirmation')+'</button>';
+        m.querySelector('.ps-em').textContent=em;
+        var rb=m.querySelector('.ps-renvoyer');
+        rb.addEventListener('click',function(){
+          rb.disabled=true;
+          fetch('https://api.mapharmastock.com/api/inscription/renvoyer',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em})})
+            .then(function(r){return r.json().catch(function(){return {};}).then(function(j){rb.textContent=j.message||(ar?'تم الإرسال.':'Email renvoyé.');});})
+            .catch(function(){rb.disabled=false;})
+            .then(function(){setTimeout(function(){rb.disabled=false;rb.textContent=ar?'إعادة إرسال رسالة التأكيد':'Renvoyer l’email de confirmation';},60000);});
+        });
         b.textContent=ar?'تم ✓':'Demande envoyée ✓';
         if(window.gtag) window.gtag('event','sign_up');
       })
