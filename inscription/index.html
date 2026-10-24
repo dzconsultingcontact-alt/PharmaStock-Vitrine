@@ -465,6 +465,20 @@ nav{position:sticky;top:0;z-index:200;background:#0c1a2e;box-shadow:0 2px 20px r
   if(q==='nouvelle-pharmacie'){nv.checked=true;}
   else{var r=f.querySelector('input[name=offre][value="'+q.toUpperCase()+'"]');if(r)r.checked=true;}
   majNouvelle();
+  // Lien de parrainage (?parrain=CODE) : gardé quelques jours sur ce navigateur, envoyé avec l'inscription
+  var par=(new URLSearchParams(location.search).get('parrain')||'').replace(/[^A-Za-z0-9]/g,'').toUpperCase().slice(0,12);
+  try{if(par)localStorage.setItem('ps-parrain',JSON.stringify({c:par,t:Date.now()}));else{var sp=JSON.parse(localStorage.getItem('ps-parrain')||'null');if(sp&&Date.now()-sp.t<30*864e5)par=sp.c;}}catch(_){}
+  if(par){
+    var hp=document.createElement('input');hp.type='hidden';hp.name='parrain';hp.value=par;f.appendChild(hp);
+    fetch('https://api.mapharmastock.com/api/parrainage-public/'+encodeURIComponent(par)).then(function(r){return r.ok?r.json():null;}).then(function(j){
+      if(!j||!j.pharmacie)return;var ar=(window.PS_LANG==='ar');
+      var bn=document.createElement('div');bn.setAttribute('role','note');
+      bn.style.cssText='margin:0 0 16px;padding:12px 14px;border-radius:14px;background:linear-gradient(135deg,rgba(199,62,122,.08),rgba(122,79,208,.10));border:1px solid rgba(122,79,208,.25);color:#123047;font-weight:600;line-height:1.5';
+      var t1=document.createElement('div');t1.textContent=(ar?'🎁 دعاك زميلك ':'🎁 Invité par ')+j.pharmacie+(j.ville?' ('+j.ville+')':'');
+      var t2=document.createElement('div');t2.style.cssText='font-weight:500;color:#4A6B8A;font-size:.92em';t2.textContent=ar?'شهران مجانًا + خصم 10 % على الاشتراك، لك ولزميلك، بعد تفعيل حسابك.':'2 mois gratuits + 10 % de remise sur l\'abonnement, pour vous et votre confrère, dès la validation de votre compte.';
+      bn.appendChild(t1);bn.appendChild(t2);f.insertBefore(bn,f.firstChild);
+    }).catch(function(){});
+  }
   f.addEventListener('submit',function(e){
     e.preventDefault();
     var ar=(window.PS_LANG==='ar');
