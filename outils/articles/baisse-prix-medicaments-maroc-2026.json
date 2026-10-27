@@ -1,0 +1,186 @@
+{
+  "slug": "baisse-prix-medicaments-maroc-2026",
+  "date": "2026-10-27",
+  "categorie": "Réglementation",
+  "categorie_ar": "التنظيم",
+  "titre": "Baisse du prix de 151 médicaments au Maroc : ce qui change pour votre officine",
+  "titre_ar": "انخفاض أثمنة 151 دواء في المغرب: ما الذي يتغير بالنسبة لصيدليتكم",
+  "description": "Nouveau décret de tarification, première liste de 151 présentations en baisse (rosuvastatine, oncologie, biosimilaires) : ce que dit la réforme et les gestes à faire en officine.",
+  "description_ar": "مرسوم جديد لتحديد الأثمنة ولائحة أولى من 151 تقديما في انخفاض (روزوفاستاتين، أدوية السرطان، البدائل الحيوية): ماذا تقول الإصلاحات وما الذي يجب فعله في الصيدلية.",
+  "chapo": "Une première liste de 151 présentations voit son prix public baisser, en application de la réforme de la tarification adoptée cet été. L'essentiel à retenir, et les gestes à faire dans votre stock.",
+  "chapo_ar": "لائحة أولى من 151 تقديما ينخفض ثمن بيعها للعموم، تطبيقا لإصلاح تحديد الأثمنة الذي اعتُمد هذا الصيف. أهم ما يجب معرفته، والخطوات التي يجب القيام بها في مخزونكم.",
+  "mots_cles": "baisse prix médicaments maroc, prix des médicaments 2026, décret 2.25.631, rosuvastatine prix, PPV pharmacie maroc",
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "La réforme du prix des médicaments est entrée dans sa phase concrète : un arrêté publié au Bulletin officiel fixe les nouveaux prix d'une première série de <strong>151 présentations</strong>. Pour le pharmacien, cela veut dire des prix à mettre à jour, un stock dont la valeur change et des patients qui posent des questions au comptoir.",
+      "ar": "دخل إصلاح أثمنة الأدوية مرحلته العملية: قرار منشور في الجريدة الرسمية يحدد الأثمنة الجديدة لسلسلة أولى من <strong>151 تقديما</strong>. بالنسبة للصيدلي، يعني ذلك أثمنة يجب تحيينها، ومخزونا تتغير قيمته، ومرضى يطرحون أسئلة عند الشباك."
+    },
+    {
+      "t": "h2",
+      "fr": "Ce que prévoit la réforme",
+      "ar": "ما الذي ينص عليه الإصلاح"
+    },
+    {
+      "t": "p",
+      "fr": "Le décret n° 2.25.631, adopté en Conseil de gouvernement le 22 juillet 2026 puis publié au Bulletin officiel le 6 août 2026, modifie le décret n° 2.13.852 du 18 décembre 2013 qui encadrait jusqu'ici le prix public de vente (PPV) des médicaments fabriqués au Maroc ou importés.",
+      "ar": "المرسوم رقم 2.25.631، الذي صادق عليه مجلس الحكومة في 22 يوليوز 2026 ثم نُشر في الجريدة الرسمية في 6 غشت 2026، يغيّر المرسوم رقم 2.13.852 الصادر في 18 دجنبر 2013 الذي كان يؤطر ثمن البيع للعموم للأدوية المصنوعة في المغرب أو المستوردة."
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Médicaments chers</strong> : au-delà de 300 DH de prix fabricant hors taxes, le prix de référence devient le prix le plus bas observé dans les pays de référence, et non plus la moyenne.",
+          "ar": "<strong>الأدوية الغالية</strong>: فوق 300 درهم من ثمن المصنع دون احتساب الرسوم، يصبح الثمن المرجعي هو أدنى ثمن في البلدان المرجعية، وليس المتوسط."
+        },
+        {
+          "t": "li",
+          "fr": "<strong>Révision plus fréquente</strong> : tous les trois ans au lieu de cinq.",
+          "ar": "<strong>مراجعة أكثر تواترا</strong>: كل ثلاث سنوات بدل خمس."
+        },
+        {
+          "fr": "<strong>Produits importés</strong> : la majoration passe de 10 % à 2,5 %.",
+          "ar": "<strong>المنتجات المستوردة</strong>: تنخفض الزيادة من 10٪ إلى 2,5٪."
+        },
+        {
+          "fr": "<strong>Génériques</strong> : fin du calcul « en escalier » ; les génériques et biosimilaires sont indexés sur le prix du princeps, avec des taux minimaux de réduction.",
+          "ar": "<strong>الأدوية الجنيسة</strong>: نهاية الحساب « على شكل درج »؛ تُربط الأدوية الجنيسة والبدائل الحيوية بثمن الدواء الأصلي، مع نسب تخفيض دنيا."
+        },
+        {
+          "fr": "<strong>Produits déjà vendus</strong> : ils doivent être réexaminés dans un délai de douze mois.",
+          "ar": "<strong>المنتجات المسوّقة حاليا</strong>: يجب إعادة دراستها داخل أجل اثني عشر شهرا."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "fr": "Le gouvernement en attend environ un milliard de dirhams d'économies par an, partagées entre les régimes de couverture médicale et les ménages.",
+      "ar": "تنتظر الحكومة من ذلك حوالي مليار درهم من الاقتصاد سنويا، تتقاسمه أنظمة التغطية الصحية والأسر."
+    },
+    {
+      "t": "h2",
+      "fr": "La première liste : 151 présentations",
+      "ar": "اللائحة الأولى: 151 تقديما"
+    },
+    {
+      "t": "p",
+      "fr": "Les nouveaux prix figurent en annexe de l'arrêté n° 2157.26. Attention, on parle de <strong>présentations</strong> et non de médicaments : un même produit apparaît plusieurs fois selon son dosage et sa boîte. La liste regroupe une cinquantaine de marques et une vingtaine de molécules.",
+      "ar": "توجد الأثمنة الجديدة في ملحق القرار رقم 2157.26. انتبهوا، الحديث هنا عن <strong>تقديمات</strong> وليس عن أدوية: نفس المنتج يظهر عدة مرات حسب جرعته وحجم علبته. تضم اللائحة حوالي خمسين علامة وعشرين جزيئة."
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "Baisse moyenne du PPV de <strong>18,4 %</strong> (médiane : 15 %).",
+          "ar": "متوسط انخفاض ثمن البيع للعموم <strong>18,4٪</strong> (الوسيط: 15٪)."
+        },
+        {
+          "fr": "La <strong>rosuvastatine</strong> représente à elle seule 71 lignes, près de la moitié de la liste : c'est la molécule que vous avez le plus de chances d'avoir en stock.",
+          "ar": "<strong>الروزوفاستاتين</strong> وحده يمثل 71 سطرا، أي حوالي نصف اللائحة: إنها الجزيئة التي من المرجح أكثر أن تكون في مخزونكم."
+        },
+        {
+          "fr": "36 présentations en <strong>oncologie</strong>, dont la plus forte baisse en valeur : le Sutent 50 mg passe de 38 480 à 19 976 DH la boîte.",
+          "ar": "36 تقديما في <strong>أدوية السرطان</strong>، منها أكبر انخفاض من حيث القيمة: ينتقل Sutent 50 mg من 38480 إلى 19976 درهما للعلبة."
+        },
+        {
+          "fr": "15 présentations de <strong>biosimilaires</strong>, en baisse de 10,5 % en moyenne.",
+          "ar": "15 تقديما من <strong>البدائل الحيوية</strong>، بانخفاض متوسط قدره 10,5٪."
+        }
+      ]
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "Ce que redoutent les pharmaciens",
+      "ar": "ما يخشاه الصيادلة"
+    },
+    {
+      "t": "p",
+      "fr": "La Confédération des syndicats des pharmaciens du Maroc dit soutenir le principe d'une baisse des prix, mais craint des ruptures plus fréquentes sur les molécules les moins chères et un risque pour l'équilibre financier des officines. Elle demande des mesures d'accompagnement et un dialogue avec le ministère.",
+      "ar": "تقول كونفدرالية نقابات صيادلة المغرب إنها تؤيد مبدأ خفض الأثمنة، لكنها تخشى انقطاعات أكثر تكرارا في الجزيئات الأقل ثمنا وخطرا على التوازن المالي للصيدليات. وتطالب بإجراءات مواكبة وبالحوار مع الوزارة."
+    },
+    {
+      "t": "h2",
+      "fr": "Les gestes à faire dans votre officine",
+      "ar": "الخطوات التي يجب القيام بها في صيدليتكم"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Repérer les présentations concernées dans votre stock</strong>, en commençant par la rosuvastatine, à partir de la liste annexée à l'arrêté.",
+          "ar": "<strong>تحديد التقديمات المعنية في مخزونكم</strong>، بدءا بالروزوفاستاتين، انطلاقا من اللائحة الملحقة بالقرار."
+        },
+        {
+          "fr": "<strong>Chiffrer l'impact</strong> : pour chaque présentation, quantité en stock × (ancien PPV − nouveau PPV). Vous savez ainsi ce que la baisse représente pour vous.",
+          "ar": "<strong>حساب الأثر</strong>: لكل تقديم، الكمية في المخزون × (الثمن القديم − الثمن الجديد). هكذا تعرفون ما يمثله الانخفاض بالنسبة لكم."
+        },
+        {
+          "fr": "<strong>Commander au plus juste</strong> sur ces références : inutile de constituer du stock juste avant un changement de prix.",
+          "ar": "<strong>الطلب بالقدر اللازم فقط</strong> على هذه المراجع: لا فائدة من تكوين مخزون قبل تغيير الثمن مباشرة."
+        },
+        {
+          "fr": "<strong>Mettre à jour les prix</strong> dans votre logiciel et sur les étiquettes à la date d'application prévue par le texte officiel.",
+          "ar": "<strong>تحيين الأثمنة</strong> في برنامجكم وعلى الملصقات في تاريخ التطبيق المنصوص عليه في النص الرسمي."
+        },
+        {
+          "fr": "<strong>Se renseigner sur les boîtes achetées à l'ancien prix</strong> auprès de votre syndicat et de vos grossistes : les modalités ne sont pas détaillées dans les informations publiées à ce jour.",
+          "ar": "<strong>الاستفسار عن العلب المشتراة بالثمن القديم</strong> لدى نقابتكم وموزعيكم: لم تُفصَّل الكيفيات في المعلومات المنشورة إلى حد الآن."
+        },
+        {
+          "fr": "<strong>Prévenir les patients chroniques</strong> concernés : une bonne nouvelle qui se dit au comptoir.",
+          "ar": "<strong>إخبار المرضى المزمنين</strong> المعنيين: خبر سار يقال عند الشباك."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Avec PharmaStock",
+      "ar": "مع PharmaStock"
+    },
+    {
+      "t": "p",
+      "fr": "PharmaStock contient la base des médicaments du Maroc avec leur PPV, mise à jour depuis le guide officiel, et suit vos quantités par lot. Vous voyez en quelques secondes combien de boîtes d'une présentation vous avez, et vous imprimez les nouvelles étiquettes prix depuis l'application. Voir aussi <a href=\"/blog/marge-rentabilite-pharmacie-maroc/\">les notions de marge à maîtriser</a>.",
+      "ar": "يتضمن PharmaStock قاعدة الأدوية المغربية مع ثمن البيع للعموم، محيّنة من الدليل الرسمي، ويتتبع كمياتكم حسب الدفعة. ترون في ثوان عدد العلب التي لديكم من كل تقديم، وتطبعون ملصقات الأثمنة الجديدة من التطبيق."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Médicaments : 151 prix rabotés, une seule molécule fabriquée au Maroc",
+      "media": "TelQuel",
+      "date": "2026-10-13",
+      "url": "https://telquel.ma/2026/10/13/medicaments-151-prix-rabotes-une-seule-molecule-fabriquee-au-maroc_2012811"
+    },
+    {
+      "titre": "Médicaments : 151 présentations moins chères",
+      "media": "LeBrief",
+      "date": "2026-10-23",
+      "url": "https://www.lebrief.ma/les-prix-de-151-presentations-de-medicaments-en-baisse-100170913/"
+    },
+    {
+      "titre": "Prix des médicaments : décryptage d'une réforme très attendue",
+      "media": "H24info",
+      "date": "2026-07-23",
+      "url": "https://h24info.ma/maroc/prix-medicaments-decryptage-reforme/"
+    },
+    {
+      "titre": "Prix des médicaments : les pharmaciens alertent sur un risque accru de pénuries",
+      "media": "Consonews",
+      "date": "2026-07-31",
+      "url": "https://consonews.ma/news/sante-bien-etre-news/prix-des-medicaments-les-pharmaciens-alertent-sur-un-risque-accru-de-penuries"
+    }
+  ],
+  "liens": [
+    [
+      "/blog/marge-rentabilite-pharmacie-maroc/",
+      "Marge et rentabilité d'une pharmacie au Maroc : les notions à maîtriser"
+    ],
+    [
+      "/guides/eviter-ruptures-stock-pharmacie/",
+      "Ruptures de stock en officine : comment les éviter"
+    ]
+  ],
+  "rang": 4
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "cloture-fin-annee-pharmacie",
+  "date": "2026-10-27",
+  "categorie": "Gestion",
+  "categorie_ar": "التسيير",
+  "titre": "Fin d'année en pharmacie : la check-list de novembre et décembre",
+  "titre_ar": "نهاية السنة في الصيدلية: لائحة المهام لشهري نونبر ودجنبر",
+  "description": "Inventaire, périmés et retours, crédit clients, relevés grossistes, objectifs et planning : tout ce qu'une officine gagne à régler avant le 31 décembre.",
+  "description_ar": "الجرد، الأدوية منتهية الصلاحية والإرجاعات، ديون الزبناء، كشوفات الموزعين، الأهداف وجدول العمل: كل ما يفيد الصيدلية تسويته قبل 31 دجنبر.",
+  "chapo": "Les deux derniers mois de l'année décident de la qualité de votre clôture. Huit chantiers à mener sans attendre la dernière semaine de décembre.",
+  "chapo_ar": "الشهران الأخيران من السنة يحددان جودة إغلاق حساباتكم. ثمانية أوراش يجب إنجازها دون انتظار الأسبوع الأخير من دجنبر.",
+  "mots_cles": "clôture pharmacie fin d'année, inventaire fin d'année pharmacie, gestion officine maroc, crédit client pharmacie, retours grossiste",
+  "actualite": false,
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "En décembre, tout arrive en même temps : la saison d'hiver au comptoir, l'inventaire, les comptes à arrêter. En s'y prenant dès novembre, la clôture devient une formalité et vous commencez l'année avec des chiffres justes.",
+      "ar": "في دجنبر، يأتي كل شيء في نفس الوقت: موسم الشتاء عند الشباك، والجرد، والحسابات التي يجب إغلاقها. بالبدء من نونبر، يصبح الإغلاق إجراء بسيطا وتبدؤون السنة بأرقام دقيقة."
+    },
+    {
+      "t": "h2",
+      "fr": "1. Fiabiliser le stock avant l'inventaire",
+      "ar": "1. ضبط المخزون قبل الجرد"
+    },
+    {
+      "t": "p",
+      "fr": "Comptez dès maintenant les rayons qui posent problème : produits chers, références souvent en écart, parapharmacie. Si vous pratiquez l'<a href=\"/blog/inventaire-tournant-pharmacie/\">inventaire tournant</a>, il ne vous reste que les zones non vérifiées depuis plusieurs mois.",
+      "ar": "عدّوا من الآن الرفوف التي تطرح مشاكل: المنتجات الغالية، المراجع التي تتكرر فيها الفوارق، المنتجات شبه الصيدلانية. إذا كنتم تعتمدون الجرد الدوّار، فلم يبق لكم إلا المناطق التي لم تُراجع منذ عدة أشهر."
+    },
+    {
+      "t": "h2",
+      "fr": "2. Traiter les périmés et les retours",
+      "ar": "2. معالجة الأدوية منتهية الصلاحية والإرجاعات"
+    },
+    {
+      "t": "p",
+      "fr": "Sortez les lots qui périment dans les trois prochains mois : ceux qui peuvent encore se vendre passent devant, les autres partent en retour chez le grossiste tant que c'est possible. Un périmé découvert en janvier, c'est une perte sèche.",
+      "ar": "أخرجوا الدفعات التي تنتهي صلاحيتها في الأشهر الثلاثة المقبلة: ما يمكن بيعه يوضع في الأمام، والباقي يُرجع إلى الموزع ما دام ذلك ممكنا. دواء منتهي الصلاحية يُكتشف في يناير خسارة صافية."
+    },
+    {
+      "t": "h2",
+      "fr": "3. Relancer le crédit clients",
+      "ar": "3. تذكير الزبناء بديونهم"
+    },
+    {
+      "t": "p",
+      "fr": "Faites la liste des soldes ouverts, du plus ancien au plus récent. Un message courtois en novembre vaut mieux qu'une créance oubliée. Voir notre guide sur <a href=\"/guides/credit-client-pharmacie-maroc/\">le crédit client en pharmacie</a>.",
+      "ar": "أعدّوا لائحة الأرصدة المفتوحة، من الأقدم إلى الأحدث. رسالة مهذبة في نونبر أفضل من دين منسي."
+    },
+    {
+      "t": "h2",
+      "fr": "4. Rapprocher les relevés des grossistes",
+      "ar": "4. مطابقة كشوفات الموزعين"
+    },
+    {
+      "t": "p",
+      "fr": "Comparez les relevés de chaque grossiste avec vos réceptions et vos factures : avoirs non reçus, livraisons partielles, retours non crédités. Mieux vaut régler les écarts avant la fin de l'année.",
+      "ar": "قارنوا كشوفات كل موزع مع عمليات الاستلام والفواتير: إشعارات دائنة لم تصل، تسليمات جزئية، إرجاعات لم تُحتسب. من الأفضل تسوية الفوارق قبل نهاية السنة."
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "5. Préparer le pic de l'hiver",
+      "ar": "5. تحضير ذروة الشتاء"
+    },
+    {
+      "t": "p",
+      "fr": "Commandez à partir de vos ventes de l'hiver dernier, par petites quantités régulières. Notre article sur <a href=\"/blog/saison-grippe-2026-2027-officine/\">la saison de la grippe</a> donne la liste des familles à surveiller.",
+      "ar": "اطلبوا انطلاقا من مبيعات الشتاء الماضي، بكميات صغيرة منتظمة."
+    },
+    {
+      "t": "h2",
+      "fr": "6. Vérifier les prix",
+      "ar": "6. التحقق من الأثمنة"
+    },
+    {
+      "t": "p",
+      "fr": "Les prix de plusieurs médicaments changent avec la réforme de la tarification : assurez-vous que votre logiciel et vos étiquettes sont à jour. Détails dans notre article sur <a href=\"/blog/baisse-prix-medicaments-maroc-2026/\">la baisse des prix de 151 présentations</a>.",
+      "ar": "تتغير أثمنة عدة أدوية مع إصلاح تحديد الأثمنة: تأكدوا من أن برنامجكم وملصقاتكم محيّنة."
+    },
+    {
+      "t": "h2",
+      "fr": "7. Faire le bilan de l'année",
+      "ar": "7. حصيلة السنة"
+    },
+    {
+      "t": "p",
+      "fr": "Chiffre d'affaires, marge, panier moyen, valeur du stock, montant des périmés : comparez avec l'an dernier et fixez deux ou trois objectifs simples pour l'année qui vient. Notre article sur <a href=\"/blog/tableau-de-bord-pharmacien-indicateurs/\">les indicateurs du pharmacien</a> vous aide à choisir.",
+      "ar": "رقم المعاملات، الهامش، متوسط السلة، قيمة المخزون، قيمة الأدوية منتهية الصلاحية: قارنوا مع السنة الماضية وحددوا هدفين أو ثلاثة أهداف بسيطة للسنة المقبلة."
+    },
+    {
+      "t": "h2",
+      "fr": "8. Organiser l'équipe",
+      "ar": "8. تنظيم الفريق"
+    },
+    {
+      "t": "p",
+      "fr": "Congés, gardes, jours d'inventaire : un planning posé tôt évite les tensions et les comptoirs vides pendant le rush de l'hiver.",
+      "ar": "العطل، الحراسات، أيام الجرد: جدول عمل يوضع مبكرا يجنب التوترات والشبابيك الفارغة خلال ذروة الشتاء."
+    },
+    {
+      "t": "h2",
+      "fr": "Avec PharmaStock",
+      "ar": "مع PharmaStock"
+    },
+    {
+      "t": "p",
+      "fr": "Inventaire tournant, alertes de péremption, crédit clients, réceptions et tableau de bord sont réunis dans PharmaStock : la check-list de fin d'année se fait depuis une seule application, en français ou en arabe.",
+      "ar": "الجرد الدوّار وتنبيهات انتهاء الصلاحية وديون الزبناء والاستلامات ولوحة القيادة مجتمعة في PharmaStock: لائحة نهاية السنة تُنجز من تطبيق واحد، بالفرنسية أو بالعربية."
+    }
+  ],
+  "liens": [
+    [
+      "/blog/inventaire-tournant-pharmacie/",
+      "Inventaire en pharmacie : passer à l'inventaire tournant"
+    ],
+    [
+      "/blog/tableau-de-bord-pharmacien-indicateurs/",
+      "Tableau de bord du pharmacien : les 8 indicateurs à suivre"
+    ]
+  ],
+  "rang": 1
+}

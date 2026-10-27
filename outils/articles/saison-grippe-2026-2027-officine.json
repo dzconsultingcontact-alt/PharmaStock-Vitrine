@@ -1,0 +1,169 @@
+{
+  "slug": "saison-grippe-2026-2027-officine",
+  "date": "2026-10-27",
+  "categorie": "Saison",
+  "categorie_ar": "الموسم",
+  "titre": "Grippe saisonnière 2026-2027 : préparer son officine",
+  "titre_ar": "الأنفلونزا الموسمية 2026-2027: تحضير الصيدلية",
+  "description": "Vaccin antigrippal, publics prioritaires, stock d'hiver, conseil au comptoir et codéine sur ordonnance : la check-list de l'officine pour la saison de la grippe.",
+  "description_ar": "اللقاح ضد الأنفلونزا، الفئات ذات الأولوية، مخزون الشتاء، الإرشاد عند الشباك والكوديين بوصفة: لائحة الصيدلية لموسم الأنفلونزا.",
+  "chapo": "Les premiers cas de grippe apparaissent et le vaccin arrive en pharmacie. Comment organiser le stock, le vaccin et le conseil pour passer l'hiver sereinement.",
+  "chapo_ar": "تظهر أولى حالات الأنفلونزا ويصل اللقاح إلى الصيدليات. كيف تنظمون المخزون واللقاح والإرشاد لتمضية الشتاء بهدوء.",
+  "mots_cles": "grippe maroc 2026, vaccin grippe pharmacie maroc, vaxigrip maroc, saison grippale officine, stock hiver pharmacie",
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "Chaque automne, la grippe saisonnière remplit les officines : fièvre, toux, courbatures, et beaucoup de questions sur le vaccin. Mi-octobre, les premiers cas étaient signalés au Maroc et le vaccin antigrippal Vaxigrip était annoncé à partir du 20 octobre. C'est le moment de préparer l'officine.",
+      "ar": "كل خريف، تملأ الأنفلونزا الموسمية الصيدليات: حمى، سعال، آلام في الجسم، والكثير من الأسئلة حول اللقاح. في منتصف أكتوبر، سُجلت أولى الحالات في المغرب وأُعلن عن وصول لقاح Vaxigrip ابتداء من 20 أكتوبر. إنه الوقت المناسب لتحضير الصيدلية."
+    },
+    {
+      "t": "h2",
+      "fr": "Le vaccin : qui en priorité ?",
+      "ar": "اللقاح: لمن الأولوية؟"
+    },
+    {
+      "t": "p",
+      "fr": "L'Organisation mondiale de la santé recommande de vacciner en priorité :",
+      "ar": "توصي منظمة الصحة العالمية بتلقيح الفئات التالية في الأولوية:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "les femmes enceintes ;",
+          "ar": "النساء الحوامل؛"
+        },
+        {
+          "fr": "les enfants de 6 mois à 5 ans ;",
+          "ar": "الأطفال من 6 أشهر إلى 5 سنوات؛"
+        },
+        {
+          "fr": "les personnes âgées ;",
+          "ar": "المسنون؛"
+        },
+        {
+          "fr": "les personnes atteintes de maladies chroniques ;",
+          "ar": "المصابون بأمراض مزمنة؛"
+        },
+        {
+          "fr": "les professionnels de santé, vous et votre équipe compris.",
+          "ar": "مهنيو الصحة، بمن فيهم أنتم وفريقكم."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Organiser l'arrivée des doses",
+      "ar": "تنظيم وصول الجرعات"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Tenir une liste d'attente</strong> des patients qui demandent le vaccin, avec leur téléphone, et les prévenir dès la livraison.",
+          "ar": "<strong>مسك لائحة انتظار</strong> للمرضى الذين يطلبون اللقاح، مع أرقام هواتفهم، وإخبارهم فور التسليم."
+        },
+        {
+          "fr": "<strong>Respecter la chaîne du froid</strong> : le vaccin se conserve au réfrigérateur ; rangez-le dès réception et relevez la température chaque jour.",
+          "ar": "<strong>احترام سلسلة التبريد</strong>: يُحفظ اللقاح في الثلاجة؛ رتبوه فور استلامه وسجلوا الحرارة كل يوم."
+        },
+        {
+          "fr": "<strong>Penser aux patients chroniques</strong> que vous servez déjà : ce sont souvent eux qui en ont le plus besoin.",
+          "ar": "<strong>التفكير في المرضى المزمنين</strong> الذين تخدمونهم أصلا: هم غالبا الأكثر حاجة إليه."
+        }
+      ]
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "Le stock d'hiver",
+      "ar": "مخزون الشتاء"
+    },
+    {
+      "t": "p",
+      "fr": "La meilleure base reste vos propres ventes : regardez ce que vous avez vendu de novembre à février l'an dernier, produit par produit, et commandez en conséquence, par petites quantités régulières plutôt qu'en une seule grosse commande.",
+      "ar": "تبقى مبيعاتكم أفضل مرجع: انظروا إلى ما بعتموه من نونبر إلى فبراير في السنة الماضية، منتجا بمنتج، واطلبوا على هذا الأساس، بكميات صغيرة منتظمة بدل طلبية كبيرة واحدة."
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "Antipyrétiques et antalgiques, sous leurs différentes formes (adulte, enfant, nourrisson).",
+          "ar": "خافضات الحرارة والمسكنات بأشكالها المختلفة (للكبار والأطفال والرضع)."
+        },
+        {
+          "fr": "Produits pour la toux et le rhume, sérum physiologique, mouchoirs.",
+          "ar": "منتجات السعال والزكام، المصل الفيزيولوجي، المناديل."
+        },
+        {
+          "fr": "Thermomètres, masques et gel hydroalcoolique.",
+          "ar": "موازين الحرارة والكمامات والمعقم الكحولي."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Le conseil au comptoir",
+      "ar": "الإرشاد عند الشباك"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "Rappeler les gestes simples : se laver les mains, tousser dans son coude, aérer, rester chez soi quand on est malade.",
+          "ar": "التذكير بالسلوكات البسيطة: غسل اليدين، السعال في المرفق، التهوية، البقاء في المنزل عند المرض."
+        },
+        {
+          "fr": "Orienter vers un médecin en cas de gêne respiratoire, de fièvre qui dure, ou chez le nourrisson, la femme enceinte et la personne âgée fragile.",
+          "ar": "التوجيه نحو الطبيب عند ضيق التنفس، أو الحمى التي تستمر، أو عند الرضيع والمرأة الحامل والمسن الهش."
+        },
+        {
+          "fr": "Rappel : les médicaments à base de codéine, y compris contre la toux, ne se délivrent que sur ordonnance.",
+          "ar": "تذكير: الأدوية التي تحتوي على الكوديين، بما فيها أدوية السعال، لا تُصرف إلا بوصفة طبية."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Avec PharmaStock",
+      "ar": "مع PharmaStock"
+    },
+    {
+      "t": "p",
+      "fr": "PharmaStock calcule les commandes suggérées à partir de vos ventes réelles et vous alerte avant la rupture : le pic de l'hiver se prépare avec vos propres chiffres. Voir aussi <a href=\"/guides/eviter-ruptures-stock-pharmacie/\">comment éviter les ruptures</a>.",
+      "ar": "يحسب PharmaStock الطلبيات المقترحة انطلاقا من مبيعاتكم الفعلية وينبهكم قبل نفاد المخزون: ذروة الشتاء تُحضَّر بأرقامكم أنتم."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Quand sera disponible le vaccin contre la grippe au Maroc ?",
+      "media": "LeBrief",
+      "date": "2026-10-13",
+      "url": "https://www.lebrief.ma/info-lebrief-quand-disponible-vaccin-grippe-maroc-100169288/"
+    },
+    {
+      "titre": "Vaccins antigrippaux : note de synthèse de l'OMS (position paper)",
+      "media": "Organisation mondiale de la santé",
+      "url": "https://cdn.who.int/media/docs/default-source/immunization/position_paper_documents/influenza/pp-influenza-november2012-summary.pdf"
+    },
+    {
+      "titre": "Codoliprane sans ordonnance : une tolérance qui vient de prendre fin",
+      "media": "Le Matin",
+      "date": "2026-07-07",
+      "url": "https://lematin.ma/societe/codoliprane-sans-ordonnance-une-tolerance-qui-vient-de-prendre-fin/354661"
+    }
+  ],
+  "liens": [
+    [
+      "/guides/eviter-ruptures-stock-pharmacie/",
+      "Ruptures de stock en officine : comment les éviter"
+    ],
+    [
+      "/blog/fideliser-patients-pharmacie/",
+      "Fidéliser les patients de sa pharmacie : 6 leviers concrets"
+    ]
+  ],
+  "rang": 2
+}

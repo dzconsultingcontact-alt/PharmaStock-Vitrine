@@ -1,0 +1,173 @@
+{
+  "slug": "bonnes-pratiques-officinales-ammps-2026",
+  "date": "2026-10-27",
+  "categorie": "Réglementation",
+  "categorie_ar": "التنظيم",
+  "titre": "Bonnes pratiques officinales : l'AMMPS publie une nouvelle ligne directrice",
+  "titre_ar": "الممارسات الجيدة في الصيدلية: الوكالة المغربية للأدوية تنشر دليلا توجيهيا جديدا",
+  "description": "Approvisionnement, stockage, dispensation, périmés, retraits de lots : ce que couvre la nouvelle ligne directrice de l'AMMPS et comment préparer votre officine.",
+  "description_ar": "التموين والتخزين والصرف والأدوية منتهية الصلاحية وسحب الدفعات: ما يشمله الدليل التوجيهي الجديد للوكالة المغربية للأدوية وكيف تحضّرون صيدليتكم.",
+  "chapo": "L'Agence marocaine du médicament et des produits de santé a publié une ligne directrice sur les bonnes pratiques officinales. Les domaines couverts, et une liste de contrôle pour vous préparer.",
+  "chapo_ar": "نشرت الوكالة المغربية للأدوية والمنتجات الصحية دليلا توجيهيا حول الممارسات الجيدة في الصيدليات. المجالات التي يشملها، ولائحة مراقبة لتستعدوا.",
+  "mots_cles": "bonnes pratiques officinales maroc, AMMPS ligne directrice, BPO pharmacie, loi 17-04, traçabilité lots pharmacie",
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "L'AMMPS, l'Agence marocaine du médicament et des produits de santé, vient de publier une ligne directrice consacrée aux <strong>bonnes pratiques officinales</strong> (BPO). Élaborée conformément à la loi n° 17-04 portant Code du médicament et de la pharmacie, elle précise les règles applicables à l'organisation des pharmacies d'officine.",
+      "ar": "نشرت الوكالة المغربية للأدوية والمنتجات الصحية دليلا توجيهيا مخصصا <strong>للممارسات الجيدة في الصيدلية</strong>. أُعدّ طبقا للقانون رقم 17-04 بمثابة مدونة الأدوية والصيدلة، ويحدد القواعد المطبقة على تنظيم الصيدليات."
+    },
+    {
+      "t": "h2",
+      "fr": "Les domaines couverts",
+      "ar": "المجالات المشمولة"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "L'approvisionnement, le stockage et la conservation des produits pharmaceutiques.",
+          "ar": "تموين المنتجات الصيدلانية وتخزينها وحفظها."
+        },
+        {
+          "fr": "Les préparations magistrales et officinales.",
+          "ar": "المستحضرات الوصفية والصيدلانية."
+        },
+        {
+          "fr": "La dispensation et le conseil aux patients.",
+          "ar": "صرف الأدوية وإرشاد المرضى."
+        },
+        {
+          "fr": "La gestion des médicaments périmés.",
+          "ar": "تدبير الأدوية منتهية الصلاحية."
+        },
+        {
+          "fr": "Le traitement des plaintes et les procédures de retrait des produits.",
+          "ar": "معالجة الشكايات ومساطر سحب المنتجات."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "fr": "Pour le détail des exigences, référez-vous au texte publié par l'AMMPS : c'est lui qui fait foi. La liste qui suit n'est pas le texte officiel ; ce sont des points de contrôle de bon sens pour vous organiser dès maintenant.",
+      "ar": "لتفاصيل المتطلبات، ارجعوا إلى النص الذي نشرته الوكالة: هو المرجع. اللائحة التالية ليست النص الرسمي؛ إنها نقاط مراقبة بديهية لتنظيم أنفسكم من الآن."
+    },
+    {
+      "t": "h2",
+      "fr": "Approvisionnement et réception",
+      "ar": "التموين والاستلام"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "Acheter auprès de fournisseurs autorisés et conserver les bons de livraison et factures.",
+          "ar": "الشراء من موردين مرخص لهم والاحتفاظ بأذون التسليم والفواتير."
+        },
+        {
+          "fr": "À chaque réception, vérifier les quantités, l'état des boîtes, les numéros de lot et les dates de péremption.",
+          "ar": "عند كل استلام، التحقق من الكميات وحالة العلب وأرقام الدفعات وتواريخ انتهاء الصلاحية."
+        },
+        {
+          "fr": "Ranger tout de suite les produits froids et noter l'heure de réception.",
+          "ar": "ترتيب المنتجات المبرّدة فورا وتسجيل ساعة الاستلام."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Stockage et conservation",
+      "ar": "التخزين والحفظ"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "Relever chaque jour la température du réfrigérateur et garder ces relevés.",
+          "ar": "تسجيل حرارة الثلاجة كل يوم والاحتفاظ بهذه التسجيلات."
+        },
+        {
+          "fr": "Ranger selon la règle « premier périmé, premier sorti » : la date la plus proche devant.",
+          "ar": "الترتيب حسب قاعدة « الأقرب انتهاء يخرج أولا »: التاريخ الأقرب في الأمام."
+        },
+        {
+          "fr": "Protéger le stock de la chaleur, de l'humidité et de la lumière directe.",
+          "ar": "حماية المخزون من الحرارة والرطوبة والضوء المباشر."
+        }
+      ]
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "Périmés, plaintes et retraits de lots",
+      "ar": "الأدوية منتهية الصلاحية والشكايات وسحب الدفعات"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "Isoler les produits périmés dans une zone identifiée, hors des rayons, et tenir la liste de ce qui est retiré.",
+          "ar": "عزل المنتجات منتهية الصلاحية في مكان محدد بعيدا عن الرفوف، ومسك لائحة ما يتم سحبه."
+        },
+        {
+          "fr": "Surveiller les lots qui approchent de leur date (90, 60 puis 30 jours) pour les écouler ou les retourner à temps.",
+          "ar": "مراقبة الدفعات التي تقترب من تاريخها (90 ثم 60 ثم 30 يوما) لتصريفها أو إرجاعها في الوقت."
+        },
+        {
+          "fr": "En cas de retrait de lot, savoir en quelques minutes si le lot est en stock, combien de boîtes, et les mettre de côté.",
+          "ar": "عند سحب دفعة، معرفة في دقائق هل هي في المخزون وكم علبة منها، ووضعها جانبا."
+        },
+        {
+          "fr": "Noter chaque plainte (date, produit, lot, suite donnée).",
+          "ar": "تسجيل كل شكاية (التاريخ، المنتج، الدفعة، الإجراء المتخذ)."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Dispensation et conseil",
+      "ar": "الصرف والإرشاد"
+    },
+    {
+      "t": "p",
+      "fr": "Vérifier l'ordonnance, rappeler la posologie, signaler les interactions et orienter vers le médecin quand c'est nécessaire. Rappel utile : les médicaments contenant de la codéine ne se délivrent que sur ordonnance.",
+      "ar": "التحقق من الوصفة، والتذكير بطريقة الاستعمال، والتنبيه إلى التفاعلات، والتوجيه نحو الطبيب عند الحاجة. تذكير مفيد: الأدوية التي تحتوي على الكوديين لا تُصرف إلا بوصفة طبية."
+    },
+    {
+      "t": "h2",
+      "fr": "Avec PharmaStock",
+      "ar": "مع PharmaStock"
+    },
+    {
+      "t": "p",
+      "fr": "PharmaStock enregistre le lot et la date de chaque boîte à la réception, signale les lots qui approchent de leur péremption et retrouve en un instant les boîtes d'un lot rappelé. La traçabilité demandée au quotidien devient un réflexe, sans registre papier supplémentaire. Voir aussi notre guide <a href=\"/guides/gerer-produits-perimes-pharmacie/\">pour réduire les périmés</a>.",
+      "ar": "يسجل PharmaStock دفعة وتاريخ كل علبة عند الاستلام، وينبّه إلى الدفعات القريبة من انتهاء صلاحيتها، ويجد في لحظة علب دفعة تم سحبها. تصبح التتبعية اليومية عادة، دون سجل ورقي إضافي."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Pharmacies d'officine : l'AMMPS publie une nouvelle ligne directrice sur les bonnes pratiques",
+      "media": "Santé Mag",
+      "date": "2026-10-26",
+      "url": "https://santemag.ma/pharmacies-dofficine-lammps-publie-une-nouvelle-ligne-directrice-sur-les-bonnes-pratiques/"
+    },
+    {
+      "titre": "Codoliprane sans ordonnance : une tolérance qui vient de prendre fin",
+      "media": "Le Matin",
+      "date": "2026-07-07",
+      "url": "https://lematin.ma/societe/codoliprane-sans-ordonnance-une-tolerance-qui-vient-de-prendre-fin/354661"
+    }
+  ],
+  "liens": [
+    [
+      "/guides/gerer-produits-perimes-pharmacie/",
+      "Produits périmés en pharmacie : 7 méthodes pour réduire les pertes"
+    ],
+    [
+      "/blog/relation-grossiste-pharmacie/",
+      "Pharmacie et grossistes : organiser commandes, réceptions et retours"
+    ]
+  ],
+  "rang": 3
+}
