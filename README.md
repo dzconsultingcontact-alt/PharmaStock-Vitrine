@@ -13,3 +13,10 @@ Le menu (barre du haut et menu du téléphone) est le même sur toutes les pages
 `outils/vitrine_menu.py` : pour ajouter, retirer ou renommer un lien, modifiez la liste en tête de ce fichier puis lancez
 `python3 outils/vitrine_menu.py .` à la racine du site ; le script remet le menu à jour dans chaque page.
 Son apparence est dans `assets/ps-site.css` (bloc « MENU DU SITE »).
+
+## Actualités du blog
+
+Chaque actualité est un fichier `outils/articles/<adresse>.json` (texte français et arabe, sources). Après avoir ajouté ou
+modifié un fichier, lancez `python3 outils/vitrine_blog.py .` à la racine du site : le script crée la page de l'article
+(`blog/<adresse>/`), met à jour la rubrique « Actualités » du blog, le plan du site (`sitemap.xml`), le flux RSS
+(`blog/feed.xml`) et le bloc « Actualités » de la page d'accueil. Il peut être relancé sans risque.
