@@ -186,7 +186,7 @@
     d.className = 'ps-ck'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', ar ? 'ملفات تعريف الارتباط' : 'Cookies');
     d.innerHTML = '<div class="ps-ck-txt"><p>' + (ar
       ? 'نستعمل ملفات تعريف ارتباط مجهولة لقياس عدد الزيارات، من أجل:</p><ul><li>توليد أفكار لتحسين الواجهة والوظائف</li><li>مساعدتكم على التنقل في الموقع وإبراز المعلومات المهمة مثل المستجدات</li></ul><p><a href="/confidentialite.html">اعرف المزيد</a>'
-      : 'Nous utilisons des cookies de mesure d\'audience anonymes pour :</p><ul><li>générer des idées pour améliorer l\'interface et les fonctionnalités ;</li><li>vous aider à naviguer sur le site et à afficher les informations importantes, comme les mises à jour.</li></ul><p><a href="/confidentialite.html">En savoir plus</a>') + '</p></div>' +
+      : 'Nous utilisons des cookies de mesure d\'audience anonymes pour :</p><ul><li>générer des idées pour améliorer l\'interface et les fonctionnalités.</li><li>vous aider à naviguer sur le site et à afficher les informations importantes, comme les mises à jour.</li></ul><p><a href="/confidentialite.html">En savoir plus</a>') + '</p></div>' +
       '<div class="ps-ck-btns"><button type="button" class="ps-ck-non">' + (ar ? 'رفض' : 'Refuser') + '</button>' +
       '<button type="button" class="ps-ck-oui">' + (ar ? 'قبول' : 'Accepter') + '</button></div>';
     function fixer(v) { try { localStorage.setItem(CLE_COOKIES, v); } catch (e) { } d.remove(); if (v === 'oui') chargerAnalytics(); else if (window.__psGa) location.reload(); }
