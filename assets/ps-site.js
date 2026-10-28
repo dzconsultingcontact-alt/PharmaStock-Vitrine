@@ -185,8 +185,8 @@
     var d = document.createElement('div');
     d.className = 'ps-ck'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', ar ? 'ملفات تعريف الارتباط' : 'Cookies');
     d.innerHTML = '<p>' + (ar
-      ? 'نستعمل ملفات تعريف الارتباط لقياس عدد الزيارات (Google Analytics) وتحسين الموقع. الزيارات تبقى مجهولة الهوية.'
-      : 'Nous utilisons des cookies pour mesurer l\'audience du site (Google Analytics) et l\'améliorer. Les visites restent anonymes.') + '</p>' +
+      ? 'نستعمل ملفات تعريف ارتباط مجهولة لقياس عدد الزيارات. <a href="/confidentialite.html">اعرف المزيد</a>'
+      : 'Nous utilisons des cookies de mesure d\'audience anonymes. <a href="/confidentialite.html">En savoir plus</a>') + '</p>' +
       '<div><button type="button" class="ps-ck-non">' + (ar ? 'رفض' : 'Refuser') + '</button>' +
       '<button type="button" class="ps-ck-oui">' + (ar ? 'قبول' : 'Accepter') + '</button></div>';
     function fixer(v) { try { localStorage.setItem(CLE_COOKIES, v); } catch (e) { } d.remove(); if (v === 'oui') chargerAnalytics(); else if (window.__psGa) location.reload(); }
@@ -194,6 +194,7 @@
     d.querySelector('.ps-ck-non').onclick = function () { fixer('non'); };
     document.body.appendChild(d);
   }
+  window.psCookies = function () { bandeauCookies(true); };
   /* Lien « Cookies » en bas de page pour changer d'avis */
   function lienCookies() {
     if (!GA_ID) return;
