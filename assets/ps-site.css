@@ -153,3 +153,7 @@ div.ps-band .ps-mq{gap:56px;font-weight:800}
 .ps-ck-oui{background:#0E6B6A;color:#fff}
 [dir=rtl] .ps-ck{left:auto;right:18px}
 @media (max-width:640px){.ps-ck{left:12px;right:12px;bottom:84px;max-width:none}}
+/* Ordinateur : bande sur toute la largeur en bas de l'écran, texte à gauche, boutons à droite */
+@media (min-width:641px){.ps-ck{left:0;right:0;bottom:0;max-width:none;border-radius:0;border-width:1px 0 0;display:flex;align-items:center;justify-content:center;gap:28px;padding:16px 32px;box-shadow:0 -12px 30px -18px rgba(11,27,43,.3)}
+.ps-ck p{margin:0;max-width:820px}.ps-ck div{flex-shrink:0}[dir=rtl] .ps-ck{left:0;right:0}
+body:has(.ps-ck) .ps-wa{bottom:92px}}
