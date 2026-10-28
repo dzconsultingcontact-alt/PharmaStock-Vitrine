@@ -143,3 +143,13 @@ div.ps-band .ps-mq{gap:56px;font-weight:800}
 [dir=rtl] .band .mq,[dir=rtl] div.ps-band .ps-mq{font-family:'Cairo','Plus Jakarta Sans',system-ui,sans-serif}
 @media (max-width:640px){div.ps-band .ps-mq{gap:24px;font-size:13px}.band .mq,div.ps-band .ps-mq{line-height:16px}}
 /* ===== fin du menu du site ===== */
+
+/* Bandeau cookies (statistiques de visite) */
+.ps-ck{position:fixed;left:18px;bottom:18px;z-index:9995;max-width:440px;background:#fff;color:#34495C;border:1px solid #E1E7E4;border-radius:18px;padding:18px 20px;box-shadow:0 24px 50px -18px rgba(11,27,43,.35);font-size:.92rem;line-height:1.55}
+.ps-ck p{margin:0 0 12px}
+.ps-ck div{display:flex;gap:10px;justify-content:flex-end}
+.ps-ck button{font:inherit;font-weight:600;border-radius:999px;padding:9px 18px;cursor:pointer;border:1px solid #0E6B6A}
+.ps-ck-non{background:#fff;color:#0E6B6A}
+.ps-ck-oui{background:#0E6B6A;color:#fff}
+[dir=rtl] .ps-ck{left:auto;right:18px}
+@media (max-width:640px){.ps-ck{left:12px;right:12px;bottom:84px;max-width:none}}

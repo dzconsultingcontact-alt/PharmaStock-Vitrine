@@ -162,7 +162,50 @@
     document.head.appendChild(s);
   }
 
+  /* Statistiques de visite (Google Analytics 4), seulement après accord du visiteur (bandeau cookies, loi 09-08 / CNDP).
+     Mettre l'identifiant de mesure « G-… » dans GA_ID ; vide = rien n'est chargé et aucun bandeau n'apparaît. */
+  var GA_ID = 'G-XW118T35QR';
+  var CLE_COOKIES = 'ps-cookies';
+  function choixCookies() { try { return localStorage.getItem(CLE_COOKIES); } catch (e) { return null; } }
+  function chargerAnalytics() {
+    if (!GA_ID || window.__psGa) return; window.__psGa = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+  }
+  function bandeauCookies(forcer) {
+    if (!GA_ID) return;
+    var c = choixCookies();
+    if (c === 'oui') chargerAnalytics();
+    if ((c && !forcer) || document.querySelector('.ps-ck')) return;
+    var ar = LANG === 'ar';
+    var d = document.createElement('div');
+    d.className = 'ps-ck'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', ar ? 'ملفات تعريف الارتباط' : 'Cookies');
+    d.innerHTML = '<p>' + (ar
+      ? 'نستعمل ملفات تعريف الارتباط لقياس عدد الزيارات (Google Analytics) وتحسين الموقع. الزيارات تبقى مجهولة الهوية.'
+      : 'Nous utilisons des cookies pour mesurer l\'audience du site (Google Analytics) et l\'améliorer. Les visites restent anonymes.') + '</p>' +
+      '<div><button type="button" class="ps-ck-non">' + (ar ? 'رفض' : 'Refuser') + '</button>' +
+      '<button type="button" class="ps-ck-oui">' + (ar ? 'قبول' : 'Accepter') + '</button></div>';
+    function fixer(v) { try { localStorage.setItem(CLE_COOKIES, v); } catch (e) { } d.remove(); if (v === 'oui') chargerAnalytics(); else if (window.__psGa) location.reload(); }
+    d.querySelector('.ps-ck-oui').onclick = function () { fixer('oui'); };
+    d.querySelector('.ps-ck-non').onclick = function () { fixer('non'); };
+    document.body.appendChild(d);
+  }
+  /* Lien « Cookies » en bas de page pour changer d'avis */
+  function lienCookies() {
+    if (!GA_ID) return;
+    var zone = document.querySelector('.footer-bot-links, .footer-bot, footer');
+    if (!zone || zone.querySelector('.ps-ck-lien')) return;
+    var a = document.createElement('a');
+    a.href = '#'; a.className = 'ps-ck-lien'; a.textContent = LANG === 'ar' ? 'ملفات تعريف الارتباط' : 'Cookies';
+    a.onclick = function (e) { e.preventDefault(); bandeauCookies(true); };
+    zone.appendChild(a);
+  }
+
   arabe();
-  function init() { bandeau(); lienFonctionnalites(); menuMobile(); boutonWhatsApp(); formulaires(); boutonsLangue(); }
+  function init() { bandeau(); lienFonctionnalites(); menuMobile(); boutonWhatsApp(); formulaires(); boutonsLangue(); bandeauCookies(false); lienCookies(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
