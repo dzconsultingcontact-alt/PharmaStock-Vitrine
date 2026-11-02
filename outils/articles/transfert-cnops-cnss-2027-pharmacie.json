@@ -1,0 +1,158 @@
+{
+  "slug": "transfert-cnops-cnss-2027-pharmacie",
+  "date": "2026-11-02",
+  "categorie": "Réglementation",
+  "categorie_ar": "التنظيم",
+  "titre": "AMO : CNOPS vers CNSS en février 2027, ce qui change en pharmacie",
+  "titre_ar": "التأمين الإجباري عن المرض: انتقال CNOPS إلى CNSS في فبراير 2027 وما يتغير في الصيدلية",
+  "description": "AMO des fonctionnaires : passage de la CNOPS à la CNSS le 1er février 2027. Ce qui est acquis, ce qui reste à préciser, comment préparer l'officine.",
+  "description_ar": "انتقال التأمين الإجباري عن المرض للموظفين من CNOPS إلى CNSS في 1 فبراير 2027: ما هو مؤكد، وما ينتظر التوضيح، وكيف تستعد الصيدلية.",
+  "chapo": "Le 1er février 2027, la gestion de l'assurance maladie des fonctionnaires, retraités du public et de leurs familles passe de la CNOPS à la CNSS. Les patients vont vous poser des questions : voici ce qui est publié, et ce qui ne l'est pas encore.",
+  "chapo_ar": "في 1 فبراير 2027، ينتقل تدبير التأمين عن المرض للموظفين ومتقاعدي القطاع العام وأسرهم من CNOPS إلى CNSS. سيطرح المرضى أسئلتهم عليكم: إليكم ما نُشر، وما لم يُنشر بعد.",
+  "mots_cles": "cnops cnss 2027, transfert cnops cnss pharmacie, amo fonctionnaires 2027, loi 54-23, remboursement médicaments cnss, pharmacie maroc amo",
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "La note de présentation du projet de loi de finances 2027, publiée le 23 octobre, confirme l'échéance : la gestion de l'assurance maladie obligatoire (AMO) du secteur public passera de la CNOPS à la CNSS le <strong>1er février 2027</strong>. Le transfert repose sur la loi n° 54-23, publiée au Bulletin officiel le 29 janvier 2026. Selon Le360, environ 4 millions de bénéficiaires sont concernés : une bonne partie de votre patientèle.",
+      "ar": "تؤكد المذكرة التقديمية لمشروع قانون المالية 2027، المنشورة في 23 أكتوبر، الموعد: سينتقل تدبير التأمين الإجباري الأساسي عن المرض للقطاع العام من CNOPS إلى CNSS في <strong>1 فبراير 2027</strong>. ويستند هذا الانتقال إلى القانون رقم 54-23 المنشور في الجريدة الرسمية في 29 يناير 2026. وحسب Le360، يهم الأمر حوالي 4 ملايين مستفيد: جزء مهم من زبناء صيدليتكم."
+    },
+    {
+      "t": "h2",
+      "fr": "Ce qui est acquis",
+      "ar": "ما هو مؤكد"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Une gestion unifiée, pas une fusion</strong> : les régimes public et privé restent distincts, chacun avec ses règles et son financement.",
+          "ar": "<strong>تدبير موحد وليس دمجا</strong>: يبقى نظاما القطاعين العام والخاص منفصلين، لكل منهما قواعده وتمويله."
+        },
+        {
+          "fr": "<strong>Les droits acquis sont préservés</strong> et le gouvernement s'engage à assurer le traitement des dossiers en cours.",
+          "ar": "<strong>الحقوق المكتسبة محفوظة</strong> وتلتزم الحكومة بمعالجة الملفات الجارية."
+        },
+        {
+          "fr": "<strong>Les mutuelles</strong> : les conventions existantes peuvent être maintenues pendant une période transitoire de cinq ans au maximum.",
+          "ar": "<strong>التعاضديات</strong>: يمكن الإبقاء على الاتفاقيات القائمة خلال فترة انتقالية أقصاها خمس سنوات."
+        },
+        {
+          "fr": "<strong>Les enfants à charge</strong> : la limite d'âge passe de 26 à 30 ans, sous conditions (études ou formation professionnelle).",
+          "ar": "<strong>الأبناء المتكفل بهم</strong>: يرتفع حد السن من 26 إلى 30 سنة، بشروط (الدراسة أو التكوين المهني)."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "fr": "Selon Belpresse, le transfert ne modifie pas automatiquement les taux de remboursement ni les prestations actuelles.",
+      "ar": "حسب Belpresse، لا يغير هذا الانتقال تلقائيا نسب التعويض ولا الخدمات الحالية."
+    },
+    {
+      "t": "h2",
+      "fr": "Ce qui reste à préciser",
+      "ar": "ما ينتظر التوضيح"
+    },
+    {
+      "t": "p",
+      "fr": "Plusieurs décrets d'application sont encore attendus avant février : ils doivent préciser l'immatriculation, la prise en charge médicale et le remboursement des frais de santé. Les cartes d'assurés, les circuits de remboursement et les délais de traitement ne sont pas détaillés à ce jour. Fonctionnaires, retraités et mutuelles s'interrogent d'ailleurs sur les délais de traitement des dossiers maladie après le transfert.",
+      "ar": "لا تزال عدة مراسيم تطبيقية منتظرة قبل فبراير: يجب أن تحدد التسجيل والتكفل الطبي وتعويض مصاريف العلاج. ولم تُفصَّل إلى حد الآن بطاقات المؤمَّنين ومسارات التعويض وآجال المعالجة. كما يتساءل الموظفون والمتقاعدون والتعاضديات عن آجال معالجة ملفات المرض بعد الانتقال."
+    },
+    {
+      "t": "p",
+      "fr": "En clair : tant que ces textes ne sont pas publiés, ne promettez rien à vos patients sur les nouvelles démarches. Renvoyez-les vers les communications officielles de la CNOPS et de la CNSS.",
+      "ar": "بعبارة واضحة: ما دامت هذه النصوص لم تُنشر، لا تَعِدوا مرضاكم بشيء بخصوص الإجراءات الجديدة. وجهوهم إلى البلاغات الرسمية لـ CNOPS و CNSS."
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "Au comptoir : répondre aux questions",
+      "ar": "عند الشباك: الإجابة عن الأسئلة"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "« Est-ce que je serai moins bien remboursé ? » : les droits acquis sont préservés par la loi et les régimes restent distincts ; le détail dépendra des décrets.",
+          "ar": "« هل سيقل تعويضي؟ »: الحقوق المكتسبة يحميها القانون والنظامان يبقيان منفصلين؛ التفاصيل رهينة بالمراسيم."
+        },
+        {
+          "fr": "« Et ma mutuelle ? » : les conventions peuvent continuer pendant une période transitoire, jusqu'à cinq ans.",
+          "ar": "« وماذا عن تعاضديتي؟ »: يمكن أن تستمر الاتفاقيات خلال فترة انتقالية تصل إلى خمس سنوات."
+        },
+        {
+          "fr": "« Que dois-je faire maintenant ? » : suivre les annonces officielles de la CNOPS et de la CNSS, et garder ses ordonnances et justificatifs en ordre.",
+          "ar": "« ماذا علي أن أفعل الآن؟ »: تتبع الإعلانات الرسمية لـ CNOPS و CNSS، والاحتفاظ بالوصفات والوثائق مرتبة."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Préparer l'officine d'ici février",
+      "ar": "تحضير الصيدلية قبل فبراير"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Repérer vos patients concernés</strong>, en particulier les retraités du public et les malades chroniques : ce sont eux qui auront le plus de questions.",
+          "ar": "<strong>تحديد المرضى المعنيين</strong>، خاصة متقاعدي القطاع العام والمرضى المزمنين: هم من ستكون لديهم أكثر الأسئلة."
+        },
+        {
+          "fr": "<strong>Garder des dossiers propres</strong> : ordonnances, factures et justificatifs bien rangés facilitent les démarches des patients pendant la transition.",
+          "ar": "<strong>الاحتفاظ بملفات مرتبة</strong>: الوصفات والفواتير والوثائق المنظمة تسهل إجراءات المرضى خلال المرحلة الانتقالية."
+        },
+        {
+          "fr": "<strong>Surveiller le crédit client</strong> : si des remboursements tardent, certains patients demanderont à payer plus tard. Fixez des plafonds clairs et suivez chaque compte.",
+          "ar": "<strong>مراقبة ديون الزبناء</strong>: إذا تأخرت التعويضات، سيطلب بعض المرضى الأداء لاحقا. حددوا سقوفا واضحة وتتبعوا كل حساب."
+        },
+        {
+          "fr": "<strong>Informer l'équipe</strong> : un message simple et identique pour tout le monde au comptoir, sans promesse sur ce qui n'est pas encore publié.",
+          "ar": "<strong>إخبار الفريق</strong>: رسالة بسيطة وموحدة للجميع عند الشباك، دون وعود بشأن ما لم يُنشر بعد."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Avec PharmaStock",
+      "ar": "مع PharmaStock"
+    },
+    {
+      "t": "p",
+      "fr": "PharmaStock garde l'historique des ordonnances de chaque patient, envoie des rappels aux patients chroniques pour leur renouvellement et suit le crédit client compte par compte, avec son solde dans le tableau de bord. Voir aussi notre guide <a href=\"/guides/credit-client-pharmacie-maroc/\">pour tenir le carnet de crédit</a>.",
+      "ar": "يحتفظ PharmaStock بسجل وصفات كل مريض، ويرسل تذكيرات للمرضى المزمنين لتجديد أدويتهم، ويتتبع ديون الزبناء حسابا بحساب، مع رصيدها في لوحة القيادة."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "AMO : le transfert de la CNOPS à la CNSS prévu le 1er février 2027",
+      "media": "La Vérité",
+      "date": "2026-10-25",
+      "url": "https://www.laverite.ma/transfert-amo-cnops-cnss-fevrier-2027/"
+    },
+    {
+      "titre": "Assurance maladie : les fonctionnaires passeront de la CNOPS à la CNSS dès février 2027",
+      "media": "Belpresse",
+      "date": "2026-10-30",
+      "url": "https://fr.belpresse.com/a-la-une/assurance-maladie-les-fonctionnaires-passeront-de-la-cnops-a-la-cnss-des-fevrier-2027/"
+    },
+    {
+      "titre": "Transfert de l'AMO à la CNSS : les craintes des fonctionnaires et des mutuelles ravivées",
+      "media": "Le360",
+      "date": "2026-10-30",
+      "url": "https://fr.le360.ma/societe/transfert-de-lamo-a-la-cnss-les-craintes-des-fonctionnaires-et-des-mutuelles-ravivees_AFW5KC5TZJD5TKSGBCGQW3VKRA/"
+    }
+  ],
+  "liens": [
+    [
+      "/guides/credit-client-pharmacie-maroc/",
+      "Crédit client en pharmacie : tenir le carnet sans perdre d'argent"
+    ],
+    [
+      "/blog/fideliser-patients-pharmacie/",
+      "Fidéliser les patients de sa pharmacie : 6 leviers concrets"
+    ]
+  ],
+  "rang": 0
+}
