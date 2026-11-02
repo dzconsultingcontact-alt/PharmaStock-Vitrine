@@ -20,7 +20,7 @@ LIENS = [
     ('offres', '/offres.html', 'Offres', 'العروض', ''),
     ('fournisseurs', '/fournisseurs/', 'Fournisseurs', 'الموردون', ''),
     ('garde', '/pharmacie-de-garde/', 'Pharmacies de garde', 'صيدليات الحراسة', ''),
-    ('blog', '/blog/', 'Blog', 'المدونة', 'psn-o2'),
+    ('blog', '/blog/', 'Actualités', 'المستجدات', 'psn-o2'),
 ]
 MOBILE = [
     ('fonctionnalites', '/fonctionnalites.html', 'Fonctionnalités', 'الوظائف'),
@@ -31,7 +31,7 @@ MOBILE = [
     ('fournisseurs', '/fournisseurs/', 'Espace fournisseurs', 'فضاء الموردين'),
     ('garde', '/pharmacie-de-garde/', 'Pharmacies de garde', 'صيدليات الحراسة'),
     ('guides', '/guides/', 'Guides', 'الأدلة'),
-    ('blog', '/blog/', 'Blog', 'المدونة'),
+    ('blog', '/blog/', 'Actualités', 'المستجدات'),
     ('apropos', '/qui-sommes-nous.html', 'Qui sommes-nous', 'من نحن'),
     ('contact', '/contact.html', 'Contact', 'اتصل بنا'),
 ]

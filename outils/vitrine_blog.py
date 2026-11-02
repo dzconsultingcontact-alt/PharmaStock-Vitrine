@@ -53,7 +53,7 @@ def bloc(b, attr=''):
 
 def page(art, tous, gabarit):
     url = f'{SITE}/blog/{art["slug"]}/'
-    titre_page = f'{art["titre"]} | Blog PharmaStock'
+    titre_page = f'{art["titre"]} | Actualités PharmaStock'
     titre_page_ar = f'{art.get("titre_ar", art["titre"])} | مدونة PharmaStock'
     tete = '\n'.join([
         f'<title>{html.escape(titre_page)}</title>',
@@ -125,10 +125,10 @@ def page(art, tous, gabarit):
     if liens:
         corps.append('<h2 data-ar="اقرأ أيضا">À lire aussi</h2>')
         corps.append('<ul>' + ''.join(f'<li><a href="{u}">{html.escape(t)}</a></li>' for u, t in liens) + '</ul>')
-    corps.append('<p><a href="/blog/" data-ar="← كل مقالات المدونة">← Tous les articles du blog</a></p>')
+    corps.append('<p><a href="/blog/" data-ar="← كل المستجدات">← Toutes les actualités</a></p>')
 
     hero = (f'<main id="contenu"><section class="ps-hero"><div class="ps-in">\n'
-            f'  <div class="ps-crumb"><a href="/">Accueil</a> › <a href="/blog/">Blog</a> › <span data-ar="{a(art.get("categorie_ar", ""))}">{html.escape(art["categorie"])}</span></div>\n'
+            f'  <div class="ps-crumb"><a href="/">Accueil</a> › <a href="/blog/">Actualités</a> › <span data-ar="{a(art.get("categorie_ar", ""))}">{html.escape(art["categorie"])}</span></div>\n'
             f'  <h1 data-ar="{a(art.get("titre_ar", ""))}">{html.escape(art["titre"])}</h1>\n'
             f'  <p data-ar="{a(art.get("chapo_ar", ""))}">{art["chapo"]}</p>\n'
             f'  <p class="ps-meta" data-ar="{a(art.get("categorie_ar", "") + " · فريق PharmaStock · " + date_ar(art["date"]))}">'
@@ -174,7 +174,7 @@ def main():
         b = b.replace('<ul class="ps-villes" style="margin-top:14px">', '<ul class="ps-villes" style="margin-top:14px"><li><a href="#cat-actu" data-ar="المستجدات">Actualités</a></li>', 1)
     if RSS not in b:
         b = b.replace('</head>', RSS + '</head>', 1)
-    b = b.replace('<h1>Blog : la gestion de pharmacie au Maroc</h1>', '<h1>Blog : actualités et gestion de pharmacie au Maroc</h1>')
+    b = b.replace('<h1>Blog : la gestion de pharmacie au Maroc</h1>', '<h1>Actualités et gestion de pharmacie au Maroc</h1>').replace('<h1>Blog : actualités et gestion de pharmacie au Maroc</h1>', '<h1>Actualités et gestion de pharmacie au Maroc</h1>')
     b = b.replace('<p>Stock, péremptions, commandes, rentabilité, crédit client, fidélisation des patients et digitalisation : des articles pratiques pour mieux gérer votre officine.</p>',
                   '<p>Actualités du médicament au Maroc (prix, réglementation, saison) et articles pratiques pour mieux gérer votre officine : stock, péremptions, commandes, rentabilité, crédit client et fidélisation.</p>')
     m = re.search(r'(<script type="application/ld\+json">)(\{"@context":"https://schema.org","@type":"Blog".*?)(</script>)', b, re.S)
