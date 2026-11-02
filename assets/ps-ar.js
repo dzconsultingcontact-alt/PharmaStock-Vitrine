@@ -197,6 +197,7 @@
 "Ventes & Stats": "المبيعات والإحصائيات",
 "Liens Utiles": "روابط مفيدة",
 "Conseils & Blog": "نصائح ومدونة",
+"Actualités & conseils": "مستجدات ونصائح",
 "Mentions légales": "الإشعارات القانونية",
 "Confidentialité": "الخصوصية",
 "CGU": "شروط الاستخدام",
@@ -204,6 +205,8 @@
 "Témoignages": "شهادات",
 "Guides": "أدلة",
 "Blog": "المدونة",
+"Actualités": "المستجدات",
+"Actualités et gestion de pharmacie au Maroc": "المستجدات وتدبير الصيدلية بالمغرب",
 "Guides pharmacien": "أدلة الصيدلي",
 "Pharmacies de garde": "صيدليات الحراسة",
 "Nouveautés": "الجديد",
@@ -243,6 +246,7 @@
 "Demander une démo →": "← اطلب عرضا توضيحيا",
 "À lire aussi": "اقرأ أيضا",
 "← Tous les articles du blog": "جميع مقالات المدونة →",
+"← Toutes les actualités": "← كل المستجدات",
 "Gardes par ville": "الحراسة حسب المدينة",
 "Casablanca, Maroc — DZ Consulting": "الدار البيضاء، المغرب — DZ Consulting"
 };
