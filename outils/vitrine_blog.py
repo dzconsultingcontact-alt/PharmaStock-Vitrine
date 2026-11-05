@@ -22,8 +22,8 @@ MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août
 MOIS_AR = ['يناير', 'فبراير', 'مارس', 'أبريل', 'ماي', 'يونيو', 'يوليوز', 'غشت', 'شتنبر', 'أكتوبر', 'نونبر', 'دجنبر']
 ICONE = ('<svg class="ps-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>'
          '<path d="M18 14h-8"></path><path d="M15 18h-5"></path><path d="M10 6h8v4h-8V6Z"></path></svg>')
-RSS = '<link rel="alternate" type="application/rss+xml" title="Actualités PharmaStock" href="/blog/feed.xml">'
-CTA = ('<div class="ps-cta-box"><p><strong>Essayez PharmaStock dans votre officine</strong>Stock, péremptions, commandes, crédit client, '
+RSS = '<link rel="alternate" type="application/rss+xml" title="Actualités ZILI Pharma" href="/blog/feed.xml">'
+CTA = ('<div class="ps-cta-box"><p><strong>Essayez ZILI Pharma dans votre officine</strong>Stock, péremptions, commandes, crédit client, '
        'rappels patients et ordonnances dans une seule application, en français et en arabe.</p>\n'
        '<a class="ps-btn ps-btn-w" href="/#pionnieres">Demander une démo →</a></div>')
 
@@ -53,8 +53,8 @@ def bloc(b, attr=''):
 
 def page(art, tous, gabarit):
     url = f'{SITE}/blog/{art["slug"]}/'
-    titre_page = f'{art["titre"]} | Actualités PharmaStock'
-    titre_page_ar = f'{art.get("titre_ar", art["titre"])} | مدونة PharmaStock'
+    titre_page = f'{art["titre"]} | Actualités ZILI Pharma'
+    titre_page_ar = f'{art.get("titre_ar", art["titre"])} | مدونة ZILI Pharma'
     tete = '\n'.join([
         f'<title>{html.escape(titre_page)}</title>',
         f'<meta name="description" content="{a(art["description"])}">',
@@ -69,7 +69,7 @@ def page(art, tous, gabarit):
         f'<meta property="og:title" content="{a(titre_page)}">',
         f'<meta property="og:description" content="{a(art["description"])}">',
         f'<meta property="og:url" content="{url}">',
-        '<meta property="og:site_name" content="PharmaStock">',
+        '<meta property="og:site_name" content="ZILI Pharma">',
         f'<meta property="article:published_time" content="{art["date"]}">',
         f'<meta property="article:modified_time" content="{art.get("modifie", art["date"])}">',
         f'<meta property="article:section" content="{a(art["categorie"])}">',
@@ -86,9 +86,9 @@ def page(art, tous, gabarit):
         'headline': art['titre'], 'description': art['description'],
         'datePublished': art['date'], 'dateModified': art.get('modifie', art['date']), 'inLanguage': 'fr-MA',
         'mainEntityOfPage': url, 'articleSection': art['categorie'], 'keywords': art.get('mots_cles', ''),
-        'author': {'@type': 'Organization', 'name': 'PharmaStock', 'url': SITE + '/'},
-        'publisher': {'@type': 'Organization', 'name': 'PharmaStock — DZ Consulting', 'logo': {'@type': 'ImageObject', 'url': SITE + '/assets/og-pharmastock.jpg'}},
-        'image': SITE + '/assets/og-pharmastock.jpg',
+        'author': {'@type': 'Organization', 'name': 'ZILI Pharma', 'url': SITE + '/'},
+        'publisher': {'@type': 'Organization', 'name': 'ZILI Pharma — DZ Consulting', 'logo': {'@type': 'ImageObject', 'url': SITE + '/assets/og-zili-pharma.jpg'}},
+        'image': SITE + '/assets/og-zili-pharma.jpg',
         'citation': [x['url'] for x in art.get('sources', [])],
     }
     fil = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
@@ -131,8 +131,8 @@ def page(art, tous, gabarit):
             f'  <div class="ps-crumb"><a href="/">Accueil</a> › <a href="/blog/">Actualités</a> › <span data-ar="{a(art.get("categorie_ar", ""))}">{html.escape(art["categorie"])}</span></div>\n'
             f'  <h1 data-ar="{a(art.get("titre_ar", ""))}">{html.escape(art["titre"])}</h1>\n'
             f'  <p data-ar="{a(art.get("chapo_ar", ""))}">{art["chapo"]}</p>\n'
-            f'  <p class="ps-meta" data-ar="{a(art.get("categorie_ar", "") + " · فريق PharmaStock · " + date_ar(art["date"]))}">'
-            f'{html.escape(art["categorie"])} · Équipe PharmaStock · <time datetime="{art["date"]}">{date_fr(art["date"])}</time></p>\n'
+            f'  <p class="ps-meta" data-ar="{a(art.get("categorie_ar", "") + " · فريق ZILI Pharma · " + date_ar(art["date"]))}">'
+            f'{html.escape(art["categorie"])} · Équipe ZILI Pharma · <time datetime="{art["date"]}">{date_fr(art["date"])}</time></p>\n'
             f'</div></section>\n<section class="ps-sec"><div class="ps-in"><article class="ps-prose">\n' + '\n\n'.join(corps) +
             '\n</article></div></section></main>')
     i, j = s.index('<main id="contenu">'), s.index('</main>') + len('</main>')
@@ -206,7 +206,7 @@ def main():
         f'<pubDate>{date.fromisoformat(x["date"]).strftime("%a, %d %b %Y")} 08:00:00 +0100</pubDate><category>{html.escape(x["categorie"])}</category>'
         f'<description>{html.escape(x["description"])}</description></item>\n' for x in arts)
     ecrire('blog/feed.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>\n'
-           f'<title>Actualités PharmaStock — la pharmacie au Maroc</title><link>{SITE}/blog/</link>'
+           f'<title>Actualités ZILI Pharma — la pharmacie au Maroc</title><link>{SITE}/blog/</link>'
            f'<atom:link href="{SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>'
            '<description>Réglementation, saison et gestion d\'officine : les actualités utiles aux pharmaciens au Maroc.</description>'
            f'<language>fr-MA</language>\n{items}</channel></rss>\n')

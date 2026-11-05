@@ -183,3 +183,6 @@ body:has(.ps-ck) .ps-wa{bottom:calc(var(--ps-ck-h,120px) + 14px)}
   .ps-ck.ps-ck .ps-ck-btns{flex:1 1 100%}
   .ps-ck.ps-ck button{padding:6px 14px;font-size:.82rem}
 }
+/* logo ZILI Pharma */
+.psn-logo img{display:block;height:52px;width:auto}
+@media (max-width:640px){.psn-logo img{height:40px}}

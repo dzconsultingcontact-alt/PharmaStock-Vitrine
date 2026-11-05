@@ -35,7 +35,7 @@ MOBILE = [
     ('apropos', '/qui-sommes-nous.html', 'Qui sommes-nous', 'من نحن'),
     ('contact', '/contact.html', 'Contact', 'اتصل بنا'),
 ]
-DEBUT, FIN = '<!-- MENU PharmaStock (commun à toutes les pages, posé par vitrine_menu.py) -->', '<!-- /MENU PharmaStock -->'
+DEBUT, FIN = '<!-- MENU ZILI Pharma (commun à toutes les pages, posé par vitrine_menu.py) -->', '<!-- /MENU ZILI Pharma -->'
 SCRIPT = ("<script>function psMenu(f){var m=document.getElementById('mobileMenu'),h=document.getElementById('hamburger');if(!m||!h)return;"
           "var o=typeof f==='boolean'?f:!m.classList.contains('open');m.classList.toggle('open',o);h.classList.toggle('active',o);h.setAttribute('aria-expanded',o);"
           "document.documentElement.style.overflow=o?'hidden':'';}"
@@ -64,7 +64,7 @@ def menu(chemin):
     return f'''{DEBUT}
 <header class="psn">
 <div class="psn-in">
-<a class="psn-logo" href="/" aria-label="PharmaStock, accueil"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FD1C7" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></i><span data-notranslate>PharmaStock</span></a>
+<a class="psn-logo" href="/" aria-label="ZILI Pharma, accueil"><img src="/assets/zili-pharma-logo.svg" alt="ZILI Pharma" width="125" height="48"></a>
 <div class="psn-links" role="navigation" aria-label="Navigation principale">
 {liens}
 </div>

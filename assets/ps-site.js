@@ -1,4 +1,4 @@
-/* PharmaStock — site vitrine : bandeau défilant, bouton WhatsApp, formulaires de demande, choix de langue FR / العربية */
+/* ZILI Pharma — site vitrine : bandeau défilant, bouton WhatsApp, formulaires de demande, choix de langue FR / العربية */
 (function () {
   var API = 'https://api.mapharmastock.com/api';
   var WA = '33638557513';
@@ -17,7 +17,7 @@
   window.PS_LANG = LANG;
 
   function lienWa(texte) { return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(texte); }
-  var MSG_WA = LANG === 'ar' ? 'السلام عليكم، أود معرفة المزيد عن PharmaStock لصيدليتي.' : "Bonjour, je souhaite en savoir plus sur PharmaStock pour ma pharmacie.";
+  var MSG_WA = LANG === 'ar' ? 'السلام عليكم، أود معرفة المزيد عن ZILI Pharma لصيدليتي.' : "Bonjour, je souhaite en savoir plus sur ZILI Pharma pour ma pharmacie.";
 
   /* Thème « Officine » : bandeau défilant en haut de chaque page (la page d'accueil a le sien) */
   function bandeau() {
@@ -90,7 +90,7 @@
     if (document.querySelector('.ps-wa')) return;
     var a = document.createElement('a');
     a.className = 'ps-wa'; a.href = lienWa(MSG_WA); a.target = '_blank'; a.rel = 'noopener';
-    a.setAttribute('aria-label', 'WhatsApp PharmaStock');
+    a.setAttribute('aria-label', 'WhatsApp ZILI Pharma');
     a.innerHTML = '<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.3.6 4.5 1.8 6.4L3 29l7-1.8c1.8 1 3.9 1.5 6 1.5 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.1 1.1-4-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.3 10 10.1 5.3 16 5.3s10.7 4.7 10.7 10.5S21.9 26.4 16 26.4zm5.9-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg><span>' + (LANG === 'ar' ? 'واتساب' : 'WhatsApp') + '</span>';
     document.body.appendChild(a);
   }
@@ -107,7 +107,7 @@
         var ar = LANG === 'ar';
         if (!d.tel && !d.email) { msg.className = 'ps-msg err'; msg.textContent = ar ? 'المرجو إدخال رقم الهاتف أو البريد الإلكتروني.' : 'Indiquez au moins un téléphone ou un email.'; return; }
         var texteBtn = btn.textContent; btn.disabled = true; btn.textContent = ar ? 'جارٍ الإرسال…' : 'Envoi en cours…';
-        var resume = (ar ? 'السلام عليكم، ' : 'Bonjour, ') + (d.type === 'PIONNIERE' ? (ar ? 'أرغب في الانضمام إلى برنامج الصيدليات الرائدة.' : 'je souhaite rejoindre le programme Pharmacies Pionnières.') : (ar ? 'أرغب في عرض توضيحي لـ PharmaStock.' : 'je souhaite une démonstration de PharmaStock.')) +
+        var resume = (ar ? 'السلام عليكم، ' : 'Bonjour, ') + (d.type === 'PIONNIERE' ? (ar ? 'أرغب في الانضمام إلى برنامج الصيدليات الرائدة.' : 'je souhaite rejoindre le programme Pharmacies Pionnières.') : (ar ? 'أرغب في عرض توضيحي لـ ZILI Pharma.' : 'je souhaite une démonstration de ZILI Pharma.')) +
           '\n' + [d.prenom, d.nom].filter(Boolean).join(' ') + (d.pharmacie ? ' — ' + d.pharmacie : '') + (d.ville ? ' (' + d.ville + ')' : '') + (d.tel ? '\n' + d.tel : '') + (d.message ? '\n' + d.message : '');
         fetch(API + '/prospects', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
           .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) throw new Error(j.message || ''); return j; }); })
