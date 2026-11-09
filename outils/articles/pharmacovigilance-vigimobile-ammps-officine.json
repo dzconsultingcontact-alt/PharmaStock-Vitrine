@@ -1,0 +1,148 @@
+{
+  "slug": "pharmacovigilance-vigimobile-ammps-officine",
+  "date": "2026-11-09",
+  "categorie": "Réglementation",
+  "categorie_ar": "التنظيم",
+  "titre": "Effets indésirables : VigiMobile et VigiUp, les outils de l'AMMPS",
+  "titre_ar": "اليقظة الدوائية: VigiMobile وVigiUp، أداتا الوكالة في الصيدلية",
+  "description": "Pharmacovigilance : l'AMMPS lance VigiMobile et VigiUp pour déclarer les effets indésirables des médicaments et produits de santé. Le rôle de l'officine.",
+  "description_ar": "أطلقت الوكالة المغربية للأدوية VigiMobile وVigiUp للتبليغ عن الآثار غير المرغوب فيها للأدوية واللقاحات والمنتجات الصحية. ما يمكن للصيدلية فعله.",
+  "chapo": "Pendant la MedSafetyWeek 2026, l'AMMPS a lancé deux plateformes de déclaration des effets indésirables. Le comptoir est souvent le premier endroit où un patient en parle : voici comment s'organiser.",
+  "chapo_ar": "خلال أسبوع MedSafetyWeek 2026، أطلقت الوكالة المغربية للأدوية والمنتجات الصحية منصتين للتبليغ عن الآثار غير المرغوب فيها. الشباك غالبا أول مكان يتحدث فيه المريض عنها: إليكم كيف تنظمون أنفسكم.",
+  "mots_cles": "pharmacovigilance maroc, vigimobile ammps, vigiup, déclarer effet indésirable maroc, medsafetyweek 2026, pharmacie maroc",
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "Le 4 novembre 2026 à Rabat, l'Agence marocaine du médicament et des produits de santé (AMMPS) a lancé deux plateformes de signalement des événements indésirables, dans le cadre de la campagne internationale MedSafetyWeek, organisée du 2 au 8 novembre 2026. Le message de la campagne, selon Le Matin : « Événements indésirables : ne les ignorez pas, notifiez-les ».",
+      "ar": "في 4 نونبر 2026 بالرباط، أطلقت الوكالة المغربية للأدوية والمنتجات الصحية منصتين للتبليغ عن الأحداث غير المرغوب فيها، في إطار الحملة الدولية MedSafetyWeek المنظمة من 2 إلى 8 نونبر 2026. وشعار الحملة، حسب جريدة Le Matin: «الأحداث غير المرغوب فيها: لا تتجاهلوها، بلّغوا عنها»."
+    },
+    {
+      "t": "h2",
+      "fr": "VigiMobile et VigiUp : à quoi sert chaque outil ?",
+      "ar": "VigiMobile وVigiUp: ما فائدة كل أداة؟"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>VigiMobile</strong> : une application mobile pour notifier les événements indésirables liés aux <strong>médicaments et aux vaccins</strong>.",
+          "ar": "<strong>VigiMobile</strong>: تطبيق على الهاتف للتبليغ عن الأحداث غير المرغوب فيها المرتبطة <strong>بالأدوية واللقاحات</strong>."
+        },
+        {
+          "fr": "<strong>VigiUp</strong> : pour les <strong>autres produits de santé</strong> : dispositifs médicaux, réactifs de diagnostic in vitro, produits cosmétiques et d'hygiène corporelle, compléments alimentaires.",
+          "ar": "<strong>VigiUp</strong>: لباقي <strong>المنتجات الصحية</strong>: المستلزمات الطبية، كواشف التشخيص في المختبر، مستحضرات التجميل والنظافة الجسدية، والمكملات الغذائية."
+        }
+      ]
+    },
+    {
+      "t": "p",
+      "fr": "D'après Le Matin, les deux outils sont accessibles depuis le site de l'agence, <strong>ammps.gov.ma</strong>. Ils visent à encourager la participation des professionnels de santé comme des citoyens.",
+      "ar": "حسب Le Matin، الأداتان متاحتان انطلاقا من موقع الوكالة <strong>ammps.gov.ma</strong>، وتهدفان إلى تشجيع مشاركة مهنيي الصحة والمواطنين على حد سواء."
+    },
+    {
+      "t": "h2",
+      "fr": "Pourquoi l'officine est en première ligne",
+      "ar": "لماذا الصيدلية في الخط الأمامي"
+    },
+    {
+      "t": "p",
+      "fr": "Un patient qui fait une éruption après un nouvel antibiotique, une réaction à un vaccin, une irritation due à une crème ou un complément alimentaire mal toléré : c'est souvent au comptoir qu'il en parle en premier. Une déclaration, même sur un simple soupçon, aide l'agence à repérer les problèmes de sécurité. Santé Mag rappelle que les patients et leurs proches peuvent aussi contribuer.",
+      "ar": "مريض يظهر عليه طفح جلدي بعد مضاد حيوي جديد، رد فعل بعد لقاح، تهيج بسبب مرهم، أو مكمل غذائي لم يتحمله: غالبا ما يتحدث عن ذلك أولا عند الشباك. التبليغ، ولو على مجرد شك، يساعد الوكالة على رصد مشاكل السلامة. وتذكّر Santé Mag أن المرضى وذويهم يمكنهم أيضا المساهمة."
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "Les informations à noter avant de déclarer",
+      "ar": "المعلومات التي يجب تدوينها قبل التبليغ"
+    },
+    {
+      "t": "p",
+      "fr": "Une déclaration utile est une déclaration précise. Au moment où le patient vous en parle, notez :",
+      "ar": "التبليغ المفيد هو التبليغ الدقيق. عندما يحدثكم المريض، دوّنوا:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "le produit en cause, son dosage et, si possible, son <strong>numéro de lot</strong> ;",
+          "ar": "المنتج المعني وجرعته، وإن أمكن <strong>رقم الحصة</strong>؛"
+        },
+        {
+          "fr": "la date de début du traitement et la date d'apparition de l'effet ;",
+          "ar": "تاريخ بداية العلاج وتاريخ ظهور الأثر؛"
+        },
+        {
+          "fr": "la description de l'effet et son évolution (arrêt du produit, consultation médicale) ;",
+          "ar": "وصف الأثر وتطوره (توقيف المنتج، استشارة طبية)؛"
+        },
+        {
+          "fr": "les autres médicaments pris en même temps ;",
+          "ar": "الأدوية الأخرى المتناولة في نفس الوقت؛"
+        },
+        {
+          "fr": "un moyen de recontacter le patient, avec son accord.",
+          "ar": "وسيلة للتواصل مع المريض من جديد، بموافقته."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Organiser l'équipe",
+      "ar": "تنظيم الفريق"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Désigner un référent</strong> dans l'équipe, qui se familiarise avec VigiMobile et VigiUp et centralise les signalements.",
+          "ar": "<strong>تعيين مرجع</strong> داخل الفريق يتعرف على VigiMobile وVigiUp ويجمع التبليغات."
+        },
+        {
+          "fr": "<strong>Garder une fiche simple au comptoir</strong> reprenant la liste ci-dessus, pour ne rien oublier quand le patient est devant vous.",
+          "ar": "<strong>الاحتفاظ ببطاقة بسيطة عند الشباك</strong> تتضمن اللائحة أعلاه، حتى لا تنسوا شيئا والمريض أمامكم."
+        },
+        {
+          "fr": "<strong>Orienter vers un médecin</strong> sans attendre en cas de réaction grave (gêne respiratoire, gonflement du visage, éruption étendue).",
+          "ar": "<strong>التوجيه نحو الطبيب</strong> دون انتظار في حالة رد فعل خطير (ضيق التنفس، انتفاخ الوجه، طفح جلدي واسع)."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Avec ZILI Pharma",
+      "ar": "مع ZILI Pharma"
+    },
+    {
+      "t": "p",
+      "fr": "Le suivi du stock et des lots de ZILI Pharma vous permet de retrouver rapidement le numéro de lot et la date de péremption d'un produit, et l'historique des ordonnances aide à reconstituer le traitement du patient : deux informations clés pour une déclaration complète. Voir aussi <a href=\"/guides/gerer-produits-perimes-pharmacie/\">comment gérer les produits périmés</a>.",
+      "ar": "يتيح لكم تتبع المخزون والحصص في ZILI Pharma إيجاد رقم الحصة وتاريخ انتهاء الصلاحية بسرعة، ويساعد سجل الوصفات على إعادة تركيب علاج المريض: معلومتان أساسيتان لتبليغ كامل."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Médicaments et vaccins : l'AMMPS lance deux plateformes de signalement des effets indésirables",
+      "media": "Le Matin",
+      "date": "2026-11-05",
+      "url": "https://lematin.ma/societe/medicament-vaccinsdeux-plateformes-pour-signaler-les-effets-indesirables/374184"
+    },
+    {
+      "titre": "MedSafetyWeek 2026 : l'AMMPS sensibilise à la déclaration des effets indésirables des médicaments",
+      "media": "Santé Mag",
+      "date": "2026-11-04",
+      "url": "https://santemag.ma/medsafetyweek-2026-lammps-sensibilise-a-la-declaration-des-effets-indesirables-des-medicaments/"
+    }
+  ],
+  "liens": [
+    [
+      "/blog/bonnes-pratiques-officinales-ammps-2026/",
+      "Bonnes pratiques officinales : l'AMMPS publie une nouvelle ligne directrice"
+    ],
+    [
+      "/guides/gerer-produits-perimes-pharmacie/",
+      "Produits périmés en pharmacie : 7 méthodes pour réduire les pertes"
+    ]
+  ],
+  "rang": 0
+}
