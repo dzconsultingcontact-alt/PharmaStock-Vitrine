@@ -1,4 +1,4 @@
-/* PharmaStock – widget « Trouver une pharmacie de garde » pour le site vitrine.
+/* ZILI Pharma – widget « Trouver une pharmacie de garde » pour le site vitrine.
    Utilisation : <div id="ps-gardes"></div><script src="/garde-widget.js" defer></script> */
 (function () {
   var API = 'https://api.mapharmastock.com/api/gardes';
@@ -10,14 +10,14 @@
     maintenant: 'مفتوحة الآن', nuit: 'ليل', h24: '24/24', toutes: 'الكل', pres: 'بالقرب مني', loc: 'تحديد الموقع…', plus: 'عرض المزيد',
     charg: 'جارٍ التحميل…', indispo: 'الخدمة غير متوفرة حاليا. أعد المحاولة بعد قليل.', aucune: 'لا توجد صيدلية لهذا الاختيار. جرّب « الكل ».',
     ouverte: 'مفتوحة الآن', iti: 'الاتجاهات', du: 'من', au: 'إلى', ville: 'المدينة', tri: 'الترتيب حسب المسافة',
-    info: function (n, v) { return n + ' صيدلية مفتوحة الآن في ' + v + '. اتصل قبل التنقل. المصدر: '; }, et: ' وصيدليات شبكة PharmaStock.',
+    info: function (n, v) { return n + ' صيدلية مفتوحة الآن في ' + v + '. اتصل قبل التنقل. المصدر: '; }, et: ' وصيدليات شبكة ZILI Pharma.',
     autres: 'صيدلية الحراسة في: ', loc2: 'ar-MA'
   } : {
     titre: 'Trouver une pharmacie de garde', sous: 'Pharmacies ouvertes de jour, de nuit et 24h/24 près de chez vous.', ar: 'ابحث عن صيدلية الحراسة الأقرب إليك',
     maintenant: 'Ouvertes maintenant', nuit: 'Nuit', h24: '24h/24', toutes: 'Toutes', pres: 'Près de moi', loc: 'Localisation…', plus: 'Voir plus',
     charg: 'Chargement…', indispo: 'Service momentanément indisponible. Réessayez dans quelques instants.', aucune: 'Aucune pharmacie pour ce choix. Essayez « Toutes ».',
     ouverte: 'Ouverte maintenant', iti: 'Itinéraire', du: 'du', au: 'au', ville: 'Ville', tri: 'Trier par distance',
-    info: function (n, v) { return n + ' pharmacie(s) ouverte(s) maintenant à ' + v + '. Appelez avant de vous déplacer. Source : '; }, et: ' et pharmacies du réseau PharmaStock.',
+    info: function (n, v) { return n + ' pharmacie(s) ouverte(s) maintenant à ' + v + '. Appelez avant de vous déplacer. Source : '; }, et: ' et pharmacies du réseau ZILI Pharma.',
     autres: 'Pharmacie de garde à : ', loc2: 'fr-FR'
   };
   var TYPES = { JOUR: [AR ? 'نهار' : 'Jour', '#b45309', '#fef3c7'], NUIT: [AR ? 'ليل' : 'Nuit', '#3730a3', '#e0e7ff'], '24H': [AR ? '24/24' : '24h/24', '#6b21a8', '#f3e8ff'] };
