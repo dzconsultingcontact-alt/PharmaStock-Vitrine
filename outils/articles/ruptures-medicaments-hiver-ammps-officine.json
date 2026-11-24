@@ -1,0 +1,135 @@
+{
+  "slug": "ruptures-medicaments-hiver-ammps-officine",
+  "date": "2026-11-23",
+  "categorie": "Gestion d'officine",
+  "categorie_ar": "تسيير الصيدلية",
+  "titre": "Ruptures de médicaments en hiver : l'AMMPS alerte, préparez le stock",
+  "titre_ar": "انقطاع الأدوية هذا الشتاء: الوكالة المغربية للأدوية تنبه، جهزوا مخزونكم",
+  "description": "Hiver 2026-2027 : l'AMMPS demande aux industriels et grossistes d'anticiper les ruptures, surtout en pédiatrie. Comment préparer le stock de l'officine.",
+  "description_ar": "شتاء 2026-2027: الوكالة تطلب من المصنعين والموزعين بالجملة استباق الانقطاعات، خاصة أدوية الأطفال. كيف تجهز الصيدلية مخزونها.",
+  "chapo": "Infections respiratoires et vagues de froid : l'AMMPS a demandé à la filière de sécuriser l'approvisionnement pour l'hiver 2026-2027, avec une vigilance particulière pour les médicaments des enfants. Ce qui a été demandé, et ce que l'officine peut faire de son côté.",
+  "chapo_ar": "التهابات تنفسية وموجات برد: طلبت الوكالة المغربية للأدوية والمنتجات الصحية من القطاع تأمين التموين خلال شتاء 2026-2027، مع يقظة خاصة بأدوية الأطفال. ما الذي طُلب، وما الذي يمكن للصيدلية فعله من جهتها.",
+  "mots_cles": "rupture médicaments maroc, ammps hiver 2026, pénurie médicaments pharmacie, stock pharmacie hiver, médicaments pédiatriques rupture, observatoire du médicament ammps",
+  "blocs": [
+    {
+      "t": "p",
+      "fr": "Dans une note d'information datée du 13 novembre 2026, selon EcoActu, l'Agence marocaine du médicament et des produits de santé (AMMPS) appelle les établissements pharmaceutiques industriels et les grossistes-répartiteurs à renforcer leur vigilance pour assurer la continuité de l'approvisionnement pendant l'hiver. En cause : la hausse de la demande attendue avec la recrudescence des infections respiratoires et les vagues de froid.",
+      "ar": "في مذكرة إخبارية مؤرخة في 13 نونبر 2026، حسب EcoActu، تدعو الوكالة المغربية للأدوية والمنتجات الصحية (AMMPS) المؤسسات الصيدلية الصناعية والموزعين بالجملة إلى تعزيز اليقظة لضمان استمرارية التموين خلال فصل الشتاء. والسبب: ارتفاع الطلب المنتظر مع تزايد الالتهابات التنفسية وموجات البرد."
+    },
+    {
+      "t": "h2",
+      "fr": "Ce que l'AMMPS a demandé",
+      "ar": "ما طلبته الوكالة"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Anticiper les besoins saisonniers</strong> en adaptant les programmes de production, d'importation et de distribution.",
+          "ar": "<strong>استباق الحاجيات الموسمية</strong> بملاءمة برامج الإنتاج والاستيراد والتوزيع."
+        },
+        {
+          "fr": "<strong>Maintenir les stocks de sécurité</strong> prévus par la réglementation en vigueur.",
+          "ar": "<strong>الحفاظ على مخزون الأمان</strong> المنصوص عليه في القوانين الجاري بها العمل."
+        },
+        {
+          "fr": "<strong>Garantir la disponibilité des médicaments essentiels</strong>, notamment ceux des pathologies hivernales et pédiatriques.",
+          "ar": "<strong>ضمان توفر الأدوية الأساسية</strong>، خاصة أدوية أمراض الشتاء والأطفال."
+        },
+        {
+          "fr": "<strong>Signaler sans délai</strong> tout risque de rupture ou de tension à l'Observatoire du médicament de l'AMMPS, avec les stocks disponibles et les mesures correctives envisagées.",
+          "ar": "<strong>التبليغ دون تأخير</strong> عن أي خطر انقطاع أو توتر لدى مرصد الأدوية التابع للوكالة، مع المخزون المتوفر والإجراءات التصحيحية المقترحة."
+        }
+      ]
+    },
+    {
+      "t": "h2",
+      "fr": "Les enfants en priorité",
+      "ar": "الأطفال أولا"
+    },
+    {
+      "t": "p",
+      "fr": "L'Agence insiste sur la population pédiatrique : les établissements doivent veiller à la disponibilité des médicaments essentiels sous des formes et dosages adaptés aux nourrissons et aux enfants. La note, telle que rapportée par la presse, ne cite aucun médicament ni aucune classe en particulier, et ne donne pas de chiffres de stock.",
+      "ar": "تشدد الوكالة على فئة الأطفال: يجب على المؤسسات السهر على توفر الأدوية الأساسية بأشكال وجرعات ملائمة للرضع والأطفال. ولا تذكر المذكرة، كما نقلتها الصحافة، أي دواء أو فئة علاجية بعينها، ولا تقدم أرقاما عن المخزون."
+    },
+    {
+      "t": "h2",
+      "fr": "Ce que cela signifie pour l'officine",
+      "ar": "ماذا يعني ذلك بالنسبة للصيدلية"
+    },
+    {
+      "t": "p",
+      "fr": "La note vise l'industrie et la répartition, pas directement les pharmacies d'officine. Mais c'est au comptoir que les tensions se voient en premier. Quelques réflexes simples pour l'hiver :",
+      "ar": "تستهدف المذكرة الصناعة والتوزيع بالجملة، وليس الصيدليات مباشرة. لكن التوترات تظهر أولا عند الشباك. بعض الردود البسيطة لفصل الشتاء:"
+    },
+    {
+      "t": "ul",
+      "items": [
+        {
+          "fr": "<strong>Revoir vos stocks minimum</strong> sur les produits d'hiver qui tournent le plus chez vous, d'après vos ventes de l'hiver dernier, sans surstocker.",
+          "ar": "<strong>مراجعة الحد الأدنى للمخزون</strong> للمنتجات الشتوية الأكثر رواجا عندكم، حسب مبيعات الشتاء الماضي، دون تخزين مفرط."
+        },
+        {
+          "fr": "<strong>Vérifier les formes pédiatriques</strong> (sirops, suspensions, suppositoires) : ce sont elles que les parents demandent en urgence.",
+          "ar": "<strong>مراقبة الأشكال الخاصة بالأطفال</strong> (أشربة، معلقات، تحاميل): هي التي يطلبها الآباء بشكل مستعجل."
+        },
+        {
+          "fr": "<strong>Commander plus souvent, en plus petites quantités</strong>, plutôt qu'une grosse commande qui immobilise la trésorerie.",
+          "ar": "<strong>الطلب بوتيرة أكبر وبكميات أصغر</strong>، بدل طلبية كبيرة تجمد السيولة."
+        },
+        {
+          "fr": "<strong>Prévenir votre grossiste</strong> dès qu'un produit devient difficile à obtenir : il est l'interlocuteur qui remonte les tensions.",
+          "ar": "<strong>إخبار موزعكم بالجملة</strong> بمجرد صعوبة الحصول على منتج: هو المحاور الذي ينقل التوترات."
+        }
+      ]
+    },
+    {
+      "t": "cta"
+    },
+    {
+      "t": "h2",
+      "fr": "Quand un produit manque au comptoir",
+      "ar": "عندما ينقص منتج عند الشباك"
+    },
+    {
+      "t": "p",
+      "fr": "Notez la demande du patient et ses coordonnées pour le rappeler à l'arrivée du produit. Si le traitement ne peut pas attendre, orientez-le vers son médecin pour une alternative. Évitez de relayer des rumeurs de pénurie : seules les communications officielles de l'AMMPS font foi.",
+      "ar": "سجلوا طلب المريض ومعلومات الاتصال به لإخباره عند وصول المنتج. وإذا كان العلاج لا يحتمل الانتظار، وجهوه إلى طبيبه لإيجاد بديل. تجنبوا نقل إشاعات النقص: البلاغات الرسمية للوكالة وحدها المرجع."
+    },
+    {
+      "t": "h2",
+      "fr": "Avec ZILI Pharma",
+      "ar": "مع ZILI Pharma"
+    },
+    {
+      "t": "p",
+      "fr": "Les commandes suggérées de ZILI Pharma s'appuient sur vos ventes pour proposer les quantités à commander, le suivi du stock et des lots signale les produits sous leur seuil, la réception par scan met le stock à jour dès la livraison, et les rappels patients vous aident à prévenir les familles quand un produit attendu arrive. Le tableau de bord montre en un coup d'œil les produits qui tournent le plus. Voir aussi <a href=\"/guides/eviter-ruptures-stock-pharmacie/\">comment éviter les ruptures de stock</a>.",
+      "ar": "تعتمد الطلبيات المقترحة في ZILI Pharma على مبيعاتكم لاقتراح الكميات، ويشير تتبع المخزون والحصص إلى المنتجات تحت الحد الأدنى، ويحدّث الاستلام بالمسح الضوئي المخزون فور التسليم، وتساعدكم تذكيرات المرضى على إخبار العائلات عند وصول المنتج المنتظر. وتعرض لوحة القيادة المنتجات الأكثر رواجا في لمحة."
+    }
+  ],
+  "sources": [
+    {
+      "titre": "Hiver 2026-2027 : l'AMMPS mobilise la filière pharmaceutique pour prévenir les ruptures de médicaments",
+      "media": "EcoActu",
+      "date": "2026-11-17",
+      "url": "https://ecoactu.ma/hiver-ammps-filiere-pharmaceutique-medicaments/"
+    },
+    {
+      "titre": "Recrudescence des infections respiratoires : L'AMMPS appelle à la sécurisation de l'approvisionnement des médicaments durant l'hiver",
+      "media": "Aujourd'hui le Maroc",
+      "date": "2026-11-16",
+      "url": "https://aujourdhui.ma/societe/recrudescence-des-infections-respiratoires-lammps-appelle-a-la-securisation-de-lapprovisionnement-des-medicaments-durant-lhiver"
+    },
+    {
+      "titre": "Médicaments : l'AMMPS appelle à anticiper les risques de rupture durant l'hiver 2026-2027",
+      "media": "SantéMag",
+      "date": "2026-11-13",
+      "url": "https://santemag.ma/medicaments-lammps-appelle-a-anticiper-les-risques-de-rupture-durant-lhiver-2026-2027/"
+    }
+  ],
+  "liens": [
+    ["/blog/saison-grippe-2026-2027-officine/", "Grippe saisonnière 2026-2027 : préparer son officine"],
+    ["/guides/eviter-ruptures-stock-pharmacie/", "Ruptures de stock en officine : comment les éviter"]
+  ],
+  "rang": 0
+}
